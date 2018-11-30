@@ -1,10 +1,10 @@
-3Di documentation
-=================
+Lizard documentation
+====================
 
-Let's try to do it with restructuredtext/sphinx!
+Let's do it with restructuredtext/sphinx!
 
-The documentation (open source!) is automatically build on
-http://3di-documentation.readthedocs.io, we can change the URL later on.
+TODO: The documentation (open source!) is automatically build on
+http://lizard-docs.readthedocs.io, we can change the URL later on.
 
 
 Local setup
