@@ -1,28 +1,40 @@
 Lizard documentation
 ====================
 
+.. image:: https://api.travis-ci.com/nens/lizard-docs.svg?branch=master
+   :target: https://travis-ci.com/nens/lizard-docs
+
+.. image:: https://readthedocs.com/projects/nelen-schuurmans-lizard-documentation/badge/?version=latest
+   :target: https://docs.lizard.net
+
 Let's do it with restructuredtext/sphinx!
 
-TODO: The documentation (open source!) is automatically build on
-http://lizard-docs.readthedocs.io, we can change the URL later on.
+The documentation is automatically build on
+https://nelen-schuurmans-lizard-documentation.readthedocs-hosted.com, we will
+change the URL to https://docs.lizard.net later on.
 
 
 Local setup
 -----------
 
-If you can run docker, you're in luck. One-time setup::
-
-  $ docker-compose build
-
-And then every time you want to re-generate your documentation::
+If you can run docker, you're in luck. Especially if you're working on
+windows, this is the easiest option right now. You just need to run::
 
   $ docker-compose up
 
-If you're not so lucky, you'll need to pip-install sphinx and you need latex
-(see the `Dockerfile` for the short list of packages that we install).
+every time you want to re-generate your documentation.
 
-Commits are automatically tested on jenkins:
-https://jenkins.lizard.net/blue/organizations/jenkins/nens%2Fthreedi-docs/
+On linux, pip-installing the `requirements.txt` in a virtualenv ought to work.
+Once readthedocs supports pipenv, we'll switch to that. But: `docker-compose
+up` is fine for you too.
+
+Commits are automatically tested on travis:
+https://travis-ci.com/nens/lizard-docs
+
+**Windows note:** please make sure all the filenames (especially the
+extensions) are lowercase. There are some funny examples in the 3Di
+documentation. Reinout will probably add an automatic check to prevent such
+mishaps later on.
 
 
 Special commands
@@ -43,23 +55,7 @@ http://www.sphinx-doc.org/en/stable/rest.html
 Special stuff, cross-references, indices etc:
 http://www.sphinx-doc.org/en/stable/markup/index.html
 
-Math support ("it is all LaTeX"):
-http://www.sphinx-doc.org/en/stable/ext/math.html
-
-
 Any questions: ask Reinout.
-
-
-Some commands needed for the OSGEO4W Shell with sphinx
-------------------------------------------------------
-
-From the git directory run the following commands::
-
-    pip install sphinx
-    sphinx-build threedi-docs\source build
-
-You will recieve some warnings, check them. You are not able to evaluate LateX
-formulas this way.
 
 
 Making a release
