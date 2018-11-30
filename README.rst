@@ -32,11 +32,6 @@ up` is fine for you too.
 Commits are automatically tested on travis:
 https://travis-ci.com/nens/lizard-docs
 
-**Windows note:** please make sure all the filenames (especially the
-extensions) are lowercase. There are some funny examples in the 3Di
-documentation. Reinout will probably add an automatic check to prevent such
-mishaps later on.
-
 
 Special commands
 ----------------
@@ -57,6 +52,19 @@ Special stuff, cross-references, indices etc:
 http://www.sphinx-doc.org/en/stable/markup/index.html
 
 Any questions: ask Reinout.
+
+
+Neatness notes
+--------------
+
+**Windows:** please make sure all the filenames (especially the extensions)
+are lowercase. There are some funny examples in the 3Di documentation. Reinout
+will probably add an automatic check to prevent such mishaps later on.
+
+As almost everybody in Nelen & Schuurmans has write access to this repository,
+the master branch has been protected. So: you must make your modifications in
+a branch and merge them into master afterwards (preferrably with a pull
+request). Note that the checks must pass before you can merge.
 
 
 Making a release
