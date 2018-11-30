@@ -1,7 +1,7 @@
 Changelog for the Lizard documentation
 ======================================
 
-0.1 (unreleased)
+0.1 (2018-11-30)
 ----------------
 
 - Started the new documentation project based on the 3Di documentation setup.
