@@ -1,5 +1,5 @@
 language: python
-  python:
-    - "3.6"
-  script:
-    - make html
+python:
+  - "3.6"
+script:
+  - make html
