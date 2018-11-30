@@ -1,5 +1,4 @@
 # Minimal makefile for Sphinx documentation
-#
 
 # A "-W" option turns warnings into errors. Good way to prevent errors (like
 # misspelled filenames) from creeping in.
