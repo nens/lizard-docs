@@ -5,7 +5,8 @@ Lizard documentation
    :target: https://travis-ci.com/nens/lizard-docs
 
 .. image:: https://readthedocs.com/projects/nelen-schuurmans-lizard-documentation/badge/?version=latest
-   :target: https://docs.lizard.net
+   :target: https://nelen-schuurmans-lizard-documentation.readthedocs-hosted.com/en/latest/?badge=latest
+   :alt: Documentation Status
 
 Let's do it with restructuredtext/sphinx!
 
