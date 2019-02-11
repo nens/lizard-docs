@@ -1,6 +1,18 @@
 Changelog for the Lizard documentation
 ======================================
 
+0.3 (unreleased)
+----------------
+
+- Created documentation by Lisanne based on
+
+* ddsc doc
+* habdleiding.pdf
+* hdsr api functioneel
+* 3di documentation
+
+
+
 0.2 (unreleased)
 ----------------
 
