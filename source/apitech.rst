@@ -107,8 +107,6 @@ Search
 .. _search_base_parameters:
 
 
-.. autoclass:: lizard_nxt.views.search.SearchViewSet
-    :noindex:
 
     **Example request:**
 
