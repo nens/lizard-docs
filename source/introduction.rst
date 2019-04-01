@@ -3,16 +3,15 @@ Introduction
 
 Welcome to the documentation of Lizard. 
 
-Lizard is a webbased portal, containing the following:
+Lizard is a data integration platform for data on the physical environment. Lizard opens up new possibilities to integrate spatially distributed timeseries and geodata, allowing you to transform data into informed decisions.
 
+One can describe the physical environment with data. In essence you need three types of data: time series, rasters and vectors. Lizard's databases are especially built for storing, accelerating and integrating these three types of data:
 
-**Assets**: water-related objects such as pump stations, levees, polders, measuringstations etc. 
+**Assets**: physical objects e.g. pump stations, groundwater stations, polders, measuring stations and parcels. 
 
-**Timeseries**: water-related sequences of measurements with metadata. Measurements may be aggregated for fast retrieval. Timeseries also contain metadata and have a relationship with a location.
+**Timeseries**: timeseries describing the physical environment, related to an Asset. E.g. water levels, growth stages, hydraulic head or temperature.
 
-**Locations**: contain the geo metadata of timeseries and may be related to an asset.
-
-**Rasters**: geospatially continuous, optionally time-varying, scalar or categorized gridded data; for example: digital elevation models, flood depths, radar precipitation measurements, satellite imagery, landcover classification, etc.
+**Rasters**: (temporal) raster data; e.g.: digital elevation models, flood depths, model results, radar precipitation measurements, satellite imagery and landcover classification.
 
 
 Where to start?

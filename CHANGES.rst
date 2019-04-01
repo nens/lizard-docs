@@ -4,6 +4,12 @@ Changelog for the Lizard documentation
 0.3 (unreleased)
 ----------------
 
+- Nothing changed yet.
+
+
+0.2 (2019-04-01)
+----------------
+
 - Created documentation by Lisanne based on
 
 * ddsc doc
