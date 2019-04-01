@@ -108,10 +108,8 @@ This section describes how the search endpoint can be used.
 .. _search_base_parameters:
 
 
-    **Example requests:**
+**Example requests**::
 
-    .. sourcecode:: http
-	
 	GET https://demo.lizard.net/api/v3/search/?q=water
 	GET https://demo.lizard.net/api/v3/search/?type=assetgroup,eventseries
 	GET https://demo.lizard.net/api/v3/search/?exclude=ef34gh3
