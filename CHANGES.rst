@@ -4,7 +4,11 @@ Changelog for the Lizard documentation
 0.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Small changes
+
+* Changed copyright date to 2019
+* Move text to a tip
+* Changed some text about the data management interface
 
 
 0.3 (2019-04-01)
