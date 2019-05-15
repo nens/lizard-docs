@@ -47,7 +47,7 @@ Characteristics of rasters are stored in the attributes of a rasterstore. The at
 Raster management
 -------------------
 
-Do you want to upload, edit or remove rasters yourself? From now on this is possible via the data management interface for rasters.
+The data management interface for rasters can be used to upload, edit or remove rasters.
  
 
 .. image:: /images/management.JPG
