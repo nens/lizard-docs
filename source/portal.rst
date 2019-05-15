@@ -166,7 +166,6 @@ Hovering along the profile on the map shows a corresponding indicator in the gra
 **Region selection** 
 
 The region selection tool aggregates data of the selected region. 
-Hover over the classes in the diagram to see more information.
 
 .. image:: /images/selection4.JPG
    :align: right 
@@ -176,6 +175,9 @@ Hover over the classes in the diagram to see more information.
 
    
 Region analysis can be performed on raster of data type nominal (quantititive) or ordinal (classes). Click the *star* behind the layer name and the analysis is applied on-the-fly on the active region type for the zoom level. The regions are coloured based on the most abundant class.
+
+.. tip::
+    Hover over the classes in the diagram to see more information.
 
 .. tip::
 	Select a class in the legend and the regions are coloured based on the relative abundancy of that class. 
