@@ -41,3 +41,4 @@ After this, you can go either to the portal, looking like this:
 Or to the API, looking like this:
 
 .. image:: /images/api.JPG
+

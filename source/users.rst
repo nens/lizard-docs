@@ -3,7 +3,7 @@ User management
 
 Via the URL www.{yourorganisation}.lizard.net/management/users/ you can manage the user roles. 
 
-.. image:: /images/user2.JPG
+.. image:: /images/image3.png
 
 
 .. note::
@@ -19,20 +19,19 @@ We have 4 roles and 3 different types of privileges.
 3. An **administator**, who can *read* data and change (*'write'*) all organisation's data. 
 4. A **manager**, who can *manage* other roles in the organisation. A manager can not read or write data by default. This role should be appointed separately. 
 
-
 	
 Existing users
 ---------------	
 
-On the user management page, you see the an overview of the users and their roles. These are sorted by organisation. You can change one user's role by clicking his or her username. 
+On the user management page, you see the an overview of the users and their roles. These are sorted by organisation. You can change one user's role by clicking the “edit roles“ button, make the changes and then click the “save“ button. 
 	
 	
 New user	
 ----------
 
-.. image:: /images/user1.JPG
+.. image:: /images/image6.png
 
-At the end of the page, you will find the form to add new users. Here, you need to fill in the username and emailadress, a first and last name. Via a scroll-down menu you can assign the desired roles. 
+After clicking the 'New User' button you will find the form to add new users. Here, you need to fill in the username and emailadress, a first and last name. Default the “User“ role is selected. Using the other buttons will select or deselect other roles.
 After you click 'Save', an activation email will be send to the user.
 
 .. tip::
@@ -44,7 +43,7 @@ Frequently asked questions
 
 
   
-*"Someone with the role “read” can only see the data but not add or modify them, and with the role “write” you can add and modify them, right? Can you see data of the organisation if you only have the role of writing?"*
+*"Someone with the role “User” can only see the data but not add or modify them, and with the role “Supplier” you can add and modify them, right? Can you see data of the organisation if you only have the role of writing?"*
 
 - Yes, yes and yes. If you can write you can automatically see as well. 
 

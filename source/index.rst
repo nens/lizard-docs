@@ -8,11 +8,8 @@ Welcome to the Lizard documentation!
 .. toctree::
    :maxdepth: 3
 
+   releasenotes
    introduction
-
-.. toctree::
-   :maxdepth: 3
-
    portal
    users
    rasters
