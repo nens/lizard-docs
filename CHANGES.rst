@@ -1,7 +1,7 @@
 Changelog for the Lizard documentation
 ======================================
 
-0.4 (unreleased)
+0.5 (unreleased)
 ----------------
 
 - Lizard release June 2019
