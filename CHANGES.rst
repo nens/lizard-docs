@@ -21,6 +21,15 @@ Changelog for the Lizard documentation
 * added release notes for the June release
 * so many new features!
 
+0.4 (2019-05-01)
+----------------
+
+- Small changes
+
+* Changed copyright date to 2019
+* Move text to a tip
+* Changed some text about the data management interface
+
 
 0.3 (2019-04-01)
 ----------------
