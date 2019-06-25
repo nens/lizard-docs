@@ -25,7 +25,7 @@ Highlights
 
 * We added new data sources to Lizard: 
 
-    * Basis Registratie Gebouwen (BAG), available through our API (demo.lizard.net/api/v3/buidlings)
+    * Basis Registratie Gebouwen (BAG), available through our API (demo.lizard.net/api/v3/buildings)
     * Nationaal Wegenbestand (NWB), available through our API (demo.lizard.net/api/v3/roads)
     * High Resolution Settlement Layer - https://www.ciesin.columbia.edu/data/hrsl/ (demo.lizard.net/favourites/9627db84-341e-448b-881b-8c4cbb80c83a)
 
@@ -112,7 +112,7 @@ Datasets
 
 **Buildings**
 
-We’ve added the Dutch buidlings dataset Basis Registratie Gebouwen (BAG). In the Netherlands all buildings from the BAG are available through the API. The dataset can be queried throughout time where each building has a start and end timestamp for validity. The dataset can be accessed via the buildings endpoint demo.lizard.net/api/v3/buidlings.
+We’ve added the Dutch buildings dataset Basis Registratie Gebouwen (BAG). In the Netherlands all buildings from the BAG are available through the API. The dataset can be queried throughout time where each building has a start and end timestamp for validity. The dataset can be accessed via the buildings endpoint demo.lizard.net/api/v3/buildings.
 
 **Roads**
 
