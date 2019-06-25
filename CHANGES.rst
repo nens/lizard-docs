@@ -6,8 +6,9 @@ Changelog for the Lizard documentation
 
 - Lizard release June 2019
 
-* added release notes for the June release
-* so many new features!
+* Added release notes for the June release
+* So many new features!
+* Embedded release video
 
 0.4 (2019-05-01)
 ----------------

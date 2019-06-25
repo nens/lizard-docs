@@ -9,6 +9,12 @@ Release notes 25-06-2019
 
 We’re happy to announce the newest release of Lizard, Lizard Dashboards, Lizard Portal, Lizard Atlas and Lizard Management interfaces. If you have questions about this release or if you’re interested in features please contact us via info@lizard.net  
 
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/NhK2OaYfc8E" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
 
 Highlights
 ----------
