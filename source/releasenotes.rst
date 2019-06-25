@@ -1,3 +1,9 @@
+.. raw:: html
+
+    <style> .blue {color:#4a86e8} </style>
+
+.. role:: blue
+
 Release notes 25-06-2019
 ========================
 
@@ -44,9 +50,13 @@ Lizard
 Labels
 """"""
 
-The concept of Labels was developed for the purpose of BlueLabel, an information service powered by Lizard. BlueLabel provides Label based insights into flood risks for individual buidlings and streets (BlueLabel.net). An A-Label indicates no flood risk, an E-label indicates a high flood risk. 
+The concept of the Labels data model was developed for BlueLabel, a state-of-the-art information service that provides label based insights into flood risks for individual buildings and roads. An A-Label indicates no flood risk, an E-label indicates a high flood risk. The BlueLabel dashboard, developed for Monitoring purposes is developed by Royal Haskoning DHV. The Dashboard, built with ESRI ArcGIS SDK communicates with the Lizard API for Labels, Label distributions, Buildings, maps and the computation of new Labels.
 
-To facilitate this service we thought out the concept of Labels such that they can be used for other purposes as well. Labels consist of three elements. LabelTypes, Labels and LabelParameters. The concept of Labels fits in the existing Authorisation model and is therefore always linked to an organisation. Each element is explained below. 
+.. image:: /images/labels.png
+
+:blue:`Impression of the BlueLabel Dashboard - more info can be found on bluelabel.net`
+
+Labels consist of three elements that are available through our API: LabelTypes, Labels and LabelParameters. The concept of Labels fits in the existing Authorisation model and is therefore always linked to an organisation. Each element is explained below. 
 
 **LabelTypes**
 
