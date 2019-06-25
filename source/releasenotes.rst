@@ -131,7 +131,7 @@ Fixed bugs
 * Too big WMS-service request weren’t handled nicely (reference: PROJ-1510)
 * Error message Excel when making exports (reference: PROJ-1102)
 * Multi Flex Meter integrityerrors (reference: PROJ-1258)
-* Indexes on road and buidling geometry are not generated (reference: PROJ-1435)
+* Indexes on road and building geometry are not generated (reference: PROJ-1435)
 * Bug in GIF generation (reference: PROJ-720)
 * 3Di import alarm check ERROR (reference: PROJ-1177)
 * Deleted rasters that are re-created casuse IntegrityError (reference: BACK-66)
