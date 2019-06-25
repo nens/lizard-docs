@@ -1,7 +1,15 @@
 Changelog for the Lizard documentation
 ======================================
 
-0.4 (unreleased)
+0.5 (2019-06-25)
+----------------
+
+- Lizard release June 2019
+
+* added release notes for the June release
+* so many new features!
+
+0.4 (2019-05-01)
 ----------------
 
 - Small changes
@@ -23,7 +31,7 @@ Changelog for the Lizard documentation
 - Created documentation by Lisanne based on
 
 * ddsc doc
-* habdleiding.pdf
+* handleiding.pdf
 * hdsr api functioneel
 * 3di documentation
 
