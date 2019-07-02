@@ -4,7 +4,7 @@ Changelog for the Lizard documentation
 0.6 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Complete change of docs structure
 
 
 0.6 (2019-06-25)

@@ -19,11 +19,10 @@ Where to start?
 
 This document will help the novice as well as the experienced Lizard-user. For the novice it contains background information and key points for starting with Lizard, while for the experienced user it will serve as a reference work. The manual contains the following sections:
 
-* :doc:`portal`
-* :doc:`users`
-* :doc:`rasters`
-* :doc:`apifunc`
-* :doc:`apitech`
+* :doc:`d_portal`
+* :doc:`b_auth`
+* :doc:`b_datatypes`
+* :doc:`c_api`
    
 
 Information about courses, examples, demonstrations and how to contact us can be found on: www.lizard.net
