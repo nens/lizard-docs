@@ -7,7 +7,7 @@
 Release notes 18-09-2019
 ========================
 
-We’re happy to announce the newest release of Lizard, Lizard Dashboards, Lizard Portal, Lizard Atlas and Lizard Management interfaces. If you have questions about this release or if you’re interested in features please contact us via info@lizard.net  
+We’re happy to announce the newest release of Lizard Portal, Lizard Backend and Lizard Catalogue. If you have questions about this release or if you’re interested in features please contact us via info@lizard.net  
 
 Frontend
 --------
@@ -20,12 +20,16 @@ Lizard Client
     * Multiple legends below each other
     * Name of the raster and organisation added to diagrams and legends
 
-image
+.. image:: /images/legends.jpg
 
 Catalogue
 ^^^^^^^^^
 
-image
+The Lizard Catalogue offers insight in the data layers that are available for your organisation. There is an extensive search option to make the layers easily accesible. Every data layer will show available metadata. From the Catalogue you have the option of opening the data layers via the API or via the Lizard portal.
+
+The Catalogue can be reached via this url: https://demo.lizard.net/catalogue/
+
+.. image:: /images/catalogue.jpg
 
 Backend
 -------
