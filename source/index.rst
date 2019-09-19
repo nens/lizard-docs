@@ -9,6 +9,7 @@ Welcome to the Lizard documentation!
    :maxdepth: 3
 
    releasenotes
+   old_releasenotes
    introduction
    portal
    users
