@@ -25,9 +25,9 @@ Lizard Client
 Catalogue
 ^^^^^^^^^
 
-A new interface to give an overview of available rasters and WMS layers.
+The Lizard Catalogue offers insight in the data layers that are available for your organisation. There is an extensive search option to make the layers easily accesible. Every data layer will show available metadata. From the Catalogue you have the option of opening the data layers via the API or via the Lizard portal.
 
-The Catalogue can be reache via this url: https://demo.lizard.net/catalogue/
+The Catalogue can be reached via this url: https://demo.lizard.net/catalogue/
 
 .. image:: /images/catalogue.jpg
 
