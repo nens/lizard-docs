@@ -11,4 +11,4 @@ deploy:
   skip_cleanup: true
   script: bash upload-artifact.sh
   on:
-    branch: reinout-setup-update
+    branch: master
