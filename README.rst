@@ -10,9 +10,9 @@ Lizard documentation
 
 Let's do it with restructuredtext/sphinx!
 
-The documentation is automatically build on travis
-(https://travis-ci.com/nens/lizard-docs), build on master are automatically
-uploaded to https://docs.lizard.net via
+The documentation is automatically build (as test) on travis
+(https://travis-ci.com/nens/lizard-docs). Successful builds of the **master**
+branch are automatically uploaded to https://docs.lizard.net via
 https://artifacts.lizard.net/overview/lizard-docs/ .
 
 
