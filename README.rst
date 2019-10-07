@@ -10,9 +10,10 @@ Lizard documentation
 
 Let's do it with restructuredtext/sphinx!
 
-The documentation is automatically build on
-https://nelen-schuurmans-lizard-documentation.readthedocs-hosted.com, we will
-change the URL to https://docs.lizard.net later on.
+The documentation is automatically build on travis
+(https://travis-ci.com/nens/lizard-docs), build on master are automatically
+uploaded to https://docs.lizard.net via
+https://artifacts.lizard.net/overview/lizard-docs/ .
 
 
 Local setup
@@ -69,13 +70,13 @@ request). Note that the checks must pass before you can merge.
 Making a release
 ----------------
 
-Only released versions are shown publicly on readthedocs. To make a release,
-install zest.releaser::
+Unlike the 3di documentation, all successful builds of **master** on travis
+are uploaded as docs.lizard.net, you don't need a release for that.
+
+For administrative purposes, making a release can be useful. To make a
+release, install zest.releaser::
 
   $ pip install zest.releaser
-
-(It is also installed inside the docker, but your git credentials won't work
-in there.)
 
 Make a release by running::
 

@@ -5,7 +5,7 @@ script:
   - make html
   - zip -r lizard-docs.zip build/
 # Deploy uploads the zipfile to https://artifacts.lizard.net, but
-# only when building master. It then turns up (TODO) on https://docs.lizard.net
+# only when building master. It then turns up on https://docs.lizard.net
 deploy:
   provider: script
   skip_cleanup: true
