@@ -25,9 +25,8 @@ windows, this is the easiest option right now. You just need to run::
 
 every time you want to re-generate your documentation.
 
-On linux, pip-installing the `requirements.txt` in a virtualenv ought to work.
-Once readthedocs supports pipenv, we'll switch to that. But: `docker-compose
-up` is fine for you too.
+If the setup changed (which should rarely happen), a quick ``docker-compose
+build`` will get you up to date.
 
 Commits are automatically tested on travis:
 https://travis-ci.com/nens/lizard-docs
