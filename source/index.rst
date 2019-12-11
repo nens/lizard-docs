@@ -6,56 +6,63 @@ Welcome to the Lizard documentation!
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Introduction
    :name: Introduction
 
    a_lizard
    a_quickstart
    a_releasenotes
+   a_release_25062019
 
 .. toctree::
    :maxdepth: 2
-   :caption: Store and Accelerate
-   :name: Store and Accelerate
+   :caption: Authorisation and Authentication
+   :name: User Management, Authorisation and Authentication
 
-   b_datatypes
-   b_auth
-   b_datamanagement
+   b_usermanagement
 
 .. toctree::
    :maxdepth: 2
-   :caption: Analyze
-   :name: Analyze
+   :caption: Data Management and Exchange
+   :name: Data Management and Exchange
 
-   c_api
-   c_ddapi
-   c_geoblocks
-   c_alarms
-   c_3dimodeling
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Visualize
-   :name: Visualize
-
-   d_portal
-   d_dashboard
-   d_atlas
-   d_qgisplugin
-   d_catalog
+   c_datatypes
+   c_datamanagement
+   c_dataexchange
+   c_apifunctional
+   c_apitechnical
 
 .. toctree::
    :maxdepth: 2
-   :caption: Servicedesk
-   :name: Servicedesk
+   :caption: Analysis
+   :name: Analysis
 
-   e_selfserviceportal
-   e_priority
-   e_bugs
-   e_featurerequests
-   
+   d_geoblocks
+   d_alarms
+   d_labels
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Visualisation
+   :name: Visualisation
 
+   e_portal
+   e_dashboard
+   e_atlas
+   e_catalog
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Service and Support
+   :name: Service and Support
 
+   f_servicesupport
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorials
+   :name: Tutorials
+
+   g_tutorials
+   g_tutorial_1

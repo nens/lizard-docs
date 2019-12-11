@@ -4,228 +4,62 @@
 
 .. role:: blue
 
-Release notes 25-06-2019
-========================
+====================
+Latest Release Notes
+====================
 
-We’re happy to announce the newest release of Lizard, Lizard Dashboards, Lizard Portal, Lizard Atlas and Lizard Management interfaces. If you have questions about this release or if you’re interested in features please contact us via info@lizard.net  
+We’re happy to announce the newest release of Lizard Portal, Lizard Backend and Lizard Catalogue. If you have questions about this release or if you’re interested in features please contact us via info@lizard.net  
 
-.. raw:: html
+Frontend
+========
 
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube.com/embed/NhK2OaYfc8E" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
+Lizard Client
+-------------
 
+* Reorganisation of the omnibox
 
-Highlights
-----------
+    * Multiple legends below each other
+    * Name of the raster and organisation added to diagrams and legends
 
-**Lizard:**
+.. image:: /images/a_releasenotes_01.jpg
 
-* We’ve developed Labels, a new data model in Lizard to add indices over time to your assets for instance to a building, fixed drainage level areas, parcels or administrative boundaries. Read about it in more detail below.
+Catalogue
+---------
 
-* We added new data sources to Lizard: 
+The Lizard Catalogue offers insight in the data layers that are available for your organisation. There is an extensive search option to make the layers easily accesible. Every data layer will show available metadata. From the Catalogue you have the option of opening the data layers via the API or via the Lizard portal.
 
-    * Basis Registratie Gebouwen (BAG), available through our API (demo.lizard.net/api/v3/buildings)
-    * Nationaal Wegenbestand (NWB), available through our API (demo.lizard.net/api/v3/roads)
-    * High Resolution Settlement Layer - https://www.ciesin.columbia.edu/data/hrsl/ (demo.lizard.net/favourites/9627db84-341e-448b-881b-8c4cbb80c83a)
+The Catalogue can be reached via this url: https://demo.lizard.net/catalogue/
 
-**Lizard Dashboards (released in the coming days):**
+.. image:: /images/a_releasenotes_02.jpg
 
-* Public dashboards, it is now possible to view dashboards without the need of logging in. 
-* GetFeatureInfo, it is now possible to click on maps and receive Feature Info on the map. 
-* T0 is now configurable (relative or absolute to now).
+Backend
+=======
 
-**Lizard Portal (released in the coming days):**
+API
+---
 
-* We’ve added a region analysis button for classified rasters. 
-* We’ve improved readability of the bar chart in region analysis mode
-* We’ve added value-on-hoover in graphs that are shown in the omnibox to increase readability of graphs. 
+* added api/v4/wmslayers/
+* added api/v4/scenarios/
+* added api/v4/datasets/
+* added api/v4/organisations/<uuid>/usage/
+* added ordering to api/v4/rasters/
+* removed CSV renderer on all timeseries endpoints
+* improved performance of api/v3/labels/
+* added a dedicated cache to api/v4/labels/counts/
+* Rerouted 3Di result processing through the Lizard API (/api/v4/scenarios/process_result)
 
-**Lizard Management (released in the coming days):**
+Geoblocks
+---------
 
-* New User Management Interface 
-* Improvements in Raster Management Interface, such as making rasters public or private, deleting raster stores and flushing data from raster stores.
-* Improvements in the Alarm Management Interface. It is now possible to configure alarms on time series via the management interface 
+* added "TemporalAggregate" and "Cumulative" geoblocks that compute temporal statistics on rasters on-the-fly
 
-Detailed Release Notes
-----------------------
+Maintenance/updates
+-------------------
 
-Lizard
-^^^^^^
+* Updated django to 1.11.24
+* Added a dedicated queue for 3Di operational scenarios
 
-Labels
-""""""
+Previous Release notes
+======================
 
-The concept of the Labels data model was developed for BlueLabel, a state-of-the-art information service that provides label based insights into flood risks for individual buildings and roads. An A-Label indicates no flood risk, an E-label indicates a high flood risk. The BlueLabel dashboard, developed for Monitoring purposes is developed by Royal Haskoning DHV. The Dashboard, built with ESRI ArcGIS SDK communicates with the Lizard API for Labels, Label distributions, Buildings, maps and the computation of new Labels.
-
-.. image:: /images/labels.png
-
-:blue:`Impression of the BlueLabel Dashboard - more info can be found on bluelabel.net`
-
-Labels consist of three elements that are available through our API: LabelTypes, Labels and LabelParameters. The concept of Labels fits in the existing Authorisation model and is therefore always linked to an organisation. Each element is explained below. 
-
-**LabelTypes**
-
-LabelTypes can be found on the LabelType-endpoint (demo.lizard.net/api/v3/labeltypes) and describe the type of Label. LabelTypes contain the following fields: 
-
-* name: name of the LabelType
-* description: description of the LabelType
-* uuid: unique ID for the LabelType
-* organisation: organisation that owns the LabelType
-* created: date when LabelType was created
-* object_type: the type of Asset related to the LabelType
-* last_modified: date when LabelType was last updated
-* source: source of the LabelType e.g. a GeoBlock
-
-**Labels**
-
-The Labels related to a specific LabelType can be found on the Labels-endpoint (demo.lizard.net/api/v3/labels). Labels contain the follow fields: 
-
-* label_value: the index value of the Label 
-* object_type: the type of Asset related to the Label
-* object_id: id of the Asset
-* created: date when the label was created
-* start: start of the validity of the Label (history of the Label)
-* end: end of the validity of the Label (history of the Label)
-* extra: this field can be used to show variables related to the definition of the Label (for instance a threshold value related to the Label)
-
-
-**LabelParameters**
-
-The Label parameters is developed to store parameters that are used in the computation of the Label. LabelParameters are linked to LabelTypes and Assets and can be found on the LabelParameters-endpoint (demo.lizard.net/api/v3/labelparameters). LabelParameters contain the following fields: 
-
-* label_type: the related LabelType
-* value: value of the parameters
-* name: name of the parameter
-* object_type: the type of Asset related to the LabelParameter
-* object_id: the ID of the Asset related to the LabelParameter
-* created: date when LabelParameter was created
-* start: start of the validity of the LabelParameter (history of the LabelParameter)
-* end: end of the validity of the LabelParameter (history of the LabelParameter)
-
-**Label statistics**
-
-With the count filter on the Labels endpoint it is possible to query a histogram of all Labels of a certain LabelType or a histogram of Labels within a region (e.g. municipality).
-
-Datasets 
-""""""""
-
-**Buildings**
-
-We’ve added the Dutch buildings dataset Basis Registratie Gebouwen (BAG). In the Netherlands all buildings from the BAG are available through the API. The dataset can be queried throughout time where each building has a start and end timestamp for validity. The dataset can be accessed via the buildings endpoint demo.lizard.net/api/v3/buildings.
-
-**Roads**
-
-We’ve added the Dutch dataset Nationaal Wegenbestand (NWB). In the Netherlands all roads from the NWB are available through the API. The dataset can be queried throughout time where each road has a start and end for validity. The dataset can be accessed via the roads endpoint demo.lizard.net/api/v3/roads.
-
-**Population**
-
-We’ve added the High Resolution Settlement Layer (https://www.ciesin.columbia.edu/data/hrsl/).
-The dataset is acquired by Columbia University and gives insights in the population density in developing countries around the world. The dataset can e.g. be used for flood risk analysis. Link: demo.lizard.net/favourites/9627db84-341e-448b-881b-8c4cbb80c83a
-
-Fixed bugs
-""""""""""
-
-* GGMN qgis plugin fix (reference: PROJ-413)
-* Mistake in fail() usage in LizardModelSerializer (reference: PROJ-1223)
-* Too big WMS-service request weren’t handled nicely (reference: PROJ-1510)
-* Error message Excel when making exports (reference: PROJ-1102)
-* Multi Flex Meter integrityerrors (reference: PROJ-1258)
-* Indexes on road and building geometry are not generated (reference: PROJ-1435)
-* Bug in GIF generation (reference: PROJ-720)
-* 3Di import alarm check ERROR (reference: PROJ-1177)
-* Deleted rasters that are re-created casuse IntegrityError (reference: BACK-66)
-* Export of temporal rasters (and 3Di-scenario’s) always use last time frame (reference: PROJ-1146)
-* PIXML importer (reference: PROJ-1444)
-* Location already exists error in timeseries import (reference: PROJ-879)
-* NonType object is not subscriptable (reference: PROJ-1366)
-* Handling of out-of-range time request in threedi results processing (reference: PROJ-1224)
-* NonType object has no attribute ‘isoformat’ (reference: PROJ-1063)
-* DateRange validation error occurs during async calculation of Labels (reference: BACK-223)
-* WMS handling lat/lon (default to WMS version 1.3.0) (reference: BACK-212)
-* Handle NULL assignment of source field in API v4 (reference: BACK-76)
-* Stores can be locked, exception isn’t handled (reference: BACK-70)
-* TimeSeries importer doesn’t copy location_name (reference: BACK-185)
-
-Lizard Dashboards (demo.lizard.net/dashboard/)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Public Dashboards**
-
-It is now possible to publish public dashboards. These dashboards do not require login credentials.
-
-**GetFeatureInfo for Maps (released in the coming weeks)**
-
-It is now possible to click on maps and receive Feature Info from WMS-layers and rasters.
-
-.. image:: /images/GetFeatureInfo.png
-
-**Fixed bugs**
-
-* a bug that resulted in invisible graphs in the dashboard after going back to the tiled overview (reference: PROJ-1200)
-* a bug that resulted in double axes and time series not being visible (reference: PROJ-1198)
-* a bug that resulted in not reloading labels on the y-axis after switching tiles (reference: PROJ-1197)
-* a bug that continuously queried temporal rasters (reference: PROJ-855)
-
-Lizard Portal (demo.lizard.net)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Value on hoover**
-
-We have added value-on-hoover functionality to the graphs that are shown in the omnibox. This feature increases the readability of graphs. This also works for graphs generated by the line tool: |linetool| 
-
-.. |linetool| image:: /images/lineSelection.png
-
-.. image:: /images/ValueOnHoover.png
-
-**Region analysis tool for classified rasters e.g. Land use or soil maps**
-
-We’ve added the region analysis tool button to the omnibox.
-
-.. image:: /images/OmniBox.png
-
-With this tool you can analyse classified rasters on the most dominant class per region configured in your portal. 
-
-.. image:: /images/image7.png
-
-.. image:: /images/image1.png
-
-By clicking on one of the classes you will find the regions where that specific class is most dominant. This is an example of 
-
-.. image:: /images/image8.png
-
-**Fixed Bugs:**
-
-* RegenRapportage didn’t work (reference: PROJ-1362)
-* Can’t find locations in portal (reference: PROJ-1001)
-* Bug in selecting a line or polygon asset (reference: PROJ-782)
-
-Lizard Management Interface (demo.lizard.net/management/)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**User Management**
-
-We’ve developed a user friendly user management interface. With this interface managers can add users to their organisation and give them the right authorization to data and applications. 
-
-.. image:: /images/image3.png
-
-.. image:: /images/image6.png
-
-.. image:: /images/image2.png
-
-**Raster Management Interface**
-We’ve updated the Raster Management Interface with features to delete or flush existing raster stores and a feature to make rasters public or private.
-
-.. image:: /images/image10.png
-
-.. image:: /images/image5.png
-
-**Alarm Management Interface**
-
-We’ve updated the Alarm Management Interface with a feature that enables you to configure an alarm on time series. This way you can be informed on threshold breaches based on measurements or model results by SMS or email. 
-
-.. image:: /images/image4.png
-
-**Fixed Bugs**
-
-* A bug that hampered users to upload temporal rasters af configuring a raster store (bug reference: PROJ-1114)
+:doc:`Release notes Lizard release 25-06-2019<a_release_25062019>`
