@@ -131,7 +131,7 @@ Selection tools
    
 There are 4 selection tools:
 
-.. image:: /images/e_portals_selection01.JPG
+.. image:: /images/e_portals_selection01.jpg
    :align: right 
    
 1. Point
@@ -145,7 +145,7 @@ Point selectionretrieves asset information, time series and map values from the 
 
 **Multipoint selection** 
 
-.. image:: /images/e_portals_selection02.JPG
+.. image:: /images/e_portals_selection02.jpg
    :align: right
    
 Use the multipoint tool to select multiple objects and/or locations.
@@ -157,7 +157,7 @@ Go to the graph view to see them.
 
 **Line selection** 	
 
-.. image:: /images/e_portals_selection03.JPG
+.. image:: /images/e_portals_selection03.jpg
    :align: right 
    
 Use the line selection tool to retrieve data along a profile, e.g. elevation from a DEM.
@@ -166,7 +166,7 @@ Use the line selection tool to retrieve data along a profile, e.g. elevation fro
 * 2nd click: End point
 * 3rd click: Reset
 
-.. image:: /images/line.JPG
+.. image:: /images/line.jpg
    :height: 400px
    :width: 300 px
    :align: center
@@ -177,10 +177,10 @@ Hovering along the profile on the map shows a corresponding indicator in the gra
 
 The region selection tool aggregates data of the selected region. 
 
-.. image:: /images/e_portals_selection04.JPG
+.. image:: /images/e_portals_selection04.jpg
    :align: right 
 
-.. image:: /images/e_portal_06.JPG
+.. image:: /images/e_portal_06.jpg
    :align: center
    
 Region analysis can be performed on raster of data type nominal (quantititive) or ordinal (classes). Click the *star* behind the layer name and the analysis is applied on-the-fly on the active region type for the zoom level. The regions are coloured based on the most abundant class.
@@ -205,7 +205,7 @@ Graph view
 
 Switch between map view and graph view with the Graph/Map button.
 
-.. image:: /images/e_portal_07.JPG
+.. image:: /images/e_portal_07.jpg
 
 By scrolling or dragging within the graph the domain of the Y-axis can be changed. By scrolling or dragging the datetimebar, the X-axis can be changed. 
 
@@ -241,7 +241,7 @@ Favourites
 
 You can save a Lizard state with data of one or more assets, maps or time series as a favourite and share it with others.
 
-.. image:: /images/e_portal_08.JPG
+.. image:: /images/e_portal_08.jpg
    :height: 400px
    :width: 300 px
    :align: center
@@ -255,12 +255,12 @@ Export
 
 You can use the export screen for both rasters and timeseries. 
 
-.. image:: /images/e_portal_09.JPG
+.. image:: /images/e_portal_09.jpg
    :align: center
 
 Click the Export button at the top of the screen and select period and the time series you are interested in. The export format is .XLSX with separate sheets for each time series. Further instructions are provided on screen.
 
-.. image:: /images/e_portal_10.JPG
+.. image:: /images/e_portal_10.jpg
 
 For rasters you have to specify the target projection. Automatically, the extent of the export is the same as your current zoom extent.
 
