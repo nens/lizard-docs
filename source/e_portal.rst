@@ -278,6 +278,3 @@ For rasters you have to specify the target projection. Automatically, the extent
 	2. Upload a file (max. 15 Mb) to support the message
 	3. Select the organisation to share the annotation with
 	4. Save the annotation (or delete one)
-
-
-

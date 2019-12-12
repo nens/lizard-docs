@@ -777,4 +777,3 @@ Time Series
 
 Time series in Lizard represent in situ measurements and forecasts of processes in the physical environment.
 We also support time series with photos (.PNG, .JPG), video’s (.AVI, .WMV) or text files (.PDF, .CSV).
-
