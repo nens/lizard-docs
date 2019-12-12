@@ -166,7 +166,7 @@ Use the line selection tool to retrieve data along a profile, e.g. elevation fro
 * 2nd click: End point
 * 3rd click: Reset
 
-.. image:: /images/line.jpg
+.. image:: /images/e_portal_11.jpg
    :height: 400px
    :width: 300 px
    :align: center

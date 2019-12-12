@@ -61,7 +61,7 @@ Don’t forget to click ‘Save’! When saved, an activation email will be send
 
 .. tip::
 	Forgot which Roles exist and what they grant a user? Click the “Need Help” button to find this overview:  
-.. image:: /images/image11.png
+.. image:: /images/b_usermanagement_05.png
 
 .. tip::
     In order to keep your users organised, we advise you to choose the username based on the users’ email address.
