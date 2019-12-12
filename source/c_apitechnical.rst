@@ -141,7 +141,7 @@ This section describes timeseries-related endpoints.
 		
 	**Example response:**
 	    	
-		.. image:: /images/c_apitechnical_01.JPG
+		.. image:: /images/c_apitechnical_01.jpg
 
 Locations
 ==========
@@ -156,4 +156,4 @@ This section describes location-related endpoints.
 		
 	**Example response:**
 	    	
-		.. image:: /images/c_apitechnical_02.JPG
+		.. image:: /images/c_apitechnical_02.jpg

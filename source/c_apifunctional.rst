@@ -4,7 +4,7 @@ API functional documentation
 
 You can acces the Lizard API via “www.{your_organisation}.lizard.net/api/”.
 
-.. image:: /images/c_apifunctional_01.JPG
+.. image:: /images/c_apifunctional_01.jpg
 
 What is an API?
 ===============
@@ -23,11 +23,11 @@ The basic url is www.{your_organisation}.lizard.net/api/v3, for example:
 If you type this in your browser, for example Google Chrome, you will get a list of parameters. These parameters are so called *endpoints*. If you paste this endpoint after your basic url, you will initiate a query. An example is ``locations``. 
 If you click on the url www.demo.lizard.net/api/v3/locations , you will send a query to Lizard to search all locations that you have access to. As a response, you will get indeed the locations back, as well as some metadata. 
 
-.. image:: /images/c_apifunctional_02.JPG
+.. image:: /images/c_apifunctional_02.jpg
 
 Above each page, you will see some additional parameters, with which you can specify your query more. Most endpoints have examples of this.
 
-.. image:: /images/c_apifunctional_03.JPG
+.. image:: /images/c_apifunctional_03.jpg
 
 If we are looking for a specific location, with a name that contains 'gemaal', we can use this query:
 

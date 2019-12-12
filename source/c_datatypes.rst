@@ -61,8 +61,8 @@ The Data Management interface is available at: “{your_organisation}.lizard.net
 
 After this screen, please click on ‘Data Management’, then ‘Rasters’ and, depending on if you want to manage a new or pre-existing raster, continue.
 
-.. image:: /images/c_datatypes_02.JPG
-.. image:: /images/c_datatypes_03.JPG
-.. image:: /images/c_datatypes_04.JPG
+.. image:: /images/c_datatypes_02.jpg
+.. image:: /images/c_datatypes_03.jpg
+.. image:: /images/c_datatypes_04.jpg
 
 Interested in the possibilities for your organisation? Please contact Joeri Verheijden via info@lizard.net.
