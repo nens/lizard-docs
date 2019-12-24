@@ -58,7 +58,6 @@ By default the new user is granted a “User” role.
 
 Don’t forget to click ‘Save’! When saved, an activation email will be send to the new user (sometimes this activation mail will end up in the spam folder). 
 
-
 .. tip::
 	Forgot which Roles exist and what they grant a user? Click the “Need Help” button to find this overview:  
 .. image:: /images/b_usermanagement_05.png

@@ -51,8 +51,7 @@ The API V2 is deprecated and we advise not to use this API for developing purpos
 API V2 will disappear in the near future.
 API V3 is the stable version of API and can be used for developing purposes.
 API V4 can be used in cooperation with our dev-team.
-API V4 is used to develop new features.
-
+API V4 is used to de
 
 Digitale Delta API
 ------------------

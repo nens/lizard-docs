@@ -28,7 +28,6 @@ Welcome to the Lizard documentation!
    :name: Data Management and Exchange
 
    c_datatypes
-   c_datamanagement
    c_dataexchange
    c_apifunctional
    c_apitechnical

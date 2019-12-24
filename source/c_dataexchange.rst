@@ -12,10 +12,6 @@ We can also provide support on either manual or automatic data uploads.
 Rasters
 =======
 
-We offer multiple types of data uploads.
-Ranging from file uploads, automatic file uploads to web services.
-All options per data type are listed below, including file requirements.  
-
 Requirements 
 --------------
 
@@ -300,8 +296,6 @@ An example of an upload of an image using requests in Python:
                         'password': 'janespassword'
                         })
 
-
-
 Vectors
 =======
 
@@ -380,12 +374,6 @@ This example .ini creates (a) new nested asset(s) from each record of the shapef
 * A **litology** taken from the column 4 columns next to the 2_code column of the shapefile and each. And a new nested asset with a litology for each 5th column from that column onwards
 
 You can copy paste this code in your own .ini file and zip it together with the shapefile.
-
-Rasters
--------
-
-.. warning::
-   Text required!
 
 Data downloads
 ==============
