@@ -106,8 +106,8 @@ Use the search bar to navigate to specific locations like countries, cities or a
 Symbols
 -------
 
-.. warning::
-    Image Required!
+.. image:: /images/e_portal_12.png 
+    :align: center
 
 All asset types have a unique symbol as you can see above.
 From the symbol, or by clicking on an asset, you can see if you are for example dealing with a groundwaterstation or a pumpstation.
@@ -116,10 +116,10 @@ A red symbol means that there is a timeseries linked to it.
 A black symbol means that there is no timeseries linked to it.
 If an asset is red, but you cannot see the timeseries, it means that you either do not have the rights to see the timeseries,
 or that you have to go further back in time (tip: click on “zoom to extent”).
-Lastly, for groundwaterstations, you can see a line drawn through the station, as seen below:
+Lastly, for groundwaterstations, you can see a line drawn through the station.
 
-.. warning::
-    Image Required!
+.. image:: /images/e_portal_13.png 
+    :align: center
 
 This means that the groundwaterstation is inactive. 
 
@@ -231,8 +231,8 @@ In order to examine your data in further detail open one of our partner platform
 .. note::
 	Apps are not available by default in every Lizard portal.
 
-Export and share 
-================
+Share
+=====
 
 Lizard enables sharing asset, time series and raster data between organisations to provide (water) managers with a better overview of systems and processes.
 
@@ -249,32 +249,3 @@ You can save a Lizard state with data of one or more assets, maps or time series
 Open the Favourites dropdown and enter a name/short description. You can save a specific period or one that is relative to ‘now’. In that case, the favourite is always up to date.
 
 Click a favourite to load the Lizard state that was saved in it. A link to the favourite can be retrieved by clicking the blue symbol next to the delete button.
-
-Export
-----------------
-
-You can use the export screen for both rasters and timeseries. 
-
-.. image:: /images/e_portal_09.jpg
-   :align: center
-
-Click the Export button at the top of the screen and select period and the time series you are interested in. The export format is .XLSX with separate sheets for each time series. Further instructions are provided on screen.
-
-.. image:: /images/e_portal_10.jpg
-
-For rasters you have to specify the target projection. Automatically, the extent of the export is the same as your current zoom extent.
-
-.. note::
-	Please do not export a raster with both a large extent and a high resolution.
-
-.. note:: 
-	No results shown? Check your selection of space and time and whether you activated the right data layers.
-	
-.. tip::
-	By adding an annotation to an object or location you can make notes or share remarks with others.
-
-	Select an object or location on the map while the annotation layer is activated:
-	1. Write a message
-	2. Upload a file (max. 15 Mb) to support the message
-	3. Select the organisation to share the annotation with
-	4. Save the annotation (or delete one)

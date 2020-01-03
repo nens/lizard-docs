@@ -1,7 +1,7 @@
 Changelog for the Lizard documentation
 ======================================
 
-0.6 (unreleased)
+0.7 (unreleased)
 ----------------
 
 - Complete change of docs structure

@@ -81,14 +81,93 @@ Your GeoTIFF’s will be uploaded in a task. You can follow the status of the ta
 Using the Lizard API
 ++++++++++++++++++++
 
-.. warning::
-   Text required!
+Below you find an example of how to upload a temporal geotiff in Python:
+
+.. code-block:: python
+
+	import requests
+	from localsecret import username, password
+	headers = {"username": username, 
+			   "password": password}
+
+	def post_geotiff_to_lizard(endpoint, file_path, timestamp=None):
+		"""Function to post a temporal geotiff to lizard"""
+		url = "{}data/".format(endpoint)
+		file = {"file": open(file_path, "rb")}
+		if timestamp:
+			data = {"timestamp": timestamp}
+			r = requests.post(url=url, data=data, files=file, headers=headers)
+		else: # use to send data to non-temporal endpoints
+			r = requests.post(url=url, files=file, headers=headers)
+		return r
+
+	uuid = "b73189fc-058d-4351-9b20-2538248fae4f"
+	endpoint = "https://demo.lizard.net/api/v4/rasters/{}/".format(uuid)
+	file_path = "local_geotiff.tif"
+	timestamp = "2020-01-01T000000Z"
+
+	response = post_temporal_geotiff_to_lizard(endpoint, file_path, timestamp)
 
 Using the Lizard FTP
 ++++++++++++++++++++ 
 
-.. warning::
-   Text required!
+The examples below elaborate on how to supply raster data to the Lizard FTP and how to manage your data flow to Lizard.
+Because data uploads depend on the system configuration of the data provider, we provide a code example to make a tool for automatic uploads.
+* You can do this using the python FTPlib package (example 1).
+* You can also use 'curl' from your commandline (example 2).
+
+Example 1 using python FTPlib package
+_____________________________________
+
+.. code-block:: python
+
+    import ftplib
+    import getpass
+    import os
+
+    LIZARD_USERNAME = input('Lizard username: ')
+    LIZARD_PASSWORD = getpass.getpass('Lizard password: ')
+
+
+    filename = "d1e25b6b-d777-4c90-a067-45645ed40da7_2018-02-13T122056Z.geotiff"
+    file_path = "D:/data/" + filename
+    file_path
+
+    os.path.exists(file_path)
+
+    file = open(file_path, 'rb')
+    ftp = ftplib.FTP_TLS()
+    host = "ftpdata.lizard.net"
+    port = 21
+    ftp.connect(host, port)
+    print(ftp.getwelcome())
+    ftp.login(LIZARD_USERNAME, LIZARD_PASSWORD)
+    ftp.prot_p()
+    ftp.storbinary("STOR " + filename, file)
+    ftp.close()
+
+
+Example 2 using 'curl' from your commandline 
+____________________________________________
+
+.. code-block:: python
+
+    import os
+
+    def raster_to_ftp(file_path, filename):
+        log.info(file_path)
+        ftp_login = "ftp://{}:{}@ftpdata.lizard.net/".format(LIZARD_USERNAME, LIZARD_PASSWORD)
+        curl_command = "curl --ssl -T {} {}".format(file_path, ftp_login)
+        os.system(curl_command)
+        os.remove(file_path)
+        log.info('files sent to ftp')
+
+    filenames = ["d1e25b6b-d777-4c90-a067-45645ed40da7_2018-02-12T122056Z.geotiff", 
+                "d1e25b6b-d777-4c90-a067-45645ed40da7_2018-02-13T122056Z.geotiff"]
+
+    for filename in filenames:
+        file_path = "D:/data/" + filename
+        raster_to_ftp(file_path, filename)
 
 Time Series
 ===========
@@ -378,17 +457,30 @@ You can copy paste this code in your own .ini file and zip it together with the 
 Data downloads
 ==============
 
-.. warning::
-   Text required!
-
 Rasters
 -------
 
-.. warning::
-   Text required!
+Download of rasters is possible but limited via the Lizard portal.
+The current limit is a 1024 by 1024 pixels download.
+Only possible when you are zoomed in far enough, depending on the resolution of the specific raster.
+
+Select a raster from the datalayers menu to the right.
+Zoom in to the required extent.
+Click the export button, and click on the Rasters tab in the Export Data window.
+Select the required projection and cel size.
+Click on Start Export.
+When raster export is done, a download link will be supplied via the Lizard inbox.
 
 Timeseries
 -----------
 
-.. warning::
-   Text required!
+Lizard supports two types of timeseries.
+There are timeseries connected to a location, and there are timeseries in the form of rasters.
+Using the datalayers menu to the right, select your source for a timeseries.
+Select the point or points of which you want to download the timeseries.
+You can start the Export directly from the map view, or you can switch to the Graph view.
+After clicking on Export, a new window will pop-up.
+Using the timeseries (or timeseries from raster) you can select the period for which you want an export.
+If the selected point has more then one timeseries, you can select which one you want to export.
+Make your selection, and click on the Start Export button.
+When the export is finished, a download link will be supplied via the Lizard inbox.
