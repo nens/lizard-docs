@@ -29,6 +29,7 @@ Welcome to the Lizard documentation!
 
    c_datatypes
    c_dataexchange
+   c_labels
    c_apifunctional
    c_apitechnical
 
@@ -39,7 +40,6 @@ Welcome to the Lizard documentation!
 
    d_geoblocks
    d_alarms
-   d_labels
 
 .. toctree::
    :maxdepth: 2

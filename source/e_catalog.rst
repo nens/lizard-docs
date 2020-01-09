@@ -37,16 +37,46 @@ Filters
 On the left side of the Catalogue app you can find several ways of filtering the data layers you have access to.
 There are three different ways to filter, Organisation, Dataset or Observation type.
 Per filter there is a list of all possible options.
+
+.. image:: /images/e_catalog_03.png
+
 You can also use the search bar per filter to directly enter what you want to filter on.
+
+.. image:: /images/e_catalog_04.png
 
 Details
 =======
-
-Once you have selected a data layer, you will find detailed information about this data to the right.
+Once you have selected a data layer, you will find detailed information about the dataset in the panel on the right.
 Here it will show a map of the area and a visualisation of the data.
 Below the map there is a table with detailed meta information about the data layer.
+If you want to use the dataset in your Portal or if you want to use it for data science purposes you can either choose to open it in the Portal or the API. 
 
-To check if you have indeed the correct data layer, you can use the 'Open in Portal' or 'Open in API' buttons.
+.. image:: /images/e_catalog_05.png
+
+Exporting
+=========
+Select the raster you would like to export. Click on the Export button in the panel on the right. 
+
+.. image:: /images/e_catalog_02.png
+
+The Export Selection window will pop up. 
+Follow the steps: 
+- Choose a preferred projection of the output GeoTIFF 
+- Choose the pixel size (resolution) of the output GeoTIFF 
+- Choose a preferred tile size. 
+
+You can export 3 tiles at a time. 
+Click on Download selected cells. A task will be started in the background.
+Once your GeoTIFF's are ready you will receive a notification in the Export dropdown menu in the green bar.
+
+.. image:: /images/e_catalog_06.png
+
+Lizard WMS Service for rasters
+==============================
+When you filtered on "Dataset" a Lizard WMS GetCapabilities link appears in the list of meta data of the raster.
+You can use this link to visualize the raster in external applications such as QGIS or ESRI applications.
+
+.. image:: /images/e_catalog_01.png
 
 Basket
 ======
@@ -58,3 +88,5 @@ After making the selection click the 'Add to basket' button in the lower right c
 At the top right corner of the Catalogue you will see that the Basket button now shows the number of selected data layers.
 Opening the basket gives an overview of all selected layers, and a button to 'Open all data in Lizard'.
 This will open a new window for Lizard, with all the selected data layers opened.
+
+.. image:: /images/e_catalog_07.png

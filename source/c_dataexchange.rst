@@ -184,7 +184,7 @@ Select both the organisation you want to upload and the asset type the time seri
 The csv should not contain a header.
 
 .. csv-table:: Example with headers
-    :header: timestamp, unit id / name, value, asset id
+    :header: timestamp, unit id/name, value, asset id
     
     2015-01-01T00:00:00Z, GWmMSL, 248.0, your_own_code_1
     2015-01-01T01:00:00Z, GWmBGS, 248.0, your_own_code_1
@@ -194,9 +194,9 @@ The csv should not contain a header.
 The columns should contain:
 
 * **timestamp:** a timestamp in iso8601 format.
-* **unit id / name:** This is both the name of the observation type name and this will become the timeseries name.
+* **unit id/name:** This is both the name of the observation type name and this will become the timeseries name.
 * **value:** value as either a float or integer number.
-* **asset id:** either an asset uuid or an organisation-code (an identifier for an asset, unique for your organisation). In case the assets have been added with a code under category [columns].
+* **asset id:** either an asset uuid or a supplier_code (an identifier for an asset, unique for your organisation).In case the assets have been added with a code under category [columns].
 
 Since a csv should not contain a header, your csv should look like this:
 
@@ -210,7 +210,7 @@ Since a csv should not contain a header, your csv should look like this:
 Authentication
 --------------
 
-SFTP users are authenticated with a username / password.
+SFTP users are authenticated with a username/password.
 
 Supported data formats
 ----------------------
@@ -309,20 +309,11 @@ Every 10 minutes a file is downloaded from LMW.
 Error handling
 ++++++++++++++++++
 
-When a file is in the **wrong format**, **authorisation fails** and / or **value type is not valid**:
+When a file is in the **wrong format**, **authorisation fails** and/or **value type is not valid**:
 
     * File is moved to ‘rejected’ directory of supplier
     * An error is logged
     * A message is sent to the Inbox of the supplier
-
-SUF-HYD
-+++++++++
-
-SUF-HYD files can be imported manually, by uploading a file to https://demo.lizard.net/import/
-
-We currently do not support GWSW-Hyd yet.
-
-The description of SUF-HYD files can be found here: https://www.riool.net/documents/20182/557556/suf-hyd-gegevens%20stelsel-1996-2003.pdf/512c2708-0594-4227-998e-f9c51bec6a50 
 
 API
 ------------
@@ -454,6 +445,15 @@ This example .ini creates (a) new nested asset(s) from each record of the shapef
 
 You can copy paste this code in your own .ini file and zip it together with the shapefile.
 
+SUF-HYD
++++++++++
+
+SUF-HYD files can be imported manually, by uploading a file to https://demo.lizard.net/import/
+
+We currently do not support GWSW-Hyd yet.
+
+The description of SUF-HYD files can be found here: https://www.riool.net/documents/20182/557556/suf-hyd-gegevens%20stelsel-1996-2003.pdf/512c2708-0594-4227-998e-f9c51bec6a50 
+
 Data downloads
 ==============
 
@@ -461,7 +461,7 @@ Rasters
 -------
 
 Download of rasters is possible but limited via the Lizard portal.
-The current limit is a 1024 by 1024 pixels download.
+The current limit is a 1 milion by 1 milion (10^9) pixels download.
 Only possible when you are zoomed in far enough, depending on the resolution of the specific raster.
 
 Select a raster from the datalayers menu to the right.

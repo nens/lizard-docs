@@ -14,9 +14,9 @@ This access should be used for, but not limited to:
 * malfunctions reports
 * query, problem and defect reporting 
 * requests for general technical support
-* submission of enhancement/ feature requests 
+* submission of enhancement/feature requests 
 
-All incidents relating to the Lizard software with the exception of enhancement/ feature requests are recorded and followed up at no additional cost. 
+All incidents relating to the Lizard software with the exception of enhancement/feature requests are recorded and followed up at no additional cost. 
 
 ==================
 Priority incidents
@@ -29,14 +29,14 @@ Each level is based on an urgency.
 The initiative for determining urgency lies primarily with the applicant.
 The levels are:
 
-* **Prio 1 (high):** Lizard functionality is completely unavailable or inaccessible. The situation requires immediate attention. The work and/ or management processes are hindered or the Client's importance is large with no workaround possible
-* **Prio 2 (medium):** The work and/ or control processes are hindered or the Client's importance is large, but with a workaround is possible
-* **Prio 3 (low):** Not urgent. Lizard is impaired, a single function is impacted but key business processes are not interrupted.The problem causes minimal operational or business impact, a general technical question or enhancement request
+* **Prio 1 (high):** Lizard functionality is completely unavailable or inaccessible. The situation requires immediate attention. The work and/or management processes are hindered or the Client's importance is large with no workaround possible.
+* **Prio 2 (medium):** The work and/or control processes are hindered or the Client's importance is large, but with a workaround is possible.
+* **Prio 3 (low):** Not urgent. Lizard is impaired, a single function is impacted but key business processes are not interrupted. The problem causes minimal operational or business impact, a general technical question or enhancement request.
 
 ================
 Feature requests
 ================
-Beyond the scope are enhancement/ feature requests or questions about the use of Lizard in the organisation,
+Beyond the scope are enhancement/feature requests or questions about the use of Lizard in the organisation,
 for which the customer can purchase an additional service.
 For more info the customer can contact the local Lizard consultant or email to info@nelen-schuurmans.nl.
 

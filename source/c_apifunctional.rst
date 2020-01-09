@@ -2,7 +2,7 @@
 API functional documentation
 ==============================
 
-You can acces the Lizard API via “www.{your_organisation}.lizard.net/api/”.
+You can acces the Lizard API via “{your_organisation}.lizard.net/api/v3/”.
 
 .. image:: /images/c_apifunctional_01.jpg
 

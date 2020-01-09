@@ -5,6 +5,77 @@ Datatypes
 Lizard can store & accelerate three types of data: vectors, rasters and time series.
 These data types are a digital representation of the physical environment.
 
+Rasters
+=======
+
+Introduction
+------------
+
+Rasters in Lizard represent continuous information about the physical environment across an area.
+Rasters can be static or temporal. Examples of static data are digital elevation models and land cover maps.
+Temporal raster datasets, or raster series, consist of a series of rasters for a certain time interval.
+Examples of temporal raster datasets are radar measurements of precipitation, air quality or hydrodynamic model results such as flood depths. 
+
+.. _why_rasterstores:
+
+Why Rasterstores
+-----------------
+
+The rasterstore is a library designed for quick data retrieval. Rasters provide a simple structure for data analyis.
+
+Main functionalities:
+
+* Retrieve values for a specific location or area
+* Analyse data for a particular period or moment in time
+* Map visualization in the lizard portal
+* Exporting to a geotiff file
+* Connecting with external applications via WMS
+* Base block for on-the-fly map calculations and conversions
+* API interactions: list, create, (partial) update, retrieve and delete
+
+Raster data
+------------
+
+A rasters is a grid of cells organized into rows and columns. Each cell contains a value that represents real-world phenomena, such as water depth. The values can be continuous (e.g. 28.5 degrees) or integer numbers. Integer numbers can represent classes (e.g. 1: Water, 2: Land).
+
+Rasterstore data can be static or temporal. Examples of static data are a digital elevation model and a land cover map. Temporal rasterstores consist of multiple timesteps. The data can be stored in time using an origin (e.g. 2019-01-01) and an interval (e.g. every day). Examples are weather predictions and timeseries of 3Di model results.
+
+Raster metadata
+----------------
+
+Characteristics of rasters are stored in the attributes of a rasterstore. The attributes are used to indicate the function, purpose and meaning of data. The main attributes are listed below.
+
+* Organisation
+* Name
+* Description
+* Aggregation type
+* Observation type
+* Colormap
+* Supplier name
+* Supplier code
+* Temporal behaviour
+
+Raster management
+------------------
+
+The data management interface for rasters can be used to upload, edit or remove rasters.
+ 
+
+.. image:: /images/c_datatypes_01.jpg
+
+The Data Management interface is available at: “{your_organisation}.lizard.net/management/”.
+
+.. note::
+	This functionality is available only to users with an admin, manager or supplier role.
+
+After this screen, please click on ‘Data Management’, then ‘Rasters’ and, depending on if you want to manage a new or pre-existing raster, continue.
+
+.. image:: /images/c_datatypes_02.jpg
+.. image:: /images/c_datatypes_03.jpg
+.. image:: /images/c_datatypes_04.jpg
+
+Interested in the possibilities for your organisation? Please contact Joeri Verheijden via info@lizard.net.
+
 .. _vector_data_types:
 
 Vectors
@@ -15,7 +86,7 @@ Lizard offers an extensive library of vector data models that can be used to rep
 Per data model, there are columns defined with certain data_types.
 Some are obligatory, such as the id, some are optional. Below you find the available columns per data model. 
 
-.. csv-table:: "administrative boundaries": "https://demo.lizard.net/api/v3/bridges/"
+.. csv-table:: "administrative boundaries":
     :header: column_name, data_type	
 	
 	id,	integer
@@ -58,7 +129,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	organisation_id,	integer
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "channels": "https://demo.lizard.net/api/v3/channel/"
+.. csv-table:: "channels":
     :header: column_name, data_type
 
 	id,	integer
@@ -750,76 +821,64 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 Time Series
 ===========
 
-Time series in Lizard represent in situ measurements and forecasts of processes in the physical environment.
-We also support time series with photos (.PNG, .JPG), video’s (.AVI, .WMV) or text files (.PDF, .CSV).
+Time series in Lizard represent in situ measurements and hindcasts/forecasts of processes in the physical environment.
 
-Rasters
-=======
+A time series object is always related to a location object, which is in turn optionally linked to an asset.
+By clicking an asset in the Lizard portal a list of related time series objects is fetched which can be visualised.
 
-Introduction
-------------
+The storage of time series data and the presentation in the API are focussed on high performance and retrieving relevant information out of it.
+There are multiple options for making aggregations and deriving statistics.
 
-Rasters in Lizard represent continuous information about the physical environment across an area.
-Rasters can be static or temporal. Examples of static data are digital elevation models and land cover maps.
-Temporal raster datasets, or raster series, consist of a series of rasters for a certain time interval.
-Examples of temporal raster datasets are radar measurements of precipitation, air quality or hydrodynamic model results such as flood depths. 
+Value Types
+-----------
 
-.. _why_rasterstores:
+Lizard time series can have different value types. The following value types are supported:
 
-Why Rasterstores
------------------
+Numerical|Integer and float
+Alphanumerical|Text
+Images|PNG and JPG
+Files|E.g. PDF
 
-The rasterstore is a library designed for quick data retrieval. Rasters provide a simple structure for data analyis.
+Series of numerical values and images can be visualised in the Lizard portal. Text values and Files can only be retrieved or downloaded from the API.
 
-Main functionalities:
+Aggregation options
+-------------------
 
-* Retrieve values for a specific location or area
-* Analyse data for a particular period or moment in time
-* Map visualization in the lizard portal
-* Exporting to a geotiff file
-* Connecting with external applications via WMS
-* Base block for on-the-fly map calculations and conversions
-* API interactions: list, create, (partial) update, retrieve and delete
+Time series can consist of many data points, making it difficult to handle when interested in longer periods of time.
+The Lizard API has several options to aggregate the bulk data to make it manageable for presentation in clients or for analysis purposes.
 
-Raster data
-------------
+In the API there are two parameters that can be used for aggregating time series.
+First there is the window parameter to determine what is the interval of the retrieved (aggregated) data.
+Options are:
 
-A rasters is a grid of cells organized into rows and columns. Each cell contains a value that represents real-world phenomena, such as water depth. The values can be continuous (e.g. 28.5 degrees) or integer numbers. Integer numbers can represent classes (e.g. 1: Water, 2: Land).
+- raw
+- 5min
+- hour
+- day
+- week
+- month
+- year
 
-Rasterstore data can be static or temporal. Examples of static data are a digital elevation model and a land cover map. Temporal rasterstores consist of multiple timesteps. The data can be stored in time using an origin (e.g. 2019-01-01) and an interval (e.g. every day). Examples are weather predictions and timeseries of 3Di model results.
-
-Raster metadata
+Field parameters
 ----------------
 
-Characteristics of rasters are stored in the attributes of a rasterstore. The attributes are used to indicate the function, purpose and meaning of data. The main attributes are listed below.
+By default the API returns the minimum and maximum values within the selected window (will change in v4).
+With the fields parameter other statistics can be retrieved. Multiple fields can be requested in one call.
+Options are:
 
-* Organisation
-* Name
-* Description
-* Aggregation type
-* Observation type
-* Colormap
-* Supplier name
-* Supplier code
-* Temporal behaviour
+- value (in case of window=raw)
+- min
+- min_timestamp
+- max
+- max_timestamp
+- avg
+- count
+- first
+- first_timestamp
+- last
+- last_timestamp
+- nans
+- size
+- sum
 
-Raster management
-------------------
-
-The data management interface for rasters can be used to upload, edit or remove rasters.
- 
-
-.. image:: /images/c_datatypes_01.jpg
-
-The Data Management interface is available at: “{your_organisation}.lizard.net/management/”.
-
-.. note::
-	This functionality is available only to users with an admin, manager or supplier role.
-
-After this screen, please click on ‘Data Management’, then ‘Rasters’ and, depending on if you want to manage a new or pre-existing raster, continue.
-
-.. image:: /images/c_datatypes_02.jpg
-.. image:: /images/c_datatypes_03.jpg
-.. image:: /images/c_datatypes_04.jpg
-
-Interested in the possibilities for your organisation? Please contact Joeri Verheijden via info@lizard.net.
+For more options in requesting time series see the API endpoint: https://demo.lizard.net/api/v3/timeseries/

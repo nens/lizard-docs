@@ -14,6 +14,16 @@ There are three types of authorisation options that can be applied to your data:
 
 .. image:: /images/b_usermanagement_01.png
 
+Whitelisting
+============
+
+The users of a certain portal may not be interested in a lot of the public/common datasets that are made available by others.
+An organisation can determine data of which other organisations is visible in their Lizard API and portal.
+This is configured by whitelisting the organisations that are allowed to show their data per portal.
+
+The effect is that for the same user the available data can differ between e.g. [your_organisation].lizard.net and demo.lizard.net (for which all organisations are whitelisted).
+The whitelisting mechanism is overruled if a user has specific authorisation for an organisation.
+
 =====
 Roles
 =====
@@ -32,7 +42,7 @@ User Management
 ===============
 
 Users can be managed in the User Management interface.
-This interface can be reached via the {yourorganisation}.lizard.net/management/users/ (or `demo.lizard.net/management/users<https://demo.lizard.net/management/users>`).
+This interface can be reached via the {yourorganisation}.lizard.net/management/users/ (or `demo.lizard.net/management/users <https://demo.lizard.net/management/users>`_).
 
 .. image:: /images/b_usermanagement_03.png
 
