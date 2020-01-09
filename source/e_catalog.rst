@@ -46,6 +46,7 @@ You can also use the search bar per filter to directly enter what you want to fi
 
 Details
 =======
+
 Once you have selected a data layer, you will find detailed information about the dataset in the panel on the right.
 Here it will show a map of the area and a visualisation of the data.
 Below the map there is a table with detailed meta information about the data layer.
@@ -55,18 +56,21 @@ If you want to use the dataset in your Portal or if you want to use it for data 
 
 Exporting
 =========
-Select the raster you would like to export. Click on the Export button in the panel on the right. 
+
+Select the raster you would like to export.
+Click on the Export button in the panel on the right. 
 
 .. image:: /images/e_catalog_02.png
 
 The Export Selection window will pop up. 
 Follow the steps: 
-- Choose a preferred projection of the output GeoTIFF 
-- Choose the pixel size (resolution) of the output GeoTIFF 
+- Choose a preferred projection of the output GeoTIFF.
+- Choose the pixel size (resolution) of the output GeoTIFF.
 - Choose a preferred tile size. 
 
 You can export 3 tiles at a time. 
-Click on Download selected cells. A task will be started in the background.
+Click on Download selected cells.
+A task will be started in the background.
 Once your GeoTIFF's are ready you will receive a notification in the Export dropdown menu in the green bar.
 
 .. image:: /images/e_catalog_06.png

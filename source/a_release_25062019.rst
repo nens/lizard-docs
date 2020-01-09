@@ -206,7 +206,7 @@ Lizard Management Interface (demo.lizard.net/management/)
 
 **User Management**
 
-We’ve developed a user friendly user management interface. With this interface managers can add users to their organisation and give them the right authorization to data and applications. 
+We’ve developed a user friendly user management interface. With this interface managers can add users to their organisation and give them the right authorisation to data and applications. 
 
 .. image:: /images/a_release_25062019_09.png
 
@@ -229,4 +229,4 @@ We’ve updated the Alarm Management Interface with a feature that enables you t
 
 **Fixed Bugs**
 
-* A bug that hampered users to upload temporal rasters af configuring a raster store (bug reference: PROJ-1114)
+* A bug that hampered users to upload temporal rasters or configuring a raster store (bug reference: PROJ-1114)

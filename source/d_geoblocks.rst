@@ -19,22 +19,30 @@ A combination of blocks is called a "graph".
 Open Source
 ===========
 
-The computational core of GeoBlocks is published open source under the name `dask-geomodeling <https://dask-geomodeling.readthedocs.io/en/latest/index.html>`_. Most operations are identical. Only the I/O filetype and configuration differs.
-The open source library can be used to build on-the-fly models on your own PC. There's a limitation in the complexity of the models that you can run locally. This is determined by your memory and processor capabilities. 
+The computational core of GeoBlocks is published open source under the name `dask-geomodeling <https://dask-geomodeling.readthedocs.io/en/latest/index.html>`_.
+Most operations are identical. Only the I/O filetype and configuration differs.
+The open source library can be used to build on-the-fly models on your own PC.
+There's a limitation in the complexity of the models that you can run locally.
+This is determined by your memory and processor capabilities. 
 
-If you want to scale up your model or increase complexity you can do publish your model and data to Lizard using the Lizard API. With the GeoBlocks engine you can scale up your models and integrate the model in your geo services using the Lizard API and Lizard WMS capabilities. 
+If you want to scale up your model or increase complexity you can do publish your model and data to Lizard using the Lizard API.
+With the GeoBlocks engine you can scale up your models and integrate the model in your geo services using the Lizard API and Lizard WMS capabilities. 
 
 
 Getting familiair with GeoBlocks 
 ================================
 
-We like helping you get more familiair with GeoBlocks. We've created a Jupyter Notebook to give you a hands-on experience with the basics of GeoBlocks. You can `download <LINK TO GITHUB PAGE FOR JUPYTER NOTEBOOK>`_ it on our Github page. Make sure to follow the right `installation procedures <https://dask-geomodeling.readthedocs.io/en/latest/installation.html>`_. 
+We like helping you get more familiair with GeoBlocks. We've created a Jupyter Notebook to give you a hands-on experience with the basics of GeoBlocks.
+You can `download <https://github.com/nens/lizardnotebooks/tree/master/Getting_familiar_with_GeoBlocks>`_ it on our Github page.
+Make sure to follow the right `installation procedures <https://dask-geomodeling.readthedocs.io/en/latest/installation.html>`_. 
+
 Any questions? We're happy to help! You can contact our servicedesk on servicedesk@nelen-schuurmans.nl
 
 How to create a GeoBlocks model/graph and view the result
 =========================================================
 
-GeoBlocks are interpreted in `JSON <https://en.wikipedia.org/wiki/JSON>`_. Your graph can be edited by POSTing or PATCHing to the Lizard API. `Postman <https://www.getpostman.com/>`_ can come in handy to manage your graph. 
+GeoBlocks are interpreted in `JSON <https://en.wikipedia.org/wiki/JSON>`_. Your graph can be edited by POSTing or PATCHing to the Lizard API.
+`Postman <https://www.getpostman.com/>`_ can come in handy to manage your graph. 
 API filtering is supported and documented in the API raster endpoint: `<https://demo.lizard.net/api/v3/rasters/>`_
 
 Raster output
@@ -42,7 +50,8 @@ Raster output
 
 If your GeoBlock output is a raster. Your GeoBlocks results can be requested via the `Catalogue <demo.lizard.net/catalogue>`_ `Raster API endpoint <demo.lizard.net/api/v3/rasters/>`_ and can be request via the Lizard WMS service.
 If you want to find your graph in the Lizard API it's easiest to use the Catalogue.
-- Search for your raster in the catalogue 
+
+- Search for your raster in the catalogue.
 - Open the raster in the API using the Open in API button. 
 - Follow the link mentioned in the source_url attribute. 
 

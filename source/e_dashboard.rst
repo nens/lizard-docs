@@ -16,7 +16,7 @@ Make sure to login via the |loginbutton| in the upper right corner.
 
 .. |loginbutton| image:: /images/e_dashboard_02.png
 
-No Lizard Dashboards yet? Contact us via info@lizard.net to learn more about the possibitlies of Lizard Dashboards for your organisation.
+No Lizard Dashboards yet? Contact us via info@lizard.net to learn more about the possibilities of Lizard Dashboards for your organisation.
 For now you can use the Demo Dashboard to explore the possibilities yourselve. 
 
 The Demo Dashboard can be reached via: 

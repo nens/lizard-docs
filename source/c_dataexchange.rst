@@ -41,7 +41,7 @@ Or choose an existing raster to edit.
 
 #. Choose the organisation you’re supplying data for. 
 #. Choose the organisations you want to share this dataset with. 
-#. Choose the preferred authorization type (read more).
+#. Choose the preferred authorisation type (read more).
 #. Give the dataset a name.
 #. Describe your dataset. Make sure to name the source and describe the analysis that resulted in this dataset. Users can read this description in the Lizard Catalog.
 #. Choose how your data should be aggregated. This functionality is only needed when you want to use the Region Analysis mode in Lizard Portal or Lizard API. 
@@ -113,6 +113,7 @@ Using the Lizard FTP
 
 The examples below elaborate on how to supply raster data to the Lizard FTP and how to manage your data flow to Lizard.
 Because data uploads depend on the system configuration of the data provider, we provide a code example to make a tool for automatic uploads.
+
 * You can do this using the python FTPlib package (example 1).
 * You can also use 'curl' from your commandline (example 2).
 
@@ -461,7 +462,7 @@ Rasters
 -------
 
 Download of rasters is possible but limited via the Lizard portal.
-The current limit is a 1 milion by 1 milion (10^9) pixels download.
+The current limit is a 1 million by 1 million pixels download.
 Only possible when you are zoomed in far enough, depending on the resolution of the specific raster.
 
 Select a raster from the datalayers menu to the right.
@@ -476,6 +477,7 @@ Timeseries
 
 Lizard supports two types of timeseries.
 There are timeseries connected to a location, and there are timeseries in the form of rasters.
+
 Using the datalayers menu to the right, select your source for a timeseries.
 Select the point or points of which you want to download the timeseries.
 You can start the Export directly from the map view, or you can switch to the Graph view.

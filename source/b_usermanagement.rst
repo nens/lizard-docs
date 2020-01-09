@@ -30,15 +30,15 @@ Roles
 
 We have 4 roles and 3 different types of privileges. 
 
-1. A **user**, who can only *read* data
-2. A **supplier**, who can *read* data and change (*'write'*) his or her own data
-3. An **administator**, who can *read* data and change (*'write'*) all organisation's data. 
-4. A **manager**, who can *manage* other roles in the organisation. A manager can not read or write data by default. This role should be appointed separately. 
+* A **user**, who can only *read* data
+* A **supplier**, who can *read* data and change (*'write'*) his or her own data
+* An **administator**, who can *read* data and change (*'write'*) all organisation's data. 
+* A **manager**, who can *manage* other roles in the organisation. A manager can not read or write data by default. This role should be appointed separately. 
 
 .. image:: /images/b_usermanagement_02.png
 
 ===============	
-User Management
+User management
 ===============
 
 Users can be managed in the User Management interface.
@@ -51,7 +51,7 @@ This interface can be reached via the {yourorganisation}.lizard.net/management/u
     Haven’t got a “manager” role but you would like to add the User Management interface?
     Please contact the application manager within your organisation or our support office (servicedesk@nelen-schuurmans.nl)
 	
-Manage Existing users
+Manage existing users
 =====================
 
 The User Management interface gives you an overview of all users that have roles for your organisation.

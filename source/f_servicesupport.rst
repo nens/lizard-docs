@@ -29,7 +29,7 @@ Each level is based on an urgency.
 The initiative for determining urgency lies primarily with the applicant.
 The levels are:
 
-* **Prio 1 (high):** Lizard functionality is completely unavailable or inaccessible. The situation requires immediate attention. The work and/or management processes are hindered or the Client's importance is large with no workaround possible.
+* **Prio 1 (high):** Lizard functionality is completely unavailable or inaccessible. The situation requires immediate attention. The work and/or management processes are hindered or the importance to the Client is large with no workaround possible.
 * **Prio 2 (medium):** The work and/or control processes are hindered or the Client's importance is large, but with a workaround is possible.
 * **Prio 3 (low):** Not urgent. Lizard is impaired, a single function is impacted but key business processes are not interrupted. The problem causes minimal operational or business impact, a general technical question or enhancement request.
 
