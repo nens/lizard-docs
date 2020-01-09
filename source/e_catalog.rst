@@ -55,6 +55,7 @@ If you want to use the dataset in your Portal or if you want to use it for data 
 
 Exporting
 =========
+
 Select the raster you would like to export. Click on the Export button in the panel on the right. 
 
 .. image:: /images/e_catalog_02.png
