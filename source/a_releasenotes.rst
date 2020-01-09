@@ -8,7 +8,8 @@
 Latest Release Notes
 ====================
 
-We’re happy to announce the newest release of Lizard Portal, Lizard Backend and Lizard Catalogue. If you have questions about this release or if you’re interested in features please contact us via info@lizard.net  
+We’re happy to announce the newest release of Lizard Portal, Lizard Backend and Lizard Catalogue.
+If you have questions about this release or if you’re interested in features please contact us via info@lizard.net  
 
 Frontend
 ========
@@ -26,7 +27,10 @@ Lizard Client
 Catalogue
 ---------
 
-The Lizard Catalogue offers insight in the data layers that are available for your organisation. There is an extensive search option to make the layers easily accesible. Every data layer will show available metadata. From the Catalogue you have the option of opening the data layers via the API or via the Lizard portal.
+The Lizard Catalogue offers insight in the data layers that are available for your organisation.
+There is an extensive search option to make the layers easily accesible.
+Every data layer will show available metadata.
+From the Catalogue you have the option of opening the data layers via the API or via the Lizard portal.
 
 The Catalogue can be reached via this url: https://demo.lizard.net/catalogue/
 
