@@ -13,7 +13,6 @@ Welcome to the Lizard documentation!
    a_lizard
    a_quickstart
    a_releasenotes
-   a_release_25062019
 
 .. toctree::
    :maxdepth: 2
@@ -57,11 +56,3 @@ Welcome to the Lizard documentation!
    :name: Service and Support
 
    f_servicesupport
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Tutorials
-   :name: Tutorials
-
-   g_tutorials
-   g_tutorial_1
