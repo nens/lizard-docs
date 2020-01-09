@@ -38,7 +38,7 @@ We have 4 roles and 3 different types of privileges.
 .. image:: /images/b_usermanagement_02.png
 
 ===============	
-User Management
+User management
 ===============
 
 Users can be managed in the User Management interface.
