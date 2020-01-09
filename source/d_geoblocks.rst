@@ -42,7 +42,8 @@ Raster output
 
 If your GeoBlock output is a raster. Your GeoBlocks results can be requested via the `Catalogue <demo.lizard.net/catalogue>`_ `Raster API endpoint <demo.lizard.net/api/v3/rasters/>`_ and can be request via the Lizard WMS service.
 If you want to find your graph in the Lizard API it's easiest to use the Catalogue.
-- Search for your raster in the catalogue 
+
+- Search for your raster in the catalogue.
 - Open the raster in the API using the Open in API button. 
 - Follow the link mentioned in the source_url attribute. 
 
