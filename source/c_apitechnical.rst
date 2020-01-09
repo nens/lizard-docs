@@ -4,15 +4,16 @@ API technical documentation
 
 This page goes into the technical documentation of our API. 
 
-The Lizard REST API is used to interact with Lizard data and objects. The API enables to collect, export and manage data. With the API, objects and data can be listed, created, (partially) updated and retrieved. Objects and data have different endpoints, to allow specific interactions. 
+The Lizard REST API is used to interact with Lizard data and objects.
+The API enables to collect, export and manage data.
+With the API, objects and data can be listed, created, (partially) updated and retrieved.
+Objects and data have different endpoints, to allow specific interactions. 
 
 The endpoints are browseable through the API root view:
 
 - API V3 https://demo.lizard.net/api/v3/
 
 - API V4 https://demo.lizard.net/api/v4/ 
-
-
  
 Resources are addressable via an URL and can be interacted with via HTTP verbs. The
 most commonly used and supported verbs are: 
@@ -34,7 +35,6 @@ token.
 Authenticating to the REST API outside of a browser is done by sending
 ``username`` and ``password`` HTTP header fields with *every* request.
 
-
 **Example request**:
 
 .. sourcecode:: http
@@ -46,7 +46,7 @@ Authenticating to the REST API outside of a browser is done by sending
 
 For all endpoints, users have to be ``admin`` in the organisation that owns the
 data to create or update resources.
-See :doc:`users` for more information about roles and permissions.
+See :doc:`b_usermanagement` for more information about roles and permissions.
 
 Supported data formats
 ======================
@@ -74,15 +74,12 @@ endpoints are described.
 Query parameters
 ----------------
 
-
 The API supports the following common query parameters on :http:method:`GET` list requests:
 
 .. http:get:: /<endpoint>/?page=(int:offset)&page_size=(int:size)
 
    :query page: offset number; default is 0.
    :query page_size: limit number of entries returned; default is 10.
-
-
    
 Response fields
 ---------------
@@ -96,7 +93,6 @@ All list responses share the following fields.
 
 These fields are not specifically mentioned in the response description of each endpoint.
 
-
 .. _search_endpoint:
 
 Search
@@ -105,7 +101,6 @@ Search
 This section describes how the search endpoint can be used.
 
 .. _search_base_parameters:
-
 
 **Example requests**::
 
@@ -136,37 +131,24 @@ Timeseries
 
 This section describes timeseries-related endpoints.
 
-
 .. _timeseries_endpoint:
-
-
-
 
 .. _timeseries_base_parameters:
 
-
     **Example request:**
-
-
 
         GET  https://demo.lizard.net/api/v3/timeseries/f1f20885-b09b-40fa-a717-1bfd4dffa60e/
 		
-		
 	**Example response:**
 	    	
-		.. image:: /images/api5.JPG
-
-	
+		.. image:: /images/c_apitechnical_01.jpg
 
 Locations
 ==========
 
 This section describes location-related endpoints.
 
-
 .. _locations_endpoint:
-
-
 
     **Example request:**
 
@@ -174,6 +156,4 @@ This section describes location-related endpoints.
 		
 	**Example response:**
 	    	
-		.. image:: /images/api6.JPG
-
-    
+		.. image:: /images/c_apitechnical_02.jpg
