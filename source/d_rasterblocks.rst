@@ -9,11 +9,11 @@ RasterBlocks are the GeoBlocks that work with rasterdata. RasterBlocks operate o
 Creating a new RasterBlock
 ==========================
 
-The first step of creating a new raster GeoBlock is making a new Lizard Rasterstore which will contain your graph.
-This can be done on the `Lizard management page <https://demo.lizard.net/management/#/>` or by performing a POST on the API endpoint https://demo.lizard.net/api/v4/rasters/ 
+The first step of creating a new raster GeoBlock is making a new Lizard raster instance which will contain your graph.
+This can be done on the `Lizard management page <https://demo.lizard.net/management/#/>`_ or by performing a POST on the API endpoint https://demo.lizard.net/api/v4/rasters/ 
 
 The second step is PATCHing the ``source`` element of your new raster. This element will contain the graph of your GeoBlock.
-To PATCH your raster provide a valid JSON object for its source element, and perform a patch on https://demo.lizard.net/api/v4/rasters/{uuid of the new raster}
+To PATCH your raster provide a valid JSON object for its source element, and perform a patch on https://demo.lizard.net/api/v4/rasters/{uuid of the new raster}/
 
 An example of a valid PATCH object is provided below. 
 
@@ -46,7 +46,7 @@ Raster output
 -------------
 
 After you PATCH your raster, the changes immediately take effect. 
-To view your GeoBlocks results you can access the raster via the `Catalogue <demo.lizard.net/catalogue>`_, `Raster API endpoint <demo.lizard.net/api/v4/rasters/>`_ or the Lizard WMS service.
+To view your GeoBlocks results you can access the raster via the `Catalogue <https://demo.lizard.net/catalogue>`_, `Raster API endpoint <https://demo.lizard.net/api/v4/rasters/>`_ or the Lizard WMS service.
 
 If you want to find the visualisation of your graph in the Lizard API it's easiest to use the Catalogue.
 
