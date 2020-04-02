@@ -90,3 +90,11 @@ html_theme = 'sphinx_rtd_theme'
 
 def setup(app):
     app.add_stylesheet('custom.css')
+
+# -- Options for Dask Geomodeling -----------------------------------------
+
+# mock imports so that we don't need all the dependencies to build the docs
+
+autodoc_mock_imports = [
+    "osgeo", "scipy", "pandas", "geopandas", "dask", "pytz", "shapely", "fiona"
+]
