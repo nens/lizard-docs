@@ -9,7 +9,7 @@ RasterBlocks are the GeoBlocks that work with rasterdata. RasterBlocks operate o
 Creating a new RasterBlock
 ==========================
 
-The first step of creating a new raster GeoBlock is making a new Lizard raster instance which will contain your graph.
+The first step of creating a new raster GeoBlock is making a new Lizard raster instance that will contain your graph.
 This can be done on the `Lizard management page <https://demo.lizard.net/management/#/>`_ or by performing a POST on the API endpoint https://demo.lizard.net/api/v4/rasters/ 
 
 The second step is PATCHing the ``source`` element of your new raster. This element will contain the graph of your GeoBlock.
