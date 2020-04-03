@@ -20,7 +20,7 @@ Once the graph has been posted it is possible to PATCH changes and alter the str
 If you want to patch changes to the graph this can be done by providing a valid JSON object for its source element,
 and perform a patch on https://demo.lizard.net/api/v3/labeltypes/{uuid of the new labeltype}/.
 
-Currently it is not possible to visualize the resultant labels in the Lizard portals.
+Currently it is not possible to visualize the resulting labels in the Lizard portals.
 Individual labels can be computed with a GET request on the labeltype endpoint. For example with:
 https://demo.lizard.net/api/v3/labeltypes/{label type uuid}/compute/?geom_intersects=POINT(4.46648 51.92938).
 It is also possible to pre-compute larger amounts of labels. By doing so it becomes possible to quickly request multiple
