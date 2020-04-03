@@ -38,7 +38,7 @@ On these pages explanation is provided on how to create a new GeoBlock in Lizard
 
 Graphs
 ------
-A graph is a combination of multiple single Blocks which work together to create a "view" of one or more datasources in Lizard.
+A graph is a combination of multiple single Blocks that work together to create a "view" of one or more datasources in Lizard.
 A valid graph always contains one or more source Blocks and one endpoint, which is the final product of your GeoBlock. 
 Once you've configured a graph , a visualization of the graph is automatically generated. This visualization can be requested using the API request below: 
 
