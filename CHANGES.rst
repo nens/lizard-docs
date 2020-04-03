@@ -1,7 +1,17 @@
 Changelog for the Lizard documentation
 ======================================
 
-0.7 (unreleased)
+0.8 (unreleased)
+----------------
+
+- Added Geometryblocks
+
+- Added autodocs for geoblocks and Geometryblocks
+
+- Added information about WMS services
+
+
+0.7 (2020-01-09)
 ----------------
 
 - Complete change of docs structure.

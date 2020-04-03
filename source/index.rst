@@ -28,6 +28,7 @@ Welcome to the Lizard documentation!
 
    c_datatypes
    c_dataexchange
+   c_lizardwms
    c_labels
    c_apifunctional
    c_apitechnical
@@ -38,6 +39,8 @@ Welcome to the Lizard documentation!
    :name: Analysis
 
    d_geoblocks
+   d_rasterblocks
+   d_geometryblocks
    d_alarms
 
 .. toctree::
