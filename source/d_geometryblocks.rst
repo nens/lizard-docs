@@ -32,7 +32,7 @@ https://demo.lizard.net/api/v3/labeltypes/{label type uuid}/compute/?boundary_id
 In the pre-compute you have to provide some sort of geographic bounding area.
 This can be through a predefined boundary in Lizard (like in the example) or a geometric bounding box.
 The start parameter applies a temporal filter to the included features.
-Features which are valid at the start date are computed, features which were built after or removed before the start-date are not computed. 
+Only features that are valid at the start date are computed; features that were created after or removed before the start-date are not included in the computation. 
 
 Label endpoint
 --------------
