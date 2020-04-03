@@ -3,13 +3,11 @@
 ==========================
 Geometry and Series Blocks
 ==========================
-GeometryBlocks are the GeoBlocks which assimilate and operate rasterdata into vector data. They can sample rasters and perform geometric operations like intersections and geometric differences.
-The output from a Geometry GeoBlock is a label value. This means that the operation should always end with a classification of one of the feature columns into a label value. 
-The result of the GeometryBlock can be requested through the API. Such request returns the label for a geometric feature along with a defined list of intermediate results.
+They can sample rasters and perform geometric operations like intersections and geometric differences.
 
 Creating a new GeometryBlock
 ----------------------------
-To create a new GeometryBlock you have to POST the graph directly to the labeltypes api endpoint: https://demo.lizard.net/api/v3/labeltypes/. Unlike for RasterBlocks it is not possible to define a GeometryBlock without the API.
+To create a new GeometryBlock you have to POST the graph directly to the labeltypes api endpoint: https://demo.lizard.net/api/v3/labeltypes/.
 Once the graph has been posted it is possible to PATCH changes and alter the structure of the graph. If you want to patch changes to the graph this can be done by providing a valid JSON object for its source element, and perform a patch on https://demo.lizard.net/api/v3/labeltypes/{uuid of the new labeltype}/.
 
 Currently it is not possible to visualize the resultant labels in the Lizard portals. Individual labels can be computed with a GET request on the labeltype endpoint. For example with:
