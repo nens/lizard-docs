@@ -4,7 +4,7 @@
 Geometry and Series Blocks
 ==========================
 
-GeometryBlocks are the GeoBlocks which assimilate and operate rasterdata into vector data.
+GeometryBlocks are the GeoBlocks that modify geometries or combine rasters with geometries.
 They can sample rasters and perform geometric operations like intersections and geometric differences.
 The output from a Geometry GeoBlock is a label value.
 This means that the operation should always end with a classification of one of the feature columns into a label value. 
