@@ -5,7 +5,7 @@ GeoBlocks
 Digital geo services rely on high resolution big data coming from multiple real-time sources. 
 We developed GeoBlocks to make it easier to process and analyse (real-time) that data to create a digital geo service. 
 
-GeoBlocks is a GIS modelling toolbox that allows you to make on-the-fly analysis using raster & vector data stored in Lizard. 
+GeoBlocks is a GIS modelling toolbox that allows you to make on-the-fly analyses using raster & vector data stored in Lizard. 
 Geoblocks consists of numerous classes which describe geographical operations. An individual class is called a Block and a combination of multiple Blocks is called a Graph.
 
 There are two basetype Blocks, :ref:`RasterBlocksAnchor` and :ref:`GeometryBlocksAnchor`. 
