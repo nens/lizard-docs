@@ -59,5 +59,5 @@ If you want to find the visualisation of your graph in the Lizard API it's easie
 Operations
 ==========
 
-Wolf, work your magic
-
+.. automodule:: dask_geomodeling.core.graphs
+   :members: Block, construct, compute

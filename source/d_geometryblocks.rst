@@ -23,8 +23,8 @@ and perform a patch on https://demo.lizard.net/api/v3/labeltypes/{uuid of the ne
 Currently it is not possible to visualize the resulting labels in the Lizard portals.
 Individual labels can be computed with a GET request on the labeltype endpoint. For example with:
 https://demo.lizard.net/api/v3/labeltypes/{label type uuid}/compute/?geom_intersects=POINT(4.46648 51.92938).
-It is also possible to pre-compute larger amounts of labels. By doing so it becomes possible to quickly request multiple
-labels or label statistics. 
+It is also possible to pre-compute larger amounts of labels.
+By doing so it becomes possible to quickly request multiple labels or label statistics.
 
 To pre-compute labels for a specific region you have to send a POST request on the labeltype endpoint, for example:
 https://demo.lizard.net/api/v3/labeltypes/{label type uuid}/compute/?boundary_id=95246&start=2018-10-01T01:00:00Z&tile_size=500&tile_projection=EPSG:28992&mode=centroid.
@@ -38,9 +38,6 @@ Label endpoint
 --------------
 
 Labels that have been pre-computed are stored in the labels endpoint of the API: https://demo.lizard.net/api/v3/labels/.
-By using this endpoint it is possible to request both individual labels and label statistics. Through a GET request it is possible to determine statistics of the entire labeltype or specific regions: https://demo.lizard.net/api/v3/labels/counts/?label_type__uuid={label type uuid}. 
-
-Labels which have been pre-computed are stored in the labels endpoint of the API: https://demo.lizard.net/api/v3/labels/.
 By using this endpoint it is possible to request both individual labels and label statistics. Through a GET request it is possible to determine statistics of the entire labeltype or specific regions: https://demo.lizard.net/api/v3/labels/counts/?label_type__uuid={label type uuid}. 
 
 Examples of a graph
@@ -150,34 +147,10 @@ Operations
    :exclude-members: get_sources_and_requests, process
 
 
-:mod:`dask_geomodeling.geometry.parallelize`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: dask_geomodeling.geometry.parallelize
-   :members:
-   :exclude-members: get_sources_and_requests, process
-
-
 :mod:`dask_geomodeling.geometry.set_operations`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. automodule:: dask_geomodeling.geometry.set_operations
-   :members:
-   :exclude-members: get_sources_and_requests, process
-
-
-:mod:`dask_geomodeling.geometry.sources`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: dask_geomodeling.geometry.sources
-   :members:
-   :exclude-members: get_sources_and_requests, process
-
-
-:mod:`dask_geomodeling.geometry.sinks`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: dask_geomodeling.geometry.sinks
    :members:
    :exclude-members: get_sources_and_requests, process
 
