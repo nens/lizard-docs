@@ -150,14 +150,6 @@ Operations
    :exclude-members: get_sources_and_requests, process
 
 
-:mod:`dask_geomodeling.geometry.merge`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. automodule:: dask_geomodeling.geometry.merge
-   :members:
-   :exclude-members: get_sources_and_requests, process
-
-
 :mod:`dask_geomodeling.geometry.parallelize`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

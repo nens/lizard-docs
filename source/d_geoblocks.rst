@@ -83,3 +83,9 @@ You can `download <https://github.com/nens/lizardnotebooks/tree/master/Getting_f
 Make sure to follow the right `installation procedures <https://dask-geomodeling.readthedocs.io/en/latest/installation.html>`_. 
 
 Any questions? We're happy to help! You can contact our servicedesk on servicedesk@nelen-schuurmans.nl
+
+API specification
+-----------------
+
+.. automodule:: dask_geomodeling.core.graphs
+   :members: Block, construct, compute

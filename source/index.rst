@@ -28,6 +28,7 @@ Welcome to the Lizard documentation!
 
    c_datatypes
    c_dataexchange
+   c_lizardwms
    c_labels
    c_apifunctional
    c_apitechnical
