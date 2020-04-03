@@ -9,7 +9,7 @@ They can sample rasters and perform geometric operations like intersections and 
 The output from a Geometry GeoBlock is a label value.
 This means that the operation should always end with a classification of one of the feature columns into a label value. 
 The result of the GeometryBlock can be requested through the API.
-Such request returns the label for a geometric feature along with a defined list of intermediate results.
+Such request returns the label for a geometric feature along with a predefined list of intermediate results.
 
 Creating a new GeometryBlock
 ----------------------------
