@@ -37,7 +37,7 @@ Only features that are valid at the start date are computed; features that were 
 Label endpoint
 --------------
 
-Labels which have been pre-computed are stored in the labels endpoint of the API: https://demo.lizard.net/api/v3/labels/.
+Labels that have been pre-computed are stored in the labels endpoint of the API: https://demo.lizard.net/api/v3/labels/.
 By using this endpoint it is possible to request both individual labels and label statistics. Through a GET request it is possible to determine statistics of the entire labeltype or specific regions: https://demo.lizard.net/api/v3/labels/counts/?label_type__uuid={label type uuid}. 
 
 Labels which have been pre-computed are stored in the labels endpoint of the API: https://demo.lizard.net/api/v3/labels/.
