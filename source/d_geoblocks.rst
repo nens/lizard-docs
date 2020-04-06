@@ -85,7 +85,281 @@ Make sure to follow the right `installation procedures <https://dask-geomodeling
 Any questions? We're happy to help! You can contact our servicedesk on servicedesk@nelen-schuurmans.nl
 
 API specification
------------------
+=================
 
 .. automodule:: dask_geomodeling.core.graphs
    :members: Block, construct, compute
+
+.. _RasterBlocksAnchor:
+
+RasterBlocks
+============
+
+RasterBlocks are the GeoBlocks that work with rasterdata. RasterBlocks operate on `Lizard Rasterdata <https://docs.lizard.net/c_datatypes.html#rasters>`_.
+
+Creating a new RasterBlock
+--------------------------
+
+The first step of creating a new raster GeoBlock is making a new Lizard raster instance that will contain your graph.
+This can be done on the `Lizard management page <https://demo.lizard.net/management/#/>`_ or by performing a POST on the API endpoint https://demo.lizard.net/api/v4/rasters/ 
+
+The second step is PATCHing the ``source`` element of your new raster. This element will contain the graph of your GeoBlock.
+To PATCH your raster provide a valid JSON object for its source element, and perform a patch on https://demo.lizard.net/api/v4/rasters/{uuid of the new raster}/
+
+An example of a valid PATCH object is provided below. 
+
+.. code-block:: json
+
+    {
+      "source": {
+        "name": "difference",
+        "graph": {
+            "AHN3": [
+              "lizard_nxt.blocks.LizardRasterSource",
+              "a60ad336-c95b-4fb6-b852-96fc352ee808"
+            ],
+            "AHN2": [
+              "lizard_nxt.blocks.LizardRasterSource",
+              "65912f43-0b70-425a-b471-1883378578eb"
+            ],
+            "difference": [
+              "geoblocks.raster.elemwise.Subtract",
+              "AHN3",
+              "AHN2"
+            ]
+        }
+      }
+    }
+
+PATCHing a raster can be done multiple times, until you are happy with the final output. 
+
+Raster output
+-------------
+
+After you PATCH your raster, the changes immediately take effect. 
+To view your GeoBlocks results you can access the raster via the `Catalogue <https://demo.lizard.net/catalogue>`_, `Raster API endpoint <https://demo.lizard.net/api/v4/rasters/>`_ or the Lizard WMS service.
+
+If you want to find the visualisation of your graph in the Lizard API it's easiest to use the Catalogue.
+
+- Search for your raster in the catalogue.
+- Open the raster in the API using the Open in API button. 
+- Follow the link mentioned in the source_url attribute. 
+
+.. image:: /images/d_geoblocks_01.png
+
+Operations
+----------
+
+.. automodule:: dask_geomodeling.raster.base
+   :members: RasterBlock
+
+
+:mod:`dask_geomodeling.raster.combine`
++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.raster.combine
+   :members:
+   :exclude-members: get_sources_and_requests, process, get_stores
+
+
+:mod:`dask_geomodeling.raster.elemwise`
++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.raster.elemwise
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+
+:mod:`dask_geomodeling.raster.misc`
++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.raster.misc
+   :members:
+   :exclude-members: get_sources_and_requests, process, extent, geometry
+
+
+:mod:`dask_geomodeling.raster.sources`
++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.raster.sources
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+
+:mod:`dask_geomodeling.raster.spatial`
++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.raster.spatial
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+
+:mod:`dask_geomodeling.raster.temporal`
++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.raster.temporal
+   :members:
+   :exclude-members: TemporalSum, get_sources_and_requests, process
+
+.. _GeometryBlocksAnchor:
+
+Geometry and Series Blocks
+==========================
+
+GeometryBlocks are the GeoBlocks that modify geometries or combine rasters with geometries.
+They can sample rasters and perform geometric operations like intersections and geometric differences.
+The output from a Geometry GeoBlock is a label value.
+This means that the operation should always end with a classification of one of the feature columns into a label value. 
+The result of the GeometryBlock can be requested through the API.
+Such request returns the label for a geometric feature along with a predefined list of intermediate results.
+
+Creating a new GeometryBlock
+----------------------------
+
+To create a new GeometryBlock you have to POST the graph directly to the labeltypes api endpoint: https://demo.lizard.net/api/v3/labeltypes/.
+Unlike for RasterBlocks it is not possible to define a GeometryBlock without the API.
+Once the graph has been posted it is possible to PATCH changes and alter the structure of the graph.
+If you want to patch changes to the graph this can be done by providing a valid JSON object for its source element,
+and perform a patch on https://demo.lizard.net/api/v3/labeltypes/{uuid of the new labeltype}/.
+
+Currently it is not possible to visualize the resulting labels in the Lizard portals.
+Individual labels can be computed with a GET request on the labeltype endpoint. For example with:
+https://demo.lizard.net/api/v3/labeltypes/{label type uuid}/compute/?geom_intersects=POINT(4.46648 51.92938).
+It is also possible to pre-compute larger amounts of labels.
+By doing so it becomes possible to quickly request multiple labels or label statistics.
+
+To pre-compute labels for a specific region you have to send a POST request on the labeltype endpoint, for example:
+https://demo.lizard.net/api/v3/labeltypes/{label type uuid}/compute/?boundary_id=95246&start=2018-10-01T01:00:00Z&tile_size=500&tile_projection=EPSG:28992&mode=centroid.
+
+In the pre-compute you have to provide some sort of geographic bounding area.
+This can be through a predefined boundary in Lizard (like in the example) or a geometric bounding box.
+The start parameter applies a temporal filter to the included features.
+Only features that are valid at the start date are computed; features that were created after or removed before the start-date are not included in the computation. 
+
+Label endpoint
+--------------
+
+Labels that have been pre-computed are stored in the labels endpoint of the API: https://demo.lizard.net/api/v3/labels/.
+By using this endpoint it is possible to request both individual labels and label statistics. Through a GET request it is possible to determine statistics of the entire labeltype or specific regions: https://demo.lizard.net/api/v3/labels/counts/?label_type__uuid={label type uuid}. 
+
+Examples of a graph
+-------------------
+
+Geometry example: classify build year of buildings.
+
+.. code-block:: json
+
+    {
+        "source": {
+            "graph": {
+                "buildings": [
+                    "geoblocks.geometry.sources.GeoDjangoSource",
+                    "hydra_core",
+                    "building",
+                    {
+                        "id": "object_id",
+                        "build_year": "building_build_year"
+                    },
+                    "geometry",
+                    "start",
+                    "end"
+                ],
+                "buildyear": [
+                    "geoblocks.geometry.base.GetSeriesBlock",
+                    "buildings",
+                    "building_build_year"
+                ],
+                "label": [
+                    "geoblocks.geometry.field_operations.Classify",
+                    "buildyear",
+                    [
+                        1900,
+                        1940,
+                        1970,
+                        1990
+                    ],
+                    [
+                        "A",
+                        "B",
+                        "C",
+                        "D",
+                        "E"
+                    ]
+                ],
+                "result": [
+                    "geoblocks.geometry.base.SetSeriesBlock",
+                    "buildings",
+                    "label_value",
+                    "label"
+                ]
+            },
+            "name": "result"
+        }
+    }
+
+Geometry output
+---------------
+
+Geometry outputs are stored in :doc:`labels<c_labels>`.
+Labels are always linked to your Vectors stored in the Vector Server, for instance flood risk for parcels or buildings.
+Labels are grouped in Labeltypes. The graph can be found in the source attribute of the labeltype.
+
+.. image:: /images/d_geoblocks_02.png 
+
+Individual labels (e.g. label linked to one building or parcel) can be found on the `labels endpoint <demo.lizard.net/api/v3/labels>`_.  
+Labels can be computed on the fly using the compute endpoint or a-sync using the Lizard Task Server. 
+
+Operations
+----------
+
+.. automodule:: dask_geomodeling.geometry.base
+   :members: GeometryBlock, SeriesBlock, GetSeriesBlock, SetSeriesBlock
+   :exclude-members: get_sources_and_requests, process
+
+
+:mod:`dask_geomodeling.geometry.aggregate`
+++++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.geometry.aggregate
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+
+:mod:`dask_geomodeling.geometry.constructive`
++++++++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.geometry.constructive
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+
+:mod:`dask_geomodeling.geometry.field_operations`
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.geometry.field_operations
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+
+:mod:`dask_geomodeling.geometry.geom_operations`
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.geometry.geom_operations
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+
+:mod:`dask_geomodeling.geometry.set_operations`
++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.geometry.set_operations
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+
+:mod:`dask_geomodeling.geometry.text`
++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.geometry.text
+   :members:
+   :exclude-members: get_sources_and_requests, process
