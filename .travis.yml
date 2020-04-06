@@ -1,7 +1,7 @@
 language: ubuntu:18.04
 script:
   - docker-compose build
-  - docker-compose up
+  - docker-compose run builder make html
   - zip -r lizard-docs.zip build/
 # Deploy uploads the zipfile to https://artifacts.lizard.net, but
 # only when building master. It then turns up on https://docs.lizard.net
