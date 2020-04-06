@@ -39,8 +39,6 @@ Welcome to the Lizard documentation!
    :name: Analysis
 
    d_geoblocks
-   d_rasterblocks
-   d_geometryblocks
    d_alarms
 
 .. toctree::
