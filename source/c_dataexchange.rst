@@ -216,8 +216,6 @@ SFTP users are authenticated with a username/password.
 Supported data formats
 ----------------------
 
-Via SFTP the following formats are supported:
-
 Via SFTP we support the CSV format.
 
 Every supplier has its own directory on the SFTP.
