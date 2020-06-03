@@ -218,8 +218,7 @@ Supported data formats
 
 Via SFTP the following formats are supported:
 
-    * CSV
-    * PiXML
+Via SFTP we support the CSV format.
 
 Every supplier has its own directory on the SFTP.
 It can be accessed by logging in with the Lizard credentials.
@@ -239,7 +238,7 @@ Use CSV for supplying timeseries data with numerical or textual values according
 
     <timestamp>,<timeseries_supplier_code or uuid>,<value>[\n]
     <timestamp>,<timeseries_supplier_code or uuid>,<value>[\n]
-    <timestamp>,<timeseries_supplier_code or uuid>,<value>[\n]      
+    <timestamp>,<timeseries_supplier_code or uuid>,<value>[\n]
     …
 
 Where:
@@ -255,60 +254,8 @@ CSV requirements:
     * Every supplied file should contain new measurements. It is not allowed to add measurements to a previously supplied file.
     * Use the empirical CSV format where the field separator is a comma (,) and the decimal separator a period (.).
 
-PiXML
-+++++++++
-
-Pi-XML is a file exchange format used by Delft-FEWS. A description can be found `here <https://publicwiki.deltares.nl/display/FEWSDOC/Delft-Fews+Published+Interface+timeseries+Format+%28PI%29+Import>`_.
-
-Images
-++++++++++++
-
-The following formats are supported for image timeseries:
-
-    * PNG
-    * JPEG
-
-Image filenames should have the following format:
-
-.. code-block:: none
-
-    <timeseries_supplier_code>_<timestamp>.png
-    <timeseries_supplier_code>_<timestamp>.jpg
-
-Where:
-
-    * **timestamp:** time in UTC in ISO 8601 format. Colons (:) should be excluded as they are not allowed in filenames. An example timestamp is: 2012-10-26T092235Z. Supplying timestamps in different timezone is only allowed when the UTC offset is added to the timestamp according to ISO 8601. For example: 2012-10-26T072235+02.
-    * **timeseries_supplier_code:** supplier_code attribute of timeseries as registered by administrator/supplier.
-
-Video and multimedia
-++++++++++++++++++++++
-
-The following multimedia file extensions are supported for multimedia timeseries:
-
-    * PDF
-    * AVI
-    * WMV
-
-Multimedia filenames should have the following format:
-
-.. code-block:: none
-
-    <timeseries_supplier_code>_<timestamp>.pdf
-    <timeseries_supplier_code>_<timestamp>.avi
-    <timeseries_supplier_code>_<timestamp>.wmv
-
-Where:
-
-* **timestamp:** time in UTC in ISO 8601 format or as a unix timestamp in ms since epoch. Colons (:) should be excluded as they are not allowed in filenames. An example timestamp is: 2012-10-26T092235Z. Supplying timestamps in different timezone is only allowed when the UTC offset is added to the timestamp according to ISO 8601. For example: 2012-10-26T072235+02.
-* **timeseries_supplier_code:** supplier_code attribute of timeseries as registered by administrator/supplier.
-
-LMW data
-+++++++++++
-
-Every 10 minutes a file is downloaded from LMW.
-
 Error handling
-++++++++++++++++++
++++++++++++++++
 
 When a file is in the **wrong format**, **authorisation fails** and/or **value type is not valid**:
 
