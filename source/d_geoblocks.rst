@@ -150,12 +150,31 @@ If you want to show the result of your raster Geoblock it is easiest to use the 
 Operations
 ----------
 
+Raster data sources
++++++++++++++++++++++
+
+.. autoclass:: lizard_nxt.blocks.LizardRasterSource
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+.. note:: If a UUID of a raster (instead of a rastersource) is given, it will
+  automatically be replaced by the Geoblock graph of that raster.
+
+
 :mod:`dask_geomodeling.raster.combine`
 +++++++++++++++++++++++++++++++++++++++
 
 .. automodule:: dask_geomodeling.raster.combine
    :members:
    :exclude-members: get_sources_and_requests, process, get_stores
+
+.. autoclass:: lizard_nxt.blocks.LizardRasterGroup
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+.. autoclass:: lizard_nxt.blocks.LizardRasterId
+   :members:
+   :exclude-members: get_sources_and_requests, process
 
 
 :mod:`dask_geomodeling.raster.elemwise`
@@ -179,7 +198,7 @@ Operations
 
 .. automodule:: dask_geomodeling.raster.spatial
    :members:
-   :exclude-members: get_sources_and_requests, process
+   :exclude-members: get_sources_and_requests, process, projection, geometry, geo_transform
 
 
 :mod:`dask_geomodeling.raster.temporal`
@@ -295,6 +314,28 @@ Labels can be computed on the fly using the compute endpoint or a-sync using the
 
 Operations
 ----------
+
+Geometry database sources
++++++++++++++++++++++++++
+
+The following Geoblocks are current geometry source of geometry-type geoblocks.
+The geometry data comes from internal Lizard tables.
+
+
+.. autoclass:: django_geoblocks.blocks.sources.GeoDjangoSource
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+.. note:: ``app_label`` should be "hydra_core" and ``model_name``
+  should be one of "building", "administrativeboundary", "parcel", "pumpeddrainagearea", "fixeddrainagelevelarea", "leveezone", "pumpstation", "groundwaterstation", "measuringstation", "polder"
+
+.. autoclass:: django_geoblocks.blocks.sources.AddDjangoFields
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+.. note:: ``app_label`` should be "lizard_nxt" and ``model_name``
+  should be one of "labelparameter", "labeltype", "rasterlayer"
+
 
 :mod:`dask_geomodeling.geometry.aggregate`
 ++++++++++++++++++++++++++++++++++++++++++
