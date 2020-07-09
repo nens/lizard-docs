@@ -10,6 +10,8 @@ Changelog for the Lizard documentation
 
 - Added information about WMS services
 
+- Update geoblocks documentation after lizard release 5.2
+
 
 0.7 (2020-01-09)
 ----------------

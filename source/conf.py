@@ -96,5 +96,9 @@ def setup(app):
 # mock imports so that we don't need all the dependencies to build the docs
 
 autodoc_mock_imports = [
-    "osgeo", "scipy", "pandas", "geopandas", "dask", "pytz", "shapely", "fiona"
+    "osgeo", "scipy", "pandas", "geopandas", "dask", "pytz", "shapely", "fiona", "pyproj",
 ]
+
+# this to be able to autodoc the lizard_nxt and django_geoblocks classes
+import sys, os
+sys.path.append('/code/python_src')
