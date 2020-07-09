@@ -34,7 +34,7 @@ import sphinx_rtd_theme
 # ones.
 extensions = ['sphinx.ext.todo', 'sphinx.ext.autodoc',
               'sphinx.ext.imgmath','sphinx.ext.imgmath', 'sphinxcontrib.httpdomain',
-              'sphinx.ext.napoleon','sphinxcontrib.restbuilder']
+              'sphinx.ext.napoleon']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
