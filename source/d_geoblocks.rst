@@ -161,7 +161,7 @@ Raster data sources
   automatically be replaced by the Geoblock graph of that raster.
 
 
-:mod:`dask_geomodeling.raster.combine`
+RasterBlocks that combine rasters
 +++++++++++++++++++++++++++++++++++++++
 
 .. automodule:: dask_geomodeling.raster.combine
@@ -177,23 +177,16 @@ Raster data sources
    :exclude-members: get_sources_and_requests, process
 
 
-:mod:`dask_geomodeling.raster.elemwise`
-+++++++++++++++++++++++++++++++++++++++
+Elementwise RasterBlocks
++++++++++++++++++++++++++++++++++++++++++
 
 .. automodule:: dask_geomodeling.raster.elemwise
    :members:
    :exclude-members: get_sources_and_requests, process
 
 
-:mod:`dask_geomodeling.raster.misc`
-+++++++++++++++++++++++++++++++++++++++
 
-.. automodule:: dask_geomodeling.raster.misc
-   :members:
-   :exclude-members: get_sources_and_requests, process, extent, geometry
-
-
-:mod:`dask_geomodeling.raster.spatial`
+Spatial RasterBlocks
 +++++++++++++++++++++++++++++++++++++++
 
 .. automodule:: dask_geomodeling.raster.spatial
@@ -201,12 +194,22 @@ Raster data sources
    :exclude-members: get_sources_and_requests, process, projection, geometry, geo_transform
 
 
-:mod:`dask_geomodeling.raster.temporal`
+Temporal RasterBlocks
 +++++++++++++++++++++++++++++++++++++++
 
 .. automodule:: dask_geomodeling.raster.temporal
    :members:
    :exclude-members: TemporalSum, get_sources_and_requests, process
+
+
+Miscelleneous RasterBlocks
++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.raster.misc
+   :members:
+   :exclude-members: get_sources_and_requests, process, extent, geometry
+
+
 
 .. _GeometryBlocksAnchor:
 
@@ -315,7 +318,7 @@ Labels can be computed on the fly using the compute endpoint or a-sync using the
 Operations
 ----------
 
-Geometry database sources
+Source GeometryBlocks
 +++++++++++++++++++++++++
 
 The following Geoblocks are current geometry source of geometry-type geoblocks.
@@ -337,47 +340,15 @@ The geometry data comes from internal Lizard tables.
   should be one of "labelparameter", "labeltype", "rasterlayer"
 
 
-:mod:`dask_geomodeling.geometry.aggregate`
-++++++++++++++++++++++++++++++++++++++++++
+Aggregate GeometryBlocks
+++++++++++++++++++++++++++
 
 .. automodule:: dask_geomodeling.geometry.aggregate
    :members:
    :exclude-members: get_sources_and_requests, process
 
 
-:mod:`dask_geomodeling.geometry.constructive`
-+++++++++++++++++++++++++++++++++++++++++++++
-
-.. automodule:: dask_geomodeling.geometry.constructive
-   :members:
-   :exclude-members: get_sources_and_requests, process
-
-
-:mod:`dask_geomodeling.geometry.field_operations`
-+++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. automodule:: dask_geomodeling.geometry.field_operations
-   :members:
-   :exclude-members: get_sources_and_requests, process
-
-
-:mod:`dask_geomodeling.geometry.geom_operations`
-++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. automodule:: dask_geomodeling.geometry.geom_operations
-   :members:
-   :exclude-members: get_sources_and_requests, process
-
-
-:mod:`dask_geomodeling.geometry.merge`
-+++++++++++++++++++++++++++++++++++++++++++++++
-
-.. automodule:: dask_geomodeling.geometry.merge
-   :members:
-   :exclude-members: get_sources_and_requests, process
-
-
-:mod:`dask_geomodeling.geometry.set_operations`
+GeometryBlocks for set operations
 +++++++++++++++++++++++++++++++++++++++++++++++
 
 .. automodule:: dask_geomodeling.geometry.set_operations
@@ -385,9 +356,34 @@ The geometry data comes from internal Lizard tables.
    :exclude-members: get_sources_and_requests, process
 
 
-:mod:`dask_geomodeling.geometry.text`
-+++++++++++++++++++++++++++++++++++++
+Constructive for constructive operations
++++++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.geometry.constructive
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+
+GeometryBlocks that operate on non-geometry fields
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.geometry.field_operations
+   :members:
+   :exclude-members: get_sources_and_requests, process
 
 .. automodule:: dask_geomodeling.geometry.text
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+
+Miscelleneous GeometryBlocks
++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. automodule:: dask_geomodeling.geometry.geom_operations
+   :members:
+   :exclude-members: get_sources_and_requests, process
+
+
+.. automodule:: dask_geomodeling.geometry.merge
    :members:
    :exclude-members: get_sources_and_requests, process
