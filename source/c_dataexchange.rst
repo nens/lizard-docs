@@ -326,7 +326,7 @@ Assets can be uploaded to Lizard with shapefiles via the import form at <base-ur
 These shapefiles contain information about assets or assets together with their nested assets (e.g. GroundwaterStations and their Filters).
 
 A shapefile can be uploaded as a zipped archive.
-The zipfile should contain at least a .dbf, .shp, .sh xand .ini file.
+The zipfile should contain at least a .dbf, .shp, .sh and a .ini file.
 In case of nested assets, these should be found in the same shapefile record (row) as their assets.
 The following section provides an example of an .ini file for groundwater stations.
 
