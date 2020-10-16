@@ -61,6 +61,10 @@ You can supply your GeoTIFF’s in multiple ways:
 * Use the Lizard API 
 * Use the Lizard FTP
 
+Use of the Data Management App is fairly straightforward and is build upon our API.
+If you want to upload larger raster datasets, please make use of our FTP server.
+Questions about FTP server access can be send to servicedesk@nelen-schuurmans.nl.
+
 Using the Data Management App
 ++++++++++++++++++++++++++++++
 
@@ -117,6 +121,9 @@ Because data uploads depend on the system configuration of the data provider, we
 * You can do this using the python FTPlib package (example 1).
 * You can also use 'curl' from your commandline (example 2).
 
+When using the FTP your raster filename should contain either the RasterSource uuid or the configured 'Supplier code' in the filename.
+The user that uploads the data should also be configured as the Supplier for the RasterSource.
+
 Example 1 using python FTPlib package
 _____________________________________
 
@@ -169,6 +176,8 @@ ____________________________________________
     for filename in filenames:
         file_path = "D:/data/" + filename
         raster_to_ftp(file_path, filename)
+
+
 
 Time Series
 ===========
@@ -264,7 +273,7 @@ When a file is in the **wrong format**, **authorisation fails** and/or **value t
 API
 ------------
 
-Timeseries data can be supplied with a POST request to the timeseries data endpoint in the API (`<baseurl>`/api/v3/timeseries/{uuid}/data/).
+Timeseries data can be supplied with a POST request to the timeseries data endpoint in the API (`<baseurl>`/api/v4/timeseries/{uuid}/data/).
 Interaction with the API can be done from e.g. Postman or Python.
 User credentials should be included in the header and the data in the payload of the request. 
 
