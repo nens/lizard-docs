@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Lizard'
-copyright = '2019, Nelen & Schuurmans'
+copyright = '2020, Nelen & Schuurmans'
 author = 'Nelen & Schuurmans'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -89,7 +89,7 @@ todo_include_todos = True
 html_theme = 'sphinx_rtd_theme'
 
 def setup(app):
-    app.add_stylesheet('custom.css')
+    app.add_css_file('custom.css')
 
 # -- Options for Dask Geomodeling -----------------------------------------
 
