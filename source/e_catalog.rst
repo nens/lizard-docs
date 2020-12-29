@@ -80,10 +80,10 @@ Lizard WMS Service for rasters
 When you filtered on "Dataset" a Lizard WMS GetCapabilities link appears in the list of meta data of the raster.
 You can use this link to visualize the raster in external applications such as QGIS or ESRI applications.
 
+.. image:: /images/e_catalog_01.png
+
 For more infomation, please consult the :doc:`WMS Services<c_lizardwms>`.
 
-
-.. image:: /images/e_catalog_01.png
 
 Basket
 ======
