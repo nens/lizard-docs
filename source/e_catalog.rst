@@ -82,6 +82,9 @@ You can use this link to visualize the raster in external applications such as Q
 
 .. image:: /images/e_catalog_01.png
 
+For more infomation, please consult the :doc:`WMS Services<c_lizardwms>`.
+
+
 Basket
 ======
 
