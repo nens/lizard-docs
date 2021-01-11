@@ -27,7 +27,7 @@ Main functionalities:
 
 * Retrieve values for a specific location or area
 * Analyse data for a particular period or moment in time
-* Map visualization in the lizard portal
+* Map visualisation in the lizard portal
 * Exporting to a geotiff file
 * Connecting with external applications via WMS
 * Base block for on-the-fly map calculations and conversions

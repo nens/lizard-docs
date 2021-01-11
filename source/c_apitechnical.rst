@@ -72,7 +72,7 @@ will however not be reflected anymore in the migrated API Key.
 Although it is not necessary, we do recommend changing usage of username / password
 in automated scripts into newly generated API keys, because it is more secure.
 
-Authorization
+Authorisation
 =============
 
 For all endpoints, users have to be ``admin`` in the organisation that owns the
