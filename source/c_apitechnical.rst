@@ -11,9 +11,9 @@ Objects and data have different endpoints, to allow specific interactions.
 
 The endpoints are browseable through the API root view:
 
-- API V3 https://demo.lizard.net/api/v3/
+- API V3 https://demo.lizard.net/api/v3/ (stable)
 
-- API V4 https://demo.lizard.net/api/v4/ 
+- API V4 https://demo.lizard.net/api/v4/ (experimental)
  
 Resources are addressable via an URL and can be interacted with via HTTP verbs. The
 most commonly used and supported verbs are: 
@@ -25,24 +25,55 @@ most commonly used and supported verbs are:
 
 We also have HEAD and OPTIONS. 
 
+.. _APIAuthenticationAnchor:
+
 Authentication
 ==============
 
-When you login via your browser, you get a session-based authentication token that is valid
-for 24 hours. All subsequent requests to the API are authenticated with that
-token.
+When you login via your browser, you receive a session cookie that is valid
+for 2 weeks. All subsequent requests to the API are authenticated with that
+session cookie.
 
-Authenticating to the REST API outside of a browser is done by sending
-``username`` and ``password`` HTTP header fields with *every* request.
+Authenticating to the REST API outside of a browser is done by attaching a
+Personal API Key to *every* request. You can attach a Personal API Key to 
+a request by using HTTP Basic Authentication with password = {your api key}.
+The username needs to be fixed to ``__key__`` (with double underscores on both
+sides of the word "key").
 
-**Example request**:
+Most applications or script languages support HTTP Basic Authentication. For
+example using Python requests:
 
-.. sourcecode:: http
+.. code-block:: python
+   import requests
 
-    GET https://demo.lizard.net/api/v3/locations HTTP/1.1
-    Host: demo.lizard.net
-    username: janedoe
-    password: janespw
+   my_secret_key = "abcdefg.01234567890"  # Example
+   requests.get("demo.lizard.net/api/v3/locations", auth=("__key__", my_secret_key))
+
+Generate a Personal API key at https://demo.lizard.net/management/.
+
+It is considered best practise to use one Personal API Key per application, so that
+you can selectively revoke keys in case they are compromised.
+
+Legacy: username / password
+---------------------------
+
+Lizard supports authenticating by attaching ``username`` and ``password`` to
+every request, either directly in Username and Password headers, or using 
+HTTP Basic Authentication.
+
+This form of authentication will be deprecated on June 1st, 2021. New
+applications should use API Keys (see above).
+
+In the period until June 1st, 2021, correct username / password combinations
+will be migrated automatically to a Personal API Key, in such a way that
+you may keep using the same username / password combination. Password changes
+will however not be reflected anymore in the migrated API Key.
+
+Although it is not necessary, we do recommend changing usage of username / password
+in automated scripts into newly generated API keys, because it is more secure.
+
+Authorization
+=============
 
 For all endpoints, users have to be ``admin`` in the organisation that owns the
 data to create or update resources.

@@ -9,29 +9,35 @@ invitation can be sent by someone with a 'manager' role in your organisation.
 If you do not know whom to contact, please contact our support office
 (servicedesk@nelen-schuurmans.nl).
 
-Users that have used Lizard before can click the "Log in" button in the top
-right of Lizard.
+Users that already have a Lizard account can click the "Log in"
+button in the top right.
 
-After clicking "Log in" or after following the invitation link, you will be
-redirected to the domain "auth.lizard.net/login?...".
-Please ensure that this domain is indeed displayed in your browser's address
-bar and that your browser displays the 'lock' symbol indicating that
-the connection is secure (https).
+After clicking "Log in" or after following the invitation link, you will arrive
+at the login screen.
 
-Here you have four different options to sign in:
+.. note::
+    Please ensure that "https://auth.lizard.net/login?..." domain is indeed displayed
+    in your browser's address bar and that your browser displays the lock
+    symbol indicating that the connection is secure.
 
-1. Through a company account,
-2. Through a social account,
-3. Through username and password,
-4. By creating a new account (Sign up).
+At the login screen you have four different options to sign in:
+
+1. through a company account,
+2. trough a social account,
+3. with username and password,
+4. by creating a new account (Sign up).
 
 First-time users may choose any of these options. If your company is listed as
-one of the option, that is the preferred choice.
+one of the possible componies to sign in with, that is the preferred choice.
 
-Existing users should use the same method that they used when signing in for 
-the first time. If you are unsure on which route to take, try inserting your
-username and password (method 3).
-Nelen & Schuurmans users should log in via Google using their company email.
+.. note::
+    Do you want to add your company to the list? Please contact our
+    support office (servicedesk@nelen-schuurmans.nl) for the options.
+
+Existing users should use the same method as they used when signing in for 
+the first time. If your Lizard username/password existed before Januari 2021,
+use method 3. Nelen & Schuurmans employees should log in via Google using
+their company email.
 
 .. _OrganisationsAnchor:
 
