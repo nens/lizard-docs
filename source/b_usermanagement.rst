@@ -1,3 +1,38 @@
+.. _AuthenticationAnchor:
+
+==========
+Signing in
+==========
+
+First-time users require an invitation to create a Lizard account. An
+invitation can be sent by someone with a 'manager' role in your organisation.
+If you do not know whom to contact, please contact our support office
+(servicedesk@nelen-schuurmans.nl).
+
+Users that have used Lizard before can click the "Log in" button in the top
+right of Lizard.
+
+After clicking "Log in" or after following the invitation link, you will be
+redirected to the domain "auth.lizard.net/login?...".
+Please ensure that this domain is indeed displayed in your browser's address
+bar and that your browser displays the 'lock' symbol indicating that
+the connection is secure (https).
+
+Here you have four different options to sign in:
+
+1. Through a company account,
+2. Through a social account,
+3. Through username and password,
+4. By creating a new account (Sign up).
+
+First-time users may choose any of these options. If your company is listed as
+one of the option, that is the preferred choice.
+
+Existing users should use the same method that they used when signing in for 
+the first time. If you are unsure on which route to take, try inserting your
+username and password (method 3).
+Nelen & Schuurmans users should log in via Google using their company email.
+
 .. _OrganisationsAnchor:
 
 =============
@@ -66,7 +101,9 @@ You can add a new user by clicking the “NEW USER” in the upper right corner.
 This will lead you to the screen to add a new user.
 By default the new user is granted a “User” role. 
 
-Don’t forget to click ‘Save’! When saved, an activation email will be send to the new user (sometimes this activation mail will end up in the spam folder). 
+Don’t forget to click ‘Save’! When saved, an invitation email will be send to the new user.
+This user can follow the invitation link to create an account and receive the new roles.
+Sometimes this invitation mail will end up in the spam folder. 
 
 .. tip::
 	Forgot which Roles exist and what they grant a user? Click the “Need Help” button to find this overview:  
