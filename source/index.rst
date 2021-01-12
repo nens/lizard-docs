@@ -32,6 +32,7 @@ Welcome to the Lizard documentation!
    c_labels
    c_apifunctional
    c_apitechnical
+   c_apitutorials
 
 .. toctree::
    :maxdepth: 2
