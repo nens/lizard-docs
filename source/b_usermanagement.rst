@@ -107,8 +107,9 @@ Adding a new user
 You can add a new user by clicking the “NEW USER” in the upper right corner.
 This will lead you to the screen to add a new user.
 By default the new user is granted a “User” role. 
+The email address you supply is important: the invitated user is required to sign in using an account with that email address.
 
-Don’t forget to click ‘Save’! When saved, an invitation email will be sent to the new user.
+Don not forget to click ‘Save’! When saved, an invitation email will be sent to the new user.
 This user can follow the invitation link to (if necessary) create an account and receive the new roles.
 Sometimes this invitation mail will end up in the spam folder. 
 
