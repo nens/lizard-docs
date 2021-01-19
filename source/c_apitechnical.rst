@@ -30,9 +30,8 @@ We also have HEAD and OPTIONS.
 Authentication
 ==============
 
-When you login via your browser, you receive a session cookie that is valid
-for 2 weeks. All subsequent requests to the API are authenticated with that
-session cookie.
+When you login via your browser, you receive a session cookie. All subsequent
+requests to the API are authenticated with that session cookie.
 
 Authenticating to the REST API outside of a browser is done by attaching a
 Personal API Key to *every* request. You can attach a Personal API Key to 
@@ -40,37 +39,55 @@ a request by using HTTP Basic Authentication with password = {your api key}.
 The username needs to be fixed to ``__key__`` (with double underscores on both
 sides of the word "key").
 
-Most applications or script languages support HTTP Basic Authentication. For
-example using Python requests:
-
-.. code-block:: python
-   import requests
-
-   my_secret_key = "abcdefg.01234567890"  # Example
-   requests.get("demo.lizard.net/api/v3/locations", auth=("__key__", my_secret_key))
+Almost all applications or script languages support HTTP Basic Authentication.
+See below for some examples.
 
 Generate a Personal API key at https://demo.lizard.net/management/.
-
-It is considered best practise to use one Personal API Key per application, so that
-you can selectively revoke keys in case they are compromised.
+It is considered best practise to generate one Personal API Key per application
+or script, so that you can selectively revoke keys in case they are compromised.
 
 Legacy: username / password
 ---------------------------
 
 Lizard supports authenticating by attaching ``username`` and ``password`` to
 every request, either directly in Username and Password headers, or using 
-HTTP Basic Authentication.
+HTTP Basic Authentication. This legacy authentication does generate a session.
 
-This form of authentication will be deprecated on June 1st, 2021. New
-applications should use API Keys (see above).
+.. warning::
+	This form of authentication will be deprecated on *June 1st, 2021*. Ensure
+	that your applications and scripts use new API Keys after that date.
 
 In the period until June 1st, 2021, correct username / password combinations
 will be migrated automatically to a Personal API Key, in such a way that
 you may keep using the same username / password combination. Password changes
 will however not be reflected anymore in the migrated API Key.
 
-Although it is not necessary, we do recommend changing usage of username / password
-in automated scripts into newly generated API keys, because it is more secure.
+Authentication examples
+-----------------------
+
+Python requests
+~~~~~~~~~~~~~~~
+
+With Python, we recommend using the ``requests`` package. Supply your API Key
+in the ``auth`` parameter, as follows:
+
+.. code-block:: python
+   import requests
+
+   url = "demo.lizard.net/api/v3/locations"
+   my_secret_key = "abcdefg.01234567890"  # Example
+   
+   response = requests.get(url, auth=("__key__", my_secret_key))
+
+
+Postman
+~~~~~~~
+
+In Postman you can set up HTTP Basic Authentication as shown in the image below.
+Be sure to choose "Basic Auth" as Type, and not "API Key".
+
+.. image:: /images/c_apitechnical_02.jpg
+
 
 Authorisation
 =============

@@ -4,19 +4,19 @@
 Signing in
 ==========
 
-First-time users require an invitation to create a Lizard account. An
+Users that already have a Lizard account can click the "Log in"
+button on the top right of the screen.
+
+First-time users first require an invitation to create a Lizard account. An
 invitation can be sent by someone with a 'manager' role in your organisation.
 If you do not know whom to contact, please contact our support office
 (servicedesk@nelen-schuurmans.nl).
-
-Users that already have a Lizard account can click the "Log in"
-button in the top right.
 
 After clicking "Log in" or after following the invitation link, you will arrive
 at the login screen.
 
 .. note::
-    Please ensure that "https://auth.lizard.net/login?..." domain is indeed displayed
+    Please ensure that "https://auth.lizard.net/" domain is indeed displayed
     in your browser's address bar and that your browser displays the lock
     symbol indicating that the connection is secure.
 
@@ -30,9 +30,10 @@ At the login screen you have four different options to sign in:
 First-time users may choose any of these options. If your company is listed as
 one of the possible componies to sign in with, that is the preferred choice.
 
-.. note::
-    Do you want to add your company to the list? Please contact our
-    support office (servicedesk@nelen-schuurmans.nl) for the options.
+.. tip::
+    Do you want to add your company to the list to centralize the user accounts
+    of your organisation? Please contact our support office
+    (servicedesk@nelen-schuurmans.nl) for the options.
 
 Existing users should use the same method as they used when signing in for 
 the first time. If your Lizard username/password existed before Januari 2021,
@@ -107,8 +108,8 @@ You can add a new user by clicking the “NEW USER” in the upper right corner.
 This will lead you to the screen to add a new user.
 By default the new user is granted a “User” role. 
 
-Don’t forget to click ‘Save’! When saved, an invitation email will be send to the new user.
-This user can follow the invitation link to create an account and receive the new roles.
+Don’t forget to click ‘Save’! When saved, an invitation email will be sent to the new user.
+This user can follow the invitation link to (if necessary) create an account and receive the new roles.
 Sometimes this invitation mail will end up in the spam folder. 
 
 .. tip::
@@ -116,5 +117,5 @@ Sometimes this invitation mail will end up in the spam folder.
 .. image:: /images/b_usermanagement_05.png
 
 .. tip::
-    In order to keep your users organised, we advise you to choose the username based on the users’ email address.
+    To keep your users organised, we advise you to choose the username based on the users’ email address.
     Use everything before the @email.com, or the format {firstname.lastname}.
