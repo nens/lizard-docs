@@ -86,7 +86,7 @@ Postman
 In Postman you can set up HTTP Basic Authentication as shown in the image below.
 Be sure to choose "Basic Auth" as Type, and not "API Key".
 
-.. image:: /images/c_apitechnical_02.jpg
+.. image:: /images/c_apitechnical_03.jpg
 
 
 Authorisation
