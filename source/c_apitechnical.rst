@@ -30,8 +30,8 @@ We also have HEAD and OPTIONS.
 Authentication
 ==============
 
-When you login via your browser, you receive a session cookie. All subsequent
-requests to the API are authenticated with that session cookie.
+When you login via your browser, your browser receives a session cookie.
+All subsequent requests to the API are authenticated with that session cookie.
 
 Authenticating to the REST API outside of a browser is done by attaching a
 Personal API Key to *every* request. You can attach a Personal API Key to 
@@ -46,24 +46,8 @@ Generate a Personal API key at https://demo.lizard.net/management/.
 It is considered best practise to generate one Personal API Key per application
 or script, so that you can selectively revoke keys in case they are compromised.
 
-Legacy: username / password
----------------------------
-
-Lizard supports authenticating by attaching ``username`` and ``password`` to
-every request, either directly in Username and Password headers, or using 
-HTTP Basic Authentication. This legacy authentication does generate a session.
-
-.. warning::
-	This form of authentication will be deprecated on *June 1st, 2021*. Ensure
-	that your applications and scripts use new API Keys after that date.
-
-In the period until June 1st, 2021, correct username / password combinations
-will be migrated automatically to a Personal API Key, in such a way that
-you may keep using the same username / password combination. Password changes
-will however not be reflected anymore in the migrated API Key.
-
-Authentication examples
------------------------
+Examples
+--------
 
 Python requests
 ~~~~~~~~~~~~~~~
@@ -87,6 +71,31 @@ In Postman you can set up HTTP Basic Authentication as shown in the image below.
 Be sure to choose "Basic Auth" as Type, and not "API Key".
 
 .. image:: /images/c_apitechnical_03.jpg
+
+
+Applications: OAuth2
+--------------------
+
+Applications (such as dashboards) that use the Lizard API should authenticate
+using OAuth2. For this, you will need a registration. Contact our servicedesk to
+request one.
+
+
+Legacy: username / password
+---------------------------
+
+Lizard supports authenticating by attaching ``username`` and ``password`` to
+every request, either directly in Username and Password headers, or using 
+HTTP Basic Authentication. This legacy authentication does generate a session.
+
+.. warning::
+	This form of authentication will be deprecated on *June 1st, 2021*. Ensure
+	that your applications and scripts use new API Keys after that date.
+
+In the period until June 1st, 2021, correct username / password combinations
+will be migrated automatically to a Personal API Key, in such a way that
+you may keep using the same username / password combination. Password changes
+will however not be reflected anymore in the migrated API Key.
 
 
 Authorisation
