@@ -56,6 +56,7 @@ With Python, we recommend using the ``requests`` package. Supply your API Key
 in the ``auth`` parameter, as follows:
 
 .. code-block:: python
+
    import requests
 
    url = "demo.lizard.net/api/v3/locations"
