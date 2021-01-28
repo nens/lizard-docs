@@ -7,8 +7,8 @@ Signing in
 Users that already have a Lizard account can click the "Log in"
 button on the top right of the screen.
 
-First-time users first require an invitation to create a Lizard account. An
-invitation can be sent by someone with a 'manager' role in your organisation.
+First-time users require an invitation to create a Lizard account. Users with
+a "manager" role are able to send invitations to new users.
 If you do not know whom to contact, please contact our support office
 (servicedesk@nelen-schuurmans.nl).
 
@@ -20,7 +20,7 @@ at the login screen.
     in your browser's address bar and that your browser displays the lock
     symbol indicating that the connection is secure.
 
-At the login screen you have four different options to sign in:
+On the login page you have four different options to sign in:
 
 1. through a company account,
 2. trough a social account,
@@ -28,7 +28,7 @@ At the login screen you have four different options to sign in:
 4. by creating a new account (Sign up).
 
 First-time users may choose any of these options. If your company is listed as
-one of the possible componies to sign in with, that is the preferred choice.
+one of the possible companies to sign in with, that is the preferred choice.
 
 .. tip::
     Do you want to add your company to the list to centralize the user accounts
@@ -37,8 +37,7 @@ one of the possible componies to sign in with, that is the preferred choice.
 
 Existing users should use the same method as they used when signing in for 
 the first time. If your Lizard username/password existed before Januari 2021,
-use method 3. Nelen & Schuurmans employees should log in via Google using
-their company email.
+use method 3.
 
 .. _OrganisationsAnchor:
 
@@ -107,7 +106,9 @@ Adding a new user
 You can add a new user by clicking the “NEW USER” in the upper right corner.
 This will lead you to the screen to add a new user.
 By default the new user is granted a “User” role. 
-The email address you supply is important: the invitated user is required to sign in using an account with that email address.
+
+.. note::
+    The invitated user is required to sign in with the email address that is supplied by the manager.
 
 Don not forget to click ‘Save’! When saved, an invitation email will be sent to the new user.
 This user can follow the invitation link to (if necessary) create an account and receive the new roles.
