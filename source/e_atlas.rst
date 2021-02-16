@@ -3,4 +3,4 @@ Atlas
 =====
 
 .. warning::
-    To be filled!
+    This section will be extended in the near future. 

@@ -1,6 +1,18 @@
 Changelog for the Lizard documentation
 ======================================
 
+2021.2
+---------
+- Added new management screens
+
+- Added Cataologue timeseries
+
+- Added API tutortials
+
+- Added FAQ
+
+
+
 0.8 (unreleased)
 ----------------
 

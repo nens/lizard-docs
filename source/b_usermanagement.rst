@@ -72,6 +72,20 @@ Don’t forget to click ‘Save’! When saved, an activation email will be send
 	Forgot which Roles exist and what they grant a user? Click the “Need Help” button to find this overview:  
 .. image:: /images/b_usermanagement_05.png
 
-.. tip::
-    In order to keep your users organised, we advise you to choose the username based on the users’ email address.
-    Use everything before the @email.com, or the format {firstname.lastname}.
+
+	
+	
+	
+==================
+Personal API keys
+==================
+
+
+
+Personal API keys can be used to authenticate external applications in Lizard with basic authentication:
+
+<username>:<key>
+
+The key itself is only visible once you create the api key. They can not be looked up later.
+
+.. image:: /images/b_usermanagement_06.png
