@@ -2,6 +2,9 @@
 Catalogue
 =========
 
+.. warning::
+    This section will be extended in the coming days.
+
 The Lizard Catalogue offers insight in the data layers that are available for your organisation.
 There is an extensive search option to make the layers easily accesible.
 Every data layer will show available metadata.
@@ -82,7 +85,7 @@ You can use this link to visualize the raster in external applications such as Q
 
 .. image:: /images/e_catalog_01.png
 
-For more infomation, please consult the :doc:`WMS Services<c_lizardwms>`.
+For more infomation, please consult the :doc:`WMS Services<e_lizardwms>`.
 
 
 Basket

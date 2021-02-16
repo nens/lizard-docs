@@ -23,24 +23,29 @@ Welcome to the Lizard documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Data Management and Exchange
-   :name: Data Management and Exchange
+   :caption: Data Management
+   :name: Data Management
 
-   c_datatypes
-   c_dataexchange
-   c_lizardwms
+
+   c_general
+   c_rasters
+   c_wms
+   c_scenarios
    c_labels
-   c_apifunctional
-   c_apitechnical
 
+   
 .. toctree::
    :maxdepth: 2
-   :caption: Analysis
-   :name: Analysis
+   :caption: Data Exchange
+   :name: Data Exchange
 
-   d_geoblocks
-   d_alarms
-
+   d_datatypes
+   d_general
+   d_apifunctional
+   d_apitechnical
+   d_apitutorials
+   d_ftpimporter
+   
 .. toctree::
    :maxdepth: 2
    :caption: Visualisation
@@ -50,10 +55,21 @@ Welcome to the Lizard documentation!
    e_dashboard
    e_atlas
    e_catalog
+   e_lizardwms
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Advanced Analysis
+   :name: Advanced Analysis
+
+   f_geoblocks
+   f_alarms
+
+
 
 .. toctree::
    :maxdepth: 2
    :caption: Service and Support
    :name: Service and Support
 
-   f_servicesupport
+   g_servicesupport
