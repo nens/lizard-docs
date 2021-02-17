@@ -1,3 +1,44 @@
+.. _AuthenticationAnchor:
+
+==========
+Signing in
+==========
+
+Users that already have a Lizard account can click the "Log in"
+button on the top right of the screen.
+
+First-time users require an invitation to create a Lizard account. Users with
+a "manager" role are able to send invitations to new users.
+If you do not know whom to contact, please contact our support office
+(servicedesk@nelen-schuurmans.nl).
+
+After clicking "Log in" or after following the invitation link, you will arrive
+at the login screen.
+
+.. note::
+    Please ensure that "https://auth.lizard.net/" domain is indeed displayed
+    in your browser's address bar and that your browser displays the lock
+    symbol indicating that the connection is secure.
+
+On the login page you have four different options to sign in:
+
+1. through a company account,
+2. trough a social account,
+3. with username and password,
+4. by creating a new account (Sign up).
+
+First-time users may choose any of these options. If your company is listed as
+one of the possible companies to sign in with, that is the preferred choice.
+
+.. tip::
+    Do you want to add your company to the list to centralize the user accounts
+    of your organisation? Please contact our support office
+    (servicedesk@nelen-schuurmans.nl) for the options.
+
+Existing users should use the same method as they used when signing in for 
+the first time. If your Lizard username/password existed before Januari 2021,
+use method 3.
+
 .. _OrganisationsAnchor:
 
 =============
@@ -66,26 +107,13 @@ You can add a new user by clicking the “NEW USER” in the upper right corner.
 This will lead you to the screen to add a new user.
 By default the new user is granted a “User” role. 
 
-Don’t forget to click ‘Save’! When saved, an activation email will be send to the new user (sometimes this activation mail will end up in the spam folder). 
+.. note::
+    The invitated user is required to sign in with the email address that is supplied by the manager.
+
+Do not forget to click ‘Save’! When saved, an invitation email will be sent to the new user.
+This user can follow the invitation link to (if necessary) create an account and receive the new roles.
+Sometimes this invitation mail will end up in the spam folder. 
 
 .. tip::
 	Forgot which Roles exist and what they grant a user? Click the “Need Help” button to find this overview:  
 .. image:: /images/b_usermanagement_05.png
-
-
-	
-	
-	
-==================
-Personal API keys
-==================
-
-
-
-Personal API keys can be used to authenticate external applications in Lizard with basic authentication:
-
-<username>:<key>
-
-The key itself is only visible once you create the api key. They can not be looked up later.
-
-.. image:: /images/b_usermanagement_06.png

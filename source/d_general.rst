@@ -155,7 +155,11 @@ Since a csv should not contain a header, your csv should look like this:
 Authentication
 --------------
 
-SFTP users are authenticated with a username/password.
+New SFTP users need to generate a Personal API Key with "FTP" scope to authenticate.
+Provide your username and use the API Key as password.
+
+Users that existed before January 2021 can keep using their username and password.
+Future changes to the passwords will not be reflected in the FTP password.
 
 Supported data formats
 ----------------------

@@ -57,6 +57,6 @@ You will find the Lizard WMS GetCapabilities URL of the dataset in the metadata 
 Authorisation
 =============
 
-The Lizard WMS Service follows the authorisation protocol mentioned under :ref:`Authorisation & Authentication<OrganisationsAnchor>`.
-If layers are private you need a login and users rights to the organisation that owns the dataset.
-Use your credentials to authenticate with the Lizard WMS Service. 
+The Lizard WMS Service follows the authorisation system mentioned under :ref:`Authorisation<OrganisationsAnchor>`.
+If layers are private you need privileges in the organisation that owns the dataset.
+Use a Personal API Key to authenticate with the Lizard WMS Service, as described in :ref:`API Authentication<APIAuthenticationAnchor>`.

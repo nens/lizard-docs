@@ -17,7 +17,7 @@ Welcome to the Lizard documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Authorisation and Authentication
-   :name: User Management, Authorisation and Authentication
+   :name: Authentication, Authorisation and User Management
 
    b_usermanagement
 
