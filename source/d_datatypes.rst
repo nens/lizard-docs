@@ -1,9 +1,11 @@
+
 =========
 Datatypes
 =========
 
 Lizard can store & accelerate three types of data: vectors, rasters and time series.
 These data types are a digital representation of the physical environment.
+We also distinguish wms layers, scenarios and labels.
 
 Rasters
 =======
@@ -40,6 +42,17 @@ A rasters is a grid of cells organized into rows and columns. Each cell contains
 
 Rasterstore data can be static or temporal. Examples of static data are a digital elevation model and a land cover map. Temporal rasterstores consist of multiple timesteps. The data can be stored in time using an origin (e.g. 2019-01-01) and an interval (e.g. every day). Examples are weather predictions and timeseries of 3Di model results.
 
+Requirements 
+--------------
+
+Your raster data has to be in the format of a single band, georeferenced TIFF (geotiff), with the following requirements: 
+
+* **Geotiff should have valid projection** including transformation (EPSG code). All projections supported by proj4 are supported.
+* **Geotiff should have a NODATA value**.
+* **Geotiff should be single band**. RGB or multi-band is not supported. 
+* **Temporal raster datasets** with multiple timesteps **should be supplied with a single geotiff per timestamp**
+
+
 Raster metadata
 ----------------
 
@@ -55,28 +68,7 @@ Characteristics of rasters are stored in the attributes of a rasterstore. The at
 * Supplier code
 * Temporal behaviour
 
-Raster management
-------------------
 
-The data management interface for rasters can be used to upload, edit or remove rasters.
- 
-
-.. image:: /images/c_datatypes_01.jpg
-
-The Data Management interface is available at: “{your_organisation}.lizard.net/management/”.
-
-.. note::
-	This functionality is available only to users with an admin, manager or supplier role.
-
-After this screen, please click on ‘Data Management’, then ‘Rasters’ and, depending on if you want to manage a new or pre-existing raster, continue.
-
-.. image:: /images/c_datatypes_02.jpg
-.. image:: /images/c_datatypes_03.jpg
-.. image:: /images/c_datatypes_04.jpg
-
-Interested in the possibilities for your organisation? Please contact Joeri Verheijden via info@lizard.net.
-
-.. _vector_data_types:
 
 Vectors
 =======
@@ -882,3 +874,64 @@ Options are:
 - sum
 
 For more options in requesting time series see the API endpoint: https://demo.lizard.net/api/v3/timeseries/
+
+
+
+
+Labels
+======
+
+Labels consist of three elements that are available through our API: LabelTypes, Labels and LabelParameters.
+Labels are always linked to an organisation.
+Each element is explained below.
+
+LabelTypes
+-----------
+
+LabelTypes can be found on the LabelType-endpoint `<demo.lizard.net/api/v3/labeltypes>`_ and describe the type of Label.
+LabelTypes contain the following fields:
+
+* name: name of the LabelType
+* description: description of the LabelType
+* uuid: unique ID for the LabelType
+* organisation: organisation that owns the LabelType
+* created: date when LabelType was created
+* object_type: the type of Asset related to the LabelType
+* last_modified: date when LabelType was last updated
+* source: source of the LabelType e.g. a GeoBlock
+
+Labels
+--------
+
+The Labels related to a specific LabelType can be found on the Labels-endpoint `<demo.lizard.net/api/v3/labels>`_.
+Labels contain the follow fields:
+
+* label_value: the index value of the Label
+* object_type: the type of Asset related to the Label
+* object_id: id of the Asset
+* created: date when the label was created
+* start: start of the validity of the Label (history of the Label)
+* end: end of the validity of the Label (history of the Label)
+* extra: this field can be used to show variables related to the definition of the Label (for instance a threshold value related to the Label)
+
+LabelParameters
+-----------------
+
+The Label parameters is developed to store parameters that are used in the computation of the Label.
+LabelParameters are linked to LabelTypes and Assets and can be found on the LabelParameters-endpoint `<demo.lizard.net/api/v3/labelparameters>`_.
+LabelParameters contain the following fields:
+
+* label_type: the related LabelType
+* value: value of the parameters
+* name: name of the parameter
+* object_type: the type of Asset related to the LabelParameter
+* object_id: the ID of the Asset related to the LabelParameter
+* created: date when LabelParameter was created
+* start: start of the validity of the LabelParameter (history of the LabelParameter)
+* end: end of the validity of the LabelParameter (history of the LabelParameter)
+
+Label statistics
+------------------
+
+With the count filter on the Labels endpoint it is possible to query a histogram of all Labels of a certain LabelType or a histogram of Labels within a region (e.g. municipality).
+

@@ -110,14 +110,10 @@ By default the new user is granted a “User” role.
 .. note::
     The invitated user is required to sign in with the email address that is supplied by the manager.
 
-Don not forget to click ‘Save’! When saved, an invitation email will be sent to the new user.
+Do not forget to click ‘Save’! When saved, an invitation email will be sent to the new user.
 This user can follow the invitation link to (if necessary) create an account and receive the new roles.
 Sometimes this invitation mail will end up in the spam folder. 
 
 .. tip::
 	Forgot which Roles exist and what they grant a user? Click the “Need Help” button to find this overview:  
 .. image:: /images/b_usermanagement_05.png
-
-.. tip::
-    To keep your users organised, we advise you to choose the username based on the users’ email address.
-    Use everything before the @email.com, or the format {firstname.lastname}.
