@@ -40,12 +40,7 @@ Beyond the scope are enhancement/feature requests or questions about the use of 
 for which the customer can purchase an additional service.
 For more info the customer can contact the local Lizard consultant or email to info@nelen-schuurmans.nl.
 
-.. |date| date::
 
-.. Note::
-    This document will be revised periodically to reflect changes in the products and solutions being supported and the processes,
-    procedures and technologies being used to deliver support services.
-    The latest version of this document was created on |date|.
 	
 
 ==============================
@@ -53,6 +48,9 @@ Frequently Asked Questions
 ==============================
 	
 This section will be extended in the near future. 
+
+.. |date| date::
+
 
 .. Note::
     This document will be revised periodically to reflect changes in the products and solutions being supported and the processes,
