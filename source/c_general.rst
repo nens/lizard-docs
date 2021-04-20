@@ -12,6 +12,3 @@ The Data Management interface is available at: “{your_organisation}.lizard.net
 
 .. note::
 	This functionality is available only to users with an admin, manager or supplier role.
-
-
-

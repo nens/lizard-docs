@@ -9,8 +9,6 @@ We can also provide support on either manual or automatic data uploads.
 .. note::
     Please note that Lizard assumes the data to be in UTC
 
-
-
 Requirements 
 --------------
 
@@ -110,9 +108,6 @@ Below you find an example of how to upload a temporal geotiff in Python:
 	timestamp = "2020-01-01T000000Z"
 
 	response = post_temporal_geotiff_to_lizard(endpoint, file_path, timestamp)
-
-
-
 
 Time Series
 ===========

@@ -2,7 +2,6 @@
 Catalogue
 =========
 
-
 General
 ========
 
@@ -19,11 +18,9 @@ For now, the Catalogue covers these three datatypes:
 * **WMS layer**  Wms layers in Lizard
 * **Time series**  Time series and monitoring networks
 
-
 There is an extensive search option to make the data easily accesible.
 Every data layer will show available metadata.
 From the Catalogue you have the option of opening the data layers via the API or via the Lizard portal.
-
 
 Filter
 --------
@@ -38,7 +35,6 @@ You can also use the search bar per filter to directly enter what you want to fi
 
 .. image:: /images/e_catalog_04.png
 
-
 Export, Basket and login
 -------------------------
 
@@ -48,7 +44,6 @@ In the top right you see the following buttons:
 
 **Export**
 Available and running exports will appear here
-
 
 **Basket**
 Using the Basket makes it easy to make different combinations of data layers to show in Lizard.
@@ -62,7 +57,6 @@ This will open a new window for Lizard, with all the selected data layers opened
 **Login**
 If you are logged in, you will have access to data that is common, or private and shared with your organisation.
 Also, you have to be logged in to be able to export.
-
 
 Rasters
 =========
@@ -87,7 +81,6 @@ The following information is visible in this overview.
 .. note::
     Not included are rasters from 3Di scenarios
 
-
 Details
 --------
 
@@ -101,7 +94,8 @@ If you want to use the dataset in your Portal or if you want to use it for data 
 Lizard WMS Service for rasters
 --------------------------------
 
-When you filtered on “Dataset” a Lizard WMS GetCapabilities link appears in the list of meta data of the raster. You can use this link to visualise the raster in external applications such as QGIS or ESRI applications.
+When you filtered on “Dataset” a Lizard WMS GetCapabilities link appears in the list of meta data of the raster.
+You can use this link to visualise the raster in external applications such as QGIS or ESRI applications.
 
 For more infomation, please consult the WMS Services.
 
@@ -146,7 +140,6 @@ The following information is visible in this overview.
 .. note::
     Information about the different Access modifiers can be found under :ref:`OrganisationsAnchor`.
 
-
 Details
 --------
 
@@ -160,17 +153,12 @@ If you want to use the dataset in your Portal or if you want to use it for data 
 Action menu
 ------------
 
-
 .. image:: /images/e_catalog_09.png
 
 You can download the wms directly, open it in the portal or in the API or analyse the wms layer in another application linking to Lizard. 
 You can use this link to visualise the raster in external applications such as QGIS or ESRI applications.
 
-
 For more infomation, please consult the :doc:`WMS Services<e_lizardwms>`.
-
-
-
 
 Time series and monitoring networks
 ====================================
@@ -180,25 +168,19 @@ It will show a list of 10 items, with the option to click through to other pages
 At the top of the screen there is a search bar.
 Using search terms that are in the Name or the Description of the data layer you can more easily find specific data layers that you might be interested in.
 
-
 The following information is visible in this overview.
 
 * **Monitoring network** Name of the data layer.
 * **Organisation** To which organisation the data layer belongs.
 * **Access modifier** Divided into Public, Common and Private.
 
-
-
 .. note::
     Information about the different Access modifiers can be found under :ref:`OrganisationsAnchor`.
-	
 	
 In monitoring networks, you can group timeseries. This can be done for example by grouping them by observation type or by source.
 	
 .. note::
     New monitoring networks can be added via https://demo.lizard.net/api/v4/monitoringnetworks/ or {yourorganisation}.lizard.net/api/v4/monitoringnetworks/ or with the help of a consultant. In the near future, time series can be managed via the management screens. 
-	
- 
 
 Details
 --------
@@ -206,7 +188,6 @@ Details
 Once you have selected a monitoring network, you will find detailed information about the dataset in the panel on the right.
 Here it will show a map of the area and a visualisation of the data.
 Below the map there is a table with detailed meta information about the data layer.
-
 
 .. image:: /images/e_catalog_10.png
 
@@ -228,7 +209,3 @@ Below you see a screenshot of all locations with time series with observation ty
 Then location Bilt is manually selected (by clicking on a dot or use the search bar) and ready to export or view in the API or in the portal. 
 
 .. image:: /images/e_catalog_13.png
-
-
-
-

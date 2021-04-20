@@ -184,15 +184,12 @@ Elementwise RasterBlocks
    :members:
    :exclude-members: get_sources_and_requests, process
 
-
-
 Spatial RasterBlocks
 +++++++++++++++++++++++++++++++++++++++
 
 .. automodule:: dask_geomodeling.raster.spatial
    :members:
    :exclude-members: get_sources_and_requests, process, projection, geometry, geo_transform
-
 
 Temporal RasterBlocks
 +++++++++++++++++++++++++++++++++++++++
@@ -201,15 +198,12 @@ Temporal RasterBlocks
    :members:
    :exclude-members: TemporalSum, get_sources_and_requests, process
 
-
 Miscelleneous RasterBlocks
 +++++++++++++++++++++++++++++++++++++++
 
 .. automodule:: dask_geomodeling.raster.misc
    :members:
    :exclude-members: get_sources_and_requests, process, extent, geometry
-
-
 
 .. _GeometryBlocksAnchor:
 

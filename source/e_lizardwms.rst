@@ -52,13 +52,9 @@ Authorisation
 The Lizard WMS Service follows the authorisation system mentioned under :ref:`Authorisation<OrganisationsAnchor>`.
 If layers are private you need privileges in the organisation that owns the dataset.
 
-
 Use a Personal API Key to authenticate with the Lizard WMS Service, as described in :ref:`API Authentication<APIAuthenticationAnchor>`.
 
 In QGIS the authentication is filled in as follows: 
 
 - username = __key__ 
 - password = Personal API Key
-
-
-

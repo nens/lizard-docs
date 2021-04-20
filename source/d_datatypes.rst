@@ -52,7 +52,6 @@ Your raster data has to be in the format of a single band, georeferenced TIFF (g
 * **Geotiff should be single band**. RGB or multi-band is not supported. 
 * **Temporal raster datasets** with multiple timesteps **should be supplied with a single geotiff per timestamp**
 
-
 Raster metadata
 ----------------
 
@@ -67,8 +66,6 @@ Characteristics of rasters are stored in the attributes of a rasterstore. The at
 * Supplier name
 * Supplier code
 * Temporal behaviour
-
-
 
 Vectors
 =======
@@ -180,7 +177,6 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	created,	timestamp with time zone
 	geometry,	USER-DEFINED
 	last_modified,	timestamp with time zone
-
 
 .. csv-table:: "culverts": "https://demo.lizard.net/api/v3/culverts/"
     :header: column_name, data_type
@@ -875,9 +871,6 @@ Options are:
 
 For more options in requesting time series see the API endpoint: https://demo.lizard.net/api/v3/timeseries/
 
-
-
-
 Labels
 ======
 
@@ -934,4 +927,3 @@ Label statistics
 ------------------
 
 With the count filter on the Labels endpoint it is possible to query a histogram of all Labels of a certain LabelType or a histogram of Labels within a region (e.g. municipality).
-

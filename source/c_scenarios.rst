@@ -4,7 +4,5 @@
 
 .. warning::
     This section will be extended in the near future.
-	
 
-.. image:: /images/c_manage_3discenarios.png
-	
+.. image:: /images/c_manage_3discenarios.png	
