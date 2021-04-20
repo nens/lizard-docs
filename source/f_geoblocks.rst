@@ -43,7 +43,7 @@ Graphs
 ------
 A graph is a combination of multiple Blocks that work together to create a "view" of one or more datasources in Lizard.
 A valid graph always contains one or more source Blocks and one endpoint, which is the final product of your GeoBlock. 
-Once you've configured a graph, a visualization of the graph is automatically generated. This visualization can be requested using the API request below: 
+Once you've configured a graph, a visualisation of the graph is automatically generated. This visualisation can be requested using the API request below: 
 
 ``https://demo.lizard.net/api/v4/rasters/{uuid of raster}/visualize/?format=svg``
 
