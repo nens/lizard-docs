@@ -21,7 +21,6 @@ After logging in:
 8. Open and close data menu
 9. Selection tools to query data on the map
 
-
 Data menu and layers	
 --------------------
 
@@ -95,7 +94,8 @@ Once a time series has been selected, by clicking on a timeseries location or af
 The graph appears in in a new screen in the top left, which we call the *omnibox*.  You also inspect the graph closer in the "Graph" mode (click it in the menu). 
 	
 .. tip::
-   In the omnibox click the button 'ZOOM TO EXTENT' to zoom to the full extent of the series. There are also three buttons for standard periods. This means no more searching for a historical or short-term time series. Just click the buttons! 
+   In the omnibox click the button 'ZOOM TO EXTENT' to zoom to the full extent of the series.
+   There are also three buttons for standard periods. This means no more searching for a historical or short-term time series. Just click the buttons! 
 
 Navigation in space	
 ===================
@@ -141,7 +141,6 @@ There are 4 selection tools:
    
 **Point selection** 
 Point selectionretrieves asset information, time series and map values from the active data layers. Results are displayed on the left.
-
 
 **Multipoint selection** 
 

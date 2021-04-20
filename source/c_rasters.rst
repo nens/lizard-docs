@@ -4,16 +4,12 @@ Rasters
 
 The data management interface for rasters can be used to upload, edit or remove rasters.
 
-
 .. warning::
     This section will be updated in the coming days.
-	
 
 .. image:: /images/c_manage_rasters_01.png
 .. image:: /images/c_manage_rasters_02.png
 .. image:: /images/c_manage_rasters_03.png
-
- 
 
 Creating and editing a Raster Store
 -------------------------------------
@@ -45,11 +41,6 @@ Or choose an existing raster to edit.
 #. If you’re supplying a temporal dataset. Choose “Raster Series”. Next, fill in the interval of the dataset. 
 #. Click submit. You have now created the Raster Store. You’re all set up to  supply your geotiff’s using the upload button. 
 
-
-
-
-
-
 .. image:: /images/c_datatypes_01.png
 
 The Data Management interface is available at: “{your_organisation}.lizard.net/management/”.
@@ -66,7 +57,6 @@ After this screen, please click on ‘Data Management’, then ‘Rasters’ and
 Interested in the possibilities for your organisation? Please contact Joeri Verheijden via info@lizard.net.
 
 .. _vector_data_types:
-
 
 Using the Data Management App
 ++++++++++++++++++++++++++++++

@@ -2,22 +2,66 @@
 Catalogue
 =========
 
-.. warning::
-    This section will be extended in the coming days.
+General
+========
 
-The Lizard Catalogue offers insight in the data layers that are available for your organisation.
-There is an extensive search option to make the layers easily accesible.
+The Lizard Catalogue offers insight in the data that are available for your organisation.
+
+You can reach the Catalogue via the following url:
+https://demo.lizard.net/catalogue/ or {yourorganisation}.lizard.net/catalogue/
+
+.. image:: /images/e_catalog_00.png
+
+For now, the Catalogue covers these three datatypes:  
+
+* **Raster**  Raster layers in Lizard (not included are rasters from 3Di scenarios) 
+* **WMS layer**  Wms layers in Lizard
+* **Time series**  Time series and monitoring networks
+
+There is an extensive search option to make the data easily accesible.
 Every data layer will show available metadata.
 From the Catalogue you have the option of opening the data layers via the API or via the Lizard portal.
 
-The Catalogue can be reached via the following url.
+Filter
+--------
 
-https://demo.lizard.net/catalogue/
+On the left side of the Catalogue app you can find several ways of filtering the data layers you have access to.
+There are three different ways to filter, Organisation, Dataset or Observation type.
+Per filter there is a list of all possible options.
 
-Data Layers
-===========
+.. image:: /images/e_catalog_03.png
 
-When you open the Catalogue you will see an overview of all the layers you have access to.
+You can also use the search bar per filter to directly enter what you want to filter on.
+
+.. image:: /images/e_catalog_04.png
+
+Export, Basket and login
+-------------------------
+
+In the top right you see the following buttons:
+
+.. image:: /images/e_catalog_07.png
+
+**Export**
+Available and running exports will appear here
+
+**Basket**
+Using the Basket makes it easy to make different combinations of data layers to show in Lizard.
+To the left of the data layers are selection boxes.
+Click these boxes to make a selection from one or several data layers.
+After making the selection click the 'Add to basket' button in the lower right corner of the data layers overview.
+At the top right corner of the Catalogue you will see that the Basket button now shows the number of selected data layers.
+Opening the basket gives an overview of all selected layers, and a button to 'Open all data in Lizard'.
+This will open a new window for Lizard, with all the selected data layers opened.
+
+**Login**
+If you are logged in, you will have access to data that is common, or private and shared with your organisation.
+Also, you have to be logged in to be able to export.
+
+Rasters
+=========
+
+When you open the Catalogue and choose 'Raster' in the top left, you will see an overview of all the layers you have access to.
 It will show a list of 10 items, with the option to click through to other pages.
 At the top of the screen there is a search bar.
 Using search terms that are in the Name or the Description of the data layer you can more easily find specific data layers that you might be interested in.
@@ -33,22 +77,12 @@ The following information is visible in this overview.
 
 .. note::
     Information about the different Access modifiers can be found under :ref:`OrganisationsAnchor`.
-
-Filters
-=======
-
-On the left side of the Catalogue app you can find several ways of filtering the data layers you have access to.
-There are three different ways to filter, Organisation, Dataset or Observation type.
-Per filter there is a list of all possible options.
-
-.. image:: /images/e_catalog_03.png
-
-You can also use the search bar per filter to directly enter what you want to filter on.
-
-.. image:: /images/e_catalog_04.png
+	
+.. note::
+    Not included are rasters from 3Di scenarios
 
 Details
-=======
+--------
 
 Once you have selected a data layer, you will find detailed information about the dataset in the panel on the right.
 Here it will show a map of the area and a visualisation of the data.
@@ -57,13 +91,21 @@ If you want to use the dataset in your Portal or if you want to use it for data 
 
 .. image:: /images/e_catalog_05.png
 
+Lizard WMS Service for rasters
+--------------------------------
+
+When you filtered on “Dataset” a Lizard WMS GetCapabilities link appears in the list of meta data of the raster.
+You can use this link to visualise the raster in external applications such as QGIS or ESRI applications.
+
+For more infomation, please consult the WMS Services.
+
 Exporting
-=========
+----------
 
 Select the raster you would like to export.
-Click on the Export button in the panel on the right. 
+Click on the Export button in the action menu. 
 
-.. image:: /images/e_catalog_02.png
+.. image:: /images/e_catalog_06a.png
 
 The Export Selection window will pop up. 
 Follow the steps: 
@@ -76,27 +118,94 @@ Click on Download selected cells.
 A task will be started in the background.
 Once your GeoTIFF's are ready you will receive a notification in the Export dropdown menu in the green bar.
 
-.. image:: /images/e_catalog_06.png
+.. image:: /images/e_catalog_06b.png
 
-Lizard WMS Service for rasters
-==============================
-When you filtered on "Dataset" a Lizard WMS GetCapabilities link appears in the list of meta data of the raster.
-You can use this link to visualize the raster in external applications such as QGIS or ESRI applications.
 
-.. image:: /images/e_catalog_01.png
+WMS layers
+=============
+
+When you open the Catalogue and choose 'WMS layer'  in the top left, you will see an overview of all the wms layers you have access to.
+It will show a list of 10 items, with the option to click through to other pages.
+At the top of the screen there is a search bar.
+Using search terms that are in the Name or the Description of the data layer you can more easily find specific data layers that you might be interested in.
+
+The following information is visible in this overview.
+
+
+* **Name** Name of the wms layer.
+* **Organisation** To which organisation the data layer belongs.
+* **Description** A short description of the data contained within the data layer.
+* **Access modifier** Divided into Public, Common and Private.
+
+.. note::
+    Information about the different Access modifiers can be found under :ref:`OrganisationsAnchor`.
+
+Details
+--------
+
+Once you have selected a wms layer, you will find detailed information about the dataset in the panel on the right.
+Here it will show a map of the area and a visualisation of the data.
+Below the map there is a table with detailed meta information about the data layer.
+If you want to use the dataset in your Portal or if you want to use it for data science purposes you can either choose to open it in the Portal or the API. 
+
+.. image:: /images/e_catalog_08.png
+
+Action menu
+------------
+
+.. image:: /images/e_catalog_09.png
+
+You can download the wms directly, open it in the portal or in the API or analyse the wms layer in another application linking to Lizard. 
+You can use this link to visualise the raster in external applications such as QGIS or ESRI applications.
 
 For more infomation, please consult the :doc:`WMS Services<e_lizardwms>`.
 
+Time series and monitoring networks
+====================================
 
-Basket
-======
+When you open the Catalogue and choose 'Time series' in the top left, you will see an overview of all the layers you have access to.
+It will show a list of 10 items, with the option to click through to other pages.
+At the top of the screen there is a search bar.
+Using search terms that are in the Name or the Description of the data layer you can more easily find specific data layers that you might be interested in.
 
-Using the Basket it is easy to make different combinations of data layers to show in Lizard.
-To the left of the data layers are selection boxes.
-Click these boxes to make a selection from one or several data layers.
-After making the selection click the 'Add to basket' button in the lower right corner of the data layers overview.
-At the top right corner of the Catalogue you will see that the Basket button now shows the number of selected data layers.
-Opening the basket gives an overview of all selected layers, and a button to 'Open all data in Lizard'.
-This will open a new window for Lizard, with all the selected data layers opened.
+The following information is visible in this overview.
 
-.. image:: /images/e_catalog_07.png
+* **Monitoring network** Name of the data layer.
+* **Organisation** To which organisation the data layer belongs.
+* **Access modifier** Divided into Public, Common and Private.
+
+.. note::
+    Information about the different Access modifiers can be found under :ref:`OrganisationsAnchor`.
+	
+In monitoring networks, you can group timeseries. This can be done for example by grouping them by observation type or by source.
+	
+.. note::
+    New monitoring networks can be added via https://demo.lizard.net/api/v4/monitoringnetworks/ or {yourorganisation}.lizard.net/api/v4/monitoringnetworks/ or with the help of a consultant. In the near future, time series can be managed via the management screens. 
+
+Details
+--------
+
+Once you have selected a monitoring network, you will find detailed information about the dataset in the panel on the right.
+Here it will show a map of the area and a visualisation of the data.
+Below the map there is a table with detailed meta information about the data layer.
+
+.. image:: /images/e_catalog_10.png
+
+Action menu
+------------
+
+In the action menu, you can export the timeries you are interested in or open it in the portal or in the API.
+You can filter on the observation type, which time series have data in a certain period and/or on location. 
+
+First choose "Select time series". 
+
+.. image:: /images/e_catalog_11.png
+
+Below you see a screenshot of all locations with time series for monitoring network KNMI weerstations without filtering.
+
+.. image:: /images/e_catalog_12.png
+
+Below you see a screenshot of all locations with time series with observation type 'windsnelheid' and that have data between 14 and 16 March 2021.
+Then location Bilt is manually selected (by clicking on a dot or use the search bar) and ready to export or view in the API or in the portal. 
+
+.. image:: /images/e_catalog_13.png

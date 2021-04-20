@@ -182,7 +182,6 @@ This API endpoint supports the following parameters on :http:method:`GET` reques
 	:query srid: Spatial Reference System Identifier.
 	:query type: Comma-seperated list of entity types. Currently the only way to search for layer metadata is by explicitly requesting those entities: type=rasterstore,scenario,assetlayer. It may also be used to limit search results to specific types, i.e. type=levees.
 	:query exclude: Comma-seperated list of exclude terms. Results are excluded if the url of the resource contains a term. This is done in the viewset so the serializer still respects the requested page_size.
-
    
 Timeseries
 ==========
