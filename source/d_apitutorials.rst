@@ -3,7 +3,7 @@ API tutorials
 ==============================
 
 We created interactive manuals for data scientists to use the Lizard API. 
-At the moment we have the following 2:
+At the moment we have the following 3:
 
 1. Interactive Time Series API manual 
 --------------------------------------
@@ -14,6 +14,13 @@ At the moment we have the following 2:
 ------------------------------------
 
 | `Notebook for /api/v4/rasters <https://colab.research.google.com/drive/1m9ECiz_mkkMWdxksAOUReOMHK4X7u-bH>`_
+
+
+3. 3Di scenario download
+--------------------------
+
+| `Notebook for how to download a maximum waterdepth raster from a 3Di-scenario <https://colab.research.google.com/drive/1lW5QYenED5OvAGa93J8LTlM4Ox85lpli#scrollTo=IQFuyCScVAF1>`_
+
 
 .. topic:: Jupyter notebook
 
