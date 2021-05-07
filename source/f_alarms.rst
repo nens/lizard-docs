@@ -2,58 +2,64 @@
 Alarms
 ======
 
-Lizard provides an alarm option via sms or email on both rasters and timeseries.
-The alarms can be configured in https://demo.lizard.net/management/#/alarms.
+Lizard provides an alarm feature that sends notifications via sms or email when newly processed values of timeseries or temporal rasters exceed a threshold. It is used to notify people of events that may require action, for instance an upcoming rain event or flood.
 
-.. image:: /images/d_alarms_01.png
+The alarm management screens are found at https://demo.lizard.net/management/#/alarms.
 
-If a value in timeseries or intersection of a temporal raster is exceeding a threshold value, an alarm will be triggered and contact groups will receive a notification. 
+.. image:: /images/f_alarms_01.jpg
 
-The Management System is used to define who receives which notifications, including the configuration of which persons will receive each alarm,
-with what text, and whether that is by SMS, email or both.  
+The configuration has a variety of options to generate relevant notifications with messages that include the specifics of the event. 
 
 Notifications
 =============
 
-In the Notifications tile, you see the configured raster and timeseries alarms and new alarms can be configured.
+Behind the Notifications tile you find the overviews of existing raster and timeseries alarms for your organisation and their status (active/inactive). The 'NEW ITEM' button leads you to the form to register a new alarm. We go through some of the options that the system provides, to explain them in detail.
 
-New raster alarms
------------------
+Selecting a raster
+------------------
 
-A raster alarm can be set, by giving input to the following values:
+Raster alarms are set on temporal rasters. These can be part of a scenario, a single source raster or a Geoblock. An alarm is set for one point location intersecting this temporal raster.
 
-* The name of the alarm
-* The raster layer for which the alarm applies (e.g. rainfall or water level)
-* The X-Y coordinates to which the alarm applies (by pinpointing a location on the map)
-* The threshold level (in the unit of the data, e.g. mMSL)
-* The recipients
+You can type in the field to search in the names of available rasters. Once a raster is selected the map below the field will show the spatial extend. There are three options to select a point location:
 
-An alarm can check only in one direction, either series going above or below certain thresholds. One or more thresholds can be defined per alarm.
-The alarm receives the status of the highest or lowest threshold that is crossed within the period that is analysed.
+* Simply clicking on the map
+* Search for an asset to use its location
+* Fill in (or adjust) the coordinates in the fields below the map (in WGS84)
 
-New timeseries alarms
+Selecting a timeseries
 ----------------------
 
-A timeseries alarm can be set, by giving input to the following values:
+Timeseries often do not have a clear name or code by themselves. That is why we start with looking up the asset it relates to. Once the asset is selected it should be easy to select the timeseries from the list of related objects.
 
-* The name of the alarm
-* The timeseries for which the alarm applies (e.g. rainfall or water level)
-* The thresholds (i.e. trigger levels (in m, AHD) for water levels or rainfall depth  in mm for rainfall)
-* The recipients
+Relative start and end
+----------------------
 
-An alarm can check only in one direction, either series going above or below certain thresholds.
-One or more thresholds can be defined per alarm.
-The alarm receives the status of the highest or lowest threshold that is crossed within the period that is analysed. 
+The user doesn't always want to receive alarms for the whole period of newly processed data. For instance, for operational flood models that start calculating some hours in the past, you may only be interested in what is simulated in the future.
 
-Groups and contacts
+To only analyse the relevant part of your data you can set relative start and end. They are set relative to The figure below gives a schematic overview of how this method works.
+
+.. image:: /images/f_alarms_02.jpg
+
+If these fields are left empty the trigger check is done on the complete data frame of newly processed data.
+
+Snoozing option
+---------------
+
+Alarms may sometimes be triggered unwantedly, for instance when data briefly spikes. The snoozing option allows the user to set the number of consecutive occurrences of the trigger before a notification is sent. It is set for both raising the alarm and the withdrawal. Default is 1 (trigger at first occurrence). 
+
+Contacts and Groups
 ===================
 
-The recipients can be added to a Group or new Groups can be created.
-By making use of groups, it is not necessary to type in all email addresses and phone numbers for each new alarm.
-New users can be added in the user management interface (https://demo.lizard.net/management/users/) 
+The recipients of alarm notifications are configured in the Contacts screen, with their phone number and/or email address.  Each contact can be part of multiple Groups, which in turn can be used in multiple alarms. So no need to do a whole lot of data duplications of contact info.
 
 Templates
 =========
 
-In the Templates tile, the message that is send by email or sms can be configured.
-There are a couple of variables that can be included in the text to send dynamic messages with the latest status of the alarm.
+The notification messages are configured with Templates. There is a difference in setting up Email and SMS Templates:
+
+* Email: Supports both plain text and HTML and are not limited in length
+* SMS: Plain text with maximum length of 160 characters (after substitution of variables)
+
+You can use a number of variables to enrich the content of the notifications and make them applicable to different alarms. The variables contain options for including the name of the receiver and details about the alarm at hand.
+
+The option "No further impact" determines that a message is used specifically to notify when an alarm is fully withdrawn. This type of message can be set in addition to a standard message to let receivers know that the situation has settled down. This often requires a different text and therefore a different Template.
