@@ -30,6 +30,7 @@ Welcome to the Lizard documentation!
    c_general
    c_rasters
    c_wms
+   c_timeseries
    c_scenarios
    c_labels
 
