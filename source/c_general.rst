@@ -3,7 +3,7 @@ General
 ================
 
 
-In the data management interface you manage rasters, wms layers, 3di scenarios and labels.
+In the data management interface you manage rasters, wms layers, time series, 3di scenarios and labels.
  
 
 .. image:: /images/c_datatypes_01.png
