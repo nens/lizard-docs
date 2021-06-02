@@ -42,7 +42,7 @@ Welcome to the Lizard documentation!
 
    d_datatypes
    d_general
-   d_apifunctional
+   c_apifunctional
    d_apitechnical
    d_apitutorials
    d_ftpimporter

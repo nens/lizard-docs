@@ -90,7 +90,7 @@ every request, either directly in Username and Password headers, or using
 HTTP Basic Authentication. This legacy authentication does generate a session.
 
 .. warning::
-	This form of authentication will be deprecated on *June 1st, 2021*. Ensure
+	This form of authentication has been deprecated on *June 1st, 2021*. Ensure
 	that your applications and scripts use new API Keys after that date.
 
 In the period until June 1st, 2021, correct username / password combinations
