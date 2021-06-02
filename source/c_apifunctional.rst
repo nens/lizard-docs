@@ -50,17 +50,14 @@ If you are an administrator or supplier of the data, you can also edit or delete
 Versions
 ========
 
-We support three versions of our API:
+We support two versions of our API:
 
-* API v2: deprecated
 * API v3: stable
 * API v4: experimental
 
-The API V2 is deprecated and we advise not to use this API for developing purposes.
-API V2 will disappear in the near future.
-API V3 is the stable version of API and can be used for developing purposes.
-API V4 can be used in cooperation with our dev-team.
-API V4 is used to develop new features.
+
+API V3 is the stable version of API. We may add new features, but it should not break existing endpoints. 
+API V4 is used to develop new features. 
 
 Digitale Delta API
 ------------------

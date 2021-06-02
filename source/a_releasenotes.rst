@@ -8,12 +8,18 @@
 Release Notes
 =============
 
+
+June 2021 Release
+=====================
+We’re happy to announce the newest release of Lizard Management.
+If you have questions about this release or if you’re interested in features please contact us via info@lizard.net
+
+
 February 2021 Release
 =====================
 We’re happy to announce the newest release of Lizard Management and Lizard Catalogue.
 If you have questions about this release or if you’re interested in features please contact us via info@lizard.net
 
-This section will be extended in the coming days. 
 
 
 November 2019 Release
