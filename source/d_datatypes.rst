@@ -29,7 +29,7 @@ Main functionalities:
 
 * Retrieve values for a specific location or area
 * Analyse data for a particular period or moment in time
-* Map visualisation in the lizard portal
+* Map visualisation in the lizard Viewer
 * Exporting to a geotiff file
 * Connecting with external applications via WMS
 * Base block for on-the-fly map calculations and conversions
@@ -812,7 +812,7 @@ Time Series
 Time series in Lizard represent in situ measurements and hindcasts/forecasts of processes in the physical environment.
 
 A time series object is always related to a location object, which is in turn optionally linked to an asset.
-By clicking an asset in the Lizard portal a list of related time series objects is fetched which can be visualised.
+By clicking an asset in the Lizard Viewer a list of related time series objects is fetched which can be visualised.
 
 The storage of time series data and the presentation in the API are focussed on high performance and retrieving relevant information out of it.
 There are multiple options for making aggregations and deriving statistics.
@@ -827,7 +827,7 @@ Alphanumerical|Text
 Images|PNG and JPG
 Files|E.g. PDF
 
-Series of numerical values and images can be visualised in the Lizard portal. Text values and Files can only be retrieved or downloaded from the API.
+Series of numerical values and images can be visualised in the Lizard Viewer. Text values and Files can only be retrieved or downloaded from the API.
 
 Aggregation options
 -------------------

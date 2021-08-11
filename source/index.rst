@@ -11,7 +11,7 @@ Welcome to the Lizard documentation!
    :name: Introduction
 
    a_lizard
-   a_quickstart
+   a_homepage
    a_releasenotes
 
 .. toctree::
@@ -52,7 +52,7 @@ Welcome to the Lizard documentation!
    :caption: Visualisation
    :name: Visualisation
 
-   e_portal
+   e_viewer
    e_dashboard
    e_atlas
    e_catalog

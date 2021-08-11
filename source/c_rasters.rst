@@ -33,9 +33,9 @@ Or choose an existing raster to edit.
 #. Choose the preferred authorisation type (read more).
 #. Give the dataset a name.
 #. Describe your dataset. Make sure to name the source and describe the analysis that resulted in this dataset. Users can read this description in the Lizard Catalog.
-#. Choose how your data should be aggregated. This functionality is only needed when you want to use the Region Analysis mode in Lizard Portal or Lizard API. 
+#. Choose how your data should be aggregated. This functionality is only needed when you want to use the Region Analysis mode in Lizard Viewer or Lizard API. 
 #. Choose the observation type of this dataset. 
-#. Choose a preferred color map. Choose “Rescalable” if you want to be able to rescale the color map in Lizard Portal.
+#. Choose a preferred color map. Choose “Rescalable” if you want to be able to rescale the color map in Lizard Viewer.
 #. Fill in the supplier name. We use your username by default.
 #. You can fill in a supplier code for your own administration.
 #. If you’re supplying a temporal dataset. Choose “Raster Series”. Next, fill in the interval of the dataset. 

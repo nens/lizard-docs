@@ -34,7 +34,7 @@ The following fields can or must be filled in:
 * Legend URL (optional): Specify which URL is used to show the legend of this layer.
 * Get Feature URL (optional) : Optional URL to retrieve feature info data.
 * Tiled (enabled by default) : Specifies whether the layer is tiled (for better performance)
-* Min and max zoom (required): Closest and furthest point of view in this WMS layer. 0 is visible at world scale, 31 is zoomed in at a house. You can check the zoom level in the url in the portal (after the coordinates). 
+* Min and max zoom (required): Closest and furthest point of view in this WMS layer. 0 is visible at world scale, 31 is zoomed in at a house. You can check the zoom level in the url in the Viewer (after the coordinates). 
 * Spatial bounds (optional): Specify the extent of this layer on the map. This information can also be automatically obtained by clicking "Get from source". 
 * Options (JSON): Extra options of this layer, specfied in JSON.
 
@@ -59,4 +59,4 @@ After clicking on the name of a wms layer, you can configure an existing wms lay
 You can for example edit the description or share your wms layer with other organisations. 
 
 .. tip::
-	Advanced: Is your wms layer not visible in the portal? Check via the network tab (press F12) how Lizard requests the wms and if that wms url makes sense. You can always ask the service desk to help as well. 
+	Advanced: Is your wms layer not visible in the Viewer? Check via the network tab (press F12) how Lizard requests the wms and if that wms url makes sense. You can always ask the service desk to help as well. 

@@ -35,7 +35,7 @@ Create a new object with the New Item button on the top right corner.
 ------------	
 
 .. warning::
-    Locations must be connected to an existing asset to be visualised in the portal. The asset will have a symbol and zoom level depending on the type. Also, the metadata differs per type. For now, only measuringstations can be added via the API. If you have any questions about this, please contact the service desk. 
+    Locations must be connected to an existing asset to be visualised in the Viewer. The asset will have a symbol and zoom level depending on the type. Also, the metadata differs per type. For now, only measuringstations can be added via the API. If you have any questions about this, please contact the service desk. 
 	
 * Asset type (optional): Specify a type of asset.  
 * Asset location: after specifying the asset type, you can search by code or name. 

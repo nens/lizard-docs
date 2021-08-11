@@ -1,8 +1,8 @@
 ======
-Portal
+Viewer
 ======
 
-The portal of Lizard is the graphical user interface (GUI), in which measuring locations, parameters, timeseries, rasters and other layers are visible in maps and graphs.
+The Viewer of Lizard is the graphical user interface (GUI), in which measuring locations, parameters, timeseries, rasters and other layers are visible in maps and graphs.
 
 Basic elements	
 ==============
@@ -228,7 +228,9 @@ Apps
 In order to examine your data in further detail open one of our partner platforms through the Apps screen.
 
 .. note::
-	Apps are not available by default in every Lizard portal.
+	Apps are not available by default in every Lizard Viewer. Do you want to see or change the App settings of a Viewer? Please contact our support office (servicedesk@nelen-schuurmans.nl).
+	
+	
 
 Share
 =====
