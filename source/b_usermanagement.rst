@@ -60,7 +60,7 @@ Whitelisting
 ============
 
 The users of a certain portal may not be interested in a lot of the public/common datasets that are made available by others.
-An organisation can determine data of which other organisations is visible in their Lizard API and portal.
+An organisation can determine data of which other organisations is visible in their Lizard API and Viewer.
 This is configured by whitelisting the organisations that are allowed to show their data per portal.
 
 The effect is that for the same user the available data can differ between e.g. [your_organisation].lizard.net and demo.lizard.net (for which all organisations are whitelisted).

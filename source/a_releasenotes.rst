@@ -9,9 +9,81 @@ Release Notes
 =============
 
 
+August 2021 Release
+=====================
+We’re happy to announce the release of Lizard Homepage.
+
+Important changes
+-------------------
+
+*	Lizard Homepage 
+*	Datasets will be called Layer collections 
+*	Lizard Contracts endpoint
+*	Steadier 3Di-result-processing
+
+The story behind  the new homepage 
++++++++++++++++++++++++++++++++++++++++
+
+The past year, many new functionalities have been developed. The Lizard data warehouse and analytics platform has become a solution for many consultants working with environmental data and for setting up digital services. We see that next to the Viewer, the Catalogue, Management and API are increasingly more important for users. The Homepage ensures easy access to functionalities for all users.
+
+
+.. image:: /images/a_homepage.jpg
+
+
+
+Action required?
++++++++++++++++++++
+
+The introduction of the homepage requires no action in itself. What we do recommend to do is to check if you or your colleagues have created quick links to Lizard. This is only needed for links to the Lizard Viewer, for example a link from your intranet or bookmark bar to a map or graph in Lizard.  If your link is broken and results in a 404 error, you can make the following adjustment:
+
+
+
+1) Search for links going to {yourorganisation}.lizard.net/
+
+2) Change this link to {yourorganisation}.lizard.net/viewer/.
+
+
+
+Example 1: Link to viewer
+
+https://demo.lizard.net/en/map/
+will be
+https://demo.lizard.net/viewer/en/map/
+
+
+
+
+Example 2: Link to a favourite
+
+https://demo.lizard.net/favourites/55db162c-581a-491f-8579-b52e7e68d2bd
+will be
+https://demo.lizard.net/viewer/favourites/55db162c-581a-491f-8579-b52e7e68d2bd
+
+.. note::
+    NB: Within Lizard all settings and references will be adjusted by us, for example links in dashboards. 
+	Links to the API will not change. 
+	
+.. note::
+    The terms Portal and Viewer were both used for {yourorganisation}.lizard.net/. The Portal will remain the base url (which now leads to the Homepage). The Viewer is the new url {yourorganisation}.lizard.net/viewer/
+
+
+
+
+
 June 2021 Release
 =====================
 We’re happy to announce the newest release of Lizard Management.
+
+* New time series management interface.
+* New user management interface.
+
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/RG4UvRtyUKo" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
 If you have questions about this release or if you’re interested in features please contact us via info@lizard.net
 
 

@@ -33,24 +33,27 @@ You can look up the UUID of the scenario using the `Scenarios endpoint in the Li
 All available filters are listed on the endpoints’ page. E.g. you can look up a scenario and it’s uuid by filtering on your own username.
 With the GetCapabilities query parameter you retrieve the metadata of the service, including supported operations, parameters and a list of available layers. 
  
-Datasets
-========
+Layer collections
+======================
 
-To visualise and request the GetCapabilities of datasets (list of rasters) you can use the following URL: 
+To visualise and request the GetCapabilities of layer collections (list of rasters, previously called 'datasets') you can use the following URL: 
 
-``https://{yourportal}.lizard.net/wms/{slug of dataset}?request=GetCapabilities``
+``https://{yourportal}.lizard.net/wms/{slug of layer collection}?request=GetCapabilities``
 
 For example:
 https://demo.lizard.net/wms/basiskaarten/?request=GetCapabilities
 
-You can search for datasets in the Lizard Catalogue by using the Datasets filter in the left panel.
-You will find the Lizard WMS GetCapabilities URL of the dataset in the metadata panel of a specific layer.  
+You can search for layer collections in the Lizard Catalogue by using the Layer collection filter in the left panel.
+You will find the Lizard WMS GetCapabilities URL of the layer collection in the metadata panel of a specific layer.  
+ 
+ 
+.. _WMSauthAnchor:
  
 Authorisation
 =============
 
 The Lizard WMS Service follows the authorisation system mentioned under :ref:`Authorisation<OrganisationsAnchor>`.
-If layers are private you need privileges in the organisation that owns the dataset.
+If layers are private you need privileges in the organisation that owns the data.
 
 Use a Personal API Key to authenticate with the Lizard WMS Service, as described in :ref:`API Authentication<APIAuthenticationAnchor>`.
 
@@ -58,3 +61,44 @@ In QGIS the authentication is filled in as follows:
 
 - username = __key__ 
 - password = Personal API Key
+
+
+How to load WMS in GIS
+=======================
+
+You can connect directly to Lizard in a GIS application like QGIS.
+
+
+* 1
+
+Open QGIS and load a new WMS connection.
+
+.. image:: /images/e_qgis_wms1.png
+
+
+* 2
+
+Give the connection a name and copy the wms link from 'https' to 'GetCapabilities', e.g. "https://maps1.klimaatatlas.net/geoserver/twn_klimaatatlas/wms/?request=GetCapabilities". 
+
+.. image:: /images/e_qgis_wms2.png
+
+
+* 3
+
+If the wms layer is not public, you have to enter your :ref:`Credentials<WMSauthAnchor>`. in the Authentication - Basic tab.
+
+
+.. image:: /images/e_qgis_wmslogin.jpg
+
+
+* 4
+
+Click OK and double click on the connection. If multiple layers appear, double click on the one you are interested in. 
+
+.. image:: /images/e_qgis_wms3.png
+
+
+.. image:: /images/e_qgis_wms4.png
+
+The styling will automatically be taken from Lizard.
+If the layer is temporal, you can also navigate through time. 

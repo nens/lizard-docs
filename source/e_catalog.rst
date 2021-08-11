@@ -20,13 +20,13 @@ For now, the Catalogue covers these three datatypes:
 
 There is an extensive search option to make the data easily accesible.
 Every data layer will show available metadata.
-From the Catalogue you have the option of opening the data layers via the API or via the Lizard portal.
+From the Catalogue you have the option of opening the data layers via the API or via the Lizard Viewer.
 
 Filter
 --------
 
 On the left side of the Catalogue app you can find several ways of filtering the data layers you have access to.
-There are three different ways to filter, Organisation, Dataset or Observation type.
+There are three different ways to filter, Organisation, Layer Collection or Observation type.
 Per filter there is a list of all possible options.
 
 .. image:: /images/e_catalog_03.png
@@ -84,17 +84,17 @@ The following information is visible in this overview.
 Details
 --------
 
-Once you have selected a data layer, you will find detailed information about the dataset in the panel on the right.
+Once you have selected a data layer, you will find detailed information about the layer in the panel on the right.
 Here it will show a map of the area and a visualisation of the data.
 Below the map there is a table with detailed meta information about the data layer.
-If you want to use the dataset in your Portal or if you want to use it for data science purposes you can either choose to open it in the Portal or the API. 
+If you want to visualise the layer in your Viewer or if you want to use it for data science purposes you can either choose to open it in the Viewer or the API. 
 
 .. image:: /images/e_catalog_05.png
 
 Lizard WMS Service for rasters
 --------------------------------
 
-When you filtered on “Dataset” a Lizard WMS GetCapabilities link appears in the list of meta data of the raster.
+When you filtered on “Layer Collection” a Lizard WMS GetCapabilities link appears in the list of meta data of the raster.
 You can use this link to visualise the raster in external applications such as QGIS or ESRI applications.
 
 For more infomation, please consult the WMS Services.
@@ -143,10 +143,10 @@ The following information is visible in this overview.
 Details
 --------
 
-Once you have selected a wms layer, you will find detailed information about the dataset in the panel on the right.
+Once you have selected a wms layer, you will find detailed information about the layer in the panel on the right.
 Here it will show a map of the area and a visualisation of the data.
 Below the map there is a table with detailed meta information about the data layer.
-If you want to use the dataset in your Portal or if you want to use it for data science purposes you can either choose to open it in the Portal or the API. 
+If you want to use the layer in your Viewer or if you want to use it for data science purposes you can either choose to open it in the Viewer or the API. 
 
 .. image:: /images/e_catalog_08.png
 
@@ -155,7 +155,7 @@ Action menu
 
 .. image:: /images/e_catalog_09.png
 
-You can download the wms directly, open it in the portal or in the API or analyse the wms layer in another application linking to Lizard. 
+You can download the wms directly, open it in the Viewer or in the API or analyse the wms layer in another application linking to Lizard. 
 You can use this link to visualise the raster in external applications such as QGIS or ESRI applications.
 
 For more infomation, please consult the :doc:`WMS Services<e_lizardwms>`.
@@ -194,7 +194,7 @@ Below the map there is a table with detailed meta information about the data lay
 Action menu
 ------------
 
-In the action menu, you can export the timeries you are interested in or open it in the portal or in the API.
+In the action menu, you can export the timeries you are interested in or open it in the Viewer or in the API.
 You can filter on the observation type, which time series have data in a certain period and/or on location. 
 
 First choose "Select time series". 
@@ -206,6 +206,6 @@ Below you see a screenshot of all locations with time series for monitoring netw
 .. image:: /images/e_catalog_12.png
 
 Below you see a screenshot of all locations with time series with observation type 'windsnelheid' and that have data between 14 and 16 March 2021.
-Then location Bilt is manually selected (by clicking on a dot or use the search bar) and ready to export or view in the API or in the portal. 
+Then location Bilt is manually selected (by clicking on a dot or use the search bar) and ready to export or view in the API or in the Viewer. 
 
 .. image:: /images/e_catalog_13.png
