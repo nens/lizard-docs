@@ -3,6 +3,6 @@ Labels
 ============
 
 .. warning::
-    This section will be extended in the coming days.
+    This section is to be extended.
 
 .. image:: /images/c_manage_labeltypes.png
