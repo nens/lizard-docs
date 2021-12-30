@@ -4,9 +4,6 @@ Rasters
 
 The data management interface for rasters can be used to upload, edit or remove rasters.
 
-.. warning::
-    This section will be updated in the coming days.
-
 .. image:: /images/c_manage_rasters_01.png
 .. image:: /images/c_manage_rasters_02.png
 .. image:: /images/c_manage_rasters_03.png
