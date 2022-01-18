@@ -9,6 +9,35 @@ Release Notes
 =============
 
 
+January 18th 2022
+===================
+
+*	Improvements in API v4:
+	
+
+		
+	*	Drop by-organisation subendpoint for most assets and enable pagination on the main endpoint, which means less restrictions in retrieving asset data
+		
+	*	Make boundary filtering parameters (`boundary__type`, `boundary__name`, `boundary__id`) consistent with other related field filters, i.e. with double underscores (backwards compatible for single underscores)
+		
+	*	Add filtering on `last_modified`, `created` and `access_modifier` fields in endpoints
+		
+	*	Add filtering on `start` and `end` fields for timeseries
+		
+	*	Add filtering on `timeseries__start` and `timeseries__end` for locations
+	
+	
+	
+*	Update of PostGIS, improving the performance of spatial filteirng in the API
+*	Add `application/json` option for WMS GetLegendGraphic requests, according to Geoserver specifications
+*	Limit task that relates locations to assets to only apply to unrelated locations, to improve performance
+*	Add button in Geoblocks management to open an item in the Lizard Viewer	
+*	Bugfix for number input fields in Lizard Management (on-the-fly validation of decimal number input)	
+*	Various other bugfixes in Lizard Management
+
+
+
+
 August 2021 Release
 =====================
 We’re happy to announce the release of Lizard Homepage.
