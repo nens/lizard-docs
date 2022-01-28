@@ -21,9 +21,9 @@ Click on “New Item” |NewItem| to open the form or choose an existing raster 
 
 .. |NewItem| image:: /images/c_dataexchange_02.png
 
-After filling in the form you can choose to directly upload your data by selecting your GeoTIFF's in the 'Data' section.
+After filling in the form you can choose to directly upload your data by selecting your GeoTIFF's in the 'DATA' section.
 In case of a temporal raster source you need to specify which file belongs to which timestep.
-This is recognised automatically if the filename is built up according to the specified format.
+This is recognised automatically if the filename is composed according to the specified format.
 When you save a new Source you will have the option to go straight to the Raster Layer form to publish your data.
 
 .. image:: /images/c_datatypes_01.png
@@ -34,4 +34,20 @@ Interested in the possibilities for your organisation? Please contact us via inf
 
 GeoBlocks management
 --------------------
-{To be worked out}
+
+The GeoBlocks management page provides you a powerful tool to build your GeoBlocks Rasters.
+It helps you configure complex GeoBlocks models and enables you to validate your work along the way.
+
+The Visual editor shows your model as a flow diagram, consisting of block objects representing the input Raster Sources and GeoBlocks operations.
+The right sidebar shows the available blocks. Click on the blocks for a description and the expected inputs. Drag a block into the canvas to include it in your model.
+Connect blocks to use one as input for the other.
+
+When the model is valid it can also be shown in the Text editor. This shows the JSON graph as it would be sent to the API when you save the item.
+Here you can also make edits and validate the result.
+
+Example 1 shows a simple model with one Raster Source and an operation that adds a value to it.
+
+Example 2 shows a model in which multiple sources are grouped together to present them as one.
+
+
+{To be worked out further}
