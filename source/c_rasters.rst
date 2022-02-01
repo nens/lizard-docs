@@ -45,9 +45,12 @@ Connect blocks to use one as input for the other.
 When the model is valid it can also be shown in the Text editor. This shows the JSON graph as it would be sent to the API when you save the item.
 Here you can also make edits and validate the result.
 
-Example 1 shows a simple model with one Raster Source and an operation that adds a value to it.
+Example 1 shows a simple model which subtracts one Raster Source from another (difference in surface elevation between two versions of a dataset).
 
-Example 2 shows a model in which multiple sources are grouped together to present them as one.
+.. image:: /images/c_manage_geoblocks_01.png
 
+Example 2 shows a more complex model with multiple Raster Sources and a series of operations.
 
-{To be worked out further}
+.. image:: /images/c_manage_geoblocks_02.png
+
+For more information about the possibilities of GeoBlocks see: :ref:`GeoBlocksAnchor`
