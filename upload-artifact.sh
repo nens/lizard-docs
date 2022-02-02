@@ -2,8 +2,7 @@
 set -e
 set -u
 
-# ARTIFACTS_KEY should be set as env variable in the travis UI.
-# TRAVIS_BRANCH is set automatically by travis
+# ARTIFACTS_KEY has been set as a secret in the github UI.
 ARTIFACT=lizard-docs.zip
 PROJECT=lizard-docs
 
@@ -12,5 +11,5 @@ curl -X POST \
      -H "Content-Type: multipart/form-data" \
      -F key=${ARTIFACTS_KEY} \
      -F artifact=@${ARTIFACT} \
-     -F branch=${TRAVIS_BRANCH} \
+     -F branch=${GITHUB_REF} \
      https://artifacts.lizard.net/upload/${PROJECT}/
