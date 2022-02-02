@@ -3,71 +3,54 @@ Rasters
 =============
 
 The data management interface for rasters can be used to upload, edit or remove rasters.
+Raster Sources are the data containers, Raster Layers are the configuration of how the data is visualised.
 
 .. image:: /images/c_manage_rasters_01.png
 .. image:: /images/c_manage_rasters_02.png
 .. image:: /images/c_manage_rasters_03.png
 
-Creating and editing a Raster Store
--------------------------------------
+Creating and editing Raster Sources and Layers
+----------------------------------------------
 
-The first step in uploading your raster datasets is to create a Raster Store.
-This can easily be done using our Data Management app.
-Following this step-by-step tutorial to upload a raster dataset:
-
-.. image:: /images/c_dataexchange_01.jpg
+The first step in uploading your raster datasets is to create a Raster Source.
 
 The Data Management interface is available at: “www.{your_organisation}.lizard.net/management/”.
 
-After landing on this page, please click on ‘Data Management’, then ‘Rasters’.
-Click on “New Raster” |NewRaster| to open the form for new Rasters.
-Or choose an existing raster to edit.  
+After landing on this page, click on ‘Data’ -> ‘Rasters’ -> 'Raster Sources'.
+Click on “New Item” |NewItem| to open the form or choose an existing raster to edit.  
 
-.. |NewRaster| image:: /images/c_dataexchange_02.png
+.. |NewItem| image:: /images/c_manage_newitem.png
 
-#. Choose the organisation you’re supplying data for. 
-#. Choose the organisations you want to share this dataset with. 
-#. Choose the preferred authorisation type (read more).
-#. Give the dataset a name.
-#. Describe your dataset. Make sure to name the source and describe the analysis that resulted in this dataset. Users can read this description in the Lizard Catalog.
-#. Choose how your data should be aggregated. This functionality is only needed when you want to use the Region Analysis mode in Lizard Viewer or Lizard API. 
-#. Choose the observation type of this dataset. 
-#. Choose a preferred color map. Choose “Rescalable” if you want to be able to rescale the color map in Lizard Viewer.
-#. Fill in the supplier name. We use your username by default.
-#. You can fill in a supplier code for your own administration.
-#. If you’re supplying a temporal dataset. Choose “Raster Series”. Next, fill in the interval of the dataset. 
-#. Click submit. You have now created the Raster Store. You’re all set up to  supply your geotiff’s using the upload button. 
+After filling in the form you can choose to directly upload your data by selecting your GeoTIFF's in the 'DATA' section.
+In case of a temporal raster source you need to specify which file belongs to which timestep.
+This is recognised automatically if the filename is composed according to the specified format.
+When you save a new Source you will have the option to go straight to the Raster Layer form to publish your data.
 
 .. image:: /images/c_datatypes_01.png
 
-The Data Management interface is available at: “{your_organisation}.lizard.net/management/”.
-
-.. note::
-	This functionality is available only to users with an admin, manager or supplier role.
-
-After this screen, please click on ‘Data Management’, then ‘Rasters’ and, depending on if you want to manage a new or pre-existing raster, continue.
-
-.. image:: /images/c_datatypes_02.jpg
-.. image:: /images/c_datatypes_03.jpg
-.. image:: /images/c_datatypes_04.jpg
-
-Interested in the possibilities for your organisation? Please contact Joeri Verheijden via info@lizard.net.
+Interested in the possibilities for your organisation? Please contact us via info@lizard.net.
 
 .. _vector_data_types:
 
-Using the Data Management App
-++++++++++++++++++++++++++++++
+GeoBlocks management
+--------------------
 
-Once you have successfully created a raster store you will see the pop up below.
+The GeoBlocks management page provides you a powerful tool to build your GeoBlocks Rasters.
+It helps you configure complex GeoBlocks models and enables you to validate your work along the way.
 
-.. image:: /images/c_dataexchange_03.png
+The Visual editor shows your model as a flow diagram, consisting of block objects representing the input Raster Sources and GeoBlocks operations.
+The right sidebar shows the available blocks. Click on the blocks for a description and the expected inputs. Drag a block into the canvas to include it in your model.
+Connect blocks to use one as input for the other.
 
-Choose upload data to browse your GeoTIFF’s.
-When you want to add data to an existing raster store, click on the upload icon |uploadicon| in the list of existing Raster Stores. 
+When the model is valid it can also be shown in the Text editor. This shows the JSON graph as it would be sent to the API when you save the item.
+Here you can also make edits and validate the result.
 
-.. |uploadicon| image:: /images/c_dataexchange_04.png
+Example 1 shows a simple model which subtracts one Raster Source from another (difference in surface elevation between two versions of a dataset).
 
-You can supply multiple rasters, Lizard will blend them together! Click “Save all Files” to start uploading your data.
-Your GeoTIFF’s will be uploaded in a task. You can follow the status of the task by clicking “show asynchronous task”.
+.. image:: /images/c_manage_geoblocks_01.png
 
-.. image:: /images/c_dataexchange_05.png
+Example 2 shows a more complex model with multiple Raster Sources and a series of operations.
+
+.. image:: /images/c_manage_geoblocks_02.png
+
+For more information about the possibilities of GeoBlocks see: :ref:`GeoBlocksAnchor`

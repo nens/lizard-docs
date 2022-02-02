@@ -1,3 +1,5 @@
+.. _GeoBlocksAnchor:
+
 =========
 GeoBlocks
 =========
@@ -8,9 +10,9 @@ We developed GeoBlocks to make it easier to process and analyse (real-time) that
 GeoBlocks is a GIS modelling toolbox that allows you to make on-the-fly analyses using raster & vector data stored in Lizard. 
 Geoblocks consists of numerous classes which describe geographical operations. An individual class is called a Block and a combination of multiple Blocks is called a Graph.
 
-There are two families of Blocks: rasters (:ref:`RasterBlocksAnchor`) and labeltypes (:ref:`GeometryBlocksAnchor`).
+Lizard uses GeoBlocks technology to derive two different types of data: Rasters and Labels. On top of the basic set of block operations (:ref:`RasterBlocksAnchor`) there is an additional set specifically for label computation (:ref:`GeometryBlocksAnchor`).
 Geoblock rasters can be visualized through the WMS, analyzed through the API or exported to GeoTIFF.
-Geoblock labeltypes are used for computing labels on-the-fly, or in a batch so that they are visible via the API.
+Geoblock labeltypes are used for computing labels on-the-fly or in a batch so that they are stored and available via the API.
 
 - GeoBlocks derives information on-the-fly, creating a "view" on your data. This is also the reason why it's very efficient in data storage, as intermediate results do not have to be stored!
 - All Blocks are modular and can be combined with each other to create extensive models.
@@ -25,7 +27,7 @@ The computational core of GeoBlocks is published open source under the name `das
 Most operations are identical. Only the I/O filetype and configuration differs.
 The open source library can be used to build on-the-fly models on your own PC.
 Dask-geomodeling has a limitation in the complexity of the models that you can run locally.
-This is determined by your memory and processor capabilities. 
+This is determined by your memory and processor capacity. 
 
 If you want to scale up your model or increase complexity you can do publish your model and data to Lizard using the Lizard API.
 The GeoBlocks engine uses the powerful Lizard backend allowing you to scale up your models and integrate the model in your geo services using the Lizard API and Lizard WMS capabilities. 
