@@ -11,6 +11,7 @@ Changelog for the Lizard documentation
 
 - Added FAQ
 
+- Moved documentation testing and generation from travis-ci to github actions.
 
 
 0.8 (unreleased)
