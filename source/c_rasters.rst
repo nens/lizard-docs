@@ -19,7 +19,7 @@ The Data Management interface is available at: “www.{your_organisation}.lizard
 After landing on this page, click on ‘Data’ -> ‘Rasters’ -> 'Raster Sources'.
 Click on “New Item” |NewItem| to open the form or choose an existing raster to edit.  
 
-.. |NewItem| image:: /images/c_dataexchange_02.png
+.. |NewItem| image:: /images/c_manage_newitem.png
 
 After filling in the form you can choose to directly upload your data by selecting your GeoTIFF's in the 'DATA' section.
 In case of a temporal raster source you need to specify which file belongs to which timestep.
