@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Lizard'
-copyright = '2020, Nelen & Schuurmans'
+copyright = '2022, Nelen & Schuurmans'
 author = 'Nelen & Schuurmans'
 
 # The version info for the project you're documenting, acts as replacement for
