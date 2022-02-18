@@ -8,18 +8,18 @@ At the moment we have the following 3:
 1. Interactive Time Series API manual 
 --------------------------------------
 
-| `Notebook for api/v4/timeseries <https://colab.research.google.com/drive/1VnwgAJQ-bSq2nsyAjaS43xm6noyfcTEc#scrollTo=FQ79duRxpTFt>`_
+| `Notebook for api/v4/timeseries <https://colab.research.google.com/drive/1sXtvrtLIZv-BxU5ruWaSc2iRoZFG6HD9>`_
 
 2. Interactive Rasters API manual 
 ------------------------------------
 
-| `Notebook for /api/v4/rasters <https://colab.research.google.com/drive/1m9ECiz_mkkMWdxksAOUReOMHK4X7u-bH>`_
+| `Notebook for /api/v4/rasters <https://colab.research.google.com/drive/1YusoGoCDdcyE095L-nlF7schTe0zE87l>`_
 
 
 3. 3Di scenario download
 --------------------------
 
-| `Notebook for how to download a maximum waterdepth raster from a 3Di-scenario <https://colab.research.google.com/drive/1lW5QYenED5OvAGa93J8LTlM4Ox85lpli#scrollTo=IQFuyCScVAF1>`_
+| `Notebook for how to download a maximum waterdepth raster from a 3Di-scenario <https://colab.research.google.com/drive/1uvpNY8DfxCL0IbJqHBy3uPG_T2KC8m-L>`_
 
 
 .. topic:: Jupyter notebook
