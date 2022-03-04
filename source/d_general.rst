@@ -350,7 +350,7 @@ Rasters
 -------
 
 Download of rasters is possible but limited via the Lizard Viewer.
-The current limit is a 1 million by 1 million pixels download.
+The current limit is 1 billion pixels per download.
 Only possible when you are zoomed in far enough, depending on the resolution of the specific raster.
 
 Select a raster from the datalayers menu to the right.
