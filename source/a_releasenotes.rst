@@ -9,6 +9,19 @@ Release Notes
 =============
 
 
+March 11th 2022
+===============
+
+*	API v4 additions:
+
+        *       Labeltypes endpoint, including Labels and Label Parameters as subendpoint
+	
+	*       Eventseries endpoint, including Events subendpoint
+	
+*       Specified error message when exporting more than 1 billion pixels in one raster export
+
+
+
 January 18th 2022
 ===================
 
