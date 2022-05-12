@@ -9,6 +9,27 @@ Release Notes
 =============
 
 
+May 11th 2022
+===============
+
+*	API v4 changes:
+
+        *       Introduction of Projects datamodel, to group Scenarios
+	
+	*       Update of Scenarios metadata model:
+	
+		*       Added fields `description` and `extra_metadata`
+		
+		*       Field names changed (`simulation_start`, `simulation_end`, `simulation_identifier` and `model_identifier`)
+		
+		*       Duplicate field `username` removed (information already available in `supplier` field)
+	
+*       Scenario Catalogue and Scenario Management updated based on added/changed features in API
+	
+*       Fix GetCapabilities request for WMS of templated GeoBlocks rasters
+
+
+
 March 11th 2022
 ===============
 
