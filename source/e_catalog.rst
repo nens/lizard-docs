@@ -209,3 +209,47 @@ Below you see a screenshot of all locations with time series with observation ty
 Then location Bilt is manually selected (by clicking on a dot or use the search bar) and ready to export or view in the API or in the Viewer. 
 
 .. image:: /images/e_catalog_13.png
+
+Scenarios
+==============
+
+When you open the Catalogue and choose 'Scenario' in the top left, you will see an overview of all the scenarios you have access to.
+It will show a list of 10 items, with the option to click through to other pages.
+At the top of the screen there is a search bar.
+Using search terms that are in the Name or the Description of the data layer you can more easily find specific data layers that you might be interested in.
+
+.. image:: /images/e_catalog_14.png
+
+
+
+The following information is visible in this overview.
+
+* **Name** Name of the data layer.
+* **Model name** Name of the model the scenario is based on. 
+* **Organisation** To which organisation the data layer belongs.
+* **Last update** When the data layer was last updated.
+* **Access modifier** Divided into Public, Common and Private.
+
+.. note::
+    Information about the different Access modifiers can be found under :ref:`OrganisationsAnchor`.
+	
+
+Details
+--------
+
+Once you have selected a data layer, you will find detailed information about the layer in the panel on the right.
+
+.. image:: /images/e_catalog_15.png
+
+
+Action menu
+------------
+
+In the action menu, you can open the scenario in the Viewer or in the API.
+
+Results
+------------
+
+In the results menu, you can download the results. 
+
+.. image:: /images/e_catalog_16.png
