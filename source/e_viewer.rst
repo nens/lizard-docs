@@ -250,3 +250,35 @@ You can save a Lizard state with data of one or more assets, maps or time series
 Open the Favourites dropdown and enter a name/short description. You can save a specific period or one that is relative to ‘now’. In that case, the favourite is always up to date.
 
 Click a favourite to load the Lizard state that was saved in it. A link to the favourite can be retrieved by clicking the blue symbol next to the delete button.
+
+Data downloads
+==============
+
+Rasters
+-------
+
+Download of rasters is possible but limited via the Lizard Viewer.
+The current limit is 1 billion pixels per download.
+Only possible when you are zoomed in far enough, depending on the resolution of the specific raster.
+
+Select a raster from the datalayers menu to the right.
+Zoom in to the required extent.
+Click the export button, and click on the Rasters tab in the Export Data window.
+Select the required projection and cel size.
+Click on Start Export.
+When raster export is done, a download link will be supplied via the Lizard inbox.
+
+Timeseries
+-----------
+
+Lizard supports two types of timeseries.
+There are timeseries connected to a location, and there are timeseries in the form of rasters.
+
+Using the datalayers menu to the right, select your source for a timeseries.
+Select the point or points of which you want to download the timeseries.
+You can start the Export directly from the map view, or you can switch to the Graph view.
+After clicking on Export, a new window will pop-up.
+Using the timeseries (or timeseries from raster) you can select the period for which you want an export.
+If the selected point has more then one timeseries, you can select which one you want to export.
+Make your selection, and click on the Start Export button.
+When the export is finished, a download link will be supplied via the Lizard inbox.

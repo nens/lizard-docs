@@ -29,7 +29,9 @@ Welcome to the Lizard documentation!
 
    c_general
    c_rasters
+   c_geoblocks
    c_wms
+   c_layercollections
    c_timeseries
    c_scenarios
    c_labels
@@ -45,16 +47,14 @@ Welcome to the Lizard documentation!
    c_apifunctional
    d_apitechnical
    d_apitutorials
-   d_ftpimporter
    
 .. toctree::
    :maxdepth: 2
-   :caption: Visualisation
+   :caption: Visualisation 
    :name: Visualisation
 
    e_viewer
    e_dashboard
-   e_atlas
    e_catalog
    e_lizardwms
 

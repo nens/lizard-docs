@@ -1,5 +1,5 @@
 ================
-General 
+Data uploads
 ================
 
 We support multiple types of data uploads.
@@ -8,6 +8,10 @@ We can also provide support on either manual or automatic data uploads.
 
 .. note::
     Please note that Lizard assumes the data to be in UTC
+	
+	
+Rasters
+===========
 
 Requirements 
 --------------
@@ -19,35 +23,6 @@ Your raster data has to be in the format of a single band, georeferenced TIFF (g
 * **Geotiff should be single band**. RGB or multi-band is not supported. 
 * **Temporal raster datasets** with multiple timesteps **should be supplied with a single geotiff per timestamp**
 
-Creating and editing a Raster Store
--------------------------------------
-
-The first step in uploading your raster datasets is to create a Raster Store.
-This can easily be done using our Data Management app.
-Following this step-by-step tutorial to upload a raster dataset:
-
-.. image:: /images/c_dataexchange_01.jpg
-
-The Data Management interface is available at: “www.{your_organisation}.lizard.net/management/”.
-
-After landing on this page, please click on ‘Data Management’, then ‘Rasters’.
-Click on “New Raster” |NewRaster| to open the form for new Rasters.
-Or choose an existing raster to edit.  
-
-.. |NewRaster| image:: /images/c_dataexchange_02.png
-
-#. Choose the organisation you’re supplying data for. 
-#. Choose the organisations you want to share this dataset with. 
-#. Choose the preferred authorisation type (read more).
-#. Give the dataset a name.
-#. Describe your dataset. Make sure to name the source and describe the analysis that resulted in this dataset. Users can read this description in the Lizard Catalog.
-#. Choose how your data should be aggregated. This functionality is only needed when you want to use the Region Analysis mode in Lizard Viewer or Lizard API. 
-#. Choose the observation type of this dataset. 
-#. Choose a preferred color map. Choose “Rescalable” if you want to be able to rescale the color map in Lizard Viewer.
-#. Fill in the supplier name. We use your username by default.
-#. You can fill in a supplier code for your own administration.
-#. If you’re supplying a temporal dataset. Choose “Raster Series”. Next, fill in the interval of the dataset. 
-#. Click submit. You have now created the Raster Store. You’re all set up to  supply your geotiff’s using the upload button. 
 
 Upload 
 ------
@@ -56,11 +31,11 @@ You can supply your GeoTIFF’s in multiple ways:
 
 * Use the Data Management App 
 * Use the Lizard API 
-* Use the Lizard FTP
+* Use the Lizard FTP (will become absolete) 
 
 Use of the Data Management App is fairly straightforward and is build upon our API.
-If you want to upload larger raster datasets, please make use of our FTP server.
-Questions about FTP server access can be send to servicedesk@nelen-schuurmans.nl.
+If you want to upload larger raster datasets, please make use of our API. 
+
 
 Using the Data Management App
 ++++++++++++++++++++++++++++++
@@ -86,126 +61,101 @@ Below you find an example of how to upload a temporal geotiff in Python:
 
 .. code-block:: python
 
+	import os
+	import shutil
 	import requests
-	from localsecret import username, password
-	headers = {"username": username, 
-			   "password": password}
+	import json
+	import time
+	from datetime import datetime, timedelta
 
-	def post_geotiff_to_lizard(endpoint, file_path, timestamp=None):
-		"""Function to post a temporal geotiff to lizard"""
-		url = "{}data/".format(endpoint)
-		file = {"file": open(file_path, "rb")}
-		if timestamp:
-			data = {"timestamp": timestamp}
-			r = requests.post(url=url, data=data, files=file, headers=headers)
-		else: # use to send data to non-temporal endpoints
-			r = requests.post(url=url, files=file, headers=headers)
-		return r
+	srcdir = r""
+	tgtdir = r"" #Files are transfered here after being uploaded
+	base_url = 'https://demo.lizard.net/api/v4/rastersources/{}/data/' #Fill in rastersource__uuid
+	api_key = '' #Fill in personal API key of supplier account
 
-	uuid = "b73189fc-058d-4351-9b20-2538248fae4f"
-	endpoint = "https://demo.lizard.net/api/v4/rasters/{}/".format(uuid)
-	file_path = "local_geotiff.tif"
-	timestamp = "2020-01-01T000000Z"
+	headers= {
+		"username": "__key__",
+		"password": "{}".format(api_key)
+		}
 
-	response = post_temporal_geotiff_to_lizard(endpoint, file_path, timestamp)
+	file_id = 10000001 #Random counter
+
+	for filename in os.listdir(srcdir):
+		print(filename)
+		f = open(os.path.join(srcdir, filename), 'rb')
+		files = {'file': f}
+		payload = {'file_id': file_id,
+				   'timestamp': '{}'.format(
+					   datetime.strptime(filename.split('.')[0],
+										 '%Y%m%dT%H%MZ'
+										 ).strftime('%Y-%m-%dT%H:%M:00Z')
+					   )
+				   }
+		#The upload request could be put in a try/except like the result check, to prevent disruptions
+		res = requests.post(url=base_url,
+							files=files,
+							data=payload,
+							headers=headers
+							)
+		f.close()
+		#Check task result to know when to upload the next
+		task_url= res.json()['url']
+		processed = False
+		while not processed:
+			time.sleep(4) #Can be adjusted based on average processing time per file
+			try:
+				task_res= requests.get(url=task_url,
+									   headers=headers
+									   )
+				if task_res.json()['status'] == 'SUCCESS':
+					processed = True
+			except:
+				print('Error occurred')
+		shutil.move(os.path.join(srcdir, filename),
+					os.path.join(tgtdir, filename)
+					)
+		file_id+= 1
+
 
 Time Series
-===========
+=============
 
 Requirements
 ------------
 
 Time series should always be linked to one of the vector data models listed :ref:`here <vector_data_types>`.
 
-Time series can be imported manually, by uploading a csv file to https://demo.lizard.net/import/.
+Time series can be imported manually, by uploading a csv file in the timeseries management screen (see https://docs.lizard.net/c_timeseries.html) or via the API. 
 
-Time series can be uploaded through a 4 column csv.
-Select both the organisation you want to upload and the asset type the time series belongs to (e.g. groundwater station).
-The csv should not contain a header.
+Upload 
+------
 
-.. csv-table:: Example with headers
-    :header: timestamp, unit id/name, value, asset id
+
+Using the Data Management App
+++++++++++++++++++++++++++++++
+
+The first line of the file should describe the column names, for example:
+
+
+.. csv-table:: Example wcsv
+    :header: timestamp, value
     
-    2015-01-01T00:00:00Z, GWmMSL, 248.0, your_own_code_1
-    2015-01-01T01:00:00Z, GWmBGS, 248.0, your_own_code_1
-    2015-01-01T00:00:00Z, GWmMSL, 252.3, your_own_code_2
-    2015-01-02T05:00:00Z, GWmMSL, 234.2, your_own_code_3
+	2020-03-20T01:00:00Z, 3.14
+	2020-03-20T01:05:00Z, 2.72
 
 The columns should contain:
 
 * **timestamp:** a timestamp in iso8601 format.
-* **unit id/name:** This is both the name of the observation type name and this will become the timeseries name.
 * **value:** value as either a float or integer number.
-* **asset id:** either an asset uuid or a supplier_code (an identifier for an asset, unique for your organisation).In case the assets have been added with a code under category [columns].
 
-Since a csv should not contain a header, your csv should look like this:
 
-.. csv-table:: Example without headers
+.. note::
+    The upload will fail if there are duplicate timestamp
 
-    2015-01-01T00:00:00Z, GWmMSL, 248.0, your_own_code_1
-    2015-01-01T01:00:00Z, GWmBGS, 248.0, your_own_code_1
-    2015-01-01T00:00:00Z, GWmMSL, 252.3, your_own_code_2
-    2015-01-02T05:00:00Z, GWmMSL, 234.2, your_own_code_3
 
-Authentication
---------------
 
-New SFTP users need to generate a Personal API Key with "FTP" scope to authenticate.
-Provide your username and use the API Key as password.
-
-Users that existed before January 2021 can keep using their username and password.
-Future changes to the passwords will not be reflected in the FTP password.
-
-Supported data formats
-----------------------
-
-Via SFTP we support the CSV format.
-
-Every supplier has its own directory on the SFTP.
-It can be accessed by logging in with the Lizard credentials.
-
-As soon as a new file is uploaded to the SFTP server, it will be automatically recognised and processed by Lizard.
-After processing the file is moved to a backup for a limited period of time.
-
-When a file is rejected, the supplied file is moved to the directory ‘rejected’ and a message is sent to the suppliers Inbox.
-In the Inbox a supplier can see the status of his supplied files.
-
-CSV
-+++++
-
-Use CSV for supplying timeseries data with numerical or textual values according to the following format:
-
-.. code-block:: none
-
-    <timestamp>,<timeseries_supplier_code or uuid>,<value>[\n]
-    <timestamp>,<timeseries_supplier_code or uuid>,<value>[\n]
-    <timestamp>,<timeseries_supplier_code or uuid>,<value>[\n]
-    …
-
-Where:
-
-    * **timestamp:** time in UTC in ISO 8601 format. For example 2012-10-26T09:22:35Z. Supplying timestamps in different timezone is only allowed when the UTC offset is added to the timestamp according to ISO 8601. For example: 2012-10-26T07:22:35+02.
-    * **timeseries_supplier_code or UUID:** supplier_code attribute of timeseries as registered by administrator/supplier or the UUID of the timeseries object.
-    * **value:** numerical or textual value.
-    * **[\\n]:** newline character.
-
-CSV requirements:
-
-    * CSV file size may not exceed 100 MB. For one timeseries with a measuring frequency of 1 second that would be around 1 month of data.
-    * Every supplied file should contain new measurements. It is not allowed to add measurements to a previously supplied file.
-    * Use the empirical CSV format where the field separator is a comma (,) and the decimal separator a period (.).
-
-Error handling
-+++++++++++++++
-
-When a file is in the **wrong format**, **authorisation fails** and/or **value type is not valid**:
-
-    * File is moved to ‘rejected’ directory of supplier
-    * An error is logged
-    * A message is sent to the Inbox of the supplier
-
-API
-------------
+Using the Lizard API
+++++++++++++++++++++
 
 Timeseries data can be supplied with a POST request to the timeseries data endpoint in the API (`<baseurl>`/api/v4/timeseries/{uuid}/data/).
 Interaction with the API can be done from e.g. Postman or Python.
@@ -255,10 +205,10 @@ An example of an upload of an image using requests in Python:
                         'password': 'janespassword'
                         })
 
-Vectors
+Assets
 =======
 
-We support vector synchronisation.
+We support asset synchronisation.
 This type of data feed has to be configured per customer.
 Changes in location names, coördinates and new locations can be seen in Lizard as soon as the following day. 
 
@@ -334,43 +284,5 @@ This example .ini creates (a) new nested asset(s) from each record of the shapef
 
 You can copy paste this code in your own .ini file and zip it together with the shapefile.
 
-SUF-HYD
-+++++++++
 
-SUF-HYD files can be imported manually, by uploading a file to https://demo.lizard.net/import/
 
-We currently do not support GWSW-Hyd yet.
-
-The description of SUF-HYD files can be found here: https://www.riool.net/documents/20182/557556/suf-hyd-gegevens%20stelsel-1996-2003.pdf/512c2708-0594-4227-998e-f9c51bec6a50 
-
-Data downloads
-==============
-
-Rasters
--------
-
-Download of rasters is possible but limited via the Lizard Viewer.
-The current limit is 1 billion pixels per download.
-Only possible when you are zoomed in far enough, depending on the resolution of the specific raster.
-
-Select a raster from the datalayers menu to the right.
-Zoom in to the required extent.
-Click the export button, and click on the Rasters tab in the Export Data window.
-Select the required projection and cel size.
-Click on Start Export.
-When raster export is done, a download link will be supplied via the Lizard inbox.
-
-Timeseries
------------
-
-Lizard supports two types of timeseries.
-There are timeseries connected to a location, and there are timeseries in the form of rasters.
-
-Using the datalayers menu to the right, select your source for a timeseries.
-Select the point or points of which you want to download the timeseries.
-You can start the Export directly from the map view, or you can switch to the Graph view.
-After clicking on Export, a new window will pop-up.
-Using the timeseries (or timeseries from raster) you can select the period for which you want an export.
-If the selected point has more then one timeseries, you can select which one you want to export.
-Make your selection, and click on the Start Export button.
-When the export is finished, a download link will be supplied via the Lizard inbox.
