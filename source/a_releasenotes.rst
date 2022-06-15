@@ -9,8 +9,27 @@ Release Notes
 =============
 
 
+June 14th 2022
+==============
+
+*	API v4 changes:
+
+        *       Enable POST on /scenarios endpoint
+	
+	*       Enable PATCH and POST on /scenarios/{uuid}/results endpoint
+	
+*       Create Scenarios and attach raster results in Lizard Management
+	
+*       Add support for `info_format=application/geo+json` in GetFeatureInfo requests on Lizard WMS service
+	
+*       Allow nesting templated GeoBlocks in new GeoBlocks Rasters
+	
+*       Bugfix for timeseries percentiles endpoint: Using start and end parameters no longer results in a 404 error
+
+
+
 May 11th 2022
-===============
+=============
 
 *	API v4 changes:
 
