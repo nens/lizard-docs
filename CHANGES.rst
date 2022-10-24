@@ -13,6 +13,8 @@ Changelog for the Lizard documentation
 
 - Moved documentation testing and generation from travis-ci to github actions.
 
+- Added PDF generation (using the official sphinx docker image).
+
 
 0.8 (unreleased)
 ----------------
