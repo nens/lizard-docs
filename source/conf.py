@@ -91,6 +91,17 @@ html_theme = 'sphinx_rtd_theme'
 def setup(app):
     app.add_css_file('custom.css')
 
+# Latex output settings, mostly to get unicode characters in math working.
+latex_engine = "xelatex"
+latex_elements = {
+    "papersize": "a4paper",
+    "extrapackages": r"\usepackage{unicode-math}",
+    # The next two are to prevent the html "align" from wreaking pdf output.
+    # See https://github.com/sphinx-doc/sphinx/issues/3289#issuecomment-298942353
+    "figure_align": "H",
+    'preamble': r'\renewenvironment{wrapfigure}[2]{\begin{figure}[H]}{\end{figure}}',
+}
+
 # -- Options for Dask Geomodeling -----------------------------------------
 
 # mock imports so that we don't need all the dependencies to build the docs
