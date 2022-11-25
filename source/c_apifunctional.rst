@@ -52,12 +52,12 @@ Versions
 
 We support two versions of our API:
 
-* API v3: stable
-* API v4: experimental
+* API v3: deprecated (sunset date: 15 May 2023)
+* API v4: stable
 
 
-API V3 is the stable version of API. We may add new features, but it should not break existing endpoints. 
-API V4 is used to develop new features. 
+API V3 will be taken offline by 15 May 2023. Any use in scripts or applications should be reimplemented in API V4.
+API V4 is the stable version. We can make changes to this version, but they should always be backwards compatible and therefore not break any existing use.
 
 Digitale Delta API
 ------------------

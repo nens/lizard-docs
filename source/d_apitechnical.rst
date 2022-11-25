@@ -11,15 +11,15 @@ Objects and data have different endpoints, to allow specific interactions.
 
 The endpoints are browseable through the API root view:
 
-- API V3 https://demo.lizard.net/api/v3/ (stable)
+- API V3 https://demo.lizard.net/api/v3/ (deprecated)
 
-- API V4 https://demo.lizard.net/api/v4/ (experimental)
+- API V4 https://demo.lizard.net/api/v4/ (stable)
  
 Resources are addressable via an URL and can be interacted with via HTTP verbs. The
 most commonly used and supported verbs are: 
 
 * GET : retrieve data
-* PUT  : change data
+* PATCH/PUT  : change data
 * DELETE : delete data
 * POST : add data
 
