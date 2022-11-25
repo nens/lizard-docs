@@ -29,4 +29,4 @@ At the moment we have the following 3:
     learning, and much more. You can run the code in the browser, but you can also copy the code to your own programming app.
 
 .. note::
-	API v4 is the experimental API version. API v3 is our stable version. We will revision the tutorials after a release. 
+	API v4 is the stable API version. API v3 is deprecated and is to be taken offline by 15 May 2023.
