@@ -162,7 +162,7 @@ This section describes timeseries-related endpoints.
 
     **Example request:**
 
-        GET  https://demo.lizard.net/api/v4/timeseries/f1f20885-b09b-40fa-a717-1bfd4dffa60e/
+        GET  https://demo.lizard.net/api/v4/timeseries/1bcba36e-781d-4339-9632-00d5398c3b15/
 		
 	**Example response:**
 	    	
@@ -177,7 +177,7 @@ This section describes location-related endpoints.
 
     **Example request:**
 
-        GET https://demo.lizard.net/api/v4/locations/6eb648bf-c5a4-4566-ac7a-1311ec69921c/
+        GET https://demo.lizard.net/api/v4/locations/faa84a55-cb8d-460c-a8b8-18d2b59da28c/
 		
 	**Example response:**
 	    	
