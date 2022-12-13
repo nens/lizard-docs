@@ -194,7 +194,7 @@ An example of an upload of an image using requests in Python:
 
     now = dt.datetime.utcnow()
     uuid = ‘385c08c5-a0cf-4097-a98f-b6f053ef32c6’
-    url = 'https://demo.lizard.net/api/v3/timeseries/{}/data/'.format(uuid)
+    url = 'https://demo.lizard.net/api/v4/timeseries/{}/events/'.format(uuid)
     data = open('./x.png', 'rb').read()
     res = requests.post(url=url,
                         data=data,
