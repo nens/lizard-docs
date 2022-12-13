@@ -2,7 +2,7 @@
 API functional documentation
 ==============================
 
-You can access the Lizard API via “{your_organisation}.lizard.net/api/v3/”.
+You can access the Lizard API via “{your_organisation}.lizard.net/api/v4/”.
 
 .. image:: /images/c_apifunctional_01.jpg
 
@@ -21,14 +21,14 @@ Basic use API
 Below we discuss a basic request to the API.
 More examples and possibilities will be discussed further down
 
-The basic url is www.{your_organisation}.lizard.net/api/v3, for example:
- www.demo.lizard.net/api/v3 
+The basic url is www.{your_organisation}.lizard.net/api/v4, for example:
+ www.demo.lizard.net/api/v4 
 
 If you type this in your browser, for example Google Chrome, you will get a list of parameters.
 These parameters are so called *endpoints*.
 If you paste this endpoint after your basic url, you will initiate a query.
 An example is ``locations``. 
-If you click on the url www.demo.lizard.net/api/v3/locations , you will send a query to Lizard to search all locations that you have access to.
+If you click on the url www.demo.lizard.net/api/v4/locations , you will send a query to Lizard to search all locations that you have access to.
 As a response, you will get indeed the locations back, as well as some metadata. 
 
 .. image:: /images/c_apifunctional_02.jpg
@@ -38,12 +38,9 @@ Most endpoints have examples of this.
 
 .. image:: /images/c_apifunctional_03.jpg
 
-If we are looking for a specific location, with a name that contains 'gemaal', we can use this query:
+If we are looking for a specific location, with a name that starts with 'Inlaat', we can use this query:
 
-www.demo.lizard.net/api/v3/locations/?name__icontains=gemaal
-
-.. tip::
-	icontains means that the name does not have to match exactly. 
+https://demo.lizard.net/api/v4/locations/?name__startswith=Inlaat
 
 If you are an administrator or supplier of the data, you can also edit or delete the data via the API. 	
 
