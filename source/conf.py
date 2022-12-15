@@ -87,6 +87,7 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_theme_options = {"analytics_id": "UA-132871786-3"}
 
 def setup(app):
     app.add_css_file('custom.css')
