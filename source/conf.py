@@ -87,6 +87,10 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_static_path = ['_static']
+html_js_files = [
+    'matomo.js',
+]
 
 def setup(app):
     app.add_css_file('custom.css')
