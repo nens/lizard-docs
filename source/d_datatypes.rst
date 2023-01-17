@@ -67,6 +67,8 @@ Characteristics of rasters are stored in the attributes of a rasterstore. The at
 * Supplier code
 * Temporal behaviour
 
+.. _vector_data_types:
+
 Vectors
 =======
 
@@ -659,11 +661,11 @@ Options are:
 Field parameters
 ----------------
 
-By default the API returns the minimum and maximum values within the selected window (will change in v4).
-With the fields parameter other statistics can be retrieved. Multiple fields can be requested in one call.
+The timeseries events sub-endpoint returns the raw values. It is also possible to retrieve aggregated values, in the aggregates sub-endpoint.
+With the fields parameter many statistics can be retrieved. Multiple fields can be requested in one call.
+
 Options are:
 
-- value (in case of window=raw)
 - min
 - min_timestamp
 - max
@@ -675,10 +677,9 @@ Options are:
 - last
 - last_timestamp
 - nans
-- size
 - sum
 
-For more options in requesting time series see the API endpoint: https://demo.lizard.net/api/v4/timeseries/
+For more options in requesting time series see the API endpoint: https://demo.lizard.net/api/v4/timeseries/{timeseries_uuid}/aggregates/
 
 Labels
 ======
