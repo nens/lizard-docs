@@ -33,8 +33,8 @@ import sphinx_rtd_theme
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.todo', 'sphinx.ext.autodoc',
-              'sphinx.ext.imgmath','sphinx.ext.imgmath', 'sphinxcontrib.httpdomain',
-              'sphinx.ext.napoleon']
+              'sphinx.ext.imgmath', 'sphinxcontrib.httpdomain',
+              'sphinx.ext.napoleon', 'sphinxcontrib.jquery']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
