@@ -20,6 +20,7 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import datetime
 import sphinx_rtd_theme
 
 
@@ -50,7 +51,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Lizard'
-copyright = '2022, Nelen & Schuurmans'
+current_year = datetime.date.today().year
+copyright = str(current_year) + ', Nelen & Schuurmans'
 author = 'Nelen & Schuurmans'
 
 # The version info for the project you're documenting, acts as replacement for
