@@ -9,17 +9,38 @@ Release Notes
 =============
 
 
+February 28th 2023
+==================
+New features:
+
+*   Raster alarms on Line and Polygon intersections
+
+*   Vectortiles for assets, per assetset (combination of organisation and asset type)
+
+Other improvements:
+
+*   Adjustments of the notification email for finished 3Di postprocessing
+
+*   API v4 improvements:
+
+    *   Added upper_bounds (in combination with origin specifies spatial bounds in original projection) for rasters and raster sources
+
+    *   Extended API v4 with Favourites and Search endpoints
+
+    *   Add object information (of related asset) to locations listview in API v4
+
+
 July 26th 2022
 ==============
 This Lizard release contains a number of small but important bug fixes:
 
-*	Lock raster source when deleting data, so that simultaneous imports do not fail
+*   Lock raster source when deleting data, so that simultaneous imports do not fail
 
-*       Reset metadata of raster source and layer when all data is deleted
+*   Reset metadata of raster source and layer when all data is deleted
 
-*       Validation of alarm thresholds forcing unique input for values and warning levels
+*   Validation of alarm thresholds forcing unique input for values and warning levels
 
-*       Improve error handling for raster zonal endpoint in case of too large request
+*   Improve error handling for raster zonal endpoint in case of too large request
 
 
 
@@ -28,7 +49,7 @@ June 14th 2022
 
 *	API v4 changes:
 
-        *       Enable POST on /scenarios endpoint
+    *       Enable POST on /scenarios endpoint
 	
 	*       Enable PATCH and POST on /scenarios/{uuid}/results endpoint
 	
