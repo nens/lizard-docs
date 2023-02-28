@@ -20,11 +20,16 @@ Selecting a raster
 
 Raster alarms are set on temporal rasters. These can be part of a scenario, a single source raster or a Geoblock. An alarm is set for one point location intersecting this temporal raster.
 
-You can type in the field to search in the names of available rasters. Once a raster is selected the map below the field will show the spatial extend. There are three options to select a point location:
+You can type in the field to search in the names of available rasters. Next, select the type of intersection (Point, Line or Polygon). Draw the geometry on the map or insert a geometry in the JSON field below the map.
 
-* Simply clicking on the map
-* Search for an asset to use its location
-* Fill in (or adjust) the coordinates in the fields below the map (in WGS84)
+For Line and Polygon intersections a spatial aggregation is needed to derive a timeseries that can be compared to the alarm thresholds. The options are:
+
+* Sum
+* Mean
+* Min
+* Max
+* Median
+* Count
 
 Selecting a timeseries
 ----------------------
