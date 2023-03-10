@@ -29,7 +29,6 @@ Welcome to the Lizard documentation!
 
    c_general
    c_rasters
-   c_geoblocks
    c_wms
    c_layercollections
    c_timeseries
