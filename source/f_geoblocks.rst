@@ -97,7 +97,7 @@ API specification
 RasterBlocks
 ============
 
-RasterBlocks are the GeoBlocks that work with rasterdata. RasterBlocks operate on `Lizard Rasterdata <https://docs.lizard.net/c_datatypes.html#rasters>`_.
+RasterBlocks are the GeoBlocks that work with rasterdata. RasterBlocks operate on `Lizard Rasterdata <d_datatypes.html#rasters>`_.
 
 Creating a new RasterBlock
 --------------------------
@@ -308,7 +308,7 @@ Labels are grouped in Labeltypes. The graph can be found via the labeltypes endp
 
 .. image:: /images/d_geoblocks_02.png 
 
-Individual labels (e.g. label linked to one building or parcel) can be found on the `labels endpoint <demo.lizard.net/api/v4/labeltypes/{label type uuid}/labels>`_.  
+Individual labels (e.g. label linked to one building or parcel) can be found on the labels endpoint.  
 Labels can be computed on the fly using the compute endpoint or a-sync using the Lizard Task Server. 
 
 Operations

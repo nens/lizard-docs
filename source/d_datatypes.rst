@@ -691,7 +691,7 @@ Each element is explained below.
 LabelTypes
 -----------
 
-LabelTypes can be found on the LabelType-endpoint `<demo.lizard.net/api/v4/labeltypes>`_ and describe the type of Label.
+LabelTypes can be found on the LabelType-endpoint `<https://demo.lizard.net/api/v4/labeltypes>`_ and describe the type of Label.
 LabelTypes contain the following fields:
 
 * name: name of the LabelType
