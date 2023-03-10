@@ -8,25 +8,19 @@ At the moment we have the following 3:
 1. Interactive Time Series API manual 
 --------------------------------------
 
-| `Notebook for api/v4/timeseries <https://colab.research.google.com/drive/1sXtvrtLIZv-BxU5ruWaSc2iRoZFG6HD9>`_
+| `Notebook for api/v4/timeseries <https://demo.lizard.net/media/tutorials/Getting_familiair_with_Lizard_Time_Series_API_V4.ipynb>`_
 
 2. Interactive Rasters API manual 
 ------------------------------------
 
-| `Notebook for /api/v4/rasters <https://colab.research.google.com/drive/1YusoGoCDdcyE095L-nlF7schTe0zE87l>`_
+| `Notebook for /api/v4/rasters <https://demo.lizard.net/media/tutorials/Getting_familiair_with_Lizard_Rasters_API.ipynb>`_
 
 
 3. 3Di scenario download
 --------------------------
 
-| `Notebook for how to download a maximum waterdepth raster from a 3Di-scenario <https://colab.research.google.com/drive/1uvpNY8DfxCL0IbJqHBy3uPG_T2KC8m-L>`_
+| `Notebook for how to download a maximum waterdepth raster from a 3Di-scenario <https://demo.lizard.net/media/tutorials/How_to_download_a_maximum_waterdepth_raster_from_a_3Di_scenario_stored_in_the_Scenario_Archive_in_Lizard_.ipynb>`_
 
-
-.. topic:: Jupyter notebook
-
-    Jupyter Notebook is a web application that allows to share Python documents that contain live code, equations, visualisations and
-    narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualisation, machine
-    learning, and much more. You can run the code in the browser, but you can also copy the code to your own programming app.
 
 .. note::
 	API v4 is the stable API version. API v3 is deprecated and is to be taken offline by 15 May 2023.
