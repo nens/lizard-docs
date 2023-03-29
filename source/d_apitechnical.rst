@@ -164,9 +164,9 @@ This section describes timeseries-related endpoints.
 
         GET  https://demo.lizard.net/api/v4/timeseries/1bcba36e-781d-4339-9632-00d5398c3b15/
 		
-	**Example response:**
+    **Example response:**
 	    	
-		.. image:: /images/c_apitechnical_01.jpg
+        .. image:: /images/c_apitechnical_01.jpg
 
 Locations
 ==========
@@ -179,6 +179,62 @@ This section describes location-related endpoints.
 
         GET https://demo.lizard.net/api/v4/locations/faa84a55-cb8d-460c-a8b8-18d2b59da28c/
 		
-	**Example response:**
+    **Example response:**
 	    	
-		.. image:: /images/c_apitechnical_02.jpg
+        .. image:: /images/c_apitechnical_02.jpg
+
+Changes between v3 to v4
+========================
+
+Some major changes have been made in the setup of API v4 in comparison to v3. We have worked on consistency in parameterisation and response formats per endpoint.
+
+To help users convert their scripts and applications we list the most important changes here. For more details please inspect the documentation within the API.
+
+Timeseries
+----------
+
+  * Timeseries events, aggregates and percentiles can be retrieved from separate sub-endpoints under the timeseries instance, instead being combined in the detail page of the timeseries instance.
+  * Timestamps are in ISO8601 format, instead of UNIX milliseconds.
+
+Rasters
+-------
+
+  * Raster aggregates have been split out in separate sub-endpoints under ``/api/v4/rasters/{uuid}/``:
+    * counts
+    * curve
+    * line
+    * point
+    * rrc
+    * zonal
+  * Raster WMS is no longer available within the versioned Lizard API (``/api/v3/wms/`` isn't being replaced by ``/api/v4/wms/``). Instead use https://demo.lizard.net/wms/.
+  * Timestamps are in ISO8601 format, instead of UNIX milliseconds.
+
+Scenarios
+---------
+
+  * scenario-results has become a sub-endpoint under scenario instances, i.e. ``/api/v4/scenarios/{uuid}/results/``
+
+Labels
+------
+
+  * All label related endpoints have been grouped under the labeltypes endpoint.
+
+Events
+------
+
+  * The events endpoint has been placed under eventseries. 
+
+Miscellaneous
+-------------
+
+  * /regions has become /boundaries in v4
+  * The following endpoints will not return in v4:
+    * annotations
+    * domains
+    * nodes
+    * leveereferencepoints
+    * leveerings
+    * leveesections
+    * leveezones
+    * opticalfibers
+    * timeseriestypes
