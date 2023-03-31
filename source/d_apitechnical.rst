@@ -199,42 +199,60 @@ Timeseries
 Rasters
 -------
 
-  * Raster aggregates have been split out in separate sub-endpoints under ``/api/v4/rasters/{uuid}/``:
-    * counts
-    * curve
-    * line
-    * point
-    * rrc
-    * zonal
-  * Raster WMS is no longer available within the versioned Lizard API (``/api/v3/wms/`` isn't being replaced by ``/api/v4/wms/``). Instead use https://demo.lizard.net/wms/.
-  * Timestamps are in ISO8601 format, instead of UNIX milliseconds.
+- Raster aggregates have been split out in separate sub-endpoints under ``/api/v4/rasters/{uuid}/``:
+
+    - counts
+    
+    - curve
+    
+    - line
+    
+    - point
+    
+    - rrc
+    
+    - zonal
+    
+- Raster WMS is no longer available within the versioned Lizard API (``/api/v3/wms/`` isn't being replaced by ``/api/v4/wms/``). Instead use https://demo.lizard.net/wms/.
+
+- Timestamps are in ISO8601 format, instead of UNIX milliseconds.
 
 Scenarios
 ---------
 
-  * scenario-results has become a sub-endpoint under scenario instances, i.e. ``/api/v4/scenarios/{uuid}/results/``
+- scenario-results has become a sub-endpoint under scenario instances, i.e. ``/api/v4/scenarios/{uuid}/results/``
 
 Labels
 ------
 
-  * All label related endpoints have been grouped under the labeltypes endpoint.
+- All label related endpoints have been grouped under the labeltypes endpoint.
 
 Events
 ------
 
-  * The events endpoint has been placed under eventseries. 
+- The events endpoint has been placed under eventseries. 
 
 Miscellaneous
 -------------
 
-  * /regions has become /boundaries in v4
-  * The following endpoints will not return in v4:
-    * annotations
-    * domains
-    * nodes
-    * leveereferencepoints
-    * leveerings
-    * leveesections
-    * leveezones
-    * opticalfibers
-    * timeseriestypes
+- /regions has become /boundaries in v4
+
+- The following endpoints will not return in v4:
+
+    - annotations
+    
+    - domains
+    
+    - nodes
+    
+    - leveereferencepoints
+    
+    - leveerings
+    
+    - leveesections
+    
+    - leveezones
+    
+    - opticalfibers
+    
+    - timeseriestypes
