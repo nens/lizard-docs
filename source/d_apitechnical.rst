@@ -183,8 +183,8 @@ This section describes location-related endpoints.
 	    	
         .. image:: /images/c_apitechnical_02.jpg
 
-Changes between v3 to v4
-========================
+Changes in v4 compared to v3
+============================
 
 Some major changes have been made in the setup of API v4 in comparison to v3. We have worked on consistency in parameterisation and response formats per endpoint.
 
