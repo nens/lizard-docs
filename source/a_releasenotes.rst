@@ -9,6 +9,19 @@ Release Notes
 =============
 
 
+May 2nd 2023
+============
+New features in API v4:
+
+*   Added spatial information to scenarios (based on raster results)
+
+*   Extended raster '/data' sub-endpoint with option to retrieve data based on a polygon geometry and output format JSON
+
+Bug fixes:
+
+*   Fixed resampling issue for requests on '/zonal' raster sub-endpoint with small polygons compared to raster pixelsize, no longer returning nulls
+ 
+
 February 28th 2023
 ==================
 New features:
