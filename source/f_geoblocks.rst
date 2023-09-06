@@ -29,7 +29,7 @@ The open source library can be used to build on-the-fly models on your own PC.
 Dask-geomodeling has a limitation in the complexity of the models that you can run locally.
 This is determined by your memory and processor capacity. 
 
-If you want to scale up your model or increase complexity you can do publish your model and data to Lizard using the Lizard API.
+If you want to scale up your model or increase complexity you can publish your model and data to Lizard using the Lizard API.
 The GeoBlocks engine uses the powerful Lizard backend allowing you to scale up your models and integrate the model in your geo services using the Lizard API and Lizard WMS capabilities. 
 
 Working with GeoBlocks
@@ -108,7 +108,11 @@ This can be done on the `Lizard management page <https://demo.lizard.net/managem
 The second step is PATCHing the ``source`` element of your new raster. This element will contain the graph of your GeoBlock.
 To PATCH your raster provide a valid JSON object for its source element, and perform a patch on ``https://demo.lizard.net/api/v4/rasters/{uuid of the new raster}/``
 
-An example of a valid PATCH object is provided below. 
+In the example we provided earlier we used the 'SUBTRACT' geoblock operation to determine the difference between the AHN3 and the AHN2.
+As a new version of the AHN is now available, we want to compare the AHN4 and AHN3, instead of the AHN3 and AHN2.
+If we want to update our model, a PATCH request can be send.
+A PATCH can be considered as an update.
+Multiple PATCH requests can be send to apply multiple updates. 
 
 .. code-block:: json
 
@@ -116,30 +120,35 @@ An example of a valid PATCH object is provided below.
       "source": {
         "name": "difference",
         "graph": {
+            "AHN4": [
+              "lizard_nxt.blocks.LizardRasterSource",
+              "f83b5020-b296-489e-8f1f-a166ff086422"
+            ],
             "AHN3": [
               "lizard_nxt.blocks.LizardRasterSource",
               "a60ad336-c95b-4fb6-b852-96fc352ee808"
             ],
-            "AHN2": [
-              "lizard_nxt.blocks.LizardRasterSource",
-              "65912f43-0b70-425a-b471-1883378578eb"
-            ],
             "difference": [
               "geoblocks.raster.elemwise.Subtract",
-              "AHN3",
-              "AHN2"
+              "AHN4",
+              "AHN3"
             ]
         }
       }
     }
 
-PATCHing a raster can be done multiple times, until you are happy with the final output. 
+
 
 Raster output
 -------------
 
 After you PATCH your raster, the changes immediately take effect. 
 To view your GeoBlocks results you can access the raster via the `Catalogue <https://demo.lizard.net/catalogue>`_, `Raster API endpoint <https://demo.lizard.net/api/v4/rasters/>`_ or the Lizard WMS service.
+
+.. tip::
+	Use the generate uuid to find your raster quickly with the following link: https://demo.lizard.net/catalog/?data=Raster&uuid={uuid}
+   By keeping a tab with your resulting raster open, you are able to refresh the page quickly after each PATCH request. 
+   This will allow you to see the effects of your patch immediately.	
 
 If you want to show the result of your raster Geoblock it is easiest to use the Catalogue.
 
