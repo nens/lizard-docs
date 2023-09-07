@@ -1,18 +1,21 @@
 ===========
-Wms layers
+WMS Layers
 ===========
 
-WMS layers management allow to configure layers in Lizard even if they are hosted on another platform. In the management screen you can add new wms layers or edit existing layers.
+WMS stands for Web Mapping Service.
+It is a standard method of sharing georeferenced maps.
+The WMS layers management allows the user to configure layers in Lizard even if they are hosted on another platform.
+In the management screen you can add new WMS layers or edit existing layers.
 
 .. image:: /images/c_manage_wms_01.png
 
-New wms layer
+New WMS Layer
 ==============
 
 
 .. image:: /images/c_manage_newitem.png
 
-After clicking the 'new item' icon, you can configure a new wms layer. 
+After clicking the 'new item' icon, you can configure a new WMS layer. 
 
 .. image:: /images/c_manage_wms_02.png
 
@@ -49,14 +52,17 @@ The following fields can or must be filled in:
 If you are satisfied, click "SAVE"
 
 
-Edit wms layer
+Edit WMS Layer
 ===============
 	
-After clicking on the name of a wms layer, you can configure an existing wms layer. If you can not find the wms layer, use the search bar, or change organisations. 
+By clicking on the name of a WMS layer, the configuration of the corresponding layer is opened.
+In the configuration page you can edit any of the settings previously given to the WMS layer.
+To quickly find a WMS layer: use the search bar.
+If the layer you are looking for seems unavailable you might have to switch organisations, feel free to contact the servicedesk for any problems (servicedesk@nelen-schuurmans.nl).
 
 .. image:: /images/c_manage_wms_03.png
 
-You can for example edit the description or share your wms layer with other organisations. 
+You can for example edit the description or share your WMS layer with other organisations. 
 
 .. tip::
-	Advanced: Is your wms layer not visible in the Viewer? Check via the network tab (press F12) how Lizard requests the wms and if that wms url makes sense. You can always ask the service desk to help as well. 
+	Advanced: Is your WMS layer not visible in the Viewer? Check via the network tab (press F12) how Lizard requests the WMS and if that WMS url makes sense. You can always ask the service desk to help as well. 
