@@ -18,11 +18,5 @@ At the moment we have the following:
 | `Download script for /api/v4/rasters <https://demo.lizard.net/media/tutorials/export_lizard_raster_layers.py>`_
 
 
-3. 3Di scenario download
-------------------------
-
-| `Notebook for how to download a maximum waterdepth raster from a 3Di-scenario <https://demo.lizard.net/media/tutorials/How_to_download_a_maximum_waterdepth_raster_from_a_3Di_scenario_stored_in_the_Scenario_Archive_in_Lizard_.ipynb>`_
-
-
 .. note::
-	API v4 is the stable API version. API v3 is deprecated and is to be taken offline by 4 July 2023.
+	API v4 is the stable API version. API v3 is deprecated since june 2023.
