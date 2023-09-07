@@ -15,17 +15,17 @@ New WMS Layer
 
 .. image:: /images/c_manage_newitem.png
 
-After clicking the 'new item' icon, you can configure a new WMS layer. 
+After clicking the 'NEW ITEM' icon, you can configure a new WMS layer. 
 
 .. image:: /images/c_manage_wms_02.png
 
-The following fields can or must be filled in:
+The configuration has some mandatory items while others are optional, an extensive list with descriptions follows:
 
 1. GENERAL
 ------------
 
 * Name (required): Choose a name that is findable and not too difficult
-* Description (optional)
+* Description (optional): Give a description of the information that is displayed by the WMS layer.
 * Tags / Datasets (optional): You can connect the layer to an existing dataset. 
 
 2. DATA
@@ -62,7 +62,5 @@ If the layer you are looking for seems unavailable you might have to switch orga
 
 .. image:: /images/c_manage_wms_03.png
 
-You can for example edit the description or share your WMS layer with other organisations. 
-
 .. tip::
-	Advanced: Is your WMS layer not visible in the Viewer? Check via the network tab (press F12) how Lizard requests the WMS and if that WMS url makes sense. You can always ask the service desk to help as well. 
+	Advanced: Is your WMS layer not visible in the Viewer? Check via the network tab (press F12) how Lizard requests the WMS and if that WMS url makes sense. 
