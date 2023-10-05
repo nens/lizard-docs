@@ -2,283 +2,413 @@
 Viewer
 ======
 
-The Viewer of Lizard is the graphical user interface (GUI), in which measuring locations, parameters, timeseries, rasters and other layers are visible in maps and graphs.
+The Lizard Viewer is a graphical user interface (GUI) in which measuring locations, parameters, timeseries, rasters and other layers are visible.
+Below you will find an overview of a general Lizard Viewer instance. 
+Every aspect of the viewer will be discussed and in the end we will supply a series of short tutorials designed to kick-start your Lizard experience.
+These are short and simple explanations of commonly used features that might require a short explanation.
+If you are struggling with any of the features, feel free to contact the `servicedesk <servicedesk@nelen-schuurmans.nl>`_ for guidance.
 
-Basic elements	
+Elements Overview
 ==============
 
-After logging in:
+The Lizard Viewer can be devided into 4 seperated sections, with each their own elements.
+We will handle items within a section from left to right, top to bottom:
 
-.. image:: /images/e_portal_01.jpg
+1. The Topbar:
+   * 1.1: Lizard Menu
+   * 1.2: Searchbar
+   * 1.3: Map / Graph
+   * 1.4: Settings and Login
 
-1. Log in or out and manage your account
-2. Make and access favourites
-3. Switch to graph view
-4. Open export screen
-5. Links to partner platforms and applications
-6. Zoom in and out on map
-7. Search for addresses, dates, names or codes/tags
-8. Open and close data menu
-9. Selection tools to query data on the map
+2. The Viewport
+   * 2.1: Select Menu
+      * 2.1.A: Cursor
+      * 2.1.B: Point
+      * 2.1.C: Line
+      * 2.1.D: Polygon
+      * 2.1.E: North-South
+      * 2.1.F: Shortcuts
+   
+   * 2.2: Time Panel
+      * 2.2.A: Datetime
+      * 2.2.B: Timeframe Selection
+      * 2.2.C: Expand / Collapse
+      * 2.2.D: Timebar
+      * 2.2.E: End / Start Date
+      * 2.2.F: Zoomfunctions
 
-Data menu and layers	
+3. The Left Panel
+   * 3.1: Minimize
+   * 3.2: Layers button
+   * 3.3: Add new x
+   * 3.4: Layers, assets and selections overview
+   * 3.5: Base layer
+
+4. The Right Panel
+   * 4.1: Layer or asset details
+   * 4.2: Legend
+   * 4.3: Time series
+      * 4.3.A: Data selection
+      * 4.3.B: Data display
+      * 4.3.C: Export
+
+   * 4.4: Controls
+      * 4.4.A: Opacity
+      * 4.4.B: Zoom to extent
+      * 4.4.C: Export raster
+      * 4.4.D: Catalog
+
+.. image:: /images/e_overview_01.jpg
+
+1. Topbar
 --------------------
 
-The topmost entry in the data menu toggles between the following base layers:
+.. image:: /images/e_topbar_01.jpg
 
-- Neutral
+**1.1 Lizard Menu**
+The Lizard gives acts as a shortcut to the homepage. At the homepage you can vind the catalogue, the viewer, the management page and the API.
+At the homepage there are also apps available, for example dashboards or floodsmart. 
+At the bottom there are some useful links, like the documentation and support links.
+
+**1.2 Searchbar**
+At the searchbar you can lookup items or locations, depending on the setting used.
+The right side of the searchbar displays the currently selected option.
+Clicking results in a drop-down menu with the available search options; currently assets or addresses.
+A location search will move the viewport to the desired location.
+The search of an asset will add the asset to the selection panel (left), select the asset and move the screen accordingly.
+
+**1.3 Mode change**
+The mode change buttons allow you to switch between map and graph mode.
+It should be noted that it is not possible to display graphs if no assets or selections of temporal rasters are provided.
+
+**1.4 User menu** 
+
+.. image:: /images/e_usermenu_01.jpg
+
+
+Offers a drop-down menu in regards to links, support tools, settings and the login.
+There is a link to the homepage available under `home`, and a link to the documentation at `help`.
+
+To get familiar with the entire viewer one can use the `Start a tour` button.
+This button will start a 'tour', during which the functionality of the viewer is introduced and explained briefly.
+The tour has a lot of functionality, allowing you to move forward and backward through the items.
+Furthermore, once confident you can skip the rest of the tour or if you would close the tour screen it can be resumed by clicking on the pulsing blue dot.
+If the tour is skipped at any point it can be restarted by using the `Start a tour` button once more.
+
+Clicking `Export` will take you to the exports overview. 
+In this overview you can see the status of your exports and download or delete any available exports.
+
+Next up is `favourites`, which will open the favourites overview screen.
+Similar to a bookmark, favourites allows you to save the current view, in both map and graph mode, to be saved.
+This includes the viewbox, the layers and assets and timeframe.
+This 'favourite' can then be loaded from the menu to quickly re-access the saved view.
+By using the option `make time relative` the user is able to determine if a favourite should remain static, or adjust based on the time past.
+
+We then find two language options: `EN` for English and `NL` for Dutch.
+Clicking on between the EN and NL buttons will swap the language settings for the entire Lizard Viewer.
+
+Finally we find the `Reset Application` and `Login` / `Logout` buttons.
+`Reset Application` as the name suggests resets the Lizard Viewer.
+This can be useful when you want to have a clean slate to work in.
+
+
+2. Viewport
+--------------------
+
+.. image:: /images/e_viewport_01.jpg
+
+**2.1 Select Menu**
+
+.. image:: /images/e_selectmenu_01.jpg
+
+The select menu determines the way you interact with the layers with the cursor and is found at the top of the viewport.
+There is a variety of options to choose from.
+At all times you are able to move the view through dragging.
+If you hold CTRL while dragging you turn the angle of the viewport.
+
+*2.1.A: Cursor*
+The Cursor when selected allows you to select individual assets by clicking on them.
+If you want to select multiple assets, CTRL has to be pressed while clicking.
+
+*2.1.B: Points*
+Allows you to create one or multiple points that display the value of a raster, or the timeseries for temporal rasters.
+As a default only one point can be created. This way clutter is avoided.
+If you are interested in using multiple points you could use CTRL-clicking to add multiple point assets.
+
+*2.1.C: Line*
+Able to create a straight line.
+If you click once you start the line placement.
+The second click will complete the line.
+If instead of selecting a different point, you reclick the start, the line placement will be cancelled.
+Could be used to examine the slope of a hill or mountain.
+With CTRL-clicking one can create multiple lines.
+
+*2.1.D: Polygon*
+The polygon method allows the user to create figures with 3 or more corners.
+By reclicking on the previously defined corner you cancel it.
+It allows you to inspect the statistics of a certain area. 
+Like what percentage of the selected area consists of a certain land-use type.
+
+*2.1.E: North-South*
+If you used CTRL+dragging to move the angle of the screen you can use this button to return the view to top-down North.
+
+*2.1.F: Shortcuts*
+
+.. image:: /images/e_shortcuts_01.jpg
+
+There are multiple shortcuts within the drop-down menu.
+Every shortcut can be accessed by clicking on it, or using the key that is displayed on the rightside.
+* Zoom-in                  [+]: Zooms in for the viewport
+* Zoom-out                 [-]: Zooms out for the viewport
+* Toggle baselayer labels  [L]: Toggles the labels within the baselayer, like names of locations.
+* Full Map                 [F]: Toggles the right and left panel to provide a full view of the map.
+* Show Time Period         [T]: Toggles the timebar in the bottom.
+
+
+**2.2 Time Panel**
+
+.. image:: /images/e_timepanel_01.jpg
+
+The time panel is related to all things time.
+It is located at the bottom of the viewport.
+The time panel has a few mentionable items:
+
+*2.2.A: Datetime Display*
+The datetime display shows you the timeframe that is currently viewed on screen.
+
+*2.2.B: Timeperiod Selection*
+The timeperiod selection tool in the upper-left corner of the panel allows you to select the timeperiod you would like to view in the timebar.
+There are a few standard settings, like one day `1D`, a week `7D`, a month `1M`, a year `1Y` or five years `5Y`.
+These will all show you the timeframe between now and the timeperiod. 
+Thus 1D will for the 27th of September 2023 12:05 will the time from 26/09/2023 12:05 till 27/09/2023 12:05.
+
+The `MAX` and `NOW` button function slightly differently.
+When one clicks `NOW` the timebar centres on the present time, with one day in advance and one day prior forming the timebar edges.
+The `MAX` button zooms to the timespan of the entire data set available.
+
+.. note::
+   `MAX` results in a view of the entire timeframe during which data can be found for the **selected** layers.
+
+*2.2.C: Expand / Collapse*
+The `Expand / Collapse` button can be found in the top-right corner.
+It allows the user to minimize the time panel in two steps:
+1. The first time you use click the button:
+   * The zoom functionality will be removed from the bar together with the timeperiod selection
+   * The timeperiod selection buttons are removed
+
+.. image:: /images/e_minimize_01.jpg
+
+2. The second button fully minimizes the panel:
+   * The timebar itself is removed
+   * The start and end dates of the interval have been removed
+   * The datetime date display becomes the current viewdate and remains visible
+
+.. image:: /images/e_minimize_02.jpg
+
+*2.2.D: Timebar*
+The timebar displays the time interval of interest.
+If a layer has been selected, the data from this timeperiod will be displayed in the right panel.
+
+.. tip:: 
+   Support `SHIFT-click` dragging functionality to zoom into a selection of the timebar.
+
+.. tip:: 
+   It is also possible to zoom in or out of the temporal timeframe with the `Scroll` button on the mouse. 
+
+
+*2.2.E: End / Start Date*
+At the edges, just below the timebar, you will find the interval between which the data is displayed in the right panel.
+For animations, this will be the start and end date.
+You are able to adjust these dates in a multitude of ways.
+One is to scroll in the timebar itself.
+Dependent on the level of initial zoom the addition or removal of the dates can range from single minutes to multiple years, the build up is gradual.
+
+Another way to update the dates on one side is clicking on the datetime and using the calendar to select a date (and possibly a time).
+
+
+*2.2.F: Zoomfunctions*
+All the way at the bottom within the middle of the time panel you will find the zoom-buttons.
+Logically, the magnifying glass with a `+` icon is the zoom-in, with the `-` representing the zoom-out functionality.
+
+
+3. Left Panel
+--------------------
+
+.. image:: /images/e_leftpanel_01.jpg
+
+**3.1 Minimize**
+Allows you to move the side panel of the screen so you have complete better of the map itself.
+
+.. image:: /images/e_minimize_03.jpg
+
+**3.2 Layers Button**
+The layers button displays the number of layers that are currently available within the left panel.
+By clicking this button all layers are selected, if all layers are selected it functions as a de-select all button.
+
+**3.3 Add new x**
+Opens a window that allows you to select a new:
+   - Layer
+   - Asset
+   - Asset set
+   - WMS layer
+   - Scenario
+
+.. image:: /images/e_addmenu_01.jpg
+
+.. image:: /images/e_addraster_01.jpg
+
+*3.3.A: Home*
+If one would like to switch to a different category the home button in the top left corner can be pressed.
+This will bring you back to the category selection screen.
+
+*3.3.B: Search bar*
+You can search within any category with the search bar at the topside of the pop-up window.
+This can be combined with category selections to create a more selective overview.
+
+*3.3.C: Filters*
+Within each of the categories there is a variety of filters to apply.
+Examples are:
+   * Organisation
+   * Observation type
+   * Layer collection
+   * Asset type
+
+*3.3.D: Results*
+This is the panel where the results of your search query are returned.
+
+
+**3.4 Layers, assets and selections overview**
+
+.. image:: /images/e_assetsrasters_01.jpg
+
+*3.4.A: Assets and selections*
+the top part of the panel is reserved for assets and selections.
+Often a graph of the data found on a line, point or region can be displayed in a graph.
+Layers only have legends, separating the two.
+Because of this additional attribute as a default only one asset or selection will be active.
+Clicking another asset will de-select the previously selected asset.
+
+.. tip::
+   You can select multiple assets with CTRL-clicking.
+
+*3.4.B: Layers*
+Below the gray line layers can be found.
+Layers comprise of all categories except individual assets or selections.
+Selecting a layer without the use of CTRL will not result in de-selection of previously selected layers.
+Selections will interact with the selected layers, allowing you to view time series of temporal rasters, or values found within a region.
+
+**3.5 Baselayer**
+The lowest part of the left panel is related to the base map.
+By clicking on the layer icon, you are able to alter the base layer.
+The different layers that are available are:
+
 - Topography
 - Satellite 
+- Neutral
+- Dark
 
-Click a data layer to activate it.
-   
-.. note::
-	Data layers need to be active to retrieve information from them in the map.
-	
-.. tip::
-   You can rescale the colour scale of the elevation layer (DEM) >> Double click the layer in the menu.
-   
 
-Adjust the opacity by clicking the green bar below the activated data layer.
-
-.. image:: /images/e_portal_02.jpg
-
-Upon activating a raster layer a crosshair appears. By clicking it the application zooms to the full data extent, both in space and time.
-
-Add more data
+4. Right Panel
 --------------------
 
-Want to see more or other data layers? Just add data that is available to your organisation.
+**4.1 Minimize**
+Just like the left panel, the right panel is equiped with a minimize button to give you more access to the map layer.
+By combining the minimize of the timebar and both panels you are left with a full map view.
 
-Hit the button in the bottom of the data menu: Add data. Clicking the cross (x) in the layer bar removes it from the menu instantaneously.
-
-Below is the 'Add data interface'. Use the search bar (1) to navigate through the data layers that you or your organisation are authorized to see.
-
-.. image:: /images/e_portal_03.jpg
-   :height: 400px
-   :width: 400 px
-   :align: center
-
-Close the Add data interface (2) and go back to the data menu.
-	
-One of the available data layer types is *3Di scenarios*. A scenario is a combination of layers and products that belong to a 3Di model run.
-Click a scenario layer to expand it and activate data layers or download products. 
-
-Navigation in time	
-==================
-
-Search for the period you are interested in through the search bar or use the buttons next to the timeline.
-You can adjust the period by panning, zooming or dragging the timeline, or by specifying the start and end date. 
-
-Temporal rasters
-----------------
-
-Raster layers with a time component (temporal raster layers, e.g. Rain radar) can be animated.
-Start or pause the animation using the button on the left-hand side of the timeline.
-	
-.. image:: /images/e_portal_04.jpg
-   :align: center
-   
-When the rain layer is active, the bars in the timeline show the distribution of rainfall in time for the area on your screen.
-
-The length of the selected period of time determines the aggregation level of the rainfall data. This can be 5 minutes, hourly or daily.
-
-Timeseries
-----------
-
-Once a time series has been selected, by clicking on a timeseries location or after you searched it in the search bar, you see something like the following:
-
-.. image:: /images/e_portal_05.jpg
-   :align: center
-   
-The graph appears in in a new screen in the top left, which we call the *omnibox*.  You also inspect the graph closer in the "Graph" mode (click it in the menu). 
-	
-.. tip::
-   In the omnibox click the button 'ZOOM TO EXTENT' to zoom to the full extent of the series.
-   There are also three buttons for standard periods. This means no more searching for a historical or short-term time series. Just click the buttons! 
-
-Navigation in space	
-===================
-
-Zoom in and out on the map by using the buttons next to the search bar.
-Use the search bar to navigate to specific locations like countries, cities or addresses.
-
-Symbols
--------
-
-.. image:: /images/e_portal_12.png 
-    :align: center
-
-All asset types have a unique symbol as you can see above.
-From the symbol, or by clicking on an asset, you can see if you are for example dealing with a groundwaterstation or a pumpstation.
-You can also see both black and red symbols.
-A red symbol means that there is a timeseries linked to it.
-A black symbol means that there is no timeseries linked to it.
-If an asset is red, but you cannot see the timeseries, it means that you either do not have the rights to see the timeseries,
-or that you have to go further back in time (tip: click on “zoom to extent”).
-Lastly, for groundwaterstations, you can see a line drawn through the station.
-
-.. image:: /images/e_portal_13.png 
-    :align: center
-
-This means that the groundwaterstation is inactive. 
-
-.. tip::
-	Looking for a specific region? Drag a frame with your mouse while holding SHIFT. This feature enables you to navigate to the selected area.
-
-Selection tools
-----------------
-   
-There are 4 selection tools:
-
-.. image:: /images/e_portals_selection01.jpg
-   :align: right 
-   
-1. Point
-2. Multipoint
-3. Line
-4. Region
-   
-**Point selection** 
-Point selectionretrieves asset information, time series and map values from the active data layers. Results are displayed on the left.
-
-**Multipoint selection** 
-
-.. image:: /images/e_portals_selection02.jpg
-   :align: right
-   
-Use the multipoint tool to select multiple objects and/or locations.
-When multiple assets are selected, time series are not displayed in the omnibox. 
-Go to the graph view to see them.
-
-.. tip::
-	Add a set of locations to a favourite to always have them available instantaneously.
-
-**Line selection** 	
-
-.. image:: /images/e_portals_selection03.jpg
-   :align: right 
-   
-Use the line selection tool to retrieve data along a profile, e.g. elevation from a DEM.
-
-* 1st click: Start point
-* 2nd click: End point
-* 3rd click: Reset
-
-.. image:: /images/e_portal_11.jpg
-   :height: 400px
-   :width: 300 px
-   :align: center
-   
-Hovering along the profile on the map shows a corresponding indicator in the graph.
-
-**Region selection** 
-
-The region selection tool aggregates data of the selected region. 
-
-.. image:: /images/e_portals_selection04.jpg
-   :align: right 
-
-.. image:: /images/e_portal_06.jpg
-   :align: center
-   
-Region analysis can be performed on raster of data type nominal (quantititive) or ordinal (classes). Click the *star* behind the layer name and the analysis is applied on-the-fly on the active region type for the zoom level. The regions are coloured based on the most abundant class.
-
-.. tip::
-    Hover over the classes in the diagram to see more information.
-
-.. tip::
-	Select a class in the legend and the regions are coloured based on the relative abundancy of that class. 
-	This answers questions like: what is the general rice growth stage within my district or which municipality is most urbanized?
-
-Graph view and data interpretation
-==================================
-
-There are multiple ways to interpret your data. For example, you can:
-
-* Activate multiple layers in order to get a more integral scope on situations or to see interaction between locations.
-* Export the data and analyse in another program (see next paragraph) 
- 
-Graph view
-----------
-
-Switch between map view and graph view with the Graph/Map button.
-
-.. image:: /images/e_portal_07.jpg
-
-By scrolling or dragging within the graph the domain of the Y-axis can be changed. By scrolling or dragging the datetimebar, the X-axis can be changed. 
+.. image:: /images/e_minimize_04.jpg
 
 .. note::
-	If multiple locations with time series are selected initially there are no time series displayed. Click time series in the menu to show/hide them.
+   The `Full Map` shortcut only minimizes both panels, not the timebar.
 
-.. tip::
-	Adjust the colour of a line by choosing from the scale that opens by clicking the coloured bar.
+**4.2 Layer details**
+Every selected layer is shown in the right panel with additional details visible below.
 
-.. tip::
-	Drag multiple time series items into one graph to combine them. 
+.. image:: /images/e_rightraster_01.jpg
 
-.. tip::
-	Water level time series can be recalculated relative to the surface level. This is done by clicking the button 'relative'. This enables analysis of drainage depth or freeboard.  The option also applies to the export of these time series.
+*4.2.A: Legend*
+Displays the raster values. This might be a value scale for scalar data, but it could also possibly be classes for things like land-use.
 
-Next to the relative button you can zoom to the standard periods and full extent of the active timeseries.
+*4.2.B: Opacity*
+How translucent is the layer. Can be set anywhere from 0 to 100 percent.
 
-Apps
-------
+*4.2.C: Zoom to extent*
+Allows the user to zoom to the full extent of the layer.
 
-In order to examine your data in further detail open one of our partner platforms through the Apps screen.
+*4.2.D: Rescale color range*
+Depending on extent of the view the color scale can be adjusted.
+An example for when this would be very useful would be when zooming in of a height map, adjusting the scale will give you a much better view.
+
+*4.2.E: Animate*
+Animates temporal rasters for you to view the change through time.
+
+*4.2.F: Export raster*
+Opens the raster export view pane.
+There is quite a lot to this view, an overview is available below.
+
+.. image:: /images/e_export_01.jpg
+
+In the export view you will find information about:
+- Layer name
+- Organisation name
+- Projection
+- Pixel size
+- No data value (optional)
+
+While the layer and organisation are always set in stone (depending on which layer you decide to export), the other settings are changeable.
+The projection determines the unit for the pixel size, with some having degrees as a unit and others having meters.
+You have the options to either export the full raster, or to make a selection with the `draw rectangle` tool in the bottom right corner.
+If you select a region, but are unhappy, you are able to click the red bin icon to remove the selection.
+There is a limited amount of pixels you are able to export, this is too limit the size of the returned file and the time it takes to download the file.
+The cap is at 1.000.000.000 pixels.
+
+.. image:: /images/e_exporterror_01.jpg
+
+*4.2.G: Catalog*
+The `Open in Lizard Catalog` brings you to the lizard catalog, allowing you to see aspects of the raster layer unavailable in the viewer.
+It also allows the user to quickly access the API of the respective layer. 
+
+
+**4.3 Assets and selection details**
+Every asset or selection shows its details in the right panel, they stack on top of the layer details.
 
 .. note::
-	Apps are not available by default in every Lizard Viewer. Do you want to see or change the App settings of a Viewer? Please contact our support office (servicedesk@nelen-schuurmans.nl).
-	
-	
+   The order of the assets and layers in the left panel determines the order within the right panel.
 
-Share
-=====
+.. image:: /images/e_rightasset_01.jpg
 
-Lizard enables sharing asset, time series and raster data between organisations to provide (water) managers with a better overview of systems and processes.
+*4.3.A: General information*
+Immediately under the asset general information is available, some examples:
+- Assets: name, code, type, capacity, station type
+- Selections: label, coordinates, length or area.
 
-Favourites
-----------------
+Next to the general information there is also information in relation to the raster layers selected.
+If a height raster would be selected (or any other continuous value raster) a point would return the value of the pixel, a line provides a graph of the value across the line and a polygon returns a distribution curve.
+For a raster with categories like soil types a point returns the category found underneath the point, a line returns nothing and a polygon returns a pie-chart with percentages every category has within the polygon.
 
-You can save a Lizard state with data of one or more assets, maps or time series as a favourite and share it with others.
+.. tip::
+   Hover over classes within a pie-chart to see more information
 
-.. image:: /images/e_portal_08.jpg
-   :height: 400px
-   :width: 300 px
-   :align: center
-   
-Open the Favourites dropdown and enter a name/short description. You can save a specific period or one that is relative to ‘now’. In that case, the favourite is always up to date.
+The information depends on the asset or selection type.
 
-Click a favourite to load the Lizard state that was saved in it. A link to the favourite can be retrieved by clicking the blue symbol next to the delete button.
+*4.3.B: Time series data selection *
+Right below the time series label a drop-down menu is available.
+Within the drop-down field you will find all the data available for the asset.
 
-Data downloads
-==============
+*4.3.C: Time series data display*
+A graph displaying the selected data type for the time interval displayed on the timebar.
+There are many ways to interact with the timeframe of the graph:
+1. Click-dragging in the graph itself, this will zoom in to the time range selected.
+2. Interacting with the timebar through any of the methods discussed in section 2.2
 
-Rasters
--------
+*4.3.D: Time series export function*
+The `Export time series` button exports all information in the time series for the selected time period (within the timebar).
+The export can be found in the user drop-down menu in the top-right corner.
+The time series is given in an Excel file.
 
-Download of rasters is possible but limited via the Lizard Viewer.
-The current limit is 1 billion pixels per download.
-Only possible when you are zoomed in far enough, depending on the resolution of the specific raster.
+*4.3.E: Controls*
+In the controls section we have options that have been discussed prior like:
+- Opacity: How translucent is the layer. Can be set anywhere from 0 to 100 percent.
+- Zoom to extent: Allows the user to zoom to the extent of the selection or asset.
 
-Select a raster from the datalayers menu to the right.
-Zoom in to the required extent.
-Click the export button, and click on the Rasters tab in the Export Data window.
-Select the required projection and cel size.
-Click on Start Export.
-When raster export is done, a download link will be supplied via the Lizard inbox.
 
-Timeseries
------------
-
-Lizard supports two types of timeseries.
-There are timeseries connected to a location, and there are timeseries in the form of rasters.
-
-Using the datalayers menu to the right, select your source for a timeseries.
-Select the point or points of which you want to download the timeseries.
-You can start the Export directly from the map view, or you can switch to the Graph view.
-After clicking on Export, a new window will pop-up.
-Using the timeseries (or timeseries from raster) you can select the period for which you want an export.
-If the selected point has more then one timeseries, you can select which one you want to export.
-Make your selection, and click on the Start Export button.
-When the export is finished, a download link will be supplied via the Lizard inbox.
+Next up we will discuss the dashboards available within Lizard!
