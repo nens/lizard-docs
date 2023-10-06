@@ -394,7 +394,7 @@ For a raster with categories like soil types a point returns the category found 
 
 The information depends on the asset or selection type.
 
-*4.3.B: Time series data selection *
+*4.3.B: Time series data selection*
 Right below the time series label a drop-down menu is available.
 Within the drop-down field you will find all the data available for the asset.
 
