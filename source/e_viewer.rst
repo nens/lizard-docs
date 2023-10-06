@@ -9,7 +9,7 @@ These are short and simple explanations of commonly used features that might req
 If you are struggling with any of the features, feel free to contact the `servicedesk <servicedesk@nelen-schuurmans.nl>`_ for guidance.
 
 Elements Overview
-==============
+===================
 
 The Lizard Viewer can be devided into 4 seperated sections, with each their own elements.
 We will handle items within a section from left to right, top to bottom:
