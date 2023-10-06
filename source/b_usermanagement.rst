@@ -48,11 +48,12 @@ Organisations
 
 All data in Lizard is linked to an organisation.
 Organisations are the backbone of our authorisation model.
+When an organisation uploads data, they are able to determine the level of authorisation required for access.
 There are three types of authorisation options that can be applied to your data: 
 
-* **Public**: everyone can see your data 
-* **Common**: everyone with login credentials to Lizard can see your data 
-* **Private**: everyone with login credentials to Lizard AND user rights to your organisation can see your data
+* **Public**: everyone is able to access your data 
+* **Common**: everyone with login credentials to Lizard is able to access your data 
+* **Private**: everyone with login credentials to Lizard AND user rights to your organisation is able to access your data
 
 
 
@@ -60,8 +61,10 @@ Whitelisting
 ============
 
 The users of a certain portal may not be interested in a lot of the public/common datasets that are made available by others.
-An organisation can determine data of which other organisations is visible in their Lizard API and Viewer.
-This is configured by whitelisting the organisations that are allowed to show their data per portal.
+Every Lizard portal has its own whitelist.
+Whitelisting allows the organisations to determine which data should be visible.
+This can remove some of the clutter.
+The whitelist affects both the Lizard Viewer aswell as the Catalogue.
 
 The effect is that for the same user the available data can differ between [your_organisation].lizard.net and demo.lizard.net (for which all organisations are whitelisted).
 The whitelisting mechanism is overruled if a user has specific authorisation for an organisation.
