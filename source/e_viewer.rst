@@ -258,11 +258,11 @@ By clicking this button all layers are selected, if all layers are selected it f
 
 **3.3 Add new x**
 Opens a window that allows you to select a new:
-   - Layer
-   - Asset
-   - Asset set
-   - WMS layer
-   - Scenario
+- Layer
+- Asset
+- Asset set
+- WMS layer
+- Scenario
 
 .. image:: /images/e_addmenu_01.jpg
 
@@ -279,10 +279,10 @@ This can be combined with category selections to create a more selective overvie
 *3.3.C: Filters*
 Within each of the categories there is a variety of filters to apply.
 Examples are:
-   * Organisation
-   * Observation type
-   * Layer collection
-   * Asset type
+* Organisation
+* Observation type
+* Layer collection
+* Asset type
 
 *3.3.D: Results*
 This is the panel where the results of your search query are returned.
