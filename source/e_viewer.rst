@@ -11,7 +11,7 @@ If you are struggling with any of the features, feel free to contact the `servic
 Elements Overview
 ===================
 
-The Lizard Viewer can be devided into 4 seperated sections, with each their own elements.
+The Lizard Viewer can be divided into 4 sections, with each their own elements.
 We will handle items within a section from left to right, top to bottom:
 
 1. The Topbar:
@@ -28,7 +28,7 @@ We will handle items within a section from left to right, top to bottom:
       * 2.1.C: Line
       * 2.1.D: Polygon
       * 2.1.E: North-South
-      * 2.1.F: Shortcuts
+      * 2.1.F: Hotkeys
    
    * 2.2: Time Panel
 
@@ -161,11 +161,11 @@ Like what percentage of the selected area consists of a certain land-use type.
 *2.1.E: North-South*
 If you used CTRL+dragging to move the angle of the screen you can use this button to return the view to top-down North.
 
-*2.1.F: Shortcuts*
+*2.1.F: Hotkeys*
 
 .. image:: /images/e_shortcuts_01.jpg
 
-There are multiple shortcuts within the drop-down menu.
+There are multiple hotkeys within the drop-down menu.
 Every shortcut can be accessed by clicking on it, or using the key that is displayed on the rightside.
 * Zoom-in                  [+]: Zooms in for the viewport
 * Zoom-out                 [-]: Zooms out for the viewport
@@ -362,8 +362,8 @@ While the layer and organisation are always set in stone (depending on which lay
 The projection determines the unit for the pixel size, with some having degrees as a unit and others having meters.
 You have the options to either export the full raster, or to make a selection with the `draw rectangle` tool in the bottom right corner.
 If you select a region, but are unhappy, you are able to click the red bin icon to remove the selection.
-There is a limited amount of pixels you are able to export, this is too limit the size of the returned file and the time it takes to download the file.
-The cap is at 1.000.000.000 pixels.
+There is a limited amount of pixels you are able to export, this is to limit the size of the returned file and the time it takes to download the file.
+The cap is at 10.000.000.000 pixels.
 
 .. image:: /images/e_exporterror_01.jpg
 
