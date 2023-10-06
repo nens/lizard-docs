@@ -22,6 +22,7 @@ We will handle items within a section from left to right, top to bottom:
 
 2. The Viewport
    * 2.1: Select Menu
+
       * 2.1.A: Cursor
       * 2.1.B: Point
       * 2.1.C: Line
@@ -30,6 +31,7 @@ We will handle items within a section from left to right, top to bottom:
       * 2.1.F: Shortcuts
    
    * 2.2: Time Panel
+
       * 2.2.A: Datetime
       * 2.2.B: Timeframe Selection
       * 2.2.C: Expand / Collapse
@@ -42,21 +44,28 @@ We will handle items within a section from left to right, top to bottom:
    * 3.2: Layers button
    * 3.3: Add new x
    * 3.4: Layers, assets and selections overview
+
+      * 3.4.A: Assets and selections
+      * 3.4.B: Layers
+
    * 3.5: Base layer
 
 4. The Right Panel
-   * 4.1: Layer or asset details
-   * 4.2: Legend
-   * 4.3: Time series
-      * 4.3.A: Data selection
-      * 4.3.B: Data display
-      * 4.3.C: Export
+   * 4.1: Minimize
+   * 4.2: Layer details
 
-   * 4.4: Controls
-      * 4.4.A: Opacity
-      * 4.4.B: Zoom to extent
-      * 4.4.C: Export raster
-      * 4.4.D: Catalog
+      * 4.2.A: Legend
+      * 4.2.B: Controls
+      * 4.2.C: Export raster
+      * 4.2.D: Catalog
+
+   * 4.3: Asset and selection details
+
+      * 4.3.A: General information
+      * 4.3.B: Time series data selection
+      * 4.3.C: Time series data display
+      * 4.3.D: Time series export function
+      * 4.3.E: Controls
 
 .. image:: /images/e_overview_01.jpg
 
@@ -328,20 +337,13 @@ Every selected layer is shown in the right panel with additional details visible
 *4.2.A: Legend*
 Displays the raster values. This might be a value scale for scalar data, but it could also possibly be classes for things like land-use.
 
-*4.2.B: Opacity*
-How translucent is the layer. Can be set anywhere from 0 to 100 percent.
+*4.2.B: Controls*
+- Opacity: How translucent is the layer. Can be set anywhere from 0 to 100 percent.
+- Zoom to extent: Allows the user to zoom to the full extent of the layer.
+- Rescale color range: Depending on extent of the view the color scale can be adjusted. An example for when this would be very useful would be when zooming in of a height map, adjusting the scale will give you a much better view.
+- Animate: Animates temporal rasters for you to view the change through time.
 
-*4.2.C: Zoom to extent*
-Allows the user to zoom to the full extent of the layer.
-
-*4.2.D: Rescale color range*
-Depending on extent of the view the color scale can be adjusted.
-An example for when this would be very useful would be when zooming in of a height map, adjusting the scale will give you a much better view.
-
-*4.2.E: Animate*
-Animates temporal rasters for you to view the change through time.
-
-*4.2.F: Export raster*
+*4.2.C: Export raster*
 Opens the raster export view pane.
 There is quite a lot to this view, an overview is available below.
 
@@ -363,7 +365,7 @@ The cap is at 1.000.000.000 pixels.
 
 .. image:: /images/e_exporterror_01.jpg
 
-*4.2.G: Catalog*
+*4.2.D: Catalog*
 The `Open in Lizard Catalog` brings you to the lizard catalog, allowing you to see aspects of the raster layer unavailable in the viewer.
 It also allows the user to quickly access the API of the respective layer. 
 
