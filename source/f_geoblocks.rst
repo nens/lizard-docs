@@ -146,9 +146,7 @@ After you PATCH your raster, the changes immediately take effect.
 To view your GeoBlocks results you can access the raster via the `Catalogue <https://demo.lizard.net/catalogue>`_, `Raster API endpoint <https://demo.lizard.net/api/v4/rasters/>`_ or the Lizard WMS service.
 
 .. tip::
-	Use the generate uuid to find your raster quickly with the following link: https://demo.lizard.net/catalog/?data=Raster&uuid={uuid}
-   By keeping a tab with your resulting raster open, you are able to refresh the page quickly after each PATCH request. 
-   This will allow you to see the effects of your patch immediately.	
+	Use the generate uuid to find your raster quickly with the following link: https://demo.lizard.net/catalog/?data=Raster&uuid={uuid}. By keeping a tab with your resulting raster open, you are able to refresh the page quickly after each PATCH request. This will allow you to see the effects of your patch immediately.	
 
 If you want to show the result of your raster Geoblock it is easiest to use the Catalogue.
 
