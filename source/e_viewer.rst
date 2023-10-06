@@ -202,12 +202,14 @@ The `MAX` button zooms to the timespan of the entire data set available.
 The `Expand / Collapse` button can be found in the top-right corner.
 It allows the user to minimize the time panel in two steps:
 1. The first time you use click the button:
+
    * The zoom functionality will be removed from the bar together with the timeperiod selection
    * The timeperiod selection buttons are removed
 
 .. image:: /images/e_minimize_01.jpg
 
 2. The second button fully minimizes the panel:
+
    * The timebar itself is removed
    * The start and end dates of the interval have been removed
    * The datetime date display becomes the current viewdate and remains visible
