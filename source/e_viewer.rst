@@ -292,9 +292,11 @@ Opens a window that allows you to select a new:
 - Scenario
 
 .. image:: /images/e_addmenu_01.jpg
+
 In the menu that opens after clicking the ``+``-icon you are able to select what kind of data category you would like to add to your selection.
 
 .. image:: /images/e_addraster_01.jpg
+   
 An example of how your screen could look if you wanted to add a layer of the type 'raster'.
 
 3.3.A: Home::
