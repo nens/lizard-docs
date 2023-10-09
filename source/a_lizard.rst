@@ -10,7 +10,7 @@ Or connect your favourite data science tools with our API.
 The documentation has detailed descriptions of individual components of every aspect of Lizard.
 Feel free to move through every section in sequence by using the next functionality at the bottom of every page, or dive straight to the item of interest with the use of the left pane.
 
-To get familiar with the Catalogue or Viewer, use one of the following toturials:
+To get familiar with the Catalogue or Viewer, use one of the following tutorials:
 1. `Catalogue Tutorial <https://docs.lizard.net/e_catalog.html>` 
 2. `Viewer Tutorial <https://docs.lizard.net/e_viewer.html>`
 

@@ -79,11 +79,13 @@ We will handle items within a section from left to right, top to bottom:
 .. image:: /images/e_topbar_01.jpg
 
 **1.1 Lizard Menu**
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 The Lizard gives acts as a shortcut to the homepage. At the homepage you can find the catalogue, the viewer, the management page and the API.
 At the homepage there are also apps available, for example dashboards or FloodSmart. 
 At the bottom there are some useful links, like the documentation and support links.
 
 **1.2 Search Bar**
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 At the search bar you can lookup items or locations, depending on the setting used.
 The right side of the search-bar displays the currently selected option.
 Clicking results in a drop-down menu with the available search options; currently assets or addresses.
@@ -91,15 +93,16 @@ A location search will move the viewport to the desired location.
 The search of an asset will add the asset to the selection panel (left), select the asset and move the screen accordingly.
 
 **1.3 Mode change**
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 The mode change buttons allow you to switch between map and graph mode.
 It should be noted that it is not possible to display graphs if no assets or selections of temporal rasters are provided.
 
 **1.4 User menu** 
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Offers a drop-down menu in regards to links, support tools, settings and the login.
 
 .. image:: /images/e_usermenu_01.jpg
 
-
-Offers a drop-down menu in regards to links, support tools, settings and the login.
 There is a link to the homepage available under ``home``, and a link to the documentation at ``help``.
 
 To get familiar with the entire viewer one can use the ``Start a tour`` button.
@@ -121,7 +124,7 @@ We then find two language options: ``EN`` for English and ``NL`` for Dutch.
 Clicking on between the EN and NL buttons will swap the language settings for the entire Lizard Viewer.
 
 Finally we find the ``Reset Application`` and ``Login`` / ``Logout`` buttons.
-`Reset Application` as the name suggests resets the Lizard Viewer.
+``Reset Application`` as the name suggests resets the Lizard Viewer.
 This can be useful when you want to have a clean slate to work in.
 
 
@@ -137,6 +140,7 @@ There are two ways to interact with the viewport:
 .. image:: /images/e_viewport_01.jpg
 
 **2.1 Select Menu**
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The select menu determines the way you interact with the layers with the cursor and is found at the top of the viewport.
 There is a variety of options to choose from.
@@ -188,6 +192,7 @@ Every shortcut can be accessed by clicking on it, or using the key that is displ
 
 
 **2.2 Time Panel**
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The time panel is related to all things time.
 It is located at the bottom of the viewport.
@@ -263,17 +268,20 @@ Logically, the magnifying glass with a ``+`` icon is the zoom-in, with the ``-``
 .. image:: /images/e_leftpanel_01.jpg
 
 **3.1 Minimize**
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Allows you to move the side panel of the screen so you have complete better of the map itself.
 
 .. image:: /images/e_minimize_03.jpg
 
 **3.2 Layers Button**
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The layers button displays the number of layers that are currently available within the left panel.
 By clicking this button all layers are selected, if all layers are selected it functions as a de-select all button.
 
 **3.3 Add new x**
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Opens a window that allows you to select a new:
 
@@ -284,13 +292,10 @@ Opens a window that allows you to select a new:
 - Scenario
 
 .. image:: /images/e_addmenu_01.jpg
-
-   In the menu that opens after clicking the ``+``-icon you are able to select what kind of data category you would like to add to your selection.
-
+In the menu that opens after clicking the ``+``-icon you are able to select what kind of data category you would like to add to your selection.
 
 .. image:: /images/e_addraster_01.jpg
-
-   An example of how your screen could look if you wanted to add a layer of the type 'raster'.
+An example of how your screen could look if you wanted to add a layer of the type 'raster'.
 
 3.3.A: Home::
 If one would like to switch to a different category the home button in the top left corner can be pressed.
@@ -314,6 +319,9 @@ This is the panel where the results of your search query are returned.
 
 
 **3.4 Layers, assets and selections overview**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Allows you to change which layers and/or assets are visible, and their order.
 
 .. image:: /images/e_assetsrasters_01.jpg
 
@@ -334,6 +342,7 @@ Selecting a layer without the use of CTRL will not result in de-selection of pre
 Selections will interact with the selected layers, allowing you to view time series of temporal rasters, or values found within a region.
 
 **3.5 Baselayer**
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The lowest part of the left panel is related to the base map.
 By clicking on the layer icon, you are able to alter the base layer.
@@ -349,6 +358,7 @@ The different layers that are available are:
 --------------------
 
 **4.1 Minimize**
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Just like the left panel, the right panel is equipped with a minimize button to give you more access to the map layer.
 By combining the minimize of the time-bar and both panels you are left with a full map view.
@@ -359,6 +369,7 @@ By combining the minimize of the time-bar and both panels you are left with a fu
    The `Full Map` shortcut only minimizes both panels, not the time-bar.
 
 **4.2 Layer details**
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Every selected layer is shown in the right panel with additional details visible below.
 
@@ -389,7 +400,7 @@ In the export view you will find information about:
 
 While the layer and organisation are always set in stone (depending on which layer you decide to export), the other settings are changeable.
 The projection determines the unit for the pixel size, with some having degrees as a unit and others having meters.
-You have the options to either export the full raster, or to make a selection with the `draw rectangle` tool in the bottom right corner.
+You have the options to either export the full raster, or to make a selection with the ``draw rectangle`` tool in the bottom right corner.
 If you select a region, but are unhappy, you are able to click the red bin icon to remove the selection.
 There is a limited amount of pixels you are able to export, this is to limit the size of the returned file and the time it takes to download the file.
 The cap is at 10.000.000.000 pixels.
@@ -397,11 +408,12 @@ The cap is at 10.000.000.000 pixels.
 .. image:: /images/e_exporterror_01.jpg
 
 4.2.D: Catalog::
-The `Open in Lizard Catalog` brings you to the lizard catalog, allowing you to see aspects of the raster layer unavailable in the viewer.
+The ``Open in Lizard Catalog`` brings you to the lizard catalog, allowing you to see aspects of the raster layer unavailable in the viewer.
 It also allows the user to quickly access the API of the respective layer. 
 
 
 **4.3 Assets and selection details**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Every asset or selection shows its details in the right panel, they stack on top of the layer details.
 
@@ -437,7 +449,7 @@ There are many ways to interact with the time frame of the graph:
 2. Interacting with the time-bar through any of the methods discussed in section 2.2
 
 4.3.D: Time series export function::
-The `Export time series` button exports all information in the time series for the selected time period (within the time-bar).
+The ``Export time series`` button exports all information in the time series for the selected time period (within the time-bar).
 The export can be found in the user drop-down menu in the top-right corner.
 The time series is given in an Excel file.
 
