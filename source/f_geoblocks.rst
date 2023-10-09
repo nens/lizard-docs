@@ -166,8 +166,8 @@ Raster data sources
    :members:
    :exclude-members: get_sources_and_requests, process
 
-.. note:: If a UUID of a raster (instead of a rastersource) is given, it will
-  automatically be replaced by the Geoblock graph of that raster.
+.. note:: 
+   If a UUID of a raster (instead of a rastersource) is given, it will automatically be replaced by the Geoblock graph of that raster.
 
 
 RasterBlocks that combine rasters
