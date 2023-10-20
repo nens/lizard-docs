@@ -9,6 +9,13 @@ Release Notes
 =============
 
 
+October 10th 2023
+=================
+New viewer released:
+
+*   Documentation for the new viewer can be found `here <https://docs.lizard.net/e_viewer.html>`
+
+
 May 2nd 2023
 ============
 New features in API v4:
