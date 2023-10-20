@@ -13,7 +13,7 @@ October 10th 2023
 =================
 New viewer released:
 
-*   Documentation for the new viewer can be found `here <https://docs.lizard.net/e_viewer.html>`
+*   Documentation for the new viewer: :doc:`e_viewer`
 
 
 May 2nd 2023
