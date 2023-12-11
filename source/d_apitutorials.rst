@@ -8,7 +8,7 @@ At the moment we have the following:
 0. Virtual Environment
 ----------------------
 
-`Virtual Environment Requirements </files/tutorials/requirements.txt>`
+`Virtual Environment Requirements </files/tutorials/requirements.txt>`_
 
 
 1. Interactive Time Series API manual 
@@ -27,7 +27,7 @@ At the moment we have the following:
 
 3. Learn to retrieve scenarios from the Lizard API
 
-`Notebook for 3Di results / Scenarios in Lizard </file/tutorials/How_to_download_a_maximum_waterdepth_raster_from_a_3Di_scenario_stored_in_the_Scenario_Archive_in_Lizard_.ipynb>`
+`Notebook for 3Di results / Scenarios in Lizard </file/tutorials/How_to_download_a_maximum_waterdepth_raster_from_a_3Di_scenario_stored_in_the_Scenario_Archive_in_Lizard_.ipynb>`_
 
 
 .. note::
