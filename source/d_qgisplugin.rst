@@ -27,13 +27,21 @@ Initial setup
 
 When starting the plugin for the first time you are prompted to provide some settings that are required.
 In the following screen you need to provide:
+
 * The base URL of the Lizard portal you want to use. This will typically be *your_organisation*.lizard.net.
-* A Personal API Key. If you already have an API Key, you can fill it in by clicking "Set...". If you do not have a Personal API Key yet, follow these steps:
+
+* A Personal API Key. If you already have an API Key, you can fill it in by clicking "Set...". If you do not have a Personal API Key yet, follow these steps.
+
     * Click "Obtain..." You will be redirected to the management page where you can create a new Personal API Key.
+
     * Create a new Personal API Key by pressing the + NEW ITEM button in the upper right corner.
+
     * Fill in a name for the new Personal API Key. Click on ‘Submit’ to the right.
+
     * You now have your own Personal API Key. Copy it.
+
     * Return to QGIS / the 3Di Modeller Interface.
+
     * Click Set… and paste your Personal API Key. Then click Save.
 
 .. image:: /images/d_qgisplugin01.png
@@ -49,12 +57,17 @@ The Lizard plugin currently contains the Scenario archive browser (to be extende
 After selecting a scenario, you have two options:
 
 * Retrieve downloadable results (raw results and non-temporal rasters)
+
     * Select the results of interest
+
     * [Optional] Set nodata value and projection that the downloaded rasters should get.
+
     * Start the download
+
     * Follow the progress at the top of the QGIS main window.
 
 * Add raster results to your project as WMS layers
+
     * Use the `Temporal Controller<https://docs.qgis.org/3.28/en/docs/user_manual/map_views/map_view.html?highlight=temporal%20controller#time-based-control-on-the-map-canvas>` to animate temporal raster  results (e.g. water depth)
 
 .. note:
