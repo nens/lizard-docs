@@ -46,6 +46,7 @@ Welcome to the Lizard documentation!
    c_apifunctional
    d_apitechnical
    d_apitutorials
+   d_qgisplugin
    
 .. toctree::
    :maxdepth: 2
