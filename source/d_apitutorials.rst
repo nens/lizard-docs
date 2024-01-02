@@ -14,7 +14,6 @@ For working in local environment, the required Python packages can be found in: 
 
 For local development using Jupyter Notebook, it's recommended to create the Jupyter kernel in a Python virtual environment.
 Once created and activated, packages can be installed in the environment with Conda or pip.
-It is expected that Python and Jupyter Notebook are already installed.
 Follow instructions explain the steps to install the kernel in the virtual environment.
 
 1. Open a new terminal of the ``cmd`` command prompt.
@@ -31,27 +30,29 @@ Follow instructions explain the steps to install the kernel in the virtual envir
 
 4. Activate the environment.
 
-   - Run: ``./{virtual environment name}\Scripts\activate.bat"``.
+   - Run: ``./{virtual environment name}\Scripts\activate.bat``.
+
+   - Example, run: ``.\lizard\Scripts\activate.bat``.
 
    - You should now see ``({virtual environment name})`` before the terminal line.
 
-5. Create a Jupyter kernel.
+5. Download the `requirements.txt <https://github.com/nens/lizard-docs/blob/master/source/files/tutorials/requirements.txt>`_.
 
-   - Run: ``ipython kernel install --user --name=lizard``.
+   - Example, run: ``wget -O requirements.txt https://raw.githubusercontent.com/nens/lizard-docs/master/source/files/tutorials/requirements.txt``.
 
-6. Download the `requirements.txt <https://github.com/nens/lizard-docs/blob/master/source/files/tutorials/requirements.txt>`_.
+6. To install the packages.
 
-   - Example: ``wget -O requirements.txt https://raw.githubusercontent.com/nens/lizard-docs/master/source/files/tutorials/requirements.txt``.
+   - Run: ``.\{virtual environment name}\bin\pip install -r \path\to\requirements.txt``.
 
-7. To install the packages.
+   - Example, run: ``.\lizard\bin\pip install -r C:\Users\steven\Downloads\requirements.txt``.
 
-   - Run: ``pip install -r \path\to\requirements.txt``.
+7. Create a Jupyter kernel in the virtual environment for the specific tutorial.
 
-   - Example: ``pip install -r C:\Users\steven\Downloads\requirements.txt``.
+   - Run: ``.\{virtual environment name}\bin\ipython kernel install --user --name=raster_tutorial``.
 
-8. Open the Jupyter Notebook from inside the environment.
+8. Open the Jupyter Notebook from inside the virtual environment.
 
-   - Run: ``jupyter notebook``.
+   - Run: ``.\{virtual environment name}\bin\jupyter notebook``.
 
 Once Jupyter has started, open the preferred notebook.
 The newly created kernel can be selected through the menu.
