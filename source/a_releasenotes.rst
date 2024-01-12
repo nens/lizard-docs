@@ -9,6 +9,23 @@ Release Notes
 =============
 
 
+January 12th 2024
+=================
+Lizard backend updates:
+
+*   Cloud-based import and export tasks (downloads come from Amazon S3 now)
+
+*   Add pixel_size option to raster export in API
+
+*   Set aggregation_type for scenario raster results, so that the Viewer shows statistics for polygon selections
+
+Lizard Viewer:
+
+*   Enable raster export again and use pixel_size option
+
+*   Show web notification when a raster export has finished
+
+
 October 10th 2023
 =================
 New viewer released:
