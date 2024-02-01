@@ -1,3 +1,5 @@
 {
-    "restructuredtext.confPath": "${workspaceFolder}\\source"
+    "restructuredtext.confPath": "${workspaceFolder}\\source",
+    "iis.configDir": "",
+    "esbonio.sphinx.confDir": "${workspaceFolder}\\source"
 }
