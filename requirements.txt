@@ -1,7 +1,9 @@
-sphinx
-sphinx_rtd_theme
+sphinx < 6
+# ^^^^ once sphinx-rtd-theme 1.2 is out, we can remove the restriction.
+sphinx-rtd-theme
 # sphinx-ext-autodoc
 # sphinxcontrib-contentui
 sphinxcontrib-httpdomain
+sphinxcontrib.jquery
 zest.releaser
 numpy

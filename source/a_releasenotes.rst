@@ -9,17 +9,75 @@ Release Notes
 =============
 
 
+January 12th 2024
+=================
+Lizard backend updates:
+
+*   Cloud-based import and export tasks (downloads come from Amazon S3 now)
+
+*   Add pixel_size option to raster export in API
+
+*   Set aggregation_type for scenario raster results, so that the Viewer shows statistics for polygon selections
+
+Lizard Viewer:
+
+*   Enable raster export again and use pixel_size option
+
+*   Show web notification when a raster export has finished
+
+
+October 10th 2023
+=================
+New viewer released:
+
+*   Documentation for the new viewer: :doc:`e_viewer`
+
+
+May 2nd 2023
+============
+New features in API v4:
+
+*   Added spatial information to scenarios (based on raster results)
+
+*   Extended raster '/data' sub-endpoint with option to retrieve data based on a polygon geometry and output format JSON
+
+Bug fixes:
+
+*   Fixed resampling issue for requests on '/zonal' raster sub-endpoint with small polygons compared to raster pixelsize, no longer returning nulls
+ 
+
+February 28th 2023
+==================
+New features:
+
+*   Raster alarms on Line and Polygon intersections
+
+*   Vectortiles for assets, per assetset (combination of organisation and asset type)
+
+Other improvements:
+
+*   Adjustments of the notification email for finished 3Di postprocessing
+
+*   API v4 improvements:
+
+    *   Added upper_bounds (in combination with origin specifies spatial bounds in original projection) for rasters and raster sources
+
+    *   Extended API v4 with Favourites and Search endpoints
+
+    *   Add object information (of related asset) to locations listview in API v4
+
+
 July 26th 2022
 ==============
 This Lizard release contains a number of small but important bug fixes:
 
-*	Lock raster source when deleting data, so that simultaneous imports do not fail
+*   Lock raster source when deleting data, so that simultaneous imports do not fail
 
-*       Reset metadata of raster source and layer when all data is deleted
+*   Reset metadata of raster source and layer when all data is deleted
 
-*       Validation of alarm thresholds forcing unique input for values and warning levels
+*   Validation of alarm thresholds forcing unique input for values and warning levels
 
-*       Improve error handling for raster zonal endpoint in case of too large request
+*   Improve error handling for raster zonal endpoint in case of too large request
 
 
 
@@ -28,7 +86,7 @@ June 14th 2022
 
 *	API v4 changes:
 
-        *       Enable POST on /scenarios endpoint
+    *       Enable POST on /scenarios endpoint
 	
 	*       Enable PATCH and POST on /scenarios/{uuid}/results endpoint
 	

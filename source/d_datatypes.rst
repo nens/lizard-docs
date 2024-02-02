@@ -67,6 +67,8 @@ Characteristics of rasters are stored in the attributes of a rasterstore. The at
 * Supplier code
 * Temporal behaviour
 
+.. _vector_data_types:
+
 Vectors
 =======
 
@@ -75,7 +77,7 @@ Lizard offers an extensive library of vector data models that can be used to rep
 Per data model, there are columns defined with certain data_types.
 Some are obligatory, such as the id, some are optional. Below you find the available columns per data model. 
 
-.. csv-table:: "administrative boundaries":
+.. csv-table:: "administrative boundaries": "https://demo.lizard.net/api/v4/boundaries/"
     :header: column_name, data_type	
 	
 	id,	integer
@@ -86,7 +88,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	geometry,	USER-DEFINED
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "bridges": "https://demo.lizard.net/api/v3/bridges/"
+.. csv-table:: "bridges": "https://demo.lizard.net/api/v4/bridges/"
     :header: column_name, data_type
 
     id, integer
@@ -104,7 +106,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
     start, timestamp with time zone
     last_modified, timestamp with time zone
 
-.. csv-table:: "buildings": "https://demo.lizard.net/api/v3/buildings/"
+.. csv-table:: "buildings": "https://demo.lizard.net/api/v4/buildings/"
     :header: column_name, data_type
 
     id,	integer
@@ -118,67 +120,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	organisation_id,	integer
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "channels":
-    :header: column_name, data_type
-
-	id,	integer
-	organisation_id,	integer
-	created,	timestamp with time zone
-	code,	character varying
-	type,	character varying
-	bed_level,	double precision
-	comment,	text
-	name,	character varying
-	talud_left,	double precision
-	talud_right,	double precision
-	image_url,	character varying
-	geometry,	USER-DEFINED
-	end,	timestamp with time zone
-	start,	timestamp with time zone
-	last_modified,	timestamp with time zone
-	
-.. csv-table:: "channelsurface": "https://demo.lizard.net/api/v3/channelsurface/"
-    :header: column_name, data_type
-
-	id,	integer
-	organisation_id,	integer
-	created,	timestamp with time zone
-	code,	character varying
-	image_url,	character varying
-	geometry,	USER-DEFINED
-	end,	timestamp with time zone
-	start,	timestamp with time zone
-	last_modified,	timestamp with time zone
-
-.. csv-table:: "crosspofile": "https://demo.lizard.net/api/v3/crossprofile/"
-    :header: column_name, data_type
-
-	id,	integer
-	type,	integer
-	tables,	character varying
-	created,	timestamp with time zone
-	last_modified,	timestamp with time zone
-
-.. csv-table:: "crosssection": "https://demo.lizard.net/api/v3/crosssection"
-    :header: column_name, data_type
-
-	id,	integer
-	cross_profile_id,	integer
-	channel_id,	integer
-	friction_type,	integer
-	friction_value,	integer
-	distance_on_channel,	numeric
-	bed_level,	double precision
-	bed_width,	double precision
-	width,	double precision
-	slope_left,	double precision
-	slope_right,	double precision
-	reclamation,	double precision
-	created,	timestamp with time zone
-	geometry,	USER-DEFINED
-	last_modified,	timestamp with time zone
-
-.. csv-table:: "culverts": "https://demo.lizard.net/api/v3/culverts/"
+.. csv-table:: "culverts": "https://demo.lizard.net/api/v4/culverts/"
     :header: column_name, data_type
     
     id, integer
@@ -202,16 +144,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
     num_timeseries, integer
     last_modified, timestamp with time zone
 
-.. csv-table:: "domains": "https://demo.lizard.net/api/v3/domains/"
-    :header: column_name, data_type
-    
-    id, integer
-    created, timestamp with time zone
-    name, character varying
-    description, character varying
-    last_modified, timestamp with time zone
-
-.. csv-table:: "filters": "https://demo.lizard.net/api/v3/filters/"
+.. csv-table:: "filters": "https://demo.lizard.net/api/v4/filters/"
     :header: column_name, data_type
     
     id, integer
@@ -227,7 +160,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
     low_groundwater_level, double precision
     last_modified, timestamp with time zone
 
-.. csv-table:: "fixeddrainagelevelareas":"https://demo.lizard.net/api/v3/fixeddrainagelevelareas/"    
+.. csv-table:: "fixeddrainagelevelareas":"https://demo.lizard.net/api/v4/fixeddrainagelevelareas/"    
     :header: column_name, data_type
 
     id, integer
@@ -246,7 +179,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
     num_timeseries, integer
     last_modified, timestamp with time zone
 
-.. csv-table:: "groundwaterstations": "https://demo.lizard.net/api/v3/groundwaterstations/",
+.. csv-table:: "groundwaterstations": "https://demo.lizard.net/api/v4/groundwaterstations/",
     :header: column_name, data_type
 
 	id,	integer
@@ -267,31 +200,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	status,	integer
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "impervioussurface": "https://demo.lizard.net/api/v3/impervioussurface/",
-    :header: column_name, data_type	
-
-	id	integer
-	organisation_id	integer
-	created	timestamp with time zone
-	code	character varying
-	surface_class	character varying
-	surface_sub_class	character varying
-	street_name	character varying
-	connection	character varying
-	pipe_id	integer
-	sewerage_inflow_parameter_id	integer
-	inhabitants	double precision
-	function	character varying
-	dry_water_flow_production	double precision
-	surface_inclination	character varying
-	image_url	character varying
-	geometry	USER-DEFINED
-	end	timestamp with time zone
-	start	timestamp with time zone
-	surface_area	double precision
-	last_modified	timestamp with time zone
-
-.. csv-table:: "leveecrosssections": "https://demo.lizard.net/api/v3/leveecrosssections/",
+.. csv-table:: "leveecrosssections": "https://demo.lizard.net/api/v4/leveecrosssections/",
     :header: column_name, data_type
 
 	id,	integer
@@ -307,37 +216,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	organisation_id,	integer
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "leveereferencepoints": "https://demo.lizard.net/api/v3/leveereferencepoints/",
-    :header: column_name, data_type
-
-	id,	integer
-	organisation_id,	integer
-	created,	timestamp with time zone
-	code,	character varying
-	reference_point_type,	integer
-	image_url,	character varying
-	distance_to_reference,	integer
-	geometry,	USER-DEFINED
-	end	timestamp, with time zone
-	start,	timestamp with time zone
-	last_modified,	timestamp with time zone
-    
-.. csv-table:: "leveerings": "https://demo.lizard.net/api/v3/leveerings/",
-    :header: column_name, data_type
-
-	id,	integer
-	created,	timestamp with time zone
-	image_url,	character varying
-	code,	character varying
-	organisation_id,	integer
-	name,	character varying
-	levee_ring_type,	integer
-	geometry,	USER-DEFINED
-	end,	timestamp with time zone
-	start,	timestamp with time zone
-	last_modified,	timestamp with time zone
-
-.. csv-table:: "levees": "https://demo.lizard.net/api/v3/levees/",
+.. csv-table:: "levees": "https://demo.lizard.net/api/v4/levees/",
     :header: column_name, data_type
 
 	id,	integer
@@ -359,38 +238,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	num_timeseries,	integer
 	last_modified,	timestamp with time zone
     
-.. csv-table:: "leveesections": "https://demo.lizard.net/api/v3/leveesections/",
-    :header: column_name, data_type
-
-	id,	integer
-	created,	timestamp with time zone
-	image_url,	character varying
-	code,	character varying
-	organisation_id,	integer
-	distance_end,	integer
-	distance_start,	integer
-	levee_id,	integer
-	levee_section_type,	integer
-	geometry,	USER-DEFINED
-	end,	timestamp with time zone
-	start,	timestamp with time zone
-	last_modified,	timestamp with time zone
-
-.. csv-table:: "leveezones": "https://demo.lizard.net/api/v3/leveezones/",
-    :header: column_name, data_type
-
-	id,	integer
-	organisation_id,	integer
-	created,	timestamp with time zone
-	code,	character varying
-	image_url,	character varying
-	levee_zone_type,	integer
-	geometry,	USER-DEFINED
-	end,	timestamp with time zone
-	start,	timestamp with time zone
-	last_modified,	timestamp with time zone
-
-.. csv-table:: "locations": "https://demo.lizard.net/api/v3/locations/",
+.. csv-table:: "locations": "https://demo.lizard.net/api/v4/locations/",
     :header: column_name, data_type
 
 	id,	integer
@@ -411,7 +259,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	node_id,	integer
 	supplier_id,	integer
 
-.. csv-table:: "manholes": "https://demo.lizard.net/api/v3/manholes/",
+.. csv-table:: "manholes": "https://demo.lizard.net/api/v4/manholes/",
     :header: column_name, data_type
 
 	id,	integer
@@ -433,7 +281,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	water_consumption,	double precision
 	last_modified,	timestamp with time zone
     
-.. csv-table:: "measuringstations": "https://demo.lizard.net/api/v3/measuringstations/",
+.. csv-table:: "measuringstations": "https://demo.lizard.net/api/v4/measuringstations/",
     :header: column_name, data_type
 
 	id,	integer
@@ -452,7 +300,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	num_timeseries,	integer
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "monitoringwells": "https://demo.lizard.net/api/v3/monitoringwells/",
+.. csv-table:: "monitoringwells": "https://demo.lizard.net/api/v4/monitoringwells/",
     :header: column_name, data_type
 
 	id,	integer
@@ -469,39 +317,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	organisation_id,	integer
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "opticalfibers": "https://demo.lizard.net/api/v3/opticalfibers/",
-    :header: column_name, data_type
-
-	id,	integer
-	organisation_id,	integer
-	created,	timestamp with time zone
-	image_url,	character varying
-	code,	character varying
-	length,	double precision
-	access_modifier,	integer
-	description,	text
-	name,	character varying
-	geometry,	USER-DEFINED
-	end,	timestamp with time zone
-	start,	timestamp with time zone
-	num_timeseries,	integer
-	uuid,	uuid
-	supplier_id,	integer
-	last_modified,	timestamp with time zone
-
-.. csv-table:: "opticalfiberpart": "https://demo.lizard.net/api/v3/opticalfiberpart/",
-    :header: column_name, data_type
-
-	id,	integer
-	fiber_id,	integer
-	position,	double precision
-	length,	double precision
-	created,	timestamp with time zone
-	index,	integer
-	geometry,	USER-DEFINED
-	last_modified,	timestamp with time zone
-  
-.. csv-table:: "orifices": "https://demo.lizard.net/api/v3/orifices/",
+.. csv-table:: "orifices": "https://demo.lizard.net/api/v4/orifices/",
     :header: column_name, data_type
 
 	id,	integer
@@ -529,7 +345,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	start,	timestamp with time zone
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "outlets": "https://demo.lizard.net/api/v3/outlets/",
+.. csv-table:: "outlets": "https://demo.lizard.net/api/v4/outlets/",
     :header: column_name, data_type
 
 	id,	integer
@@ -546,7 +362,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	start,	timestamp with time zone
 	last_modified,	timestamp with time zone
     
-.. csv-table:: "overflows": "https://demo.lizard.net/api/v3/overflows/",
+.. csv-table:: "overflows": "https://demo.lizard.net/api/v4/overflows/",
     :header: column_name, data_type
 
 	id,	integer
@@ -573,7 +389,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	name,	character varying
 	last_modified,	timestamp with time zone
     
-.. csv-table:: "parcels": "https://demo.lizard.net/api/v3/parcels/",
+.. csv-table:: "parcels": "https://demo.lizard.net/api/v4/parcels/",
     :header: column_name, data_type
 
 	id,	integer
@@ -589,7 +405,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	num_timeseries,	integer
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "pipes": "https://demo.lizard.net/api/v3/pipes/",
+.. csv-table:: "pipes": "https://demo.lizard.net/api/v4/pipes/",
     :header: column_name, data_type
 
 	id,	integer
@@ -617,7 +433,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	start,	timestamp with time zone
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "polders": "https://demo.lizard.net/api/v3/polders/",
+.. csv-table:: "polders": "https://demo.lizard.net/api/v4/polders/",
     :header: column_name, data_type
 
 	id,	integer
@@ -631,7 +447,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	start,	timestamp with time zone
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "pressurepipes": "https://demo.lizard.net/api/v3/pressurepipes/",
+.. csv-table:: "pressurepipes": "https://demo.lizard.net/api/v4/pressurepipes/",
     :header: column_name, data_type
 
 	id,	integer
@@ -651,7 +467,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	start,	timestamp with time zone
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "pumpeddrainageareas": "https://demo.lizard.net/api/v3/pumpeddrainageareas/",
+.. csv-table:: "pumpeddrainageareas": "https://demo.lizard.net/api/v4/pumpeddrainageareas/",
     :header: column_name, data_type
 
 	id,	integer
@@ -683,7 +499,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	pump_overcapacity,	double precision
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "pumps": "https://demo.lizard.net/api/v3/pumps/",
+.. csv-table:: "pumps": "https://demo.lizard.net/api/v4/pumps/",
     :header: column_name, data_type
 
 	id,	integer
@@ -704,7 +520,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	created,	timestamp with time zone
 	last_modified,	timestamp with time zone
     
-.. csv-table:: "pumpstations": "https://demo.lizard.net/api/v3/pumpstations/",
+.. csv-table:: "pumpstations": "https://demo.lizard.net/api/v4/pumpstations/",
     :header: column_name, data_type
 
 	id,	integer
@@ -729,12 +545,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	num_timeseries,	integer
 	last_modified,	timestamp with time zone
     
-.. csv-table:: "regions": "https://demo.lizard.net/api/v3/regions/",
-    :header: column_name, data_type
-
-    id, integer
-    
-.. csv-table:: "roads": "https://demo.lizard.net/api/v3/roads/",
+.. csv-table:: "roads": "https://demo.lizard.net/api/v4/roads/",
     :header: column_name, data_type
     
 	id,	integer
@@ -751,7 +562,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	region_id,	integer
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "sluices": "https://demo.lizard.net/api/v3/sluices/",
+.. csv-table:: "sluices": "https://demo.lizard.net/api/v4/sluices/",
     :header: column_name, data_type
 
 	id,	integer
@@ -766,7 +577,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	num_timeseries,	integer
 	last_modified,	timestamp with time zone
     
-.. csv-table:: "wastewatertreatmentplants": "https://demo.lizard.net/api/v3/wastewatertreatmentplants/",
+.. csv-table:: "wastewatertreatmentplants": "https://demo.lizard.net/api/v4/wastewatertreatmentplants/",
     :header: column_name, data_type
 
 	id,	integer
@@ -781,7 +592,7 @@ Some are obligatory, such as the id, some are optional. Below you find the avail
 	num_timeseries,	integer
 	last_modified,	timestamp with time zone
 
-.. csv-table:: "weirs": "https://demo.lizard.net/api/v3/weirs/",
+.. csv-table:: "weirs": "https://demo.lizard.net/api/v4/weirs/",
     :header: column_name, data_type
 
     id	integer
@@ -850,11 +661,11 @@ Options are:
 Field parameters
 ----------------
 
-By default the API returns the minimum and maximum values within the selected window (will change in v4).
-With the fields parameter other statistics can be retrieved. Multiple fields can be requested in one call.
+The timeseries events sub-endpoint returns the raw values. It is also possible to retrieve aggregated values, in the aggregates sub-endpoint.
+With the fields parameter many statistics can be retrieved. Multiple fields can be requested in one call.
+
 Options are:
 
-- value (in case of window=raw)
 - min
 - min_timestamp
 - max
@@ -866,10 +677,9 @@ Options are:
 - last
 - last_timestamp
 - nans
-- size
 - sum
 
-For more options in requesting time series see the API endpoint: https://demo.lizard.net/api/v3/timeseries/
+For more options in requesting time series see the API endpoint: https://demo.lizard.net/api/v4/timeseries/{timeseries_uuid}/aggregates/
 
 Labels
 ======
@@ -881,7 +691,7 @@ Each element is explained below.
 LabelTypes
 -----------
 
-LabelTypes can be found on the LabelType-endpoint `<demo.lizard.net/api/v3/labeltypes>`_ and describe the type of Label.
+LabelTypes can be found on the LabelType-endpoint `<https://demo.lizard.net/api/v4/labeltypes>`_ and describe the type of Label.
 LabelTypes contain the following fields:
 
 * name: name of the LabelType
@@ -896,7 +706,7 @@ LabelTypes contain the following fields:
 Labels
 --------
 
-The Labels related to a specific LabelType can be found on the Labels-endpoint `<demo.lizard.net/api/v3/labels>`_.
+The Labels related to a specific LabelType can be found on the Labels-endpoint `<demo.lizard.net/api/v4/labeltypes/{labeltype_uuid}/labels>`_.
 Labels contain the follow fields:
 
 * label_value: the index value of the Label
@@ -911,7 +721,7 @@ LabelParameters
 -----------------
 
 The Label parameters is developed to store parameters that are used in the computation of the Label.
-LabelParameters are linked to LabelTypes and Assets and can be found on the LabelParameters-endpoint `<demo.lizard.net/api/v3/labelparameters>`_.
+LabelParameters are linked to LabelTypes and Assets and can be found on the LabelParameters-endpoint `<demo.lizard.net/api/v4/labeltypes/{labeltype_uuid}/labelparameters>`_.
 LabelParameters contain the following fields:
 
 * label_type: the related LabelType

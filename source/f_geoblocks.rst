@@ -29,7 +29,7 @@ The open source library can be used to build on-the-fly models on your own PC.
 Dask-geomodeling has a limitation in the complexity of the models that you can run locally.
 This is determined by your memory and processor capacity. 
 
-If you want to scale up your model or increase complexity you can do publish your model and data to Lizard using the Lizard API.
+If you want to scale up your model or increase complexity you can publish your model and data to Lizard using the Lizard API.
 The GeoBlocks engine uses the powerful Lizard backend allowing you to scale up your models and integrate the model in your geo services using the Lizard API and Lizard WMS capabilities. 
 
 Working with GeoBlocks
@@ -97,7 +97,7 @@ API specification
 RasterBlocks
 ============
 
-RasterBlocks are the GeoBlocks that work with rasterdata. RasterBlocks operate on `Lizard Rasterdata <https://docs.lizard.net/c_datatypes.html#rasters>`_.
+RasterBlocks are the GeoBlocks that work with rasterdata. RasterBlocks operate on `Lizard Rasterdata <d_datatypes.html#rasters>`_.
 
 Creating a new RasterBlock
 --------------------------
@@ -108,7 +108,11 @@ This can be done on the `Lizard management page <https://demo.lizard.net/managem
 The second step is PATCHing the ``source`` element of your new raster. This element will contain the graph of your GeoBlock.
 To PATCH your raster provide a valid JSON object for its source element, and perform a patch on ``https://demo.lizard.net/api/v4/rasters/{uuid of the new raster}/``
 
-An example of a valid PATCH object is provided below. 
+In the example we provided earlier we used the 'SUBTRACT' geoblock operation to determine the difference between the AHN3 and the AHN2.
+As a new version of the AHN is now available, we want to compare the AHN4 and AHN3, instead of the AHN3 and AHN2.
+If we want to update our model, a PATCH request can be send.
+A PATCH can be considered as an update.
+Multiple PATCH requests can be send to apply multiple updates. 
 
 .. code-block:: json
 
@@ -116,30 +120,33 @@ An example of a valid PATCH object is provided below.
       "source": {
         "name": "difference",
         "graph": {
+            "AHN4": [
+              "lizard_nxt.blocks.LizardRasterSource",
+              "f83b5020-b296-489e-8f1f-a166ff086422"
+            ],
             "AHN3": [
               "lizard_nxt.blocks.LizardRasterSource",
               "a60ad336-c95b-4fb6-b852-96fc352ee808"
             ],
-            "AHN2": [
-              "lizard_nxt.blocks.LizardRasterSource",
-              "65912f43-0b70-425a-b471-1883378578eb"
-            ],
             "difference": [
               "geoblocks.raster.elemwise.Subtract",
-              "AHN3",
-              "AHN2"
+              "AHN4",
+              "AHN3"
             ]
         }
       }
     }
 
-PATCHing a raster can be done multiple times, until you are happy with the final output. 
+
 
 Raster output
 -------------
 
 After you PATCH your raster, the changes immediately take effect. 
 To view your GeoBlocks results you can access the raster via the `Catalogue <https://demo.lizard.net/catalogue>`_, `Raster API endpoint <https://demo.lizard.net/api/v4/rasters/>`_ or the Lizard WMS service.
+
+.. tip::
+	Use the generate uuid to find your raster quickly with the following link: https://demo.lizard.net/catalog/?data=Raster&uuid={uuid}. By keeping a tab with your resulting raster open, you are able to refresh the page quickly after each PATCH request. This will allow you to see the effects of your patch immediately.	
 
 If you want to show the result of your raster Geoblock it is easiest to use the Catalogue.
 
@@ -159,8 +166,8 @@ Raster data sources
    :members:
    :exclude-members: get_sources_and_requests, process
 
-.. note:: If a UUID of a raster (instead of a rastersource) is given, it will
-  automatically be replaced by the Geoblock graph of that raster.
+.. note:: 
+   If a UUID of a raster (instead of a rastersource) is given, it will automatically be replaced by the Geoblock graph of that raster.
 
 
 RasterBlocks that combine rasters
@@ -223,24 +230,24 @@ Such request returns the label for a geometric feature along with a predefined l
 Creating a new GeometryBlock
 ----------------------------
 
-To create a new GeometryBlock you have to POST the graph directly to the labeltypes api endpoint: https://demo.lizard.net/api/v3/labeltypes/.
+To create a new GeometryBlock you have to POST the graph directly to the labeltypes api endpoint: https://demo.lizard.net/api/v4/labeltypes/.
 Unlike for RasterBlocks it is not possible to define a GeometryBlock without the API.
 Once the graph has been posted it is possible to PATCH changes and alter the structure of the graph.
 If you want to patch changes to the graph this can be done by providing a valid JSON object for its source element,
-and perform a patch on ``https://demo.lizard.net/api/v3/labeltypes/{uuid of the new labeltype}/``.
+and perform a patch on ``https://demo.lizard.net/api/v4/labeltypes/{uuid of the new labeltype}/``.
 
 Currently it is not possible to visualize the resulting labels in the Lizard Viewer.
 Individual labels can be computed with a GET request on the labeltype endpoint. For example with:
-``https://demo.lizard.net/api/v3/labeltypes/{label type uuid}/compute/?geom_intersects=POINT(4.46648 51.92938)``.
-It is also possible to pre-compute larger amounts of labels, which will either be exported to a downloadable file, or become available via https://demo.lizard.net/api/v3/labels/.
+``https://demo.lizard.net/api/v4/labeltypes/{label type uuid}/compute/?geom_intersects=POINT(4.46648 51.92938)``.
+It is also possible to pre-compute larger amounts of labels, which will either be exported to a downloadable file, or become available via https://demo.lizard.net/api/v4/labeltypes/{label type uuid}/labels/.
 By doing so it becomes possible to quickly request multiple labels or label statistics.
 
 To pre-compute labels for a specific region you have to send a POST request on the labeltype endpoint, for example:
-``https://demo.lizard.net/api/v3/labeltypes/{label type uuid}/compute/?boundary_id=95246&start=2018-10-01T01:00:00Z&tile_size=500&tile_projection=EPSG:28992&mode=centroid``.
-For details about file exports, consult the documentation at ``https://demo.lizard.net/api/v3/labeltypes/{label type uuid}/compute/``.
+``https://demo.lizard.net/api/v4/labeltypes/{label type uuid}/compute/?boundary_id=95246&start=2018-10-01T01:00:00Z&tile_size=500&tile_projection=EPSG:28992&mode=centroid``.
+For details about file exports, consult the documentation at ``https://demo.lizard.net/api/v4/labeltypes/{label type uuid}/compute/``.
 
-Labels that have been pre-computed are stored in the labels endpoint of the API: https://demo.lizard.net/api/v3/labels/.
-By using this endpoint it is possible to request both individual labels and label statistics. Through a GET request it is possible to determine statistics of the entire labeltype or specific regions: https://demo.lizard.net/api/v3/labels/counts/?label_type__uuid={label type uuid}. 
+Labels that have been pre-computed are stored in the labels endpoint of the API: https://demo.lizard.net/api/v4/labeltypes/{label type uuid}/labels/.
+By using this endpoint it is possible to request both individual labels and label statistics. Through a GET request it is possible to determine statistics of the entire labeltype or specific regions: https://demo.lizard.net/api/v4/labeltypes/{label type uuid}/labels/counts/. 
 
 Examples of a graph
 -------------------
@@ -304,11 +311,11 @@ Geometry outputs are stored in :doc:`labels<c_labels>`.
 Labels are always linked to your Vectors stored in the Vector Server, for instance flood risk for parcels or buildings.
 Labels are grouped in Labeltypes. The graph can be found via the labeltypes endpoint:
 
-``https://demo.lizard.net/api/v3/labeltypes/{label type uuid}/visualize/?format=svg``
+``https://demo.lizard.net/api/v4/labeltypes/{label type uuid}/visualize/?format=svg``
 
 .. image:: /images/d_geoblocks_02.png 
 
-Individual labels (e.g. label linked to one building or parcel) can be found on the `labels endpoint <demo.lizard.net/api/v3/labels>`_.  
+Individual labels (e.g. label linked to one building or parcel) can be found on the labels endpoint.  
 Labels can be computed on the fly using the compute endpoint or a-sync using the Lizard Task Server. 
 
 Operations

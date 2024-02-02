@@ -29,9 +29,9 @@ Upload
 
 You can supply your GeoTIFF’s in multiple ways: 
 
-* Use the Data Management App 
-* Use the Lizard API 
-* Use the Lizard FTP (will become absolete) 
+* Use the Data Management App
+* Use the Lizard API
+* Use the Lizard FTP
 
 Use of the Data Management App is fairly straightforward and is build upon our API.
 If you want to upload larger raster datasets, please make use of our API. 
@@ -123,7 +123,7 @@ Time Series
 Requirements
 ------------
 
-Time series should always be linked to one of the vector data models listed :ref:`here <vector_data_types>`.
+Time series can be linked through their location to one of the vector data models listed :ref:`here <vector_data_types>`.
 
 Time series can be imported manually, by uploading a csv file in the timeseries management screen (see https://docs.lizard.net/c_timeseries.html) or via the API. 
 
@@ -194,7 +194,7 @@ An example of an upload of an image using requests in Python:
 
     now = dt.datetime.utcnow()
     uuid = ‘385c08c5-a0cf-4097-a98f-b6f053ef32c6’
-    url = 'https://demo.lizard.net/api/v3/timeseries/{}/data/'.format(uuid)
+    url = 'https://demo.lizard.net/api/v4/timeseries/{}/events/'.format(uuid)
     data = open('./x.png', 'rb').read()
     res = requests.post(url=url,
                         data=data,
@@ -279,8 +279,8 @@ This example .ini creates (a) new nested asset(s) from each record of the shapef
 * A **code** taken from the 2_code column of the shapefile. And a new nested asset with a filter_bottom_level for each 5th column from that column onwards;
 * A **filter_bottom_level** taken from the column directly next to the 2_code column of the shapefile. And a new nested asset with a filter_bottom_level for each 5th column from that column onwards;
 * A **filter_top_level** taken from the column 2 columns next to the 2_code column of the shapefile. And a new nested asset with a filter_top_level for each 5th column from that column onwards;
-* A **aquifer_confiment** taken from the column 3 columns next to the 2_code column of the shapefile. And a new nested asset with a aquifer_confiment for each 5th column from that column onwards;
-* A **litology** taken from the column 4 columns next to the 2_code column of the shapefile and each. And a new nested asset with a litology for each 5th column from that column onwards
+* A **aquifer_confinement** taken from the column 3 columns next to the 2_code column of the shapefile. And a new nested asset with a aquifer_confinement for each 5th column from that column onwards;
+* A **lithology** taken from the column 4 columns next to the 2_code column of the shapefile and each. And a new nested asset with a lithology for each 5th column from that column onwards
 
 You can copy paste this code in your own .ini file and zip it together with the shapefile.
 

@@ -23,7 +23,7 @@ at the login screen.
 On the login page you have four different options to sign in:
 
 1. through a company account,
-2. trough a social account,
+2. through a social account,
 3. with username and password,
 4. by creating a new account (Sign up).
 
@@ -48,11 +48,12 @@ Organisations
 
 All data in Lizard is linked to an organisation.
 Organisations are the backbone of our authorisation model.
+When an organisation uploads data, they are able to determine the level of authorisation required for access.
 There are three types of authorisation options that can be applied to your data: 
 
-* **Public**: everyone can see your data 
-* **Common**: everyone with login credentials to Lizard can see your data 
-* **Private**: everyone with login credentials to Lizard AND user rights to your organisation can see your data
+* **Public**: everyone is able to access your data 
+* **Common**: everyone with login credentials to Lizard is able to access your data 
+* **Private**: everyone with login credentials to Lizard AND user rights to your organisation is able to access your data
 
 
 
@@ -60,10 +61,12 @@ Whitelisting
 ============
 
 The users of a certain portal may not be interested in a lot of the public/common datasets that are made available by others.
-An organisation can determine data of which other organisations is visible in their Lizard API and Viewer.
-This is configured by whitelisting the organisations that are allowed to show their data per portal.
+Every Lizard portal has its own whitelist.
+Whitelisting allows the organisations to determine which data should be visible.
+This can remove some of the clutter.
+The whitelist affects both the Lizard Viewer aswell as the Catalogue.
 
-The effect is that for the same user the available data can differ between e.g. [your_organisation].lizard.net and demo.lizard.net (for which all organisations are whitelisted).
+The effect is that for the same user the available data can differ between [your_organisation].lizard.net and demo.lizard.net (for which all organisations are whitelisted).
 The whitelisting mechanism is overruled if a user has specific authorisation for an organisation.
 
 .. tip::
@@ -87,7 +90,7 @@ User management
 ===============
 
 Users can be managed in the User Management interface.
-This interface can be reached via the {yourorganisation}.lizard.net/management/users/ (or `demo.lizard.net/management/users <https://demo.lizard.net/management/users>`_).
+This interface can be reached via the {your_organisation}.lizard.net/management/users/ (or `demo.lizard.net/management/users <https://demo.lizard.net/management/users>`_).
 
 .. note::
     You require a “manager” role to access the User Management interface.
@@ -111,11 +114,11 @@ You can add a new user by clicking the “NEW ITEM” icon in the upper right co
 
 .. image:: /images/c_manage_newitem.png
 
-This will lead you to the screen to add a new user.
+This will lead you to the screen where a new user can be added.
 
 .. image:: /images/b_usermanagement_04.png
 
-By default the new user is granted a “User” role. At least one role is required when invite a new user.  
+By default the new user is granted a “User” role. At least one role is required when a new user is invited.  
 Do not forget to click ‘Save’! When saved, an invitation email will be sent to the new user.
 This user can follow the invitation link to (if necessary) create an account and receive the new roles.
 The user will appear in the user management overview once they accepted the invite and created the account.
@@ -124,14 +127,14 @@ The user will appear in the user management overview once they accepted the invi
     Sometimes this invitation mail will end up in the spam folder. 
 
 .. note::
-    The invitated user is required to sign in with the email address that is supplied by the manager. This email address can't be changed later on. 
+    The invited user is required to sign in with the email address that is supplied by the manager. This email address can't be changed later on. 
 
 .. note::
-	Deselect all roles will remove the user from the organisation but will not delete the user's account.
+	Deselecting all roles will remove the user from the organisation, but will not delete the user's account.
 
 .. note::
 	You cannot remove your own manager role.	
 	
 .. tip::
-	Click on 'Pending Users', to see who have not completed the acitvation process yet. 	
+	Click on 'Pending Users', to see who have not completed the activation process yet. 	
 

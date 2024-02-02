@@ -30,8 +30,6 @@ When you save a new Source you will have the option to go straight to the Raster
 
 Interested in the possibilities for your organisation? Please contact us via info@lizard.net.
 
-.. _vector_data_types:
-
 GeoBlocks management
 --------------------
 

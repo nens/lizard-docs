@@ -20,6 +20,7 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import datetime
 import sphinx_rtd_theme
 
 
@@ -33,8 +34,8 @@ import sphinx_rtd_theme
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.todo', 'sphinx.ext.autodoc',
-              'sphinxcontrib.httpdomain',
-              'sphinx.ext.napoleon']
+              'sphinx.ext.imgmath', 'sphinxcontrib.httpdomain',
+              'sphinx.ext.napoleon', 'sphinxcontrib.jquery']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -50,7 +51,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Lizard'
-copyright = '2022, Nelen & Schuurmans'
+current_year = datetime.date.today().year
+copyright = str(current_year) + ', Nelen & Schuurmans'
 author = 'Nelen & Schuurmans'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -87,6 +89,10 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_static_path = ['_static']
+html_js_files = [
+    'matomo.js',
+]
 
 def setup(app):
     app.add_css_file('custom.css')

@@ -29,7 +29,6 @@ Welcome to the Lizard documentation!
 
    c_general
    c_rasters
-   c_geoblocks
    c_wms
    c_layercollections
    c_timeseries
@@ -47,6 +46,7 @@ Welcome to the Lizard documentation!
    c_apifunctional
    d_apitechnical
    d_apitutorials
+   d_qgisplugin
    
 .. toctree::
    :maxdepth: 2
