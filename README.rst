@@ -10,9 +10,9 @@ Lizard documentation
 
 Let's do it with restructuredtext/sphinx!
 
-The documentation is automatically build (as test) on travis
-(https://travis-ci.com/nens/lizard-docs). Successful builds of the **master**
-branch are automatically uploaded to https://docs.lizard.net via
+The documentation is automatically build (as test) on github
+actions. Successful builds of the **master** branch are automatically uploaded
+to https://docs.lizard.net via
 https://artifacts.lizard.net/overview/lizard-docs/ .
 
 
@@ -29,9 +29,6 @@ every time you want to re-generate your documentation.
 If the setup changed (which should rarely happen), a quick ``docker-compose
 build`` will get you up to date.
 
-Commits are automatically tested on travis:
-https://travis-ci.com/nens/lizard-docs
-
 
 Special commands
 ----------------
@@ -40,6 +37,10 @@ If the sphinx documentation tells you about a makefile: you can run those
 commands from within docker, too. For example::
 
   $ docker-compose run builder make latexpdf
+
+To get a really fresh build::
+
+  $ docker-compose run builder make clean
 
 
 Some sphinx/restructuredtext notes
