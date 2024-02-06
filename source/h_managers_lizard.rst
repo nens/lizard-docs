@@ -90,7 +90,7 @@ Dit gebeurt als volgt:
 2. Ga naar het gebruikersgedeelte in het managementscherm ({organisatie}.lizard.net/management/users).
 3. Klik op `+ NEW USER` rechts boven in het scherm (afbeelding 1, rood).
 4. Type het e-mail van de gebruiker in de 'e-mail' balk (afbeelding 2).
-5. Selecteer de rollen die de gebruiker krijgt. Voor de rechten die aan de rollen gekoppeld zitten kunt terug vallen op `rechten <Welke rechten zijn er te verdelen en wanneer is dit nodig?>`_.
+5. Selecteer de rollen die de gebruiker krijgt. Voor de rechten die aan de rollen gekoppeld zitten kunt terug vallen op `Welke rechten zijn er te verdelen en wanneer is dit nodig?`_.
 6. Klik op `SAVE`.
 7. Het is gelukt! De uitnoding is verstuurd en zal binnen 5 minuten in de mailbox van de nieuwe gebruiker belanden.
 
@@ -103,7 +103,7 @@ Dit gebeurt als volgt:
     :alt: Overview of the Lizard management page with multiple users.
 
     Afbeelding 1: Een overzicht van het gebruikersgedeelte in het managementscherm van Lizard.
-    Hier kunt u de bestaande rechten inzien en nieuwe gebruikers uitnodigen (rood) of uitstaande `uitnodigingen beheren <Uitnodigingen beheren>`_ (geel).
+    Hier kunt u de bestaande rechten inzien en nieuwe gebruikers uitnodigen (rood) of uitstaande `Uitnodigingen beheren`_ (geel).
 
 
 .. figure:: /images/h_gebruiker_uitnodigen_2.png
