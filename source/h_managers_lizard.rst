@@ -96,7 +96,7 @@ Dit gebeurt als volgt:
 
 .. tip:: Wanneer de e-mail niet in de inbox verschijnt na 5 minuten, controleer dan eerst uw spam. Mocht de uitnodiging hier ook niet zijn, dan kunt u altijd de `servicedesk <mailto:servicedesk@nelen-schuurmans.nl>`_ benaderen.
 
-.. figure:: /images/lizard/gebruiker_uitnodigen_1.png
+.. figure:: /images/h_gebruiker_uitnodigen_1.png
     :scale: 50%
     :alt: Overview of the Lizard management page with multiple users.
 
@@ -104,7 +104,7 @@ Dit gebeurt als volgt:
     Hier kunt u de bestaande rechten inzien en nieuwe gebruikers uitnodigen (rood) of uitstaande `uitnodigingen beheren <Uitnodigingen beheren>`_ (geel).
 
 
-.. figure:: /images/lizard/gebruiker_uitnodigen_2.png
+.. figure:: /images/h_gebruiker_uitnodigen_2.png
     :scale: 50%
     :alt: Invitation screen for new users of Lizard. Enter an e-mail and select the roles for the new user.
 
@@ -119,7 +119,7 @@ In het `Pending Invitations` scherm kunt u zien welke uitnodigingen u heeft vers
 Uitnodigingen verlopen standaard binnen 15 dagen, maar u kunt ze al eerder opzeggen door op de 3 stippen te klikken die achter een e-mail staan (afbeelding 3).
 Mocht een e-mail niet bij een gebruiker binnen zijn gekomen dan kunt u hier ook nogmaals de e-mail verifiëren.
 
-.. figure:: /images/lizard/pending_uitnodiging_1.png
+.. figure:: /images/h_pending_uitnodiging_1.png
     :scale: 50%
     :alt: Invitation screen for new users of Lizard. Enter an e-mail and select the roles for the new user.
 
@@ -136,7 +136,7 @@ U ziet hier de volgende informatie van gebruikers die rechten hebben voor uw org
 2. Email
 3. Rollen / Roles
 
-.. figure:: /images/lizard/rechten_beheren_1.png
+.. figure:: /images/h_rechten_beheren_1.png
     :scale: 50%
     :alt: Overview of the Lizard management page with multiple users.
 
@@ -146,7 +146,7 @@ Door op de gebruikersnaam te klikken van de desbetreffende gebruiker wordt u mee
 Hier klikt u op de rollen die u wilt verwijderen of toevoegen.
 Is een rol duidelijk gekleurd heeft de gebruiker deze rechten wel.
 
-.. figure:: /images/lizard/rechten_beheren_2.png
+.. figure:: /images/h_rechten_beheren_2.png
     :scale: 50%
     :alt: Roles of an individual user.
 
