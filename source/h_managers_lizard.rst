@@ -4,165 +4,162 @@
 Managers
 ========
 
-
-Wat zijn de taken die vallen op een Manager van een organisatie
+What are the tasks that fall under a Manager of an organization
 ===============================================================
 
-De rol van manager is belangrijk voor het beheer van de data van een organisatie.
-Als manager verleent u rechten voor uw organisatie, of neemt u deze af.
-Een manager heeft voornamelijk twee taken:
+The role of a manager is important for managing the data of an organization.
+As a manager, you grant or revoke rights for your organization.
+A manager mainly has two tasks:
 
-1. Het onderhouden van de rechten van bestaande gebruikers
-2. Het verlenen van rechten aan nieuwe medewerkers of externe partijen
+1. Maintaining the rights of existing users
+2. Granting rights to new employees or external parties
 
-**Onderhouden rechten van bestaande gebruikers**
+**Maintaining rights of existing users**
 
-De rechten van gebruikers die onder uw organisatie vallen vervallen niet automatisch.
-Het is dus van belang dat u met enige regelmaat controleert of gebruikers hun rechten nog nodig hebben.
-Dit kan dan gaan om werknemers die de organisatie verlaten, maar ook om een project wat af loopt.
-Soms hoeven niet alle rechten afgenomen te worden, ook dit is mogelijk.
-Het is aan u om te bepalen hoe vaak u dit wil controleren.
+The rights of users under your organization do not expire automatically.
+So, it is important that you regularly check whether users still need their rights.
+This can include employees leaving the organization or projects coming to an end.
+Sometimes, not all rights need to be revoked, this is also possible.
+It is up to you to determine how often you want to perform this check.
 
-**Verlenen rechten nieuwe gebruikers**
+**Granting rights to new users**
 
-Als een gebruiker rechten nodig heeft voor uw organisatie bent u hiervoor verantwoordelijk.
-Voor het spoedig verloop van een project is het handig om dit soort verzoeken met enige spoed af te handelen.
-Het verlenen van rechten hoeft ook geen langdradige klus te zijn, met een minuut zijn de rechten al verleend.
-Hoe dit exact in zijn werk gaat leest u in `Nieuwe gebruikers uitnodigen`_ en `Bestaande rechten aanpassen`_.
+If a user needs rights for your organization, you are responsible for granting them.
+For the smooth progress of a project, it is useful to handle such requests promptly.
+Granting rights also doesn't have to be a lengthy task; rights can be granted in a minute.
+You can learn exactly how this works in `Inviting New Users`_ and `Adjusting Existing Rights`_.
 
-.. tip:: Gebruik een bookmark om direct naar de Management-pagina te komen. Op deze manier kan je binnen no-time een gebruiker rechten geven.
+.. tip:: Use a bookmark to go directly to the Management page. This way, you can give a user rights in no time.
 
 
-Welke rechten zijn er te verdelen en wanneer is dit nodig?
-==========================================================
+Roles and rights
+=================
 
 **User**
 
-Voor elke projectmedewerker, intern of extern, die toegang nodig heeft tot de privé data van de organisatie.
-Dit zijn alleen “lees”-rechten, wat betekent dat deze gebruiker geen data kan aanpassen of toevoegen.
+For every project collaborator, internal or external, who needs access to the organization's private data.
+These are only "read" rights, meaning this user cannot modify or add data.
 
 **Supplier**
 
-Projectmedewerkers die juist data moeten aanpassen of aanleveren hebben “schrijf”-rechten nodig. 
-Dit valt onder deze rol.
-Als supplier is het alleen mogelijk om je eigen data aan te leveren en aan te passen, niet die van andere gebruikers (van de organisatie).
-Een gebruiker met enkel supplier-rechten kan wel nog publiek beschikbare data inzien.
+Project collaborators who need to modify or deliver data require "write" rights.
+This falls under this role.
+As a supplier, it is only possible to deliver and modify your own data, not that of other users (within the organization).
+However, a user with only supplier rights can still view publicly available data.
 
 **Administrator**
 
-Een administrator heeft zowel “lees” als “schrijf” rechten. 
-Dit betekent dat de rechten van User en Supplier samen komen in deze rol.
-Extra met deze rechten komt de mogelijkheid om de aangeleverde data van andere aan te passen.
- 
+An administrator has both "read" and "write" rights.
+This means the rights of User and Supplier come together in this role.
+Additionally, with these rights, there is the ability to modify the delivered data of others.
+
 **Manager**
 
-De manager geeft en neemt rechten van andere.
-Een manager kan ook de rechten van een andere manager afnemen.
-Zorg dus dat u alleen vertrouwde partijen managers rechten geeft.
+The manager gives and takes rights from others.
+A manager can also revoke the rights of another manager.
+So, make sure to only give manager rights to trusted parties.
 
-.. tip:: In sommige situaties ontstaant organisaties voor specifieke projecten. 
-    Als de data binnen dit project onder uw organisatie valt en u wilt hiervoor een manager aanstellen, 
-    neem dan contact op met de `servicedesk <mailto:servicedesk@nelen-schuurmans.nl>`_.
+.. tip:: In some situations, organizations arise for specific projects.
+    If the data within this project falls under your organization and you want to appoint a manager for this, 
+    please contact the `servicedesk <mailto:servicedesk@nelen-schuurmans.nl>`_.
 
-
-Het managementscherm
+The management screen
 ====================
 
-Het managementscherm bied de mogelijkheid om verschillende aspecten van je organisatie te beheren.
-Denk hierbij aan het beheren van uw data: rasters, scenario's, tijdseries en meer. 
-Voor het complete gebruik van deze pagina kunt u terecht op de `lizard documentatie <https://docs.lizard.net/index.html>`_.
-Belangrijkste is in dit geval het "User Management".
-Alleen managers hebben toegang tot het "Users" scherm.
-Het is in dit scherm dat u:
+The management screen offers the opportunity to manage various aspects of your organization.
+This includes managing your data: rasters, scenarios, time series, and more.
+For complete use of this page, refer to the `lizard documentation <https://docs.lizard.net/index.html>`_.
+The most important thing in this case is "User Management".
+Only managers have access to the "Users" screen.
+In this screen, you can:
 
-1. Nieuwe gebruikers kunt uitnodigen.
-2. Uitnodigingen kunt beheren.
-3. Bestaande rechten kunt aanpassen.
+1. Invite new users.
+2. Manage invitations.
+3. Adjust existing rights.
 
 
-Nieuwe gebruikers uitnodigen
+Inviting New Users
 ----------------------------
 
-Als een nieuwe gebruiker toegang tot Lizard nodig heeft vanuit de organisatie kunnen deze verleend worden door de Manager.
-Dit gebeurt als volgt:
+If a new user needs access to Lizard from the organization, this can be granted by the Manager.
+This is done as follows:
 
-1. U logt in op het portaal van de organisatie ({organisatie}.lizard.net).
-2. Ga naar het gebruikersgedeelte in het managementscherm ({organisatie}.lizard.net/management/users).
-3. Klik op `+ NEW USER` rechts boven in het scherm (afbeelding 1, rood).
-4. Type het e-mail van de gebruiker in de 'e-mail' balk (afbeelding 2).
-5. Selecteer de rollen die de gebruiker krijgt. Voor de rechten die aan de rollen gekoppeld zitten kunt terug vallen op `Welke rechten zijn er te verdelen en wanneer is dit nodig?`_.
-6. Klik op `SAVE`.
-7. Het is gelukt! De uitnoding is verstuurd en zal binnen 5 minuten in de mailbox van de nieuwe gebruiker belanden.
+1. Log in to the organization's portal ({organization}.lizard.net).
+2. Go to the user section in the management screen ({organization}.lizard.net/management/users).
+3. Click on `+ NEW USER` at the top right of the screen (Image 1, in red).
+4. Type the user's email in the 'email' field (Image 2).
+5. Select the roles the user will have. For the rights associated with the roles, refer to `Roles and rights`_.
+6. Click `SAVE`.
+7. Success! The invitation has been sent and will be in the new user's mailbox within 5 minutes.
 
-.. tip:: Als u op een rol klikt wanneer u iemand wilt uitnodigen worden de rechten van elke rol ook aan de linkerkant van uw scherm beschreven. 
+.. tip:: Clicking on a role when inviting someone will also display the rights of each role on the left side of your screen.
 
-.. tip:: Wanneer de e-mail niet in de inbox verschijnt na 5 minuten, controleer dan eerst uw spam. Mocht de uitnodiging hier ook niet zijn, dan kunt u altijd de `servicedesk <mailto:servicedesk@nelen-schuurmans.nl>`_ benaderen.
+.. tip:: If the email does not appear in the inbox after 5 minutes, first check your spam folder. If the invitation is not there either, you can always contact the `servicedesk <mailto:servicedesk@nelen-schuurmans.nl>`_.
 
-.. figure:: /images/h_gebruiker_uitnodigen_1.png
+.. figure:: /images/lizard/gebruiker_uitnodigen_1.png
     :scale: 50%
     :alt: Overview of the Lizard management page with multiple users.
 
-    Afbeelding 1: Een overzicht van het gebruikersgedeelte in het managementscherm van Lizard.
-    Hier kunt u de bestaande rechten inzien en nieuwe gebruikers uitnodigen (rood) of uitstaande `Uitnodigingen beheren`_ (geel).
+    Image 1: An overview of the user section in the management screen of Lizard.
+    Here you can view existing rights and invite new users (red) or manage pending invitations (yellow).
 
-
-.. figure:: /images/h_gebruiker_uitnodigen_2.png
+.. figure:: /images/lizard/gebruiker_uitnodigen_2.png
     :scale: 50%
-    :alt: Invitation screen for new users of Lizard. Enter an e-mail and select the roles for the new user.
+    :alt: Invitation screen for new users of Lizard. Enter an email and select the roles for the new user.
 
-    Afbeelding 2: Het uitnodigingscherm voor nieuwe gebruikers. U selecteert de rollen door er op te klikken.
+    Image 2: The invitation screen for new users. You select the roles by clicking on them.
 
 
 
-Uitnodigingen beheren
+Managing Invitations
 ---------------------
 
-In het `Pending Invitations` scherm kunt u zien welke uitnodigingen u heeft verstuurd, die nog niet geaccepteerd of verlopen zijn.
-Uitnodigingen verlopen standaard binnen 15 dagen, maar u kunt ze al eerder opzeggen door op de 3 stippen te klikken die achter een e-mail staan (afbeelding 3).
-Mocht een e-mail niet bij een gebruiker binnen zijn gekomen dan kunt u hier ook nogmaals de e-mail verifiëren.
+In the `Pending Invitations` screen, you can see which invitations you have sent that have not yet been accepted or expired.
+Invitations expire by default within 15 days, but you can cancel them earlier by clicking on the 3 dots next to an email (Image 3).
+If an email has not reached a user, you can also verify the email here.
 
-.. figure:: /images/h_pending_uitnodiging_1.png
+.. figure:: /images/lizard/pending_uitnodiging_1.png
     :scale: 50%
-    :alt: Invitation screen for new users of Lizard. Enter an e-mail and select the roles for the new user.
+    :alt: Invitation screen for new users of Lizard. Enter an email and select the roles for the new user.
 
-    Afbeelding 3: Het overzicht voor uitstaande uitnodigingen.
+    Image 3: An overview of pending invitations.
 
 
-Bestaande rechten aanpassen
+Adjusting Existing Rights
 ---------------------------
 
-In het gebruikersrechten overzicht scherm kunt u de rechten van bestaande gebruikers beheren.
-U ziet hier de volgende informatie van gebruikers die rechten hebben voor uw organisatie:
+In the user rights overview screen, you can manage the rights of existing users.
+Here you see the following information of users who have rights for your organization:
 
-1. Gebruikersnaam / Username
+1. Username
 2. Email
-3. Rollen / Roles
+3. Roles
 
-.. figure:: /images/h_rechten_beheren_1.png
+.. figure:: /images/lizard/rechten_beheren_1.png
     :scale: 50%
     :alt: Overview of the Lizard management page with multiple users.
 
-    Afbeelding 4: Het overzicht voor uitstaande uitnodigingen.
+    Image 4: An overview of pending invitations.
 
-Door op de gebruikersnaam te klikken van de desbetreffende gebruiker wordt u meegenomen naar de pagina van deze gebruiker specifiek.
-Hier klikt u op de rollen die u wilt verwijderen of toevoegen.
-Is een rol duidelijk gekleurd heeft de gebruiker deze rechten wel.
+By clicking on the username of the respective user, you will be taken to this user's specific page.
+Here, you can click on the roles you want to remove or add.
+If a role is clearly colored, the user has these rights.
 
-.. figure:: /images/h_rechten_beheren_2.png
+.. figure:: /images/lizard/rechten_beheren_2.png
     :scale: 50%
     :alt: Roles of an individual user.
 
-    Afbeelding 5: In dit geval heeft de gebruiker 'User' en 'Manager' rechten.
+    Image 5: In this case, the user has 'User' and 'Manager' rights.
 
 
 Tips
 =============
 
-.. tip:: Zorg dat direct aan het begin van een project rechten worden besproken en verleend.
-    Dit voorkomt dat er later vertraging plaats vindt doordat iemand moet wachten op zijn rechten.
+.. tip:: Ensure that rights are discussed and granted at the beginning of a project.
+    This prevents delays later due to someone waiting for their rights.
 
-.. tip:: Vergeet na het afsluiten van een project niet de rechten van gebruikers niet te verwijderen.
-    Op deze manier houd u actief de gebruikersdatabase bij en is uw data onder uw controle.
-    Controleer hierbij wel of er geen scripts draaien op een API KEY van een van deze gebruikers.
+.. tip:: Don't forget to remove users' rights after a project is completed.
+    This way, you actively maintain the user database and keep your data under control.
+    However, be sure to check if any scripts are running on an API KEY of any of these users.
 
-.. tip:: Mocht u accounts willen deactiveren, neem dat contact op met de `servicedesk <mailto:servicedesk@nelen-schuurmans.nl>`_
+.. tip:: If you want to deactivate accounts, contact the `servicedesk <mailto:servicedesk@nelen-schuurmans.nl>`_.
