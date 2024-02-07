@@ -64,7 +64,7 @@ So, make sure to only give manager rights to trusted parties.
     please contact the `servicedesk <mailto:servicedesk@nelen-schuurmans.nl>`_.
 
 The management screen
-====================
+=====================
 
 The management screen offers the opportunity to manage various aspects of your organization.
 This includes managing your data: rasters, scenarios, time series, and more.
