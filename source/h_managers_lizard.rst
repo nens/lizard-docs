@@ -96,14 +96,14 @@ This is done as follows:
 
 .. tip:: If the email does not appear in the inbox after 5 minutes, first check your spam folder. If the invitation is not there either, you can always contact the `servicedesk <mailto:servicedesk@nelen-schuurmans.nl>`_.
 
-.. figure:: /images/lizard/gebruiker_uitnodigen_1.png
+.. figure:: /images/gebruiker_uitnodigen_1.png
     :scale: 50%
     :alt: Overview of the Lizard management page with multiple users.
 
     Image 1: An overview of the user section in the management screen of Lizard.
     Here you can view existing rights and invite new users (red) or manage pending invitations (yellow).
 
-.. figure:: /images/lizard/gebruiker_uitnodigen_2.png
+.. figure:: /images/gebruiker_uitnodigen_2.png
     :scale: 50%
     :alt: Invitation screen for new users of Lizard. Enter an email and select the roles for the new user.
 
@@ -118,7 +118,7 @@ In the `Pending Invitations` screen, you can see which invitations you have sent
 Invitations expire by default within 15 days, but you can cancel them earlier by clicking on the 3 dots next to an email (Image 3).
 If an email has not reached a user, you can also verify the email here.
 
-.. figure:: /images/lizard/pending_uitnodiging_1.png
+.. figure:: /images/pending_uitnodiging_1.png
     :scale: 50%
     :alt: Invitation screen for new users of Lizard. Enter an email and select the roles for the new user.
 
@@ -135,7 +135,7 @@ Here you see the following information of users who have rights for your organiz
 2. Email
 3. Roles
 
-.. figure:: /images/lizard/rechten_beheren_1.png
+.. figure:: /images/rechten_beheren_1.png
     :scale: 50%
     :alt: Overview of the Lizard management page with multiple users.
 
@@ -145,7 +145,7 @@ By clicking on the username of the respective user, you will be taken to this us
 Here, you can click on the roles you want to remove or add.
 If a role is clearly colored, the user has these rights.
 
-.. figure:: /images/lizard/rechten_beheren_2.png
+.. figure:: /images/rechten_beheren_2.png
     :scale: 50%
     :alt: Roles of an individual user.
 
