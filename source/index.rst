@@ -22,6 +22,7 @@ Welcome to the Lizard documentation!
    b_viewer
    b_management
    b_apps
+   b_lizardplugin
 
 .. toctree::
    :maxdepth: 1
