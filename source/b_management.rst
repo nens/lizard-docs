@@ -2,197 +2,460 @@
 Management
 ==========
 
-Signing in
-==========
+In the management interface there is a variety of options.
 
-Users that already have a Lizard account can click the "Log in"
-button on the top right of the screen.
+`Usermanagement <d_authentication_user_management>`_ will be discussed later.
 
-First-time users require an invitation to create a Lizard account. Users with
-a "manager" role are able to send invitations to new users.
-If you do not know whom to contact, please contact our support office
-(servicedesk@nelen-schuurmans.nl).
-
-After clicking "Log in" or after following the invitation link, you will arrive
-at the login screen.
-
-.. note::
-    Please ensure that "https://auth.lizard.net/" domain is indeed displayed
-    in your browser's address bar and that your browser displays the lock
-    symbol indicating that the connection is secure.
-
-On the login page you have four different options to sign in:
-
-1. through a company account,
-2. through a social account,
-3. with username and password,
-4. by creating a new account (Sign up).
-
-First-time users may choose any of these options. If your company is listed as
-one of the possible companies to sign in with, that is the preferred choice.
-
-Existing users should use the same method as they used when signing in for 
-the first time. If your Lizard username/password existed before Januari 2021,
-use method 3.
-
-.. tip::
-    Do you want to add your company to the list to centralise the user accounts
-    of your organisation? Please contact our support office
-    (servicedesk@nelen-schuurmans.nl) for the options.
-
-
-Organisations
+Rasters
 =============
 
-All data in Lizard is linked to an organisation.
-Organisations are the backbone of our authorisation model.
-When an organisation uploads data, they are able to determine the level of authorisation required for access.
-There are three types of authorisation options that can be applied to your data: 
+The data management interface for rasters can be used to upload, edit or remove rasters.
+Raster Sources are the data containers, Raster Layers are the configuration of how the data is visualised.
 
-* **Public**: everyone is able to access your data 
-* **Common**: everyone with login credentials to Lizard is able to access your data 
-* **Private**: everyone with login credentials to Lizard AND user rights to your organisation is able to access your data
+.. image:: /images/c_manage_rasters_01.png
+.. image:: /images/c_manage_rasters_02.png
+.. image:: /images/c_manage_rasters_03.png
+
+Creating and editing Raster Sources and Layers
+----------------------------------------------
+
+The first step in uploading your raster datasets is to create a Raster Source.
+
+The Data Management interface is available at: “www.{your_organisation}.lizard.net/management/”.
+
+After landing on this page, click on ‘Data’ -> ‘Rasters’ -> 'Raster Sources'.
+Click on “New Item” |NewItem| to open the form or choose an existing raster to edit.  
+
+.. |NewItem| image:: /images/c_manage_newitem.png
+
+After filling in the form you can choose to directly upload your data by selecting your GeoTIFF's in the 'DATA' section.
+In case of a temporal raster source you need to specify which file belongs to which timestep.
+This is recognised automatically if the filename is composed according to the specified format.
+When you save a new Source you will have the option to go straight to the Raster Layer form to publish your data.
+
+.. image:: /images/c_datatypes_01.png
+
+Interested in the possibilities for your organisation? Please contact us via info@lizard.net.
+
+GeoBlocks management
+--------------------
+
+The GeoBlocks management page provides you a powerful tool to build your GeoBlocks Rasters.
+It helps you configure complex GeoBlocks models and enables you to validate your work along the way.
+
+The Visual editor shows your model as a flow diagram, consisting of block objects representing the input Raster Sources and GeoBlocks operations.
+The right sidebar shows the available blocks. Click on the blocks for a description and the expected inputs. Drag a block into the canvas to include it in your model.
+Connect blocks to use one as input for the other.
+
+When the model is valid it can also be shown in the Text editor. This shows the JSON graph as it would be sent to the API when you save the item.
+Here you can also make edits and validate the result.
+
+Example 1 shows a simple model which subtracts one Raster Source from another (difference in surface elevation between two versions of a dataset).
+
+.. image:: /images/c_manage_geoblocks_01.png
+
+Example 2 shows a more complex model with multiple Raster Sources and a series of operations.
+
+.. image:: /images/c_manage_geoblocks_02.png
+
+For more information about the possibilities of GeoBlocks see: :ref:`GeoBlocksAnchor`
 
 
+WMS Layers
+===========
 
-Whitelisting
+WMS stands for Web Mapping Service.
+It is a standard method of sharing georeferenced maps.
+The WMS layers management allows the user to configure layers in Lizard even if they are hosted on another platform.
+In the management screen you can add new WMS layers or edit existing layers.
+
+.. image:: /images/c_manage_wms_01.png
+
+New WMS Layer
+-------------
+
+.. image:: /images/c_manage_newitem.png
+
+After clicking the 'NEW ITEM' icon, you can configure a new WMS layer. 
+
+.. image:: /images/c_manage_wms_02.png
+
+The configuration has some mandatory items while others are optional, an extensive list with descriptions follows:
+
+1. GENERAL
 ------------
 
-The users of a certain portal may not be interested in a lot of the public/common datasets that are made available by others.
-Every Lizard portal has its own whitelist.
-Whitelisting allows the organisations to determine which data should be visible.
-This can remove some of the clutter.
-The whitelist affects both the Lizard Viewer aswell as the Catalogue.
+* Name (required): Choose a name that is findable and not too difficult
+* Description (optional): Give a description of the information that is displayed by the WMS layer.
+* Tags / Datasets (optional): You can connect the layer to an existing dataset. 
 
-The effect is that for the same user the available data can differ between [your_organisation].lizard.net and demo.lizard.net (for which all organisations are whitelisted).
-The whitelisting mechanism is overruled if a user has specific authorisation for an organisation.
+2. DATA
+------------
+
+* WMS URL (required): Specify which base URL is used to retrieve the image data. It usually ends on '/wms'
+* Slug (required): can be seen as layer name used in the external platform
+* Download URL (optional): Specify which URL is used to download the data. This will enable the download button in the Lizard Catalogue.
+* Legend URL (optional): Specify which URL is used to show the legend of this layer.
+* Get Feature URL (optional) : Optional URL to retrieve feature info data.
+* Tiled (enabled by default) : Specifies whether the layer is tiled (for better performance)
+* Min and max zoom (required): Closest and furthest point of view in this WMS layer. 0 is visible at world scale, 31 is zoomed in at a house. You can check the zoom level in the url in the Viewer (after the coordinates). 
+* Spatial bounds (optional): Specify the extent of this layer on the map. This information can also be automatically obtained by clicking "Get from source". 
+* Options (JSON): Extra options of this layer, specfied in JSON.
+
+3. RIGHTS
+------------
+
+* Accessibility (required, private by default): Choose an access modifier to decide who has access to this object. 
+* Shared with (optional): Specify if this object should be accessible by other organisations, and if so, which ones.
+* Organisation (required, pre-filled):  The organisation this object belongs to. 
+* Supplier (optional): The supplier of this object. If you are not an administrator, this field is always pre-filled with your username.
+
+If you are satisfied, click "SAVE"
+
+
+Edit WMS Layer
+---------------
+	
+By clicking on the name of a WMS layer, the configuration of the corresponding layer is opened.
+In the configuration page you can edit any of the settings previously given to the WMS layer.
+To quickly find a WMS layer: use the search bar.
+If the layer you are looking for seems unavailable you might have to switch organisations, feel free to contact the servicedesk for any problems (servicedesk@nelen-schuurmans.nl).
+
+.. image:: /images/c_manage_wms_03.png
 
 .. tip::
-    Do you want to see or change the whitelist settings of a portal? Please contact our support office
-    (servicedesk@nelen-schuurmans.nl).
+	Advanced: Is your WMS layer not visible in the Viewer? Check via the network tab (press F12) how Lizard requests the WMS and if that WMS url makes sense. 
 
 
-Roles
------
+====================
+Layer collections
+====================
 
-We have 4 roles and 3 different types of privileges. 
-
-* A **user**, who can only *read* data
-* A **supplier**, who can *read* data and change (*'write'*) his or her own data
-* An **administator**, who can *read* data and change (*'write'*) all organisation's data. 
-* A **manager**, who can *manage* other roles in the organisation. A manager can not read or write data by default. This role should be appointed separately. 
+.. warning::
+    This section will be extended in the near future. 
 
 
-User management
-===============
 
-Users can be managed in the User Management interface.
-This interface can be reached via the {your_organisation}.lizard.net/management/users/ (or `demo.lizard.net/management/users <https://demo.lizard.net/management/users>`_).
+Time series
+==============
+
+
+The data management interface for timeseries can be used to upload, edit or remove timeseries, monitoring networks and locations.
+
+.. image:: /images/c_manage_timeseries_menu.png	
+
+
+----------
+Locations
+----------
+
+.. image:: /images/c_manage_locations_01.png	
+
+
+Search or sort your locations here.
+Check out possible actions by clicking the three dots icon.
+Create a new object with the New Item button on the top right corner.
+
+
+.. image:: /images/c_manage_newitem.png
+
+.. image:: /images/c_manage_locations_02.png	
+
+1. GENERAL
+------------
+
+* Location name (required): Choose a name that is findable and not too difficult
+* Code (required): Choose a code that represents the object within your organisation.
+
+
+2. DATA
+------------	
+
+.. warning::
+    Locations must be connected to an existing asset to be visualised in the Viewer. The asset will have a symbol and zoom level depending on the type. Also, the metadata differs per type. For now, only measuringstations can be added via the API. If you have any questions about this, please contact the service desk. 
+	
+* Asset type (optional): Specify a type of asset.  
+* Asset location: after specifying the asset type, you can search by code or name. 
+* Extra metadata (JSON) (optional): Free JSON field to add information to this object.
+
+3. RIGHTS
+------------
+
+* Accessibility (required, private by default): Choose an access modifier to decide who has access to this object. 
+
+
+If you are satisfied, click "SAVE"
+
+------------
+Timeseries
+------------
+
+.. image:: /images/c_manage_timeseries_01.png	
+
+Search or sort your time series here.
+Check out possible actions by clicking the three dots icon next to a time series. You can add timeseries to a monitoring network (MN), edit, or delete hem. 
+Create a new object with the New Item button on the top right corner.
+
+.. image:: /images/c_manage_newitem.png
+
+.. image:: /images/c_manage_timeseries_02.png	
+
+1. GENERAL
+------------
+
+* Name (required): Choose a name that is findable and not too difficult
+* Code (required): Choose a code that represents the object within your organisation.
+
+
+2. DATA
+------------	
+
+* Observation type (required): Choose the way the data is measured, and the units. New observation types can be added via the `api <https://demo.lizard.net/api/v4/observationtypes/>`_ or requested via the servicedesk.
+* Location (required): Choose to which location you want to add this timeseries. New locations can be added via the api or via data management --> timeseries --> locations.
+* Value type (required): Specify what kind of data you will be supplying. See `Level of measurement <https://en.wikipedia.org/wiki/Level_of_measurement>`_.
+* Datasource (optional): Specify a data source if it is available. Otherwise, you can leave it empty or create a new one via the API. 
+* Interval (optional): Specify a time range between each time series step.
 
 .. note::
-    You require a “manager” role to access the User Management interface.
-    Haven’t got a “manager” role but you would like to add the User Management interface?
-    Please contact the application manager within your organisation or our support office (servicedesk@nelen-schuurmans.nl)
+	if you leave the interval at 0, it will mean it is irregular ('nonequidistant') data. This is also necessary if you have timesteps smaller than seconds. 
 	
-.. image:: /images/b_usermanagement_03.png
+* CSV Files (optional): You can add new data via a csv file or via the API. If you want to supply a csv file, see the instructions below:
 
-In the example above, you see the current rights for 7 users under the organisation Nelen & Schuurmans. 
+.. note::
+	The first line of the file should describe the column names, for example:
+
+	| time, value
+	| 2020-03-20T01:00:00Z, 3.14 
+	| 2020-03-20T01:05:00Z, 2.72
+	
+	The next lines are the timestemp and value for that timestep. Make sure you do not list the same timestep twice. 
+	All uploads in Lizard are expected to be in UTC time. 
+
+	| time: ISO 8601 date and time representation. This is a required field. 
+	| value: A number, string, or boolean, depending on the value_type of the corresponding time series. 
 
 
-The management screen offers the opportunity to manage various aspects of your organization.
-This includes managing your data: rasters, scenarios, time series, and more.
-For complete use of this page, refer to the `lizard documentation <https://docs.lizard.net/index.html>`_.
-The most important thing in this case is "User Management".
-Only managers have access to the "Users" screen.
-In this screen, you can:
-
-1. Invite new users.
-2. Manage invitations.
-3. Adjust existing rights.
+* Extra metadata (JSON) (optional): Free JSON field to add information to this object.
 
 
-Inviting New Users
-----------------------------
+3. RIGHTS
+------------
 
-If a new user needs access to Lizard from the organization, this can be granted by the Manager.
-This is done as follows:
+* Accessibility (required, private by default): Choose an access modifier to decide who has access to this object. 
+* Username of supplier (optional): The supplier of this object. If you are not an administrator, this field is always pre-filled with your username.
+* Supplier code (optional): The FTP or Supplier code is used as reference to your own system. 
 
-1. Log in to the organization's portal ({organization}.lizard.net).
-2. Go to the user section in the management screen ({organization}.lizard.net/management/users).
-3. Click on `+ NEW USER` at the top right of the screen (Image 1, in red).
-4. Type the user's email in the 'email' field (Image 2).
-5. Select the roles the user will have. For the rights associated with the roles, refer to `Roles and rights`_.
-6. Click `SAVE`.
-7. Success! The invitation has been sent and will be in the new user's mailbox within 5 minutes.
+.. note::
+	Timeseries are not linked to an organisation directly. They are linked to organisations via the locations. 
 
-.. tip:: Clicking on a role when inviting someone will also display the rights of each role on the left side of your screen.
-
-.. tip:: If the email does not appear in the inbox after 5 minutes, first check your spam folder. If the invitation is not there either, you can always contact the `servicedesk <mailto:servicedesk@nelen-schuurmans.nl>`_.
-
-.. figure:: /images/h_gebruiker_uitnodigen_1.png
-    :scale: 50%
-    :alt: Overview of the Lizard management page with multiple users.
-
-    Image 1: An overview of the user section in the management screen of Lizard.
-    Here you can view existing rights and invite new users (red) or manage pending invitations (yellow).
-
-.. figure:: /images/h_gebruiker_uitnodigen_2.png
-    :scale: 50%
-    :alt: Invitation screen for new users of Lizard. Enter an email and select the roles for the new user.
-
-    Image 2: The invitation screen for new users. You select the roles by clicking on them.
+If you are satisfied, click "SAVE"
 
 
 
-Managing Invitations
+---------------------
+Monitoring networks
 ---------------------
 
-In the `Pending Invitations` screen, you can see which invitations you have sent that have not yet been accepted or expired.
-Invitations expire by default within 15 days, but you can cancel them earlier by clicking on the 3 dots next to an email (Image 3).
-If an email has not reached a user, you can also verify the email here.
+Monitoring networks are used to group and give insights on time series.
+Check out possible actions by clicking the three dots icon next to existing networks.
 
-.. figure:: /images/h_pending_uitnodiging_1.png
-    :scale: 50%
-    :alt: Invitation screen for new users of Lizard. Enter an email and select the roles for the new user.
+Create a new object with the New Item button on the top right corner.
 
-    Image 3: An overview of pending invitations.
+.. image:: /images/c_manage_newitem.png
 
+.. image:: /images/c_manage_monitoringnetworks_01.png	
 
-Adjusting Existing Rights
----------------------------
+1. GENERAL
+------------
 
-In the user rights overview screen, you can manage the rights of existing users.
-Here you see the following information of users who have rights for your organization:
-
-1. Username
-2. Email
-3. Roles
-
-.. figure:: /images/h_rechten_beheren_1.png
-    :scale: 50%
-    :alt: Overview of the Lizard management page with multiple users.
-
-    Image 4: An overview of pending invitations.
-
-By clicking on the username of the respective user, you will be taken to this user's specific page.
-Here, you can click on the roles you want to remove or add.
-If a role is clearly colored, the user has these rights.
-
-.. figure:: /images/h_rechten_beheren_2.png
-    :scale: 50%
-    :alt: Roles of an individual user.
-
-    Image 5: In this case, the user has 'User' and 'Manager' rights.
+* Name (required): Choose a name that is findable and not too difficult
+* Description (optional)
 
 
-Tips
+2. DATA
+------------	
+
+.. warning::
+    The button "MANAGE" will only work if there are already timseries connected to the monitoring network. If there are, you can remove the the connection here. New connections can be added via the timeseries management app. 
+
+3. RIGHTS
+------------
+
+* Accessibility (required, private by default): Choose an access modifier to decide who has access to this object. 
+* Organisation (required, pre-filled):  The organisation this object belongs to. 
+
+If you are satisfied, click "SAVE"
+
+
+
+Scenarios
+==============
+
+The data management interface for scenarios can be used to manage scenarios.
+
+
+.. image:: /images/c_manage_scenarios_01.png	
+
+
+Search for a scenario
+------------------------
+
+You can search for a scenario by either typing (part of) the scenario name, the UUID, username of the supplier or model name. 
+
+.. image:: /images/c_manage_scenarios_search.png	
+
+You can also specify that you only want to show your own scenarios by ticking the box in the top right corner.
+
+
+Used storage and deletion of scenarios
+-----------------------------------------
+
+.. image:: /images/c_manage_scenarios_storage.png	
+
+In the left side, you can see the used storage for your organisation. This may have influence on your subscription.
+
+.. image:: /images/c_manage_scenarios_delete1.png	
+
+If you want to remove a complete scenario, you simply check the box of the relevant scenario(s) and choose 'delete'. 
+If you choose 'delete raw', it will only remove the raw data and not the timeseries and rasters. You can also remove a specific raster of a scenario by double-clicking on a scenario and clicking on the 'trash' icon next to the layer.
+
+.. image:: /images/c_manage_scenarios_delete2.png	 
+
+.. warning::
+	If you delete a scenario, it is really gone! We might be able to retrieve the rasters if you contact support within 14 days.  
+	
+Add a scenario
+--------------------
+
+Scenarios can be automatically exported to Lizard, for example via 3Di. 
+You can also add a new scenario with the New Item button on the top right corner.
+
+.. image:: /images/c_manage_newitem.png	
+	
+Edit a scenario
+----------------
+
+Right now you can only edit the accessability of a scenario.
+Scenarios are private by default (only visible for logged in users of the same organisation). 
+You can choose to make them visible for all logged in users or even public so no login is necessary.
+
+.. image:: /images/c_manage_scenarios_public.png
+
+
+.. tip::
+	Make scenarios public if you want to use them in other GIS applications via a `wms link <https://docs.lizard.net/e_lizardwms.html#di-scenarios>`_. 
+	
+	
+You can add a scenario to an existing project via the threedot icon.
+
+.. image:: /images/c_manage_scenarios_project.png		
+	
+Group scenarios in a project
+-----------------------------
+
+Projects are used to group and give insights on scenarios.
+
+.. image:: /images/c_manage_projects_01.png
+
+Create a new project with the New Item button on the top right corner.
+
+.. image:: /images/c_manage_newitem.png
+
+
+Labels
+============
+
+.. warning::
+    This section is to be extended.
+
+.. image:: /images/c_manage_labeltypes.png
+
+
+
+Alarms
+======
+
+Lizard provides an alarm feature that sends notifications via sms or email when newly processed values of timeseries or temporal rasters exceed a threshold.
+It is used to notify people of events that may require action, for instance an upcoming rain event or flood.
+
+The alarm management screens are found at https://demo.lizard.net/management/#/alarms.
+
+.. image:: /images/f_alarms_01.jpg
+
+The configuration has a variety of options to generate relevant notifications with messages that include the specifics of the event. 
+
+Notifications
 =============
 
-.. tip:: Ensure that rights are discussed and granted at the beginning of a project.
-    This prevents delays later due to someone waiting for their rights.
+Behind the Notifications tile you find the overviews of existing raster and timeseries alarms for your organisation and their status (active/inactive).
+The 'NEW ITEM' button leads you to the form to register a new alarm.
+We go through some of the options that the system provides, to explain them in detail.
 
-.. tip:: Don't forget to remove users' rights after a project is completed.
-    This way, you actively maintain the user database and keep your data under control.
-    However, be sure to check if any scripts are running on an API KEY of any of these users.
+Selecting a raster
+------------------
 
-.. tip:: If you want to deactivate accounts, contact the `servicedesk <mailto:servicedesk@nelen-schuurmans.nl>`_.
+Raster alarms are set on temporal rasters. These can be part of a scenario, a single source raster or a Geoblock.
+An alarm is set for one point location intersecting this temporal raster.
+
+You can type in the field to search in the names of available rasters. Next, select the type of intersection (Point, Line or Polygon).
+Draw the geometry on the map or insert a geometry in the JSON field below the map.
+
+For Line and Polygon intersections a spatial aggregation is needed to derive a timeseries that can be compared to the alarm thresholds.
+The options are:
+
+* Sum
+* Mean
+* Min
+* Max
+* Median
+* Count
+
+Selecting a timeseries
+----------------------
+
+Timeseries often do not have a clear name or code by themselves.
+That is why we start with looking up the asset it relates to.
+Once the asset is selected it should be easy to select the timeseries from the list of related objects.
+
+Relative start and end
+----------------------
+
+The user doesn't always want to receive alarms for the whole period of newly processed data.
+For instance, for operational flood models which might have records of prior theshold exceedances, you may only be interested in receiving alarms for forecasted threaths.
+
+To only analyse the relevant part of your data you can set relative start and end.
+They are set relative to The figure below gives a schematic overview of how this method works.
+
+.. image:: /images/f_alarms_02.jpg
+
+If these fields are left empty the trigger check is done on the complete data frame of newly processed data.
+
+Snoozing option
+---------------
+
+It can be considered undesirable for alarms to be triggered during brief spikes.
+The snoozing option allows the user to determine the timeperiod a threshold should be exceeded before the alarm is triggered and a notification is sent.
+This option is available for both the raising of the alarm and its withdrawal. Default is 1 (trigger at first occurrence). 
+
+Contacts and Groups
+===================
+
+The recipients of alarm notifications are configured in the Contacts screen, with their phone number and/or email address.
+Each contact can be part of multiple Groups, which in turn can be used in multiple alarms.
+So no need to do a whole lot of data duplications of contact info.
+
+Templates
+=========
+
+The notification messages are configured with Templates.
+There is a difference in setting up Email and SMS Templates:
+
+* Email: Supports both plain text and HTML and are not limited in length
+* SMS: Plain text with maximum length of 160 characters (after substitution of variables)
+
+You can use a number of variables to enrich the content of the notifications and make them applicable to different alarms.
+The variables contain options for including the name of the receiver and details about the alarm at hand.
+
+The option "No further impact" determines that a message is used specifically to notify when an alarm is fully withdrawn.
+This type of message can be set in addition to a standard message to let receivers know that the situation has settled down.
+This often requires a different text and therefore a different Template.

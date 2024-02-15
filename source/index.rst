@@ -12,6 +12,7 @@ Welcome to the Lizard documentation!
 
    a_user_interfaces
    a_tutorials
+   a_geoblocks
 
 .. toctree::
    :maxdepth: 1
