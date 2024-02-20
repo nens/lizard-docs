@@ -107,11 +107,20 @@ To download a raster multiple settings can be provided:
 * The output folder: the folder in which the file will be saved.
 * The filename: the name of the file.
 * Map extent based on:
-    * Map canvas: the entire map is exported.
+    * Map canvas: the part of the raster that is shown on the QGIS map canvas is exported.
     * Polygons: the polygon provided is used to export the project.
 * No-data value: the value which represents no-data available.
 * Pixel-size: the size of each individual pixel
 * CRS: coordinate system.
+
+The use of polygons deserves some additional explanation. 
+To use polygons as export extent it is first of all required to have a polygon layer.
+Once a polygon layer is selected two check boxes are available.
+* Selected features only: Only polygons that are selected within the project are used to download the raster.
+* Clip to polygon(s): default is True, determines if the edges of a polygon are used as its borders. If it is unchecked a rectangle will be drawn around the polygon, this rectangle will be exported. 
+
+If multiple polygons are available within a raster you either have to use the checkbox `Selected features only` 
+and select one or more polygons, or you have to provide the namefield of the Polygon you want to export.
 
 .. image:: /images/d_qgisplugin05.png
 
