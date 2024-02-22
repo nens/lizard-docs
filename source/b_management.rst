@@ -38,7 +38,7 @@ When you save a new Source you will have the option to go straight to the Raster
 Interested in the possibilities for your organisation? Please contact us via info@lizard.net.
 
 GeoBlocks management
---------------------
+====================
 
 The GeoBlocks management page provides you a powerful tool to build your GeoBlocks Rasters.
 It helps you configure complex GeoBlocks models and enables you to validate your work along the way.
@@ -127,7 +127,7 @@ If the layer you are looking for seems unavailable you might have to switch orga
 	Advanced: Is your WMS layer not visible in the Viewer? Check via the network tab (press F12) how Lizard requests the WMS and if that WMS url makes sense. 
 
 
-====================
+
 Layer collections
 ====================
 
