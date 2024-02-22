@@ -2,6 +2,9 @@
 Self Service Portal
 ===================
 
+Self Service Portal
+===================
+
 Nelen & Schuurmans provide a Service Desk function via https://nelen-schuurmans.topdesk.net/, The Nelen & Schuurmans Self Service Portal shall be available 24/7.
 The Service Desk giving support on all Lizard products for Lizard customers.
 Customers can reach telephonic support (Prio 1) on working days from 09:00 - 17:00 (CEST) excluding the days declared as dutch public holiday close days.
@@ -18,7 +21,6 @@ This access should be used for, but not limited to:
 
 All incidents relating to the Lizard software with the exception of enhancement/feature requests are recorded and followed up at no additional cost. 
 
-==================
 Priority incidents
 ==================
 
@@ -33,27 +35,9 @@ The levels are:
 * **Prio 2 (medium):** The work and/or control processes are hindered or the Client's importance is large, but a workaround is possible.
 * **Prio 3 (low):** Not urgent. Lizard is impaired, a single function is impacted but key business processes are not interrupted. The problem causes minimal operational or business impact, a general technical question or enhancement request.
 
-================
+
 Feature requests
 ================
 Beyond the scope are enhancement/feature requests or questions about the use of Lizard in the organisation,
 for which the customer can purchase an additional service.
 For more info the customer can contact the local Lizard consultant or email to info@nelen-schuurmans.nl.
-
-
-	
-
-==============================
-Frequently Asked Questions
-==============================
-	
-This section will be extended in the near future. 
-
-.. |date| date::
-
-
-.. Note::
-    This document will be revised periodically to reflect changes in the products and solutions being supported and the processes,
-    procedures and technologies being used to deliver support services.
-    The latest version of this document was created on |date|.
-	

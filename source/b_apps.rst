@@ -1,6 +1,11 @@
-=========
-Dashboard
-=========
+====
+Apps
+====
+
+This page contains an explanation of availibity of apps in Lizard!
+
+Dashboards
+==========
 
 Manage, control and keep track with Lizard Dashboards.
 Lizard Dashboards can offer key insights that help decision makers make data driven decisions.

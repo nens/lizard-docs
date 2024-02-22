@@ -30,7 +30,7 @@ October 10th 2023
 =================
 New viewer released:
 
-*   Documentation for the new viewer: :doc:`e_viewer`
+*   Documentation for the new viewer: :doc:`b_viewer`
 
 
 May 2nd 2023

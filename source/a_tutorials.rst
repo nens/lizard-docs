@@ -1,11 +1,11 @@
-==============================
+=============
 API tutorials
-==============================
+=============
 
 We created interactive manuals for data scientists to use the Lizard API. 
 At the moment we have the following:
 
-0. Virtual Environment
+1. Virtual Environment
 ----------------------
 
 | `Virtual Environment Requirements <https://demo.lizard.net/media/tutorials/requirements.txt>`_
