@@ -76,7 +76,7 @@ The following information is visible in this overview.
 * **Access modifier** Divided into Public, Common and Private.
 
 .. note::
-    Information about the different Access modifiers can be found under :ref:`OrganisationsAnchor`.
+    Information about the different access modifiers can be found under `organisation modifiers <d_authentication_user_management.html#Organisations>`_.
 	
 .. note::
     Not included are rasters from 3Di scenarios
@@ -138,7 +138,7 @@ The following information is visible in this overview.
 * **Access modifier** Divided into Public, Common and Private.
 
 .. note::
-    Information about the different Access modifiers can be found under :ref:`OrganisationsAnchor`.
+    Information about the different access modifiers can be found under `organisation modifiers <d_authentication_user_management.html#Organisations>`_.
 
 Details
 --------
@@ -158,7 +158,7 @@ Action menu
 You can download the wms directly, open it in the Viewer or in the API or analyse the wms layer in another application linking to Lizard. 
 You can use this link to visualise the raster in external applications such as QGIS or ESRI applications.
 
-For more infomation, please consult the :doc:`WMS Services<e_lizardwms>`.
+For more infomation, please consult the `WMS Services <b_management.html#WMS Services>`_.
 
 Time series and monitoring networks
 ====================================
@@ -175,7 +175,7 @@ The following information is visible in this overview.
 * **Access modifier** Divided into Public, Common and Private.
 
 .. note::
-    Information about the different Access modifiers can be found under :ref:`OrganisationsAnchor`.
+    Information about the different access modifiers can be found under `organisation modifiers <d_authentication_user_management.html#Organisations>`_.
 	
 In monitoring networks, you can group timeseries. This can be done for example by grouping them by observation type or by source.
 	
@@ -231,7 +231,7 @@ The following information is visible in this overview.
 * **Access modifier** Divided into Public, Common and Private.
 
 .. note::
-    Information about the different Access modifiers can be found under :ref:`OrganisationsAnchor`.
+    Information about the different access modifiers can be found under `organisation modifiers <d_authentication_user_management.html#Organisations>`_.
 	
 
 Details

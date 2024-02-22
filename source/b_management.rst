@@ -127,6 +127,109 @@ If the layer you are looking for seems unavailable you might have to switch orga
 	Advanced: Is your WMS layer not visible in the Viewer? Check via the network tab (press F12) how Lizard requests the WMS and if that WMS url makes sense. 
 
 
+WMS Services
+=============
+
+Lizard provides a Web Map Service (WMS) that you can use to visualise rasters and 3Di scenarios stored in Lizard Raster Server as tiled images.
+The Lizard WMS Service follows the `OGC WMS guidelines <https://www.ogc.org/standards/wms>`_.
+
+Rasters
+---------
+
+To visualise and request the GetCapabilities of a specific raster you can use the following URL: 
+
+``https://{yourportal}.lizard.net/wms/raster_{UUID of raster}/?request=GetCapabilities``
+
+for example: 
+https://demo.lizard.net/wms/raster_eae92c48-cd68-4820-9d82-f86f763b4186/?request=GetCapabilities
+
+You can easily find the UUID of the raster in the `Lizard Catalogue <https://demo.lizard.net/catalogue>`_ or `API <https://demo.lizard.net/api/v4/rasters/>`_.
+The Lizard Catalogue also provides the Lizard WMS GetCapabilities link for each raster.
+With the GetCapabilities query parameter you retrieve the metadata of the service, including supported operations, parameters and a list of available layers. 
+
+3Di Scenarios
+--------------
+
+To visualise and request the GetCapabilities of a 3Di scenario (list of rasters) you can use the following URL: 
+
+``https://{yourportal}.lizard.net/wms/scenario_{UUID of scenario}/?request=getcapabilities``
+
+For example:
+https://demo.lizard.net/wms/scenario_c30ef7f2-c871-4d70-a087-8f078f9ebafd/?request=GetCapabilities
+
+You can look up the UUID of the scenario using the `Scenarios endpoint in the Lizard API <https://demo.lizard.net/api/v4/scenarios>`_.
+All available filters are listed on the endpointsâ€™ page. E.g. you can look up a scenario and itâ€™s uuid by filtering on your own username.
+With the GetCapabilities query parameter you retrieve the metadata of the service, including supported operations, parameters and a list of available layers. 
+ 
+Layer collections
+-------------------
+
+To visualise and request the GetCapabilities of layer collections (list of rasters, previously called 'datasets') you can use the following URL: 
+
+``https://{yourportal}.lizard.net/wms/{slug of layer collection}?request=GetCapabilities``
+
+For example:
+https://demo.lizard.net/wms/basiskaarten/?request=GetCapabilities
+
+You can search for layer collections in the Lizard Catalogue by using the Layer collection filter in the left panel.
+You will find the Lizard WMS GetCapabilities URL of the layer collection in the metadata panel of a specific layer.  
+ 
+ 
+.. _WMSauthAnchor:
+ 
+Authorisation
+--------------
+
+The Lizard WMS Service follows the authorisation system mentioned under `organisation modifiers <d_authentication_user_management.html#Organisations>`_.
+If layers are private you need privileges in the organisation that owns the data.
+
+Use a Personal API Key to authenticate with the Lizard WMS Service, as described in `API authentication <_APIAuthenticationAnchor>`_.
+
+In QGIS the authentication is filled in as follows: 
+
+- username = __key__ 
+- password = Personal API Key
+
+
+How to load WMS in GIS
+=======================
+
+You can connect directly to Lizard in a GIS application like QGIS.
+
+
+* 1
+
+Open QGIS and load a new WMS connection.
+
+.. image:: /images/e_qgis_wms1.png
+
+
+* 2
+
+Give the connection a name and copy the wms link from 'https' to 'GetCapabilities', e.g. "https://maps1.klimaatatlas.net/geoserver/twn_klimaatatlas/wms/?request=GetCapabilities". 
+
+.. image:: /images/e_qgis_wms2.png
+
+
+* 3
+
+If the wms layer is not public, you have to enter your :ref:`Credentials<WMSauthAnchor>`. in the Authentication - Basic tab.
+
+
+.. image:: /images/e_qgis_wmslogin.jpg
+
+
+* 4
+
+Click OK and double click on the connection. If multiple layers appear, double click on the one you are interested in. 
+
+.. image:: /images/e_qgis_wms3.png
+
+
+.. image:: /images/e_qgis_wms4.png
+
+The styling will automatically be taken from Lizard.
+If the layer is temporal, you can also navigate through time. 
 
 Layer collections
 ====================
@@ -145,7 +248,7 @@ The data management interface for timeseries can be used to upload, edit or remo
 .. image:: /images/c_manage_timeseries_menu.png	
 
 
-----------
+
 Locations
 ----------
 
@@ -161,15 +264,15 @@ Create a new object with the New Item button on the top right corner.
 
 .. image:: /images/c_manage_locations_02.png	
 
-1. GENERAL
-------------
+1. **GENERAL**
+
 
 * Location name (required): Choose a name that is findable and not too difficult
 * Code (required): Choose a code that represents the object within your organisation.
 
 
-2. DATA
-------------	
+2. **DATA**
+
 
 .. warning::
     Locations must be connected to an existing asset to be visualised in the Viewer. The asset will have a symbol and zoom level depending on the type. Also, the metadata differs per type. For now, only measuringstations can be added via the API. If you have any questions about this, please contact the service desk. 
@@ -178,15 +281,13 @@ Create a new object with the New Item button on the top right corner.
 * Asset location: after specifying the asset type, you can search by code or name. 
 * Extra metadata (JSON) (optional): Free JSON field to add information to this object.
 
-3. RIGHTS
-------------
+3. **RIGHTS**
 
 * Accessibility (required, private by default): Choose an access modifier to decide who has access to this object. 
 
 
 If you are satisfied, click "SAVE"
 
-------------
 Timeseries
 ------------
 
@@ -200,17 +301,15 @@ Create a new object with the New Item button on the top right corner.
 
 .. image:: /images/c_manage_timeseries_02.png	
 
-1. GENERAL
-------------
+1. **GENERAL**
 
 * Name (required): Choose a name that is findable and not too difficult
 * Code (required): Choose a code that represents the object within your organisation.
 
 
-2. DATA
-------------	
+2. **DATA**	
 
-* Observation type (required): Choose the way the data is measured, and the units. New observation types can be added via the `api <https://demo.lizard.net/api/v4/observationtypes/>`_ or requested via the servicedesk.
+* Observation type (required): Choose the way the data is measured, and the units. New observation types can be added via the `observation types api <https://demo.lizard.net/api/v4/observationtypes/>`_ or requested via the servicedesk.
 * Location (required): Choose to which location you want to add this timeseries. New locations can be added via the api or via data management --> timeseries --> locations.
 * Value type (required): Specify what kind of data you will be supplying. See `Level of measurement <https://en.wikipedia.org/wiki/Level_of_measurement>`_.
 * Datasource (optional): Specify a data source if it is available. Otherwise, you can leave it empty or create a new one via the API. 
@@ -238,8 +337,7 @@ Create a new object with the New Item button on the top right corner.
 * Extra metadata (JSON) (optional): Free JSON field to add information to this object.
 
 
-3. RIGHTS
-------------
+3. **RIGHTS**
 
 * Accessibility (required, private by default): Choose an access modifier to decide who has access to this object. 
 * Username of supplier (optional): The supplier of this object. If you are not an administrator, this field is always pre-filled with your username.
@@ -252,7 +350,6 @@ If you are satisfied, click "SAVE"
 
 
 
----------------------
 Monitoring networks
 ---------------------
 
@@ -265,21 +362,18 @@ Create a new object with the New Item button on the top right corner.
 
 .. image:: /images/c_manage_monitoringnetworks_01.png	
 
-1. GENERAL
-------------
+1. **GENERAL**
 
 * Name (required): Choose a name that is findable and not too difficult
 * Description (optional)
 
 
-2. DATA
-------------	
+2. **DATA**	
 
 .. warning::
     The button "MANAGE" will only work if there are already timseries connected to the monitoring network. If there are, you can remove the the connection here. New connections can be added via the timeseries management app. 
 
-3. RIGHTS
-------------
+3. **RIGHTS**
 
 * Accessibility (required, private by default): Choose an access modifier to decide who has access to this object. 
 * Organisation (required, pre-filled):  The organisation this object belongs to. 

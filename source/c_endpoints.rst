@@ -25,7 +25,7 @@ most commonly used and supported verbs are:
 
 We also have HEAD and OPTIONS. 
 
-.. _APIAuthenticatiosnAnchor:
+.. _APIAuthenticationAnchor:
 
 Authentication
 ==============
@@ -104,7 +104,7 @@ Authorisation
 
 For all endpoints, users have to be ``admin`` in the organisation that owns the
 data to create or update resources.
-See :doc:`b_usermanagement` for more information about roles and permissions.
+See `user management <d_authentication_user_management.html#User management>`_ for more information about roles and permissions.
 
 Supported data formats
 ======================

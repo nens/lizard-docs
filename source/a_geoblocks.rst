@@ -307,7 +307,7 @@ Geometry example: classify build year of buildings.
 Geometry output
 ---------------
 
-Geometry outputs are stored in :doc:`labels<c_labels>`.
+Geometry outputs are stored in `labels <b_management.html#Labels>`_.
 Labels are always linked to your Vectors stored in the Vector Server, for instance flood risk for parcels or buildings.
 Labels are grouped in Labeltypes. The graph can be found via the labeltypes endpoint:
 
