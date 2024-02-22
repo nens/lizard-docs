@@ -20,8 +20,9 @@ jobs:
       - name: build
         run: |
           docker-compose build
-          docker-compose run builder make html
-          zip -r lizard-docs.zip build
+          docker-compose run builder make html latexpdf
+          docker-compose run builder cp build/latex/lizard.pdf build/html
+          zip -r lizard-docs.zip build/html
 
       - name: Publish master to https://docs.lizard.net
         if: github.event.ref == 'refs/heads/master'
