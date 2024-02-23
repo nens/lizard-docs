@@ -17,7 +17,7 @@ Installation
     2. In the section *Plugin repositories*, click *Add*
     3. As details, fill in '3Di' as *Name*, and 'https://plugins.lizard.net/plugins.xml' as *URL*
 
-* Install the Lizard plugin
+* Install the Lizard plugin    
     1. Click on the tab *All*
     2. In the search bar at the top, search for Lizard
     3. Select Lizard in the panel in the middle
@@ -35,6 +35,7 @@ If you do not provide an API key first, you will receive a pop-up with the follo
 
 Which is followed by the settings menu.
 There are only two settings to worry about:
+
 * Base URL: this is the Lizard portal you would like to acces. This will typically be *your_organisation*.lizard.net.
 * API Key: your personal API key. You can provide one by clicking `Set...`. 
  
@@ -60,10 +61,12 @@ Simulations results
 -------------------
 
 The simulation results section consists of three compartments: scenario selection, scenario items and feedback.
+
 .. image:: /images/d_qgisplugin02.png
 
 The scenario selection, which can be found at the top of the section. With the search bar a scenario can be found.
 Once a scenario has been selected two options are available, below the scenario overview on the right:
+
 * `Show downloadable files`: will display all downloadable files in the middle compartment.
 * `Add as WMS`: adds all downloadable layers as WMS into your project.
 
@@ -73,6 +76,8 @@ Downloadable results will be black, others are shown as grey.
 .. image:: /images/d_qgisplugin02a.png
 
 To download results:
+
+
 1. Select the results of interest
 2. [Optional] Set nodata value and projection that the downloaded rasters should get.
 3. Start the download
@@ -85,6 +90,7 @@ To inspect their changes over time: use the `Temporal Controller<https://docs.qg
 The last compartment consists of feedback. 
 Within this section the actions of the plugin are reported. 
 Some examples are:
+
 * Scenario download task added to the queue.
 * Scenario download finished.
 * WMS layers for scenario added to the project.
@@ -92,6 +98,7 @@ Some examples are:
 If an action fails for any reason this will also be reported in the feedback compartment.
 
 .. image:: /images/d_qgisplugin03.png
+
 
 Rasters
 -------
@@ -125,6 +132,7 @@ and select one or more polygons, or you have to provide the namefield of the Pol
 .. image:: /images/d_qgisplugin05.png
 
 The last compartment consists of feedback. Within this section the actions of the plugin are reported. Some examples are:
+
 * Scenario download task added to the queue.
 * Scenario download finished.
 * WMS layers for scenario added to the project.
