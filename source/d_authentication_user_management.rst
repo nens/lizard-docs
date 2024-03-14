@@ -29,6 +29,10 @@ On the login page you have four different options to sign in:
 3. with username and password,
 4. by creating a new account (Sign up).
 
+.. note:: 
+    To sign up you an invitation from an organisation is required. 
+    Without an invitation you will be unable to create an account.
+
 First-time users may choose any of these options. If your company is listed as
 one of the possible companies to sign in with, that is the preferred choice.
 
