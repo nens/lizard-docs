@@ -101,8 +101,11 @@ This interface can be reached via the {your_organisation}.lizard.net/management/
     You require the “Manager” role to access the User Management interface.
     Please contact the application manager within your organisation or our support office (servicedesk@nelen-schuurmans.nl) if you would like to manage the users of your organisation.
 	
-.. image:: /images/b_usermanagement_03.png
-    In the example above, you see the current rights for 7 users under the organisation Nelen & Schuurmans. 
+.. figure:: /images/b_usermanagement_03.png
+    :scale: 50%
+    :alt: Overview of the rights of 7 users in the Nelen & Schuurmans organisation.
+
+    Image 1: In the example above, you see the current rights for 7 users under the organisation Nelen & Schuurmans. 
 
 A manager in the user interface can:
 
@@ -133,14 +136,14 @@ This is done as follows:
     :scale: 50%
     :alt: Overview of the Lizard management page with multiple users.
 
-    Image 1: An overview of the user section in the management screen of Lizard.
+    Image 2: An overview of the user section in the management screen of Lizard.
     Here you can view existing rights and invite new users (red) or manage pending invitations (yellow).
 
 .. figure:: /images/h_gebruiker_uitnodigen_2.png
     :scale: 50%
     :alt: Invitation screen for new users of Lizard. Enter an email and select the roles for the new user.
 
-    Image 2: The invitation screen for new users. You select the roles by clicking on them.
+    Image 3: The invitation screen for new users. You select the roles by clicking on them.
 
 
 
