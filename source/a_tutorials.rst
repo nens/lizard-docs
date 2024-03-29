@@ -1,3 +1,5 @@
+.. _api_tutorials_ref:
+
 =============
 API tutorials
 =============
