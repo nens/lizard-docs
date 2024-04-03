@@ -9,8 +9,22 @@ Release Notes
 =============
 
 
+February 20th 2024
+==================
+
+Lizard QGIS plugin updated:
+
+* Download scenario'sor use them as a WMS.
+  
+* Download rasters directly into your project.
+
+Everything can be found on the `Lizard Plugin page <b_lizardplugin>`_.
+
+
+
 January 12th 2024
 =================
+
 Lizard backend updates:
 
 *   Cloud-based import and export tasks (downloads come from Amazon S3 now)

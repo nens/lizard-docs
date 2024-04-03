@@ -2,6 +2,7 @@
 Authentication and User Management
 ==================================
 
+.. _signinref:
 
 Signing in
 ==========
@@ -29,6 +30,10 @@ On the login page you have four different options to sign in:
 3. with username and password,
 4. by creating a new account (Sign up).
 
+.. note:: 
+    To sign up you an invitation from an organisation is required. 
+    Without an invitation you will be unable to create an account.
+
 First-time users may choose any of these options. If your company is listed as
 one of the possible companies to sign in with, that is the preferred choice.
 
@@ -45,24 +50,27 @@ use method 3.
 Organisations
 =============
 
-All data in Lizard is linked to an organisation.
-Organisations are the backbone of our authorisation model.
-When an organisation uploads data, they are able to determine the level of authorisation required for access.
-There are three types of authorisation options that can be applied to your data: 
+Most data in Lizard is linked to an organisation.
+This is used in multiple ways, think of: whitelisting sources data, filtering or providing access to certain datasources.
+Further more, it provides organisations and its members with the ability to manage their own users and data.
+There are three types of authorisation options that can be applied to your data, with:
 
-* **Public**: everyone is able to access your data 
-* **Common**: everyone with login credentials to Lizard is able to access your data 
-* **Private**: everyone with login credentials to Lizard AND user rights to your organisation is able to access your data
+* **Public [0]**: everyone is able to access your data 
+* **Common [100]**: everyone with login credentials to Lizard is able to access your data 
+* **Private [200]**: everyone with login credentials to Lizard AND user rights to your organisation is able to access your data
 
+.. note:: 
+    Access modifiers can be set as codes or as strings. So both providing 'Public' or 0 will work.
 
 
 Whitelisting
 ------------
 
 The users of a certain portal may not be interested in a lot of the public/common datasets that are made available by others.
+To combat this issue, whitelisting exists.
+When you whitelist an organisation, its (public) data will become visible.
 Every Lizard portal has its own whitelist.
-Whitelisting allows the organisations to determine which data should be visible.
-This can remove some of the clutter.
+Whitelisting allows the organisations to be selective in their data, limiting clutter.
 The whitelist affects both the Lizard Viewer aswell as the Catalogue.
 
 The effect is that for the same user the available data can differ between [your_organisation].lizard.net and demo.lizard.net (for which all organisations are whitelisted).
@@ -78,34 +86,29 @@ Roles
 
 We have 4 roles and 3 different types of privileges. 
 
-* A **user**, who can only *read* data
-* A **supplier**, who can *read* data and change (*'write'*) his or her own data
-* An **administator**, who can *read* data and change (*'write'*) all organisation's data. 
-* A **manager**, who can *manage* other roles in the organisation. A manager can not read or write data by default. This role should be appointed separately. 
+* **User:** can only *read* data
+* **Supplier:** can *read* and change (*'write'*) his or her own data
+* **Administator:** can *read* and change (*'write'*) all organisation's data. 
+* **Manager:** is allowed to grant roles to different users. A manager can not read or write data by default. To achieve this, one of the other roles has to be assigned seperately. 
 
 
 User management
 ===============
 
-Users can be managed in the User Management interface.
+In the User Management interface all relevant information related the users of your organisation is available.
 This interface can be reached via the {your_organisation}.lizard.net/management/users/ (or `demo.lizard.net/management/users <https://demo.lizard.net/management/users>`_).
 
 .. note::
-    You require a “manager” role to access the User Management interface.
-    Haven’t got a “manager” role but you would like to add the User Management interface?
-    Please contact the application manager within your organisation or our support office (servicedesk@nelen-schuurmans.nl)
+    You require the “Manager” role to access the User Management interface.
+    Please contact the application manager within your organisation or our support office (servicedesk@nelen-schuurmans.nl) if you would like to manage the users of your organisation.
 	
-.. image:: /images/b_usermanagement_03.png
+.. figure:: /images/b_usermanagement_03.png
+    :scale: 50%
+    :alt: Overview of the rights of 7 users in the Nelen & Schuurmans organisation.
 
-In the example above, you see the current rights for 7 users under the organisation Nelen & Schuurmans. 
+    Image 1: In the example above, you see the current rights for 7 users under the organisation Nelen & Schuurmans. 
 
-
-The management screen offers the opportunity to manage various aspects of your organization.
-This includes managing your data: rasters, scenarios, time series, and more.
-For complete use of this page, refer to the `lizard documentation <https://docs.lizard.net/index.html>`_.
-The most important thing in this case is "User Management".
-Only managers have access to the "Users" screen.
-In this screen, you can:
+A manager in the user interface can:
 
 1. Invite new users.
 2. Manage invitations.
@@ -134,14 +137,14 @@ This is done as follows:
     :scale: 50%
     :alt: Overview of the Lizard management page with multiple users.
 
-    Image 1: An overview of the user section in the management screen of Lizard.
+    Image 2: An overview of the user section in the management screen of Lizard.
     Here you can view existing rights and invite new users (red) or manage pending invitations (yellow).
 
 .. figure:: /images/h_gebruiker_uitnodigen_2.png
     :scale: 50%
     :alt: Invitation screen for new users of Lizard. Enter an email and select the roles for the new user.
 
-    Image 2: The invitation screen for new users. You select the roles by clicking on them.
+    Image 3: The invitation screen for new users. You select the roles by clicking on them.
 
 
 
