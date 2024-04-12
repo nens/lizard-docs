@@ -5,45 +5,69 @@ Catalogue
 General
 ========
 
-The Lizard Catalogue offers insight in the data that are available for your organisation.
+The Lizard Catalogue offers insight in all data available to your organisation.
 
 You can reach the Catalogue via the following url:
-https://demo.lizard.net/catalogue/ or {yourorganisation}.lizard.net/catalogue/
 
-.. image:: /images/e_catalog_00.png
+`https://demo.lizard.net/catalogue/` or `[yourorganisation].lizard.net/catalogue/`
 
-For now, the Catalogue covers these three datatypes:  
+.. image:: /images/b_catalogue_00.png
 
-* **Raster**  Raster layers in Lizard (not included are rasters from 3Di scenarios) 
-* **WMS layer**  Wms layers in Lizard
-* **Time series**  Time series and monitoring networks
+For now, the Catalogue covers these four datatypes:  
 
-There is an extensive search option to make the data easily accesible.
-Every data layer will show available metadata.
-From the Catalogue you have the option of opening the data layers via the API or via the Lizard Viewer.
+* **Raster**:  Raster layers in Lizard (not included are rasters from 3Di scenarios).
+* **WMS layer**:  Wms layers in Lizard.
+* **Time series**:  Time series and monitoring networks.
+* **Scenarios**:  Scenario information from 3Di.
 
-Filter
+Because of the extensive amount of data available, it is important to be able to search and filter properly.
+Lizard has a variety of methods to find and group data.
+
+Filters
 --------
 
-On the left side of the Catalogue app you can find several ways of filtering the data layers you have access to.
-There are three different ways to filter, Organisation, Layer Collection or Observation type.
-Per filter there is a list of all possible options.
+On the left side of the catalogue interface you can find several ways of filtering the data layers you have access to.
+There are three different options:
 
-.. image:: /images/e_catalog_03.png
+1. **Organisation**: the organisation that owns the data.
+2. **Layer Collection**: the layer grouping, which can be created and assigned in the `management screens <b_management#Layer collections>`_.
+3. **Observation type**: speaks for itself, but the type of data found within the datasource.
 
-You can also use the search bar per filter to directly enter what you want to filter on.
+Per filter there is a list of all possible options. 
+Only one selection can be made: if you want to filter on `Observation type = 'Waterheight'` you are unable to also include `Observation type = 'Rain'`
+You can also use the search bar to directly find your data. It is important to select the correct data type.
 
-.. image:: /images/e_catalog_04.png
+.. figure:: /images/b_catalogue_01.png
 
-Export, Basket and login
--------------------------
+    Red, the filtering options on the left panel; Orange, the searchbar; Green, the search datatype.
 
-In the top right you see the following buttons:
 
-.. image:: /images/e_catalog_07.png
+Export, selection and login
+---------------------------
+
+In the top-right corner you will find five different pressable buttons:
+
+1. **Home**: return to the homepage of the lizard portal.
+2. **Exports**: interface of all exports within the session.
+3. **Selection**: allows you to collect a selection of data within your "cart" to display in the viewer.
+4. **Login**: log in to the application.
+5. **Info**: information pop-up with a link to the docs.
+
+.. image:: /images/b_catalogue_02.png
+
 
 **Export**
-Available and running exports will appear here
+
+Within the export interface you are able to see all current and previous exports within this session.
+You are able to download the rasters whenever the export is completed.
+Once you have downloaded your raster of interest, you can clear the task.
+
+.. image:: /images/b_catalogue_03.png
+
+
+Done
+###############################################################################################################################################################
+Not Done
 
 **Basket**
 Using the Basket makes it easy to make different combinations of data layers to show in Lizard.
