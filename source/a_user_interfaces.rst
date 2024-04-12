@@ -1,3 +1,5 @@
+.. _userinterfacesref:
+
 ===============
 User interfaces
 ===============

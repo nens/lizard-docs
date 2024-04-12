@@ -1,3 +1,5 @@
+.. _api_endpoints_ref:
+
 =========
 Endpoints
 =========

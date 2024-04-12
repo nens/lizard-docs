@@ -2,6 +2,7 @@
 Authentication and User Management
 ==================================
 
+.. _signinref:
 
 Signing in
 ==========
