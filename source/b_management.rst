@@ -388,7 +388,7 @@ Scenarios
 The data management interface for scenarios can be used to manage scenarios.
 
 
-.. image:: /images/c_manage_scenarios_01.png	
+.. image:: /images/c_manage_scenarios_01.png
 
 
 Search for a scenario
@@ -396,10 +396,13 @@ Search for a scenario
 
 You can search for a scenario by either typing (part of) the scenario name, the UUID, username of the supplier or model name. 
 
-.. image:: /images/c_manage_scenarios_search.png	
+.. image:: /images/b_management_01.png	
 
 You can also specify that you only want to show your own scenarios by ticking the box in the top right corner.
+In this same corner you will find the export to Excel button. 
+With this new functionality you are able to get an overview of all scenario's in your organisation (if you have the proper rights.).
 
+.. note:: You will only see your own scenario's if you have User and/or Supplier roles. To be able to view all scenario's the Administrator or Manager role is required.
 
 Used storage and deletion of scenarios
 -----------------------------------------
@@ -408,12 +411,17 @@ Used storage and deletion of scenarios
 
 In the left side, you can see the used storage for your organisation. This may have influence on your subscription.
 
-.. image:: /images/c_manage_scenarios_delete1.png	
+.. image:: /images/b_management_02.png	
 
-If you want to remove a complete scenario, you simply check the box of the relevant scenario(s) and choose 'delete'. 
-If you choose 'delete raw', it will only remove the raw data and not the timeseries and rasters. You can also remove a specific raster of a scenario by double-clicking on a scenario and clicking on the 'trash' icon next to the layer.
+If you want to remove a complete scenario, you simply check the box of the relevant scenario(s) and choose `Delete scenarios (nr)`. 
+If you choose `Delete raw results (nr)`, it will only remove the raw data and not the timeseries and rasters. 
+You can also remove a specific raster of a scenario by double-clicking on a scenario and clicking on the 'trash' icon next to the layer.
 
 .. image:: /images/c_manage_scenarios_delete2.png	 
+
+Before the deletion, you will first be shown a warning. You will be asked to confirm you really want to delete these scenario's.
+
+.. image:: /images/b_management_03.png
 
 .. warning::
 	If you delete a scenario, it is really gone! We might be able to retrieve the rasters if you contact support within 14 days.  
