@@ -64,16 +64,20 @@ Once you have downloaded your raster of interest, you can clear the task.
 
 .. image:: /images/b_catalogue_03.png
 
+
 **Basket**
-Using the Basket makes it easy to make different combinations of data layers to show in Lizard.
-To the left of the data layers are selection boxes.
-Click these boxes to make a selection from one or several data layers.
-After making the selection click the 'Add to basket' button in the lower right corner of the data layers overview.
-At the top right corner of the Catalogue you will see that the Basket button now shows the number of selected data layers.
+
+The Lizard catalogue can be used to quickly access your rasters of interest.
+One quick way to collect these rasters is through the basket - easily recognized by by the basket icon named `Selection`.
+By clicking the checkbox on the left side of a raster you unlock the option to add the raster to your basket.
+To add multiple layers add once, simply select multiple layers before pressing `ADD TO SELECTION`.
+Once you added the rasters to your selection, you will see that the Basket icon now shows the number of selected data layers.
 Opening the basket gives an overview of all selected layers, and a button to 'Open all data in Lizard'.
-This will open a new window for Lizard, with all the selected data layers opened.
+This will open a new window for Lizard, with all the collected data layers visible.
+
 
 **Login**
+
 If you are logged in, you will have access to data that is common, or private and shared with your organisation.
 Also, you have to be logged in to be able to export.
 
