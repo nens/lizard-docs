@@ -64,11 +64,6 @@ Once you have downloaded your raster of interest, you can clear the task.
 
 .. image:: /images/b_catalogue_03.png
 
-
-Done
-###############################################################################################################################################################
-Not Done
-
 **Basket**
 Using the Basket makes it easy to make different combinations of data layers to show in Lizard.
 To the left of the data layers are selection boxes.
