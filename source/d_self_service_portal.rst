@@ -1,3 +1,5 @@
+.. _self_service_portal:
+
 ===================
 Self Service Portal
 ===================
@@ -5,21 +7,22 @@ Self Service Portal
 Topdesk
 ===========
 
-Nelen & Schuurmans provide a Service Desk function via https://nelen-schuurmans.topdesk.net/, The Nelen & Schuurmans Self Service Portal shall be available 24/7.
-The Service Desk giving support on all Lizard products for Lizard customers.
-Customers can reach telephonic support (Prio 1) on working days from 09:00 - 17:00 (CEST) excluding the days declared as dutch public holiday close days.
+Nelen & Schuurmans provides a Service Desk function via https://nelen-schuurmans.topdesk.net/. 
+The Nelen & Schuurmans Self Service Portal is available 24/7.
+The Service Desk gives support on all Lizard products for Lizard customers.
+Customers can reach telephonic support (Prio 1) on working days from 09:00 - 17:00 (CEST) excluding the Dutch public holidays.
 
-Customers shall report incidents primarily via the Self Service Portal but may also do so via email: servicedesk@nelen-schuurmans.nl.
+Customers can report incidents primarily via the Self Service Portal but may also do so via email: servicedesk@nelen-schuurmans.nl.
 
-This access should be used for, but not limited to:
+This access should be used for, but is not limited to:
 
-* new incidents
-* monitor service progress
-* account requests
-* malfunctions reports
-* query, problem and defect reporting 
-* requests for general technical support
-* submission of enhancement/feature requests 
+* New incidents
+* Monitor service progress
+* Account requests
+* Malfunctions reports
+* Query, problem and defect reporting 
+* Requests for general technical support
+* Submission of enhancement/feature requests 
 
 All incidents relating to the Lizard software with the exception of enhancement/feature requests are recorded and followed up at no additional cost. 
 
