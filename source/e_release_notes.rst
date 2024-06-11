@@ -19,7 +19,7 @@ New features in API v4:
 
 * Async (bulk) timeseries events import in API - The API now includes functionality for asynchronous import of bulk timeseries events, improving efficiency and performance for large data sets.
 
-* Vulnerable Buildings Analysis - A functionality is added to Lizard allowing you to determine vulnerable buildings based on waterdepth maps. 
+* Vulnerable Buildings Analysis - An experimental functionality added to Lizard to allow you to determine vulnerable buildings based on waterdepth maps. 
 
 
 February 20th 2024
