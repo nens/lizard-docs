@@ -561,3 +561,41 @@ The variables contain options for including the name of the receiver and details
 The option "No further impact" determines that a message is used specifically to notify when an alarm is fully withdrawn.
 This type of message can be set in addition to a standard message to let receivers know that the situation has settled down.
 This often requires a different text and therefore a different Template.
+
+
+User Management
+===============
+
+As user management is only of interest to managers, this is discribed in its own section. Find the page on user management `here <h_managers_lizard.html>`_.
+
+
+Personal API Keys
+=================
+
+Personal API keys are used to authenticate external applications with basic authentication. These keys are essential for ensuring secure access to APIs without exposing your username and password. This follows a security measure, labeled as 'basic authentication'. The interface, allows you to manage your personal API keys. The list of keys is displayed on the right side of the page. You can add new keys by clicking the "+ New Item" button.
+
+.. image:: /images/b_management_13.png
+
+Within the viewport you can find the following information:
+
+* **Name:** The name provided to the API Key, this is mainly for you to remember what you used the API Key for.
+* **Scope:** Currently two scopes are available - Read/Write and FTP.
+* **Created on:** The date and time of the key creation.
+
+
+.. tip::
+	Visibility: The API key is only shown once at the time of creation. Ensure you save it securely, as it cannot be retrieved later.
+
+.. tip::
+	Security: Treat your API key like a password. Do not share it publicly or expose it in your application code.
+	By using personal API keys, you can securely interact with external applications and services, ensuring that your API credentials are kept safe.
+
+
+Authentication
+--------------
+
+To authenticate using a personal API key, follow these steps:
+
+1. Set the authentication type to 'basic authentication'
+2. Set the username to __key__ (with double underscores on both sides of the word "key").
+3. The password is your unique API key.
