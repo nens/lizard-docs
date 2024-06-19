@@ -84,7 +84,7 @@ Furthermore, you have to be logged in to be able to export raster data.
 
 
 Rasters
-=========
+=======
 
 The default view of the catalogue will display a selection of 10 rasters, with the option to click through to other pages.
 The following information is visible in this overview, for rasters.

@@ -7,14 +7,17 @@ In the management interface there is a variety of options.
 `Usermanagement <d_authentication_user_management>`_ will be discussed later.
 
 Rasters
-=============
+=======
 
 The data management interface for rasters can be used to upload, edit or remove rasters.
 Raster Sources are the data containers, Raster Layers are the configuration of how the data is visualised.
 
 .. image:: /images/c_manage_rasters_01.png
+
 .. image:: /images/c_manage_rasters_02.png
+
 .. image:: /images/c_manage_rasters_03.png
+
 
 Creating and editing Raster Sources and Layers
 ----------------------------------------------
@@ -23,7 +26,7 @@ The first step in uploading your raster datasets is to create a Raster Source.
 
 The Data Management interface is available at: “www.{your_organisation}.lizard.net/management/”.
 
-After landing on this page, click on ‘Data’ -> ‘Rasters’ -> 'Raster Sources'.
+After landing on this page, click on `Data` -> `Rasters` -> `Raster Sources`.
 Click on “New Item” |NewItem| to open the form or choose an existing raster to edit.  
 
 .. |NewItem| image:: /images/c_manage_newitem.png
