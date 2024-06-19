@@ -54,6 +54,7 @@ Overview of the documentation pages
 
    c_introduction
    c_endpoints
+   c_digitale_delta
 
    
 .. toctree::

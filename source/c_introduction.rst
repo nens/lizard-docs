@@ -4,73 +4,92 @@
 Introduction
 ============
 
-API functional documentation
-==============================
+This section gives more information on the Lizard API, which can be accessed via “{your_organisation}.lizard.net/api/v4/”.
+The Lizard API can be used to retrieve data from or send data to the datawarehouse. The following topics are documented here: 
 
-You can access the Lizard API via “{your_organisation}.lizard.net/api/v4/”.
+- :ref:`what_is_an_api`
+- :ref:`basic_use_api`
+- :ref:`api_versions` 
+- :ref:`api_data_uploads`
+- :ref:`api_rasters` 
+- :ref:`api_timeseries`
+- :ref:`api_assets`
+- :ref:`api_contact` 
+
+.. note:: 
+	You can find the Lizard API here: “{your_organisation}.lizard.net/api/v4/”, for example https://demo.lizard.net/api/v4/.
+
+
 
 .. image:: /images/c_apifunctional_01.jpg
+
+.. _what_is_an_api:
 
 What is an API?
 ===============
 
 API stands for Application Programming Interface. 
-The API, looking like the picture above, gives back timeseries, rasters, or other data or information.
-This is depending on the request you do to the API.
-This request comes from the URL you type in the browser.
-You can also access the API via another program, and make automatic requests.
+The Lizard API enables users to communicate with the data that is stored within the datawarehouse.
+The communication between you and the Lizard API happens through a request. 
+There are two main ways to send a request to the Lizard API: 
+
+* From your browser
+* From an environment with a programming language that supports requests, such as a Python script
+
+
+
+.. _basic_use_api:
 
 Basic use API
 =============
 
-Below we discuss a basic request to the API.
-More examples and possibilities will be discussed further down
+In this section we explain how to communicate with the Lizard API by making requests.
+A request consists of an *endpoint* (required) and *query parameters* (optional).
+An endpoint is a digital location that is connected to a specific resource, such as for example ``locations``.
+All possible endpoints are shown at the API root: “{your_organisation}.lizard.net/api/v4/”. 
+Query parameters are filters that you can use, for example to filter on the location name or code. 
 
-The basic url is www.{your_organisation}.lizard.net/api/v4, for example:
- www.demo.lizard.net/api/v4 
+| An example of a request is: 
+| 	https://demo.lizard.net/api/v4/locations/
 
-If you type this in your browser, for example Google Chrome, you will get a list of parameters.
-These parameters are so called *endpoints*.
-If you paste this endpoint after your basic url, you will initiate a query.
-An example is ``locations``. 
-If you click on the url www.demo.lizard.net/api/v4/locations , you will send a query to Lizard to search all locations that you have access to.
-As a response, you will get indeed the locations back, as well as some metadata. 
+This example consists of an API root (demo.lizard.net/api/v4/) and an endpoint (``locations``).
+The request asks Lizard to show all locations that you have access to, including their metadata.
 
-.. image:: /images/c_apifunctional_02.jpg
-
-Above each page, you will see some additional parameters, with which you can specify your query more.
-Most endpoints have examples of this.
+If you want to look for specific locations, you can add query parameters. 
+Each endpoint page shows which query parameters can be used. 
+The image below shows the query parameters available for the endpoint ``locations``.
 
 .. image:: /images/c_apifunctional_03.jpg
 
-If we are looking for a specific location, with a name that starts with 'Inlaat', we can use this query:
+In the case of the endpoint ``locations`` you can for example filter on ``name`` and ``code``. 
+A request with query parameters should follow this structure: 
 
-https://demo.lizard.net/api/v4/locations/?name__startswith=Inlaat
+	{endpoint url}/?{query parameter}={your filter}
 
-If you are an administrator or supplier of the data, you can also edit or delete the data via the API. 	
+| An example of a request for locations with code ``3201_PS2``:
+|	https://demo.lizard.net/api/v4/locations/?code=3201_PS2
+
+
+| If you want to use multiple query parameters in your request, you have to separate them by using an ampersand:
+|	{endpoint url}/?{query parameter 1}={filter 1}&{query parameter 2}={filter 2}
+
+| An example with two query parameters is when you look for locations with code ``3201_PS2`` (query parameter 1) and a name that starts with ``inlaat`` (query parameter 2): 
+| 	https://demo.lizard.net/api/v4/locations/?code=3201_PS2&name__startswith=inlaat
+
+
+.. _api_versions:
 
 Versions
 ========
 
-We support two versions of our API:
+The current stable version of the Lizard API is v4.
 
-* API v3: deprecated (sunset date: 4 July 2023)
-* API v4: stable
+The previous version v3 is deprecated since 2023. 
+Any use of v3 in scripts or applications should be reimplemented in API v4. 
+If you run into problems converting API v3 into v4, please contact us through the :ref:`self_service_portal`.
 
 
-API V3 will be taken offline by 4 July 2023. Any use in scripts or applications should be reimplemented in API V4.
-API V4 is the stable version. We can make changes to this version, but they should always be backwards compatible and therefore not break any existing use.
-
-Digitale Delta API
-------------------
-
-De Nederlandse watersector staat voor de opgave om in een snel veranderende omgeving haar informatievoorziening te transformeren en klaar te maken voor de toekomst.
-De Digitale Delta is het open platform voor het aanbieden en vinden van relevante data voor het waterbeheer in Nederland.
-Lizard spreekt Digitale Delta en is een van de dataleveranciers binnen de Digitale Delta.
-De Digitale Delta API Root is te vinden op https://demo.lizard.net/dd/api/v2
-
-De documentatie van de Digitale Delta API is te vinden op:  
-https://github.com/DigitaleDeltaOrg/dd-api-spec/blob/master/README.md
+.. _api_data_uploads:
 
 Data uploads
 ================
@@ -81,8 +100,9 @@ We can also provide support on either manual or automatic data uploads.
 
 .. note::
     Please note that Lizard assumes the data to be in UTC
-	
-	
+		
+.. _api_rasters:
+
 Rasters
 ===========
 
@@ -189,6 +209,7 @@ Below you find an example of how to upload a temporal geotiff in Python:
 					)
 		file_id+= 1
 
+.. _api_timeseries:
 
 Time Series
 =============
@@ -277,6 +298,7 @@ An example of an upload of an image using requests in Python:
                         'username': 'jane.doe',
                         'password': 'janespassword'
                         })
+.. _api_assets:
 
 Assets
 =======
@@ -357,6 +379,7 @@ This example .ini creates (a) new nested asset(s) from each record of the shapef
 
 You can copy paste this code in your own .ini file and zip it together with the shapefile.
 
+.. _api_contact:
 
 Contact
 =======

@@ -9,17 +9,29 @@ Release Notes
 =============
 
 
+May 21st 2024
+==================
+
+
+New features in API v4:
+
+* 3D tiles generation - Lizard postprocessing can now generate 3D tiles
+
+* Async (bulk) timeseries events import in API - The API now includes functionality for asynchronous import of bulk timeseries events, improving efficiency and performance for large data sets.
+
+* Vulnerable Buildings Analysis - An experimental functionality added to Lizard to allow you to determine vulnerable buildings based on waterdepth maps. 
+
+
 February 20th 2024
 ==================
 
 Lizard QGIS plugin updated:
 
-* Download scenario'sor use them as a WMS.
+* Download scenario's or use them as a WMS.
   
-* Download rasters directly into your project.
+* Download (non-scenario) rasters directly into your QGIS project.
 
 Everything can be found on the `Lizard Plugin page <b_lizardplugin>`_.
-
 
 
 January 12th 2024
