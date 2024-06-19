@@ -35,6 +35,7 @@ There are three different options:
 
 Per filter there is a list of all possible options. 
 Only one selection can be made: if you want to filter on `Observation type = 'Waterheight'` you are unable to also include `Observation type = 'Rain'`
+
 You can also use the search bar to directly find your data. It is important to select the correct data type.
 
 .. figure:: /images/b_catalogue_01.png
@@ -78,38 +79,39 @@ This will open a new window for Lizard, with all the collected data layers visib
 
 **Login**
 
-If you are logged in, you will have access to data that is common, or private and shared with your organisation.
-Also, you have to be logged in to be able to export.
+Some information is publicly accessible in Lizard. All users which are logged in will have access to 'common' data. Depending on the rights of an user a selection of private information will be available. 
+Furthermore, you have to be logged in to be able to export raster data.
+
 
 Rasters
 =========
 
-When you open the Catalogue and choose 'Raster' in the top left, you will see an overview of all the layers you have access to.
-It will show a list of 10 items, with the option to click through to other pages.
-At the top of the screen there is a search bar.
-Using search terms that are in the Name or the Description of the data layer you can more easily find specific data layers that you might be interested in.
+The default view of the catalogue will display a selection of 10 rasters, with the option to click through to other pages.
+The following information is visible in this overview, for rasters.
 
-The following information is visible in this overview.
-
-* **Type** The type of data. A normal raster, or a temporal raster.
-* **Name** Name of the data layer.
-* **Organisation** To which organisation the data layer belongs.
-* **Description** A short description of the data contained within the data layer.
-* **Latest update** When the data layer was last updated.
-* **Access modifier** Divided into Public, Common and Private.
+* **Type:** The type of data. A normal raster, or a temporal raster.
+* **Name:** Name of the data layer.
+* **Organisation:** To which organisation the data layer belongs.
+* **Description:** A short description of the data contained within the data layer.
+* **Latest update:** When the data layer was last updated.
+* **Access modifier:** Divided into Public, Common and Private.
 
 .. note::
     Information about the different access modifiers can be found under `organisation modifiers <d_authentication_user_management.html#Organisations>`_.
 	
 .. note::
-    Not included are rasters from 3Di scenarios
+    Not included are rasters from 3Di scenarios, these are covered under the "Scenarios" date-type.
 
-Details
---------
 
-Once you have selected a data layer, you will find detailed information about the layer in the panel on the right.
-Here it will show a map of the area and a visualisation of the data.
-Below the map there is a table with detailed meta information about the data layer.
+Raster Information
+------------------
+
+Once you have selected a raster, the details become available in the right panel.
+This panel offers a map of the region of interest (base map) and projects the data on top.
+Underneath some general details are displayed, namely the discription, organisation and the WMS GetCapabilities URL.
+In the bottom of the right-panel the `DETAILS` and `ACTIONS` can be found.
+
+
 If you want to visualise the layer in your Viewer or if you want to use it for data science purposes you can either choose to open it in the Viewer or the API. 
 
 .. image:: /images/e_catalog_05.png
@@ -120,7 +122,11 @@ Lizard WMS Service for rasters
 When you filtered on “Layer Collection” a Lizard WMS GetCapabilities link appears in the list of meta data of the raster.
 You can use this link to visualise the raster in external applications such as QGIS or ESRI applications.
 
-For more infomation, please consult the WMS Services.
+.. tip::
+    We now also have a `Lizard Plugin <b_lizardplugin.html>`_ for QGIS and the 3Di Modellers Interface that allows you to display WMS-Layers within these applications more easily. You only have to generate an API key to be able to use this plugin. Don't know how to generate an API key? No problem, go to: `API Key <b_management.html#Personal API Keys>`_.
+
+.. note::
+    For more infomation, please consult the WMS Services.
 
 Exporting
 ----------
