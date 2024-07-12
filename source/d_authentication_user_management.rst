@@ -92,6 +92,8 @@ We have 4 roles and 3 different types of privileges.
 * **Manager:** is allowed to grant roles to different users. A manager can not read or write data by default. To achieve this, one of the other roles has to be assigned seperately. 
 
 
+.. _user_management:
+
 User management
 ===============
 

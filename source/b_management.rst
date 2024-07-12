@@ -1,20 +1,48 @@
 ==========
 Management
 ==========
+This page discusses the Management page that can be accessed through the :ref:`Lizard homepage <lizard_homepage>`.
 
-In the management interface there is a variety of options.
+The management page links to four subpages:
 
-`Usermanagement <d_authentication_user_management>`_ will be discussed later.
+- :ref:`data_management`
+- :ref:`Users <user_management>`
+- :ref:`alarms`
+- :ref:`personal_api_keys`
+
+
+.. _data_management: 
+
+====
+Data
+====
+The data management page provides several options to interact with the data in the datawarehouse.
+These options are divided by the type of data: 
+
+- :ref:`data_management_rasters`
+- :ref:`data_management_geoblocks`
+- :ref:`data_management_wmslayers`
+- :ref:`data_management_layercollections`
+- :ref:`data_management_timeseries`
+- :ref:`data_management_scenarios`
+- :ref:`data_management_labels`
+
+.. image:: /images/c_datatypes_01.png
+
+.. _data_management_rasters:
 
 Rasters
-=============
+=======
 
 The data management interface for rasters can be used to upload, edit or remove rasters.
 Raster Sources are the data containers, Raster Layers are the configuration of how the data is visualised.
 
 .. image:: /images/c_manage_rasters_01.png
+
 .. image:: /images/c_manage_rasters_02.png
+
 .. image:: /images/c_manage_rasters_03.png
+
 
 Creating and editing Raster Sources and Layers
 ----------------------------------------------
@@ -23,7 +51,7 @@ The first step in uploading your raster datasets is to create a Raster Source.
 
 The Data Management interface is available at: “www.{your_organisation}.lizard.net/management/”.
 
-After landing on this page, click on ‘Data’ -> ‘Rasters’ -> 'Raster Sources'.
+After landing on this page, click on `Data` -> `Rasters` -> `Raster Sources`.
 Click on “New Item” |NewItem| to open the form or choose an existing raster to edit.  
 
 .. |NewItem| image:: /images/c_manage_newitem.png
@@ -33,12 +61,13 @@ In case of a temporal raster source you need to specify which file belongs to wh
 This is recognised automatically if the filename is composed according to the specified format.
 When you save a new Source you will have the option to go straight to the Raster Layer form to publish your data.
 
-.. image:: /images/c_datatypes_01.png
-
 Interested in the possibilities for your organisation? Please contact us via info@lizard.net.
 
-GeoBlocks management
-====================
+
+.. _data_management_geoblocks:
+
+GeoBlocks
+=========
 
 The GeoBlocks management page provides you a powerful tool to build your GeoBlocks Rasters.
 It helps you configure complex GeoBlocks models and enables you to validate your work along the way.
@@ -60,6 +89,7 @@ Example 2 shows a more complex model with multiple Raster Sources and a series o
 
 For more information about the possibilities of GeoBlocks see: :ref:`GeoBlocksAnchor`
 
+.. _data_management_wmslayers:
 
 WMS Layers
 ===========
@@ -231,6 +261,8 @@ Click OK and double click on the connection. If multiple layers appear, double c
 The styling will automatically be taken from Lizard.
 If the layer is temporal, you can also navigate through time. 
 
+.. _data_management_layercollections:
+
 Layer collections
 ====================
 
@@ -238,9 +270,10 @@ Layer collections
     This section will be extended in the near future. 
 
 
+.. _data_management_timeseries:
 
 Time series
-==============
+===========
 
 
 The data management interface for timeseries can be used to upload, edit or remove timeseries, monitoring networks and locations.
@@ -381,9 +414,10 @@ Create a new object with the New Item button on the top right corner.
 If you are satisfied, click "SAVE"
 
 
+.. _data_management_scenarios:
 
 Scenarios
-==============
+=========
 
 The data management interface for scenarios can be used to manage scenarios.
 
@@ -464,8 +498,10 @@ Create a new project with the New Item button on the top right corner.
 .. image:: /images/c_manage_newitem.png
 
 
+.. _data_management_labels:
+
 Labels
-============
+======
 
 .. warning::
     This section is to be extended.
@@ -473,18 +509,57 @@ Labels
 .. image:: /images/c_manage_labeltypes.png
 
 
+.. _alarms:
+
 
 Alarms
-======
+==========
 
-Lizard provides an alarm feature that sends notifications via sms or email when newly processed values of timeseries or temporal rasters exceed a threshold.
-It is used to notify people of events that may require action, for instance an upcoming rain event or flood.
+The Lizard Alarms are a powerful feature designed to provide real-time notifications and alerts based on user-defined criteria. 
+This system enables users to monitor various environmental conditions, ensuring timely responses to critical events.
 
-The alarm management screens are found at https://demo.lizard.net/management/#/alarms.
 
-.. image:: /images/f_alarms_01.jpg
+Submenus
+----------
+An alarm is set-up using multiple submenu's:
 
-The configuration has a variety of options to generate relevant notifications with messages that include the specifics of the event. 
+* Contacts
+* Groups
+* Templates
+* Notifications 
+
+1. Contacts
+
+In the contacts menu, you can list names and add telephone numbers or email adresses for 
+respectively SMS and email alarm notifications.
+
+2. Groups
+
+In the Groups menu, you can set up contacts to be grouped for receiving alerts. Note that only contact groups can be assigned to an alarm. If you want to send messages to a single contact, you need to assign that contact to a group with just one member.
+
+3. Templates
+
+In the templates map the alarm messages are set-up. Here you can configure specific messages using dynamic variables like
+names, specific rain variables, timestamps and more. 
+
+4. Notifications
+
+The Notifications tab is where you configure the alerts and bring everything together.  
+First you have to choose on what type of data the alert is connected:
+
+* Raster alarms
+* Time series alarms
+
+To set up an alarm, choose the raster or time series you are interested in by searching for and selecting the object name. When selecting a raster alarm, you need to define measuring points using longitude-latitude coordinates (note that we specifically use the order longitude-latitude, not latitude-longitude).
+
+The "Limit to relative period" setting determines what selection of the data is used for alerts. If switched off, alarms are triggered whenever new data is added. If switched on, you can configure alerts to only be triggered by near-future events, which is useful for avoiding alerts when adding new historical data.
+
+After selecting the location and data, you can apply multiple boolean expressions to define the conditions for triggering alarms. You can also enter specific threshold values.
+
+For more varying measurements, there is a snooze button that allows you to trigger an alarm only after a threshold has been met or withdrawn a certain number of times.
+
+Finally, you can select the specific contact group (as defined in Groups) and the template message (as defined in Templates) for the alarm.
+
 
 Notifications
 =============
@@ -561,3 +636,42 @@ The variables contain options for including the name of the receiver and details
 The option "No further impact" determines that a message is used specifically to notify when an alarm is fully withdrawn.
 This type of message can be set in addition to a standard message to let receivers know that the situation has settled down.
 This often requires a different text and therefore a different Template.
+
+
+User Management
+===============
+
+As user management is only of interest to managers, this is discribed in its own section. Find the page on user management `here <h_managers_lizard.html>`_.
+
+.. _personal_api_keys:
+
+Personal API Keys
+=================
+
+Personal API keys are used to authenticate external applications with basic authentication. These keys are essential for ensuring secure access to APIs without exposing your username and password. This follows a security measure, labeled as 'basic authentication'. The interface, allows you to manage your personal API keys. The list of keys is displayed on the right side of the page. You can add new keys by clicking the "+ New Item" button.
+
+.. image:: /images/b_management_13.png
+
+Within the viewport you can find the following information:
+
+* **Name:** The name provided to the API Key, this is mainly for you to remember what you used the API Key for.
+* **Scope:** Currently two scopes are available - Read/Write and FTP.
+* **Created on:** The date and time of the key creation.
+
+
+.. tip::
+	Visibility: The API key is only shown once at the time of creation. Ensure you save it securely, as it cannot be retrieved later.
+
+.. tip::
+	Security: Treat your API key like a password. Do not share it publicly or expose it in your application code.
+	By using personal API keys, you can securely interact with external applications and services, ensuring that your API credentials are kept safe.
+
+
+Authentication
+--------------
+
+To authenticate using a personal API key, follow these steps:
+
+1. Set the authentication type to 'basic authentication'
+2. Set the username to __key__ (with double underscores on both sides of the word "key").
+3. The password is your unique API key.

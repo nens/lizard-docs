@@ -17,6 +17,8 @@ Feel free to move through every section in sequence by using the next functional
 
 Tutorials in regards to the Lizard API usage can be found in the `API Tutorials section <https://docs.lizard.net/a_tutorials.html>`
 
+.. _lizard_homepage:
+
 Homepage
 ===============
 
@@ -33,21 +35,9 @@ https://demo.lizard.net/
 
 From the Homepage, you can link to the Lizard functionality you are interested in.
 
-* `**Catalogue**  <b_catalogue>`_:  Search for your data. 
-* `**Viewer** <b_viewer>`_:         Explore your data.
-* `**Management** <b_management>`_: Manage your data, users, alarms and GeoBlocks.
-* `**API** <c_introduction>`_:      Query your data.
+* `Catalogue <b_catalogue.html>`_:  Search for your data. 
+* `Viewer <b_viewer.html>`_:         Explore your data.
+* `Management <b_management.html>`_: Manage your data, users, alarms and GeoBlocks.
+* `API <c_introduction.html>`_:      Query your data.
 
 From the homepage you have easy access to the support team and the documentation. 
-
-
-Catalogue
-=============
-
-
-Viewer
-==========
-
-
-Management
-==========
