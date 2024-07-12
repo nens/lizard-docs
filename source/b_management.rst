@@ -1,10 +1,35 @@
 ==========
 Management
 ==========
+This page discusses the Management page that can be accessed through the :ref:`Lizard homepage <lizard_homepage>`.
 
-In the management interface there is a variety of options.
+The management page links to four subpages:
 
-`Usermanagement <d_authentication_user_management>`_ will be discussed later.
+- :ref:`data_management`
+- :ref:`Users <user_management>`
+- Alarms
+- :ref:`personal_api_keys`
+
+
+.. _data_management: 
+
+====
+Data
+====
+The data management page provides several options to interact with the data in the datawarehouse.
+These options are divided by the type of data: 
+
+- :ref:`data_management_rasters`
+- :ref:`data_management_geoblocks`
+- :ref:`data_management_wmslayers`
+- :ref:`data_management_layercollections`
+- :ref:`data_management_timeseries`
+- :ref:`data_management_scenarios`
+- :ref:`data_management_labels`
+
+.. image:: /images/c_datatypes_01.png
+
+.. _data_management_rasters:
 
 Rasters
 =======
@@ -36,12 +61,13 @@ In case of a temporal raster source you need to specify which file belongs to wh
 This is recognised automatically if the filename is composed according to the specified format.
 When you save a new Source you will have the option to go straight to the Raster Layer form to publish your data.
 
-.. image:: /images/c_datatypes_01.png
-
 Interested in the possibilities for your organisation? Please contact us via info@lizard.net.
 
-GeoBlocks management
-====================
+
+.. _data_management_geoblocks:
+
+GeoBlocks
+=========
 
 The GeoBlocks management page provides you a powerful tool to build your GeoBlocks Rasters.
 It helps you configure complex GeoBlocks models and enables you to validate your work along the way.
@@ -63,6 +89,7 @@ Example 2 shows a more complex model with multiple Raster Sources and a series o
 
 For more information about the possibilities of GeoBlocks see: :ref:`GeoBlocksAnchor`
 
+.. _data_management_wmslayers:
 
 WMS Layers
 ===========
@@ -234,6 +261,8 @@ Click OK and double click on the connection. If multiple layers appear, double c
 The styling will automatically be taken from Lizard.
 If the layer is temporal, you can also navigate through time. 
 
+.. _data_management_layercollections:
+
 Layer collections
 ====================
 
@@ -241,9 +270,10 @@ Layer collections
     This section will be extended in the near future. 
 
 
+.. _data_management_timeseries:
 
 Time series
-==============
+===========
 
 
 The data management interface for timeseries can be used to upload, edit or remove timeseries, monitoring networks and locations.
@@ -384,9 +414,10 @@ Create a new object with the New Item button on the top right corner.
 If you are satisfied, click "SAVE"
 
 
+.. _data_management_scenarios:
 
 Scenarios
-==============
+=========
 
 The data management interface for scenarios can be used to manage scenarios.
 
@@ -467,8 +498,10 @@ Create a new project with the New Item button on the top right corner.
 .. image:: /images/c_manage_newitem.png
 
 
+.. _data_management_labels:
+
 Labels
-============
+======
 
 .. warning::
     This section is to be extended.
@@ -571,6 +604,7 @@ User Management
 
 As user management is only of interest to managers, this is discribed in its own section. Find the page on user management `here <h_managers_lizard.html>`_.
 
+.. _personal_api_keys:
 
 Personal API Keys
 =================
