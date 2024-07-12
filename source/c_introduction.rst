@@ -95,8 +95,10 @@ Data uploads
 ================
 
 We support multiple types of data uploads.
-Data can be uploaded manually, via the data management interface, or you can set up real-time data connections using the API.
-We can also provide support on either manual or automatic data uploads. 
+Data can be uploaded manually, via the :ref:`data management interface <data_management>`, 
+or you can set up real-time data connections using the API.
+We can also provide support on either manual or automatic data uploads. \
+This section deals with the data upload through the API.
 
 .. note::
     Please note that Lizard assumes the data to be in UTC
@@ -109,46 +111,18 @@ Rasters
 Requirements 
 --------------
 
-Your raster data has to be in the format of a single band, georeferenced TIFF (geotiff), with the following requirements: 
+Your raster data has to be in the format of a single band, georeferenced TIFF (GeoTIFF), with the following requirements: 
 
 * **Geotiff should have valid projection** including transformation (EPSG code). All projections supported by proj4 are supported.
 * **Geotiff should have a NODATA value**.
 * **Geotiff should be single band**. RGB or multi-band is not supported. 
 * **Temporal raster datasets** with multiple timesteps **should be supplied with a single geotiff per timestamp**
 
+.. warning:: It is not possible to directly upload a NetCDF file to Lizard. 
+	They have to be seperated into individual geotiffs.
 
 Upload 
 ------
-
-You can supply your GeoTIFF’s in multiple ways: 
-
-* Use the Data Management App
-* Use the Lizard API
-* Use the Lizard FTP
-
-Use of the Data Management App is fairly straightforward and is build upon our API.
-If you want to upload larger raster datasets, please make use of our API. 
-
-
-Using the Data Management App
-++++++++++++++++++++++++++++++
-
-Once you have successfully created a raster store you will see the pop up below.
-
-.. image:: /images/c_dataexchange_03.png
-
-Choose upload data to browse your GeoTIFF’s.
-When you want to add data to an existing raster store, click on the upload icon |uploadicon| in the list of existing Raster Stores. 
-
-.. |uploadicon| image:: /images/c_dataexchange_04.png
-
-You can supply multiple rasters, Lizard will blend them together! Click “Save all Files” to start uploading your data.
-Your GeoTIFF’s will be uploaded in a task. You can follow the status of the task by clicking “show asynchronous task”.
-
-.. image:: /images/c_dataexchange_05.png
-
-Using the Lizard API
-++++++++++++++++++++
 
 Below you find an example of how to upload a temporal geotiff in Python:
 
