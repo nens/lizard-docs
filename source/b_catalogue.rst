@@ -1,6 +1,15 @@
+
+
 =========
 Catalogue
 =========
+
+- :ref:`filters_reference_label`
+- :ref:`rasters_reference_label`
+- :ref:`wms_reference_label`
+- :ref:`timeseries_reference_label`
+- :ref:`scenarios_reference_label`
+
 
 General
 ========
@@ -11,7 +20,10 @@ You can reach the Catalogue via the following url:
 
 `https://demo.lizard.net/catalogue/` or `[yourorganisation].lizard.net/catalogue/`
 
-.. image:: /images/b_catalogue_00.png
+
+.. figure:: /images/b_catalogue_00.png
+
+    Complete overview of the Lizard catalogue landing page.
 
 For now, the Catalogue covers these four datatypes:  
 
@@ -23,10 +35,13 @@ For now, the Catalogue covers these four datatypes:
 Because of the extensive amount of data available, it is important to be able to search and filter properly.
 Lizard has a variety of methods to find and group data.
 
+.. _filters_reference_label:
+
+
 Filters
 --------
 
-On the left side of the catalogue interface you can find several ways of filtering the data layers you have access to.
+On the left side of the Catalogue interface you can find several ways of filtering the data layers you have access to.
 There are three different options:
 
 1. **Organisation**: the organisation that owns the data.
@@ -63,7 +78,9 @@ Within the export interface you are able to see all current and previous exports
 You are able to download the rasters whenever the export is completed.
 Once you have downloaded your raster of interest, you can clear the task.
 
-.. image:: /images/b_catalogue_03.png
+.. figure:: /images/b_catalogue_03.png
+
+    Export tasks, when no exports have yet been completed.
 
 
 **Basket**
@@ -82,6 +99,7 @@ This will open a new window for Lizard, with all the collected data layers visib
 Some information is publicly accessible in Lizard. All users which are logged in will have access to 'common' data. Depending on the rights of an user a selection of private information will be available. 
 Furthermore, you have to be logged in to be able to export raster data.
 
+.. _rasters_reference_label:
 
 Rasters
 =======
@@ -114,7 +132,9 @@ In the bottom of the right-panel the `DETAILS` and `ACTIONS` can be found.
 
 If you want to visualise the layer in your Viewer or if you want to use it for data science purposes you can either choose to open it in the Viewer or the API. 
 
-.. image:: /images/e_catalog_05.png
+.. figure:: /images/e_catalog_05.png
+
+    The complete right-panel in the Lizard Catalogue. Presenting a map, description and various details regarding the selected raster (or other data-type).
 
 Lizard WMS Service for rasters
 --------------------------------
@@ -128,13 +148,20 @@ You can use this link to visualise the raster in external applications such as Q
 .. note::
     For more infomation, please consult the WMS Services.
 
+
 Exporting
 ----------
 
-Select the raster you would like to export.
-Click on the Export button in the action menu. 
+Files can be exported from the catalogue. The steps you have to take to download related files depends on the date-type.
+It is possible to download: rasters, timeseries or files related to scenario's. 
+To download a **raster**: (1) select your raster of interest, (2) go to the actions menu in the bottom-right, (3) press `Export raster` to open the raster export modal.
 
-.. image:: /images/e_catalog_06a.png
+The raster export modal allows you to select cells for your download. 
+Cell settings can be defined on the right-side of the modal.
+
+.. figure:: /images/b_catalogue_04.png
+
+    An overview of the export modal.
 
 The Export Selection window will pop up. 
 Follow the steps: 
@@ -142,24 +169,33 @@ Follow the steps:
 - Choose the pixel size (resolution) of the output GeoTIFF.
 - Choose a preferred tile size. 
 
-You can export 3 tiles at a time. 
-Click on Download selected cells.
-A task will be started in the background.
-Once your GeoTIFF's are ready you will receive a notification in the Export dropdown menu in the green bar.
+.. tip::
+    Do not use a really small pixel-size when you have a wide-zoom. This will require many grid-cells to be loaded, which comes at a high computational load.
 
-.. image:: /images/e_catalog_06b.png
+You can export multiple tiles at once, resulting in a series of download tasks. 
+Once your GeoTIFF's are ready you will receive a notification in the Exports button in the green topbar. If any export tasks have been started a small circle on top op the export-icon will show the number of tiffs that are being (or have been) exported.
+
+.. figure:: /images/b_catalogue_05.png
+
+    Currently 3 tiffs have been, or are being, downloaded.
+
+
+.. _wms_reference_label:
 
 
 WMS layers
 =============
 
-When you open the Catalogue and choose 'WMS layer'  in the top left, you will see an overview of all the wms layers you have access to.
+The Catalogue allows you to easily filter and visualize WMS-Layers.
+To start, select WMS as data-type within the search-bar.
+
+.. figure:: /images/b_catalogue_06.png
+
+
 It will show a list of 10 items, with the option to click through to other pages.
-At the top of the screen there is a search bar.
-Using search terms that are in the Name or the Description of the data layer you can more easily find specific data layers that you might be interested in.
+You are only able to search based on the name in the search bar, however, it is possible to filter based on organisation (left-panel).
 
-The following information is visible in this overview.
-
+The following information is visible in this overview:
 
 * **Name** Name of the wms layer.
 * **Organisation** To which organisation the data layer belongs.
@@ -169,87 +205,92 @@ The following information is visible in this overview.
 .. note::
     Information about the different access modifiers can be found under `organisation modifiers <d_authentication_user_management.html#Organisations>`_.
 
+
 Details
 --------
 
-Once you have selected a wms layer, you will find detailed information about the layer in the panel on the right.
-Here it will show a map of the area and a visualisation of the data.
-Below the map there is a table with detailed meta information about the data layer.
-If you want to use the layer in your Viewer or if you want to use it for data science purposes you can either choose to open it in the Viewer or the API. 
+The details of a WMS-layer are similar to that of a raster.
+They can be found in the right-panel. The only change is the `download` functionality, which replaces the export of rasters.
 
-.. image:: /images/e_catalog_08.png
 
-Action menu
-------------
+.. figure:: /images/e_catalog_08.png
 
-.. image:: /images/e_catalog_09.png
+    Example of a WMS-layer details panel.
+
+.. figure:: /images/b_catalogue_07.png
+
+    The actions overview within the details panel.
 
 You can download the wms directly, open it in the Viewer or in the API or analyse the wms layer in another application linking to Lizard. 
 You can use this link to visualise the raster in external applications such as QGIS or ESRI applications.
 
 For more infomation, please consult the `WMS Services <b_management.html#WMS Services>`_.
 
+
+.. _timeseries_reference_label:
+
 Time series and monitoring networks
 ====================================
 
-When you open the Catalogue and choose 'Time series' in the top left, you will see an overview of all the layers you have access to.
-It will show a list of 10 items, with the option to click through to other pages.
-At the top of the screen there is a search bar.
-Using search terms that are in the Name or the Description of the data layer you can more easily find specific data layers that you might be interested in.
+Like the WMS-Layers, you first have to select the `Timeseries` date-type. 
+You will then be presented with available monitoring networks. 
+A monitoring network is a group of locations, with one or multiple timeseries. 
+An example of a monitoring network is the dutch meteorological measurements of the KNMI weatherstations.
+In monitoring networks, you can group locations. These locations can have one, or multiple, timeseries.
 
 The following information is visible in this overview.
 
-* **Monitoring network** Name of the data layer.
-* **Organisation** To which organisation the data layer belongs.
+* **Monitoring network** Name of the network.
+* **Organisation** The organisation to which the monitoring network belongs.
 * **Access modifier** Divided into Public, Common and Private.
 
 .. note::
     Information about the different access modifiers can be found under `organisation modifiers <d_authentication_user_management.html#Organisations>`_.
 	
-In monitoring networks, you can group timeseries. This can be done for example by grouping them by observation type or by source.
-	
 .. note::
     New monitoring networks can be added via https://demo.lizard.net/api/v4/monitoringnetworks/ or {yourorganisation}.lizard.net/api/v4/monitoringnetworks/ or with the help of a consultant. In the near future, time series can be managed via the management screens. 
+
 
 Details
 --------
 
-Once you have selected a monitoring network, you will find detailed information about the dataset in the panel on the right.
-Here it will show a map of the area and a visualisation of the data.
-Below the map there is a table with detailed meta information about the data layer.
+Once you have selected a monitoring network, the map within the right-panel will display all locations within the network. You will find the description right below, and the observation types of the timeseries can be found in the details tab.
 
-.. image:: /images/e_catalog_10.png
+.. figure:: /images/b_catalogue_08.png
+
+    An overview of the KNMI weatherstations monitoring network.
+
 
 Action menu
 ------------
 
-In the action menu, you can export the timeries you are interested in or open it in the Viewer or in the API.
-You can filter on the observation type, which time series have data in a certain period and/or on location. 
+In the action menu, you can export the timeries you are interested in or open it in the Viewer or in the API. You can filter on the observation type or on the availability of data in a certain period and/or on location. 
 
-First choose "Select time series". 
+.. figure:: /images/b_catalogue_09.png
 
-.. image:: /images/e_catalog_11.png
+    Monitoring networks have two actions, view the details within the API, or select a timeseries of interest.
 
-Below you see a screenshot of all locations with time series for monitoring network KNMI weerstations without filtering.
+First choose `Select time series`. 
 
-.. image:: /images/e_catalog_12.png
 
-Below you see a screenshot of all locations with time series with observation type 'windsnelheid' and that have data between 14 and 16 March 2021.
-Then location Bilt is manually selected (by clicking on a dot or use the search bar) and ready to export or view in the API or in the Viewer. 
+.. figure:: /images/b_catalogue_10.png
 
-.. image:: /images/e_catalog_13.png
+    The `select time series` button will open the timeseries selection modality.
+
+
+.. figure:: /images/b_catalogue_11.png
+
+    If you provide a timeframe, only locations where data is available will be shown.
+
+
+.. _scenarios_reference_label:
 
 Scenarios
 ==============
 
-When you open the Catalogue and choose 'Scenario' in the top left, you will see an overview of all the scenarios you have access to.
-It will show a list of 10 items, with the option to click through to other pages.
-At the top of the screen there is a search bar.
-Using search terms that are in the Name or the Description of the data layer you can more easily find specific data layers that you might be interested in.
+To find information in regards to the 3Di scenarios, that have been exported to Lizard, the first step is to select the `Scenario` date-type.
 
-.. image:: /images/e_catalog_14.png
-
-
+.. figure:: /images/b_catalogue_12.png
 
 The following information is visible in this overview.
 
@@ -258,6 +299,10 @@ The following information is visible in this overview.
 * **Organisation** To which organisation the data layer belongs.
 * **Last update** When the data layer was last updated.
 * **Access modifier** Divided into Public, Common and Private.
+
+.. figure:: /images/b_catalogue_13.png
+
+    A simulation has a extensive details page, further more, you are able to download related files or view the scenario in the API or Viewer.
 
 .. note::
     Information about the different access modifiers can be found under `organisation modifiers <d_authentication_user_management.html#Organisations>`_.
@@ -268,7 +313,7 @@ Details
 
 Once you have selected a data layer, you will find detailed information about the layer in the panel on the right.
 
-.. image:: /images/e_catalog_15.png
+.. figure:: /images/b_catalogue_14.png
 
 
 Action menu
@@ -276,9 +321,10 @@ Action menu
 
 In the action menu, you can open the scenario in the Viewer or in the API.
 
-Results
-------------
 
-In the results menu, you can download the results. 
+Downloads
+---------
 
-.. image:: /images/e_catalog_16.png
+The downloads section shows all related files. There are basic and raw files available.
+
+.. figure:: /images/b_catalogue_15.png
