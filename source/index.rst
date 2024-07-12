@@ -45,6 +45,7 @@ Overview of the documentation pages
    b_management
    b_apps
    b_lizardplugin
+   b_alarms
 
 .. toctree::
    :maxdepth: 1
