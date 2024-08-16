@@ -4,4 +4,3 @@ build/
 lizard-docs.zip
 __pycache__
 *.pyc
-source/_build
