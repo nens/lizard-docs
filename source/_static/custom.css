@@ -53,6 +53,10 @@ a.headerlink, .rst-content .viewcode-link {
     color: #115E67 !important; /* Teal color on hover */
 }
 
+.wy-nav-side a:visited {
+    color: #ffffff !important; /* Keep the color white after visiting */
+}
+
 /* Hover styling for menu items */
 .wy-menu a:hover, .wy-menu a:focus {
     color: #115E67 !important; /* Teal color on hover */
