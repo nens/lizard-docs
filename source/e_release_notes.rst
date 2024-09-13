@@ -1,8 +1,3 @@
-.. raw:: html
-
-    <style> .blue {color:#4a86e8} </style>
-
-.. role:: blue
 
 =============
 Release Notes
