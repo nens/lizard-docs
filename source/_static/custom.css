@@ -1,12 +1,112 @@
-.toggle .header {
-    display: block;
-    clear: both;
+/* General link styling for all internal and external links */
+a, a:visited {
+    color: #115E67; /* Teal color for all links */
+    text-decoration: none; /* Optional: Remove underline from links */
 }
 
+a:hover, a:focus {
+    color: #0D3B4A; /* Darker teal for hover */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Styling for "View page source" link */
+a.headerlink, .rst-content .viewcode-link {
+    color: #115E67; /* Teal color */
+}
+
+/* Home logo in the header */
+.wy-nav-top .icon-home {
+    color: #115E67; /* Teal color for the home icon */
+}
+
+/* Navigation bar styling */
+.wy-nav-top {
+    background-color: #115E67; /* Teal background for the navigation bar */
+    color: #ffffff; /* White text for contrast */
+}
+
+/* Styling for main content headers */
+.rst-content h1 {
+    color: #115E67; /* Teal color for main headers */
+}
+
+/* Sidebar navigation headers */
+.wy-nav-side h1 {
+    color: #115E67;
+    background-color: #115E67; /* Teal background */
+}
+
+/* Sidebar links styling */
+.wy-nav-side .toctree-l1,
+.wy-nav-side .caption-text {
+    color: #ffffff; /* White text color */
+}
+
+/* Sidebar overall styling */
+.wy-nav-side {
+    background-color: #213031; /* Dark teal background */
+    color: #ffffff; /* White text */
+}
+
+/* Hover styling for sidebar links */
+.wy-nav-side a:hover, .wy-nav-side a:focus {
+    color: #115E67 !important; /* Teal color on hover */
+}
+
+/* Hover styling for menu items */
+.wy-menu a:hover, .wy-menu a:focus {
+    color: #115E67 !important; /* Teal color on hover */
+    background-color: #E6F2F3; /* Light teal background on hover */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Logo styling */
+.logo {
+    color: #115E67; 
+    background-color: #115E67; /* Teal background */
+}
+
+/* Search bar in sidebar */
+.wy-side-nav-search {
+    color: #115E67; 
+    background-color: #115E67; /* Teal background */
+}
+
+/* Additional classes for specific link styles */
+.linkcolor, .visitedlinkcolor {
+    color: #115E67; /* Teal color for specific link styles */
+}
+
+/* Admonition blocks styling */
+.admonition, .admonition-note, .admonition-tip, .admonition-important, .admonition-caution, .admonition-warning {
+    background-color: #E6F2F3 !important; /* Light teal background */
+    color: #115E67 !important; /* Teal text color */
+    border-left: 4px solid #115E67; /* Teal border */
+    border-color:  #115E67 !important;
+
+}
+
+/* Admonition title styling */
+.admonition-title {
+    background-color: #115E67 !important; /* Light teal background */
+    color: #E6F2F3 !important; /* Teal text color */
+    border-left: 4px solid #115E67; /* Teal border */
+    border-color:  #115E67 !important;
+
+}
+
+/* Toggle headers */
 .toggle .header:after {
     content: " ▶";
 }
 
 .toggle .header.open:after {
     content: " ▼";
+}
+
+.toggle .header {
+    display: block;
+    background-color: #115E67; /* Teal background */
+    color: #ffffff; /* White text for visibility */
+    clear: both;
 }
