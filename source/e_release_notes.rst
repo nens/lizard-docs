@@ -4,8 +4,26 @@ Release Notes
 =============
 
 
+July 17th 2024
+==============
+
+Lizard QGIS plugin updated:
+
+* Bugfix: Download failed due to the following error: '>' not supported between instances of 'NoneType' and 'float'
+  
+* Bugfix: User defined pixel size is not respected when requested area is tiled
+
+
+June 21st 2024
+==============
+
+Lizard QGIS plugin updated:
+
+* Bugfix: Scenario files cannot be downloaded
+
+
 May 21st 2024
-==================
+=============
 
 
 New features in API v4:

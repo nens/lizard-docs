@@ -17,7 +17,7 @@ The Lizard API can be used to retrieve data from or send data to the datawarehou
 - :ref:`api_contact` 
 
 .. note:: 
-	You can find the Lizard API here: “{your_organisation}.lizard.net/api/v4/”, for example https://demo.lizard.net/api/v4/.
+	You can find the Lizard API here: ``{your_organisation}.lizard.net/api/v4/``, for example https://demo.lizard.net/api/v4/.
 
 
 
@@ -46,13 +46,13 @@ Basic use API
 In this section we explain how to communicate with the Lizard API by making requests.
 A request consists of an *endpoint* (required) and *query parameters* (optional).
 An endpoint is a digital location that is connected to a specific resource, such as for example ``locations``.
-All possible endpoints are shown at the API root: “{your_organisation}.lizard.net/api/v4/”. 
+All possible endpoints are shown at the API root: ``{your_organisation}.lizard.net/api/v4/``. 
 Query parameters are filters that you can use, for example to filter on the location name or code. 
 
 | An example of a request is: 
 | 	https://demo.lizard.net/api/v4/locations/
 
-This example consists of an API root (demo.lizard.net/api/v4/) and an endpoint (``locations``).
+This example consists of an API root (``demo.lizard.net/api/v4/``) and an endpoint (``locations``).
 The request asks Lizard to show all locations that you have access to, including their metadata.
 
 If you want to look for specific locations, you can add query parameters. 
@@ -64,14 +64,14 @@ The image below shows the query parameters available for the endpoint ``location
 In the case of the endpoint ``locations`` you can for example filter on ``name`` and ``code``. 
 A request with query parameters should follow this structure: 
 
-	{endpoint url}/?{query parameter}={your filter}
+	``{endpoint url}/?{query parameter}={your filter}``
 
 | An example of a request for locations with code ``3201_PS2``:
 |	https://demo.lizard.net/api/v4/locations/?code=3201_PS2
 
 
 | If you want to use multiple query parameters in your request, you have to separate them by using an ampersand:
-|	{endpoint url}/?{query parameter 1}={filter 1}&{query parameter 2}={filter 2}
+|	``{endpoint url}/?{query parameter 1}={filter 1}&{query parameter 2}={filter 2}``
 
 | An example with two query parameters is when you look for locations with code ``3201_PS2`` (query parameter 1) and a name that starts with ``inlaat`` (query parameter 2): 
 | 	https://demo.lizard.net/api/v4/locations/?code=3201_PS2&name__startswith=inlaat
@@ -106,7 +106,17 @@ This section deals with the data upload through the API.
 .. _api_rasters:
 
 Rasters
-===========
+=======
+
+Rasters in Lizard consist of: 
+
+* Raster Sources that contain the raster data 
+* Raster Layers that represent the visualisation
+  
+Raster data must therefore be uploaded to a Raster Source. 
+The Raster Source must exist in Lizard to be able to upload raster data.
+The endpoint for raster data is ``{your_organisation}.lizard.net/api/v4/rastersources/{your_raster_uuid}/data/``.
+
 
 Requirements 
 --------------
@@ -186,67 +196,48 @@ Below you find an example of how to upload a temporal geotiff in Python:
 .. _api_timeseries:
 
 Time Series
-=============
+===========
+
+Time series data is stored in the events endpoint of a time series object: 
+``{your_organisation}.lizard.net/api/v4/timeseries/{timeseries_uuid}/events/``.
+A time series object must exist in order to upload time series data to Lizard.
+
+To upload time series data of multiple time series at once you can use the time series event bulk import at
+``{your_organisation}.lizard.net/api/v4/timeseries/events/``.
+
 
 Requirements
 ------------
 
-Time series can be linked through their location to one of the vector data models listed :ref:`here <vector_data_types>`.
+The upload of time series events should consist of at least one time-value pair. 
+The time must be in ISO 8601 date and time representation.
+The value can be a number, string or boolean, depending on the ``value_type`` of the corresponding time series object.
 
-Time series can be imported manually, by uploading a csv file in the timeseries management screen (see https://docs.lizard.net/c_timeseries.html) or via the API. 
+An example of a time-value pair is: 
+``{"time": "2024-08-16T01:00:00Z", "value": 3.14}`` 
+
+.. warning:: 
+
+	An upload with duplicate times will be rejected
 
 Upload 
 ------
 
-
-Using the Data Management App
-++++++++++++++++++++++++++++++
-
-The first line of the file should describe the column names, for example:
-
-
-.. csv-table:: Example wcsv
-    :header: timestamp, value
-    
-	2020-03-20T01:00:00Z, 3.14
-	2020-03-20T01:05:00Z, 2.72
-
-The columns should contain:
-
-* **timestamp:** a timestamp in iso8601 format.
-* **value:** value as either a float or integer number.
-
-
-.. note::
-    The upload will fail if there are duplicate timestamp
-
-
-
-Using the Lizard API
-++++++++++++++++++++
-
-Timeseries data can be supplied with a POST request to the timeseries data endpoint in the API (`<baseurl>`/api/v4/timeseries/{uuid}/data/).
+Timeseries data can be supplied with a POST request to the timeseries events endpoint in the API.
 Interaction with the API can be done from e.g. Postman or Python.
-User credentials should be included in the header and the data in the payload of the request. 
+User credentials should be included in the header and the data should be stored in the payload of the request. 
 
 Value based timeseries
 +++++++++++++++++++++++++++
 
-This type of timeseries consists of integers, floats, float arrays or text. The body of the request is a JSON object with timestamps and values:
+This type of timeseries consists of integers, floats, float arrays or text. The body of the request is a JSON payload with a list of one or more time-value pairs:
 
-.. code-block:: json 
+.. code-block:: python 
 
-    {
-    	"data": [{
-    			"datetime": "2019-07-01T01:30:00Z",
-    			"value": 40.7
-    		},
-    		{
-    			"datetime": "2019-07-01T02:00:00Z",
-    			"value": 39.1
-    		}
-    	]
-    }
+	[
+		{"time": "2024-07-01T01:30:00Z", "value": 40.7}, 
+		{"time": "2024-07-01T02:00:00Z", "value": 39.1}
+	]
 
 File based timeseries
 ++++++++++++++++++++++
@@ -277,9 +268,16 @@ An example of an upload of an image using requests in Python:
 Assets
 =======
 
+Assets are locations that represent a certain object, such as a measuring station or weir.
+They are used to visualise locations in the Lizard viewer.
+
+Assets can be created with an API POST request on the endpoint of the object type, for example 
+``{your_organisation}.lizard.net/api/v4/measuringstations/``. 
+More information on asset attributes can be found in the section on :ref:`Vectors <vector_data_types>`.
+
 We support asset synchronisation.
 This type of data feed has to be configured per customer.
-Changes in location names, coördinates and new locations can be seen in Lizard as soon as the following day. 
+Changes in location names, coordinates and new locations can be seen in Lizard as soon as the following day. 
 
 Upload vectors as a shapefile
 -----------------------------
