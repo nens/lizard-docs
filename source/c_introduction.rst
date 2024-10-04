@@ -220,6 +220,10 @@ An example of a time-value pair is:
 
 	An upload with duplicate times will be rejected
 
+.. note::
+
+	Use ``None`` to upload a missing value
+
 Upload 
 ------
 
@@ -239,59 +243,69 @@ This type of timeseries consists of integers, floats, float arrays or text. The 
 		{"time": "2024-07-01T02:00:00Z", "value": 39.1}
 	]
 
-File based timeseries
-++++++++++++++++++++++
-
-This type consists of images, movies or files. A single files is posted on a certain datetime, which is included in the header of the request.
-
-An example of an upload of an image using requests in Python:
-
-.. code-block:: none  
-
-    import requests
-    import datetime as dt
-
-    now = dt.datetime.utcnow()
-    uuid = ‘385c08c5-a0cf-4097-a98f-b6f053ef32c6’
-    url = 'https://demo.lizard.net/api/v4/timeseries/{}/events/'.format(uuid)
-    data = open('./x.png', 'rb').read()
-    res = requests.post(url=url,
-                        data=data,
-                        headers={
-                        'Content-Type': 'image/png',
-                        'datetime': now.strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
-                        'username': 'jane.doe',
-                        'password': 'janespassword'
-                        })
 .. _api_assets:
 
 Assets
-=======
+======
 
 Assets are locations that represent a certain object, such as a measuring station or weir.
 They are used to visualise locations in the Lizard viewer.
 
-Assets can be created with an API POST request on the endpoint of the object type, for example 
-``{your_organisation}.lizard.net/api/v4/measuringstations/``. 
-More information on asset attributes can be found in the section on :ref:`Vectors <vector_data_types>`.
+Lizard has the following assets:
+
+- Bridges
+- Buildings
+- Culverts
+- Filters
+- Fixed drainage level areas
+- Groundwater stations
+- Levees
+- Levee cross sections
+- Manholes
+- Measuring stations 
+- Monitoring wells
+- Orifices
+- Outlets
+- Overflows 
+- Parcels
+- Pipes
+- Polders
+- Pressure pipes
+- Pumped drainage areas
+- Pump stations
+- Roads
+- Sluices
+- Waste water treatment plants
+- Weirs
+
+Some assets are related to each other in a parent-child relation.
+The children are refered to as nested assets. 
+An example of a nested asset is a Filter that is part of a Groundwater station.
+The nested asset should refer to the parent asset.
+
 
 We support asset synchronisation.
 This type of data feed has to be configured per customer.
 Changes in location names, coordinates and new locations can be seen in Lizard as soon as the following day. 
 
-Upload vectors as a shapefile
+Upload assets using the API
+---------------------------
+Assets can be created with an API POST request on the endpoint of the object type, for example 
+``{your_organisation}.lizard.net/api/v4/measuringstations/``. 
+More information on asset attributes can be found in the section on :ref:`Vectors <vector_data_types>`.
+
+
+Upload assets as a shapefile
 -----------------------------
+It is possible to use a vector layer to create assets. 
+The vector layer should be included in a zipped archive with a .dbf, .shp, .sh and a .ini file.
+The zipped archive can be uploaded via the import form at ``{your_organisation}.lizard.net/import``.
 
-Assets can be uploaded to Lizard with shapefiles via the import form at <base-url>/import.
-These shapefiles contain information about assets or assets together with their nested assets (e.g. GroundwaterStations and their Filters).
-
-A shapefile can be uploaded as a zipped archive.
-The zipfile should contain at least a .dbf, .shp, .sh and a .ini file.
-In case of nested assets, these should be found in the same shapefile record (row) as their assets.
-The following section provides an example of an .ini file for groundwater stations.
+The following section first describes what the .ini file should contain
+and then provides an example of an .ini file for groundwater stations.
 
 Assets without nested assets
-++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++
 
 An .ini file is used to map shapefile attributes to Lizard database tables, organisations and attributes. An .ini file consists of three sections:
 
@@ -299,18 +313,10 @@ An .ini file is used to map shapefile attributes to Lizard database tables, orga
     * **[columns]:** maps lizard columns to shapefile columns
     * **[default]:** optionally provide default values for columns
 
-This example .ini creates a new asset from each record of the shapefile, with:
-
-    * A **code** taken from the ID_1 column of the shapefile;
-    * A **name** taken from the NAME column of the shapefile;
-    * A **surface_level** taken from the HEIGHT column of the shapefile;
-    * A **frequency** that defaults to daily;
-    * A **scale** that defaults to 1, which means this asset can be seen at world scale, when the asset-layer in Lizard-nxt is configured accordingly.
-
 Assets with nested assets
 ++++++++++++++++++++++++++++++++++++
-
-In case of nested assets another section should be added to the .ini file:
+In case of nested assets, these should be found in the same shapefile record (row) as their assets.
+The following section should be added to the .ini file: 
 
     * **[nested]:** maps lizard columns to shapefile columns, it is possible to add multiple nested assets for one asset.
 
@@ -335,6 +341,14 @@ A groundwater station with filters (its nested assets) would look like this:
     first = 2_code
     fields = [code, filter_bottom_level, filter_top_level, aquifer_confiment, litology]
 
+This example .ini creates a new asset from each record of the shapefile, with:
+
+    * A **code** taken from the ID_1 column of the shapefile;
+    * A **name** taken from the NAME column of the shapefile;
+    * A **surface_level** taken from the HEIGHT column of the shapefile;
+    * A **frequency** that defaults to daily;
+    * A **scale** that defaults to 1, which means this asset can be seen at world scale, when the asset-layer in Lizard-nxt is configured accordingly.
+
 The **[nested]** categories describe:
 
     * **first:** indicates the first column in the shapefile that maps lizard columns to shapefile columns. This column and all columns to its right configure nested assets. The number of these columns should be a multiple  (the number of maximum nested assets per asset) of the fields.
@@ -356,4 +370,4 @@ You can copy paste this code in your own .ini file and zip it together with the 
 Contact
 =======
 
-If you have additional questions about the use of the API contact our servicedesk (servicedesk@nelen-schuurmans.nl)
+If you have additional questions about the use of the API contact our servicedesk at servicedesk@nelen-schuurmans.nl.
