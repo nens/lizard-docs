@@ -3,6 +3,16 @@
 Release Notes
 =============
 
+November 13th 2024
+==================
+
+Lizard plugin 0.3.6
+-------------------
+ 
+* Bugfix: Using a clip polygon with a different CRS than the CRS of the requested raster no longer gives issues.
+ 
+* Enhancement: New option to set pixel size when downloading simulation result rasters.
+
 
 July 17th 2024
 ==============
